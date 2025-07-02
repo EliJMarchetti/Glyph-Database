@@ -1,0 +1,28 @@
+css
+/* === background === */
+.bg-topo { background-image:url('topo.jpg'); background-size:cover; background-attachment:fixed; }
+
+/* === sections === */
+.section-title { @apply text-xl font-semibold uppercase tracking-wide; }
+.gauge-card { @apply flex flex-col items-center gap-2; }
+.gauge-svg { width:100px; height:100px; }
+.gauge-controls { @apply flex flex-wrap gap-1 items-center justify-center text-sm; }
+.btn { @apply bg-white/10 px-2 py-1 rounded hover:bg-white/20; }
+.num { @apply w-16 bg-white/10 text-center rounded px-1; }
+.max-setters { @apply flex flex-wrap items-center gap-2 text-sm; }
+
+/* === prepared glyphs === */
+.prep-card { @apply bg-white/5 p-3 rounded relative; }
+.prep-title { @apply font-semibold mb-1; }
+.unprep { @apply absolute top-1 right-1 text-red-400 hover:text-red-200; }
+
+/* === modal === */
+.overlay { @apply fixed inset-0 bg-black/60 flex items-center justify-center; }
+.picker { @apply bg-gray-900 max-h-[80vh] w-96 rounded shadow-lg flex flex-col; }
+.picker-header { @apply px-4 py-2 font-semibold flex justify-between items-center border-b border-white/10; }
+.picker-body { @apply flex-1 overflow-y-auto px-4 py-2 text-sm; }
+.picker-footer { @apply border-t border-white/10 p-2 text-right; }
+
+/* === presets === */
+.preset-input { @apply bg-white/10 px-2 py-1 rounded; }
+.preset-select { @apply bg-white/10 px-2 py-1 rounded; }
