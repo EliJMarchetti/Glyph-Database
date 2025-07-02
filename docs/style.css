@@ -1,7 +1,6 @@
 css
 /* === background === */
-.bg-topo { background-image:url('topo.jpg'); background-size:cover; background-attachment:fixed; }
-
+.bg-topo { background-image:url('topo-bg.jpg'); ... }
 /* === sections === */
 .section-title { @apply text-xl font-semibold uppercase tracking-wide; }
 .gauge-card { @apply flex flex-col items-center gap-2; }
