@@ -1,0 +1,23 @@
+md
+### Deploy
+1. Copy all files in this bundle into your repo’s `docs/` folder.
+2. Convert `glyphs.yaml` → `docs/glyphs.json` with the helper one‑liner.
+3. Git push → GitHub Pages (Branch: `main`, Folder: `/docs`).
+
+### Local dev
+```bash
+python -m http.server --directory docs 8000  # open localhost:8000
+```
+
+### Licence
+CC‑BY for site code; glyph content © Eli Marchetti.
+```
+
+---
+### One‑liner helper (run from repo root)
+```bash
+py - <<'PY'
+import yaml, json, pathlib
+p=pathlib.Path('glyphs.yaml'); json.dump(yaml.safe_load(p.read_text()), open('docs/glyphs.json','w'))
+print('✓ glyphs.json ready')
+PY
