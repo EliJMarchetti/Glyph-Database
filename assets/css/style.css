@@ -178,3 +178,35 @@ button {
     display: block;
   }
 }
+/* ——— Tablet & Desktop: force all 8 check‐boxes in one centered row ——— */
+@media (min-width: 481px) {
+  #schoolFilters {
+    /* no wrapping, always one line */
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  #schoolFilters label {
+    /* allow each box to shrink equally */
+    flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+/* ——— Mobile (<481px): two‐row card‐headers ——— */
+@media (max-width: 480px) {
+  .card-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  .card-header .info {
+    /* first row: Name */
+    flex: 1 1 100%;
+    order: 1;
+  }
+  .card-header .meta {
+    /* second row: School, V/S, Tier, Mana */
+    flex: 1 1 100%;
+    order: 2;
+  }
+}
