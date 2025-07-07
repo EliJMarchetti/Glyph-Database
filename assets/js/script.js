@@ -1,21 +1,20 @@
 (async () => {
-  // load the glyph data
-  const res = await fetch('data/glyphs.json');
+  // 1) Load the glyph data
+  const res    = await fetch('data/glyphs.json');
   const glyphs = await res.json();
 
-  // grab our controls & container
+  // 2) Grab our controls & container
   const levelFilter   = document.getElementById('levelFilter');
   const schoolFilters = document.getElementById('schoolFilters');
   const searchInput   = document.getElementById('search');
   const searchToggle  = document.getElementById('searchTextToggle');
   const container     = document.getElementById('cardsContainer');
 
-  // 1) Populate level dropdown with "All Glyphs" + "Tier X"
+  // 3) Populate level dropdown with "All Glyphs" + "Tier X"
   const allOpt = document.createElement('option');
   allOpt.value = 'all';
   allOpt.textContent = 'All Glyphs';
   levelFilter.appendChild(allOpt);
-
   for (let i = 0; i <= 12; i++) {
     const opt = document.createElement('option');
     opt.value = i;
@@ -23,51 +22,41 @@
     levelFilter.appendChild(opt);
   }
 
-  // 2) Build the school filter buttons (toggle-style)
-const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
-const schoolBtns = {};  // keep references to each button
+  // 4) Build the school filter buttons (toggle-style)
+  const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
+  const schoolBtns = {};
+  schools.forEach(s => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'school-button';
+    btn.textContent = s;
+    schoolFilters.appendChild(btn);
 
-schools.forEach(s => {
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.className = 'school-button';
-  btn.textContent = s;
-  schoolFilters.appendChild(btn);
-
-  // store for filter logic
-  schoolBtns[s] = btn;
-
-  // toggle active state on click and re-render
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
-    render();
+    schoolBtns[s] = btn;
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      render();
+    });
   });
-});
 
-
-  // 3) The render function: filter & draw cards
+  // 5) The render function: filter & draw cards
   function render() {
-    const levelVal      = levelFilter.value;
-  // collect which schools are “active” via button .active
-    const activeSchools = schools.filter(s =>
-    schoolBtns[s].classList.contains('active')
-    );
-  // if none are active, show all
+    const levelVal = levelFilter.value;
+
+    // which schools are active?
+    let activeSchools = schools.filter(s => schoolBtns[s].classList.contains('active'));
     if (activeSchools.length === 0) {
-     activeSchools.push(...schools);
+      activeSchools = [...schools]; // none active → all
     }
-    const q             = searchInput.value.toLowerCase();
-    const inDetails     = searchToggle.checked;
+
+    const q         = searchInput.value.toLowerCase();
+    const inDetails = searchToggle.checked;
 
     container.innerHTML = '';
-
     glyphs
       .filter(g => {
-        // level filter
         if (levelVal !== 'all' && +g.Tier !== +levelVal) return false;
-        // school filter (only when at least one box is checked)
-        if (!activeSchools.includes(g.School)) return false;
-        // text search
+        if (!activeSchools.includes(g.School))             return false;
         if (q) {
           if (g.Name.toLowerCase().includes(q)) return true;
           if (inDetails && Object.values(g).some(v =>
@@ -78,20 +67,20 @@ schools.forEach(s => {
         return true;
       })
       .forEach(g => {
-        // create card
+        // build each card
         const card = document.createElement('div');
         card.className = 'card';
 
-        // create header
+        // card header
         const header = document.createElement('div');
         header.className = 'card-header';
 
-        // info: only the Name
+        // info (Name)
         const info = document.createElement('div');
         info.className = 'info';
         info.innerHTML = `<b>${g.Name}</b>`;
 
-        // meta: School, V/S, Tier & Mana
+        // meta (School, V/S, Tier, Mana)
         const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
         const meta = document.createElement('div');
         meta.className = 'meta';
@@ -102,17 +91,14 @@ schools.forEach(s => {
           • ${g.Points} Mana
         `;
 
-        // assemble header
         header.appendChild(info);
         header.appendChild(meta);
         card.appendChild(header);
 
-        // create body
+        // card body (collapsed by default)
         const body = document.createElement('div');
         body.className = 'card-body';
-        body.style.display = 'none';  // start collapsed
-
-        // body contents
+        body.style.display = 'none';
         const ct   = document.createElement('p');
         ct.textContent = `Casting Time: ${g['Casting Time']}`;
         const dur  = document.createElement('p');
@@ -122,49 +108,37 @@ schools.forEach(s => {
         const hr   = document.createElement('hr');
         const high = document.createElement('p');
         high.textContent = g['Higher Tiers'];
-
         body.append(ct, dur, txt, hr, high);
         card.appendChild(body);
 
-        // toggle open/close & card opacity
+        // toggle open/close on header click
         header.addEventListener('click', () => {
           const isOpen = body.style.display === 'block';
           body.style.display = isOpen ? 'none' : 'block';
           card.classList.toggle('open', !isOpen);
         });
 
-        // add to container
         container.appendChild(card);
       });
   }
 
-  // 4) Attach render to all inputs
-  [
-    levelFilter,
-    searchInput,
-    searchToggle,
-    ...Array.from(schoolFilters.querySelectorAll('input'))
-  ].forEach(el => el.addEventListener('input', render));
+  // 6) Wire up filters & controls to re-render
+  levelFilter.addEventListener('change', render);
+  searchInput.addEventListener('input', render);
+  searchToggle.addEventListener('change', render);
+  Object.values(schoolBtns).forEach(btn => btn.addEventListener('click', render));
 
-  // 5) initial draw
+  // 7) Initial draw
   render();
+
+  // 8) Mobile-only: hide/show filter row on scroll
+  if (window.innerWidth < 768) {
+    const filterRow = document.getElementById('schoolFilters');
+    let lastScroll  = container.scrollTop;
+    container.addEventListener('scroll', () => {
+      const st = container.scrollTop;
+      filterRow.style.transform = st > lastScroll ? 'translateY(-100%)' : 'translateY(0)';
+      lastScroll = st;
+    });
+  }
 })();
-  // … after: [levelFilter, …].forEach(el => …);
-  render();
-
-  // 6) On mobile, hide/show filters when scrolling the cards
-  const filterRow = document.getElementById('schoolFilters');
-  const scroller  = document.getElementById('cardsContainer');
-  let lastScroll = 0;
-  scroller.addEventListener('scroll', () => {
-    const st = scroller.scrollTop;
-    if (st > lastScroll) {
-      // scrolling down → hide
-      filterRow.style.transform = 'translateY(-100%)';
-    } else {
-      // scrolling up → show
-      filterRow.style.transform = 'translateY(0)';
-    }
-    lastScroll = st;
-  });
-

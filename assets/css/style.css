@@ -101,41 +101,17 @@ button {
   font-family: inherit;
 }
 /* === Responsive tweaks === */
-
-/* 1) Default: center and wrap schools if needed */
+/* ——— Default: center & wrap school buttons ——— */
 #schoolFilters {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
-/* 2) Tablet & desktop (≥768px): force 1 row of 8 centered */
-@media (min-width: 768px) {
-  #schoolFilters {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  #schoolFilters label {
-    flex: 1 1 auto;
-    max-width: 12.5%;
-  }
-}
-
-/* 3) Mobile (<768px): two-row card headers */
-@media (max-width: 767px) {
-  .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-  .card-header .info,
-  .card-header .meta {
-    width: 100%;
-  }
-}
+/* style toggle buttons */
 .school-button {
   background: rgba(0,0,0,0.4);
   border: 2px solid white;
@@ -146,62 +122,39 @@ button {
   transition: border-color 0.2s, background 0.2s;
 }
 .school-button.active {
-  border-color: gold;
-  background: rgba(255,255,255,0.1);
-}
-
-/* ensure one centered row on desktop/tablet */
-@media (min-width: 768px) {
-  #schoolFilters {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .school-button {
-    flex: 1 1 auto;
-    max-width: 12.5%; /* 100/8 */
-  }
-}
-
-/* wrap nicely on mobile */
-@media (max-width: 767px) {
-  #schoolFilters {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .school-button {
-    flex: 1 1 45%;
-    max-width: 45%;
-    margin-bottom: 0.5rem;
-  }
-}
-/* ——— Button active color = magenta ——— */
-.school-button.active {
   border-color: magenta;
   background: rgba(255, 0, 255, 0.1);
 }
 
-/* ——— Always separate the button row on PC & tablet ——— */
+/* ——— Tablet & desktop (≥768px): one full row of 8 buttons ——— */
 @media (min-width: 768px) {
-  /* force #schoolFilters onto its own row */
+  /* force buttons onto a second row */
   #schoolFilters {
     flex-basis: 100%;
     flex-wrap: nowrap;
-    justify-content: center;
   }
-  /* eight equal buttons across 100% */
   .school-button {
     flex: 1 1 auto;
-    max-width: 12.5%;
+    max-width: 12.5%; /* 100% ÷ 8 buttons */
   }
 }
 
-/* ——— Animate hide/show of the filter row ——— */
-#schoolFilters {
-  transition: transform 0.3s ease;
-}
-
-/* ——— Mobile two-row card-headers (keep these!) ——— */
+/* ——— Mobile (<768px): shrink base font & two-line clamp ——— */
 @media (max-width: 767px) {
+  /* make text a bit smaller so cards stay uniform */
+  html {
+    font-size: 120%;
+  }
+
+  /* two-line title clamp */
+  .card-header .info b {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* stack header into two rows */
   .card-header {
     display: flex;
     flex-direction: column;
@@ -210,5 +163,16 @@ button {
   .card-header .info,
   .card-header .meta {
     width: 100%;
+  }
+
+  /* wrap buttons two-per-row */
+  #schoolFilters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .school-button {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin-bottom: 0.5rem;
   }
 }
