@@ -1,16 +1,16 @@
 (async () => {
-  // 1) Load the glyph data
+  // 1) Load glyph data
   const res    = await fetch('data/glyphs.json');
   const glyphs = await res.json();
 
-  // 2) Grab our controls & container
+  // 2) Grab controls & container
   const levelFilter   = document.getElementById('levelFilter');
   const schoolFilters = document.getElementById('schoolFilters');
   const searchInput   = document.getElementById('search');
   const searchToggle  = document.getElementById('searchTextToggle');
   const container     = document.getElementById('cardsContainer');
 
-  // 3) Populate level dropdown with "All Glyphs" + "Tier X"
+  // 3) Populate Tier dropdown
   const allOpt = document.createElement('option');
   allOpt.value = 'all';
   allOpt.textContent = 'All Glyphs';
@@ -22,7 +22,7 @@
     levelFilter.appendChild(opt);
   }
 
-  // 4) Build the school filter buttons (toggle-style)
+  // 4) Build school filter buttons
   const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
   const schoolBtns = {};
   schools.forEach(s => {
@@ -31,7 +31,6 @@
     btn.className = 'school-button';
     btn.textContent = s;
     schoolFilters.appendChild(btn);
-
     schoolBtns[s] = btn;
     btn.addEventListener('click', () => {
       btn.classList.toggle('active');
@@ -39,15 +38,11 @@
     });
   });
 
-  // 5) The render function: filter & draw cards
+  // 5) Render function
   function render() {
     const levelVal = levelFilter.value;
-
-    // which schools are active?
     let activeSchools = schools.filter(s => schoolBtns[s].classList.contains('active'));
-    if (activeSchools.length === 0) {
-      activeSchools = [...schools]; // none active → all
-    }
+    if (activeSchools.length === 0) activeSchools = [...schools];
 
     const q         = searchInput.value.toLowerCase();
     const inDetails = searchToggle.checked;
@@ -56,7 +51,7 @@
     glyphs
       .filter(g => {
         if (levelVal !== 'all' && +g.Tier !== +levelVal) return false;
-        if (!activeSchools.includes(g.School))             return false;
+        if (!activeSchools.includes(g.School)) return false;
         if (q) {
           if (g.Name.toLowerCase().includes(q)) return true;
           if (inDetails && Object.values(g).some(v =>
@@ -67,20 +62,16 @@
         return true;
       })
       .forEach(g => {
-        // build each card
         const card = document.createElement('div');
         card.className = 'card';
 
-        // card header
         const header = document.createElement('div');
         header.className = 'card-header';
 
-        // info (Name)
         const info = document.createElement('div');
         info.className = 'info';
         info.innerHTML = `<b>${g.Name}</b>`;
 
-        // meta (School, V/S, Tier, Mana)
         const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
         const meta = document.createElement('div');
         meta.className = 'meta';
@@ -95,7 +86,6 @@
         header.appendChild(meta);
         card.appendChild(header);
 
-        // card body (collapsed by default)
         const body = document.createElement('div');
         body.className = 'card-body';
         body.style.display = 'none';
@@ -109,20 +99,19 @@
         const high = document.createElement('p');
         high.textContent = g['Higher Tiers'];
         body.append(ct, dur, txt, hr, high);
-        card.appendChild(body);
 
-        // toggle open/close on header click
         header.addEventListener('click', () => {
           const isOpen = body.style.display === 'block';
           body.style.display = isOpen ? 'none' : 'block';
           card.classList.toggle('open', !isOpen);
         });
 
+        card.appendChild(body);
         container.appendChild(card);
       });
   }
 
-  // 6) Wire up filters & controls to re-render
+  // 6) Wire up controls
   levelFilter.addEventListener('change', render);
   searchInput.addEventListener('input', render);
   searchToggle.addEventListener('change', render);
@@ -131,35 +120,13 @@
   // 7) Initial draw
   render();
 
-     // 8) Mobile-only: pin & hide/show header on scroll, adjust card offset
+  // 8) Mobile-only: manual header dropdown
   if (window.innerWidth < 768) {
-    const headerEl    = document.querySelector('header');
-    const containerEl = document.getElementById('cardsContainer');
-
-    // a) Keep container offset equal to header height
-    function setOffset() {
-      containerEl.style.marginTop = headerEl.offsetHeight + 'px';
-    }
-    setOffset();
-    window.addEventListener('resize', setOffset);
-
-    // b) Hide header on scroll-down, show on scroll-up
-    let lastY = containerEl.scrollTop;
-    containerEl.addEventListener('scroll', () => {
-      const currentY = containerEl.scrollTop;
-      if (currentY > lastY) {
-        // scrolling down → slide header up and remove offset
-        headerEl.style.transform      = 'translateY(-100%)';
-        containerEl.style.marginTop   = '0';
-      } else {
-        // scrolling up → slide header back and restore offset
-        headerEl.style.transform = 'translateY(0)';
-        setOffset();
-      }
-      lastY = currentY;
+    const toggle = document.getElementById('mobileHeaderToggle');
+    document.body.classList.remove('collapsed');
+    toggle.addEventListener('click', () => {
+      const isCollapsed = document.body.classList.toggle('collapsed');
+      toggle.textContent = isCollapsed ? '▲' : '▼';
     });
   }
-
-
-
 })();

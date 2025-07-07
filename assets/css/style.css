@@ -2,11 +2,8 @@
 html {
   font-size: 150%;
 }
-/* animate header sliding on mobile scroll */
-header {
-  transition: transform 0.3s ease;
-}
-/* Use a light-weight system serif so numbers work, no licensing needed */
+
+/* Use a light-weight system serif so numbers work */
 body, #app {
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 300;
@@ -14,31 +11,33 @@ body, #app {
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body, html { width: 100%; height: 100%; overflow: hidden; }
+
 /* FULL-SCREEN STATIC BACKGROUND IMAGE */
 #bg-fallback {
-  position: fixed;
-  top: 0; left: 0;
+  position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
-  /* note: ../ goes from assets/css → assets, then bg.jpg */
   background: url('../bg.jpg') center/cover no-repeat;
   z-index: -1;
 }
+
 #app {
-  color: white;
   display: flex; flex-direction: column;
   height: 100vh;
 }
+
+/* HEADER */
 header {
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   display: flex; flex-wrap: wrap; gap: 1rem;
+  transition: transform 0.3s ease; /* for mobile toggle */
 }
+
+/* SEARCH & FILTER CONTROLS */
 #search {
-  flex: 1;
-  padding: 0.5rem;
+  flex: 1; padding: 0.5rem;
   background: rgba(255,255,255,0.1);
-  border: none;
-  color: white;
+  border: none; color: white;
 }
 label { color: white; }
 select {
@@ -47,11 +46,14 @@ select {
   border: 1px solid white;
   color: white;
 }
+
+/* CARD CONTAINER */
 #cardsContainer {
   overflow-y: auto;
   padding: 1rem;
 }
-/* card base style + smooth fade */
+
+/* CARD STYLING */
 .card {
   background: rgba(0,0,0,0.4);
   margin-bottom: 1rem;
@@ -59,22 +61,14 @@ select {
   border-radius: 0.5rem;
   transition: background 0.2s ease;
 }
-
-/* full-opacity when expanded */
 .card.open {
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0,0,0,1);
 }
-
 .card-header {
   padding: 0.75rem;
   cursor: pointer;
   display: flex; justify-content: space-between;
 }
-.card-header .info {
-  display: flex; gap: 1rem;
-  align-items: center;
-}
-.card-header b { font-weight: bold; }
 .card-body {
   display: none;
   padding: 0.75rem;
@@ -84,37 +78,36 @@ select {
   margin: 0.75rem 0;
   border: 0; border-top: 1px solid white;
 }
-/* make the V/S less prominent */
-.info .vs {
-  font-size: 0.8em;              /* smaller */
-  color: rgba(255, 255, 255, 0.6); /* lighter */
-  margin-left: 0.5rem;           /* a bit of breathing room */
-}
 
-/* optional: style the meta block */
+/* NAME & META */
+.card-header .info {
+  display: flex; gap: 1rem;
+  align-items: center;
+}
+.card-header b { font-weight: bold; }
 .meta {
   font-weight: 300;
   opacity: 0.9;
 }
-/* make form controls use the page’s serif font */
-input,
-select,
-textarea,
-button {
-  font-family: inherit;
-}
-/* === Responsive tweaks === */
-/* ——— Default: center & wrap school buttons ——— */
-#schoolFilters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  transition: transform 0.3s ease;
+/* V/S styling */
+.info .vs {
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.6);
+  margin-left: 0.5rem;
 }
 
-/* style toggle buttons */
+/* FORM CONTROLS USE PAGE FONT */
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+/* SCHOOL BUTTONS */
+#schoolFilters {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .school-button {
   background: rgba(0,0,0,0.4);
   border: 2px solid white;
@@ -126,41 +119,47 @@ button {
 }
 .school-button.active {
   border-color: magenta;
-  background: rgba(255, 0, 255, 0.1);
+  background: rgba(255,0,255,0.1);
 }
 
-/* ——— Tablet & desktop (≥768px): one full row of 8 buttons ——— */
+/* DESKTOP & TABLET: one full row of 8 buttons */
 @media (min-width: 768px) {
-  /* force buttons onto a second row */
   #schoolFilters {
     flex-basis: 100%;
     flex-wrap: nowrap;
   }
   .school-button {
     flex: 1 1 auto;
-    max-width: 12.5%; /* 100% ÷ 8 buttons */
+    max-width: 12.5%; /* 100/8 */
   }
 }
 
-/* ——— Mobile (<768px): shrink base font & two-line clamp ——— */
+/* MOBILE: manual dropdown toggle + title clamp */
 @media (max-width: 767px) {
-   /* 1a) Pin the header so it can slide away */
-  header {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    width: 100%;
+  /* show toggle button, hide by default on larger screens */
+  .header-toggle {
+    display: block;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
   }
-  /* 1b) Push the card list down by the header’s height */
-  #cardsContainer {
-    margin-top: 4rem; /* adjust this if your header is taller/shorter */
+
+  /* when body.collapsed, slide header up */
+  body.collapsed header {
+    transform: translateY(-100%);
   }
-  /* make text a bit smaller so cards stay uniform */
+  body.collapsed .header-toggle {
+    transform: rotate(180deg);
+  }
+
+  /* clamp titles to two lines */
   html {
     font-size: 120%;
   }
-
-  /* two-line title clamp */
   .card-header .info b {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -168,7 +167,7 @@ button {
     overflow: hidden;
   }
 
-  /* stack header into two rows */
+  /* stack header rows */
   .card-header {
     display: flex;
     flex-direction: column;
@@ -179,11 +178,7 @@ button {
     width: 100%;
   }
 
-  /* wrap buttons two-per-row */
-  #schoolFilters {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  /* wrap schools two-per-row */
   .school-button {
     flex: 1 1 45%;
     max-width: 45%;
