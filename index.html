@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Glyph Database</title>
+     <link rel="stylesheet" href="assets/css/style.css" />
+   </head>
+   <body>
+    
+    <!-- DYNAMIC BACKGROUND IMAGE: -->
+  <div id="bg-fallback"></div>
+
+     <div id="app">
+       <header>
+         <input type="text" id="search" placeholder="Search glyphs..." />
+         <label><input type="checkbox" id="searchTextToggle" /> Search in details</label>
+         <select id="levelFilter">
+           <option value="all">All Glyphs</option>
+           <!-- options 0–12 will be added by script -->
+         </select>
+         <div id="schoolFilters"></div>
+       </header>
+
+       <main id="cardsContainer"></main>
+     </div>
+
+     <script src="assets/js/script.js"></script>
+   </body>
+   </html>

@@ -1,0 +1,27 @@
+{
+  "name": "glyph-database",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:data": "node assets/js/convert.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliJMarchetti/Glyph-Database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliJMarchetti/Glyph-Database/issues"
+  },
+  "homepage": "https://github.com/EliJMarchetti/Glyph-Database#readme",
+  "description": "",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
