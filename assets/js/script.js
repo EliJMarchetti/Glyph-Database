@@ -4,11 +4,11 @@
   const glyphs = await res.json();
 
   // grab our controls & container
-  const levelFilter    = document.getElementById('levelFilter');
-  const schoolFilters  = document.getElementById('schoolFilters');
-  const searchInput    = document.getElementById('search');
-  const searchToggle   = document.getElementById('searchTextToggle');
-  const container      = document.getElementById('cardsContainer');
+  const levelFilter   = document.getElementById('levelFilter');
+  const schoolFilters = document.getElementById('schoolFilters');
+  const searchInput   = document.getElementById('search');
+  const searchToggle  = document.getElementById('searchTextToggle');
+  const container     = document.getElementById('cardsContainer');
 
   // 1) Populate level dropdown with "All Glyphs" + "Tier X"
   const allOpt = document.createElement('option');
@@ -93,13 +93,13 @@
         body.style.display = 'none';  // start collapsed
 
         // body contents
-        const ct  = document.createElement('p');
+        const ct   = document.createElement('p');
         ct.textContent = `Casting Time: ${g['Casting Time']}`;
-        const dur = document.createElement('p');
+        const dur  = document.createElement('p');
         dur.textContent = `Duration: ${g.Duration}${g.Concentration ? ' (Concentration)' : ''}`;
-        const txt = document.createElement('p');
+        const txt  = document.createElement('p');
         txt.textContent = g['New Text'];
-        const hr  = document.createElement('hr');
+        const hr   = document.createElement('hr');
         const high = document.createElement('p');
         high.textContent = g['Higher Tiers'];
 
@@ -110,4 +110,22 @@
         header.addEventListener('click', () => {
           const isOpen = body.style.display === 'block';
           body.style.display = isOpen ? 'none' : 'block';
-          card.classList.toggle('open', !
+          card.classList.toggle('open', !isOpen);
+        });
+
+        // add to container
+        container.appendChild(card);
+      });
+  }
+
+  // 4) Attach render to all inputs
+  [
+    levelFilter,
+    searchInput,
+    searchToggle,
+    ...Array.from(schoolFilters.querySelectorAll('input'))
+  ].forEach(el => el.addEventListener('input', render));
+
+  // 5) initial draw
+  render();
+})();
