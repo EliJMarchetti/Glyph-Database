@@ -48,14 +48,14 @@ schools.forEach(s => {
   // 3) The render function: filter & draw cards
   function render() {
     const levelVal      = levelFilter.value;
-// collect which schools are “active” via button .active
-const activeSchools = schools.filter(s =>
-  schoolBtns[s].classList.contains('active')
-);
-// if none are active, show all
-if (activeSchools.length === 0) {
-  activeSchools.push(...schools);
-}
+  // collect which schools are “active” via button .active
+    const activeSchools = schools.filter(s =>
+    schoolBtns[s].classList.contains('active')
+    );
+  // if none are active, show all
+    if (activeSchools.length === 0) {
+     activeSchools.push(...schools);
+    }
     const q             = searchInput.value.toLowerCase();
     const inDetails     = searchToggle.checked;
 
@@ -66,7 +66,7 @@ if (activeSchools.length === 0) {
         // level filter
         if (levelVal !== 'all' && +g.Tier !== +levelVal) return false;
         // school filter (only when at least one box is checked)
-        if (activeSchools.length > 0 && !activeSchools.includes(g.School)) return false;
+        if (!activeSchools.includes(g.School)) return false;
         // text search
         if (q) {
           if (g.Name.toLowerCase().includes(q)) return true;
@@ -149,3 +149,22 @@ if (activeSchools.length === 0) {
   // 5) initial draw
   render();
 })();
+  // … after: [levelFilter, …].forEach(el => …);
+  render();
+
+  // 6) On mobile, hide/show filters when scrolling the cards
+  const filterRow = document.getElementById('schoolFilters');
+  const scroller  = document.getElementById('cardsContainer');
+  let lastScroll = 0;
+  scroller.addEventListener('scroll', () => {
+    const st = scroller.scrollTop;
+    if (st > lastScroll) {
+      // scrolling down → hide
+      filterRow.style.transform = 'translateY(-100%)';
+    } else {
+      // scrolling up → show
+      filterRow.style.transform = 'translateY(0)';
+    }
+    lastScroll = st;
+  });
+

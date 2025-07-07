@@ -174,3 +174,41 @@ button {
     margin-bottom: 0.5rem;
   }
 }
+/* ——— Button active color = magenta ——— */
+.school-button.active {
+  border-color: magenta;
+  background: rgba(255, 0, 255, 0.1);
+}
+
+/* ——— Always separate the button row on PC & tablet ——— */
+@media (min-width: 768px) {
+  /* force #schoolFilters onto its own row */
+  #schoolFilters {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  /* eight equal buttons across 100% */
+  .school-button {
+    flex: 1 1 auto;
+    max-width: 12.5%;
+  }
+}
+
+/* ——— Animate hide/show of the filter row ——— */
+#schoolFilters {
+  transition: transform 0.3s ease;
+}
+
+/* ——— Mobile two-row card-headers (keep these!) ——— */
+@media (max-width: 767px) {
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .card-header .info,
+  .card-header .meta {
+    width: 100%;
+  }
+}
