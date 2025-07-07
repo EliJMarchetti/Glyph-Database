@@ -136,3 +136,41 @@ button {
     width: 100%;
   }
 }
+.school-button {
+  background: rgba(0,0,0,0.4);
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.school-button.active {
+  border-color: gold;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ensure one centered row on desktop/tablet */
+@media (min-width: 768px) {
+  #schoolFilters {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .school-button {
+    flex: 1 1 auto;
+    max-width: 12.5%; /* 100/8 */
+  }
+}
+
+/* wrap nicely on mobile */
+@media (max-width: 767px) {
+  #schoolFilters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .school-button {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin-bottom: 0.5rem;
+  }
+}

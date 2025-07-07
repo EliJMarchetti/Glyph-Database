@@ -23,19 +23,39 @@
     levelFilter.appendChild(opt);
   }
 
-  // 2) Build the school checkboxes (unchecked by default)
-  const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
-  schools.forEach(s => {
-    const id = `sch-${s}`;
-    const label = document.createElement('label');
-    label.innerHTML = `<input type="checkbox" id="${id}" /> ${s}`;
-    schoolFilters.appendChild(label);
+  // 2) Build the school filter buttons (toggle-style)
+const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
+const schoolBtns = {};  // keep references to each button
+
+schools.forEach(s => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'school-button';
+  btn.textContent = s;
+  schoolFilters.appendChild(btn);
+
+  // store for filter logic
+  schoolBtns[s] = btn;
+
+  // toggle active state on click and re-render
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    render();
   });
+});
+
 
   // 3) The render function: filter & draw cards
   function render() {
     const levelVal      = levelFilter.value;
-    const activeSchools = schools.filter(s => document.getElementById(`sch-${s}`).checked);
+// collect which schools are “active” via button .active
+const activeSchools = schools.filter(s =>
+  schoolBtns[s].classList.contains('active')
+);
+// if none are active, show all
+if (activeSchools.length === 0) {
+  activeSchools.push(...schools);
+}
     const q             = searchInput.value.toLowerCase();
     const inDetails     = searchToggle.checked;
 
