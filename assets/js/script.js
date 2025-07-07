@@ -131,28 +131,35 @@
   // 7) Initial draw
   render();
 
-    // 8) Mobile-only: pin & hide/show header on scroll, and adjust card top-margin
+     // 8) Mobile-only: pin & hide/show header on scroll, adjust card offset
   if (window.innerWidth < 768) {
-    const headerEl = document.querySelector('header');
-    const container = document.getElementById('cardsContainer');
+    const headerEl    = document.querySelector('header');
+    const containerEl = document.getElementById('cardsContainer');
 
-    // 8a) Keep the container pushed down by the header height
-    function adjustMargin() {
-      container.style.marginTop = headerEl.offsetHeight + 'px';
+    // a) Keep container offset equal to header height
+    function setOffset() {
+      containerEl.style.marginTop = headerEl.offsetHeight + 'px';
     }
-    adjustMargin();
-    window.addEventListener('resize', adjustMargin);
+    setOffset();
+    window.addEventListener('resize', setOffset);
 
-    // 8b) Hide header on scroll down, show on scroll up
-    let lastScroll = container.scrollTop;
-    container.addEventListener('scroll', () => {
-      const st = container.scrollTop;
-      headerEl.style.transform = st > lastScroll
-        ? 'translateY(-100%)'
-        : 'translateY(0)';
-      lastScroll = st;
+    // b) Hide header on scroll-down, show on scroll-up
+    let lastY = containerEl.scrollTop;
+    containerEl.addEventListener('scroll', () => {
+      const currentY = containerEl.scrollTop;
+      if (currentY > lastY) {
+        // scrolling down → slide header up and remove offset
+        headerEl.style.transform      = 'translateY(-100%)';
+        containerEl.style.marginTop   = '0';
+      } else {
+        // scrolling up → slide header back and restore offset
+        headerEl.style.transform = 'translateY(0)';
+        setOffset();
+      }
+      lastY = currentY;
     });
   }
+
 
 
 })();
