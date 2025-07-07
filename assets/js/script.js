@@ -1,26 +1,29 @@
 (async () => {
+  // load the glyph data
   const res = await fetch('data/glyphs.json');
   const glyphs = await res.json();
 
-  const levelFilter = document.getElementById('levelFilter');
-  const schoolFilters = document.getElementById('schoolFilters');
-  const searchInput = document.getElementById('search');
-  const searchToggle = document.getElementById('searchTextToggle');
-  const container = document.getElementById('cardsContainer');
+  // grab our controls & container
+  const levelFilter    = document.getElementById('levelFilter');
+  const schoolFilters  = document.getElementById('schoolFilters');
+  const searchInput    = document.getElementById('search');
+  const searchToggle   = document.getElementById('searchTextToggle');
+  const container      = document.getElementById('cardsContainer');
 
-  // Populate level dropdown with "Tier X"
-const allOpt = document.createElement('option');
-allOpt.value = 'all';
-allOpt.textContent = 'All Glyphs';
-levelFilter.appendChild(allOpt);
+  // 1) Populate level dropdown with "All Glyphs" + "Tier X"
+  const allOpt = document.createElement('option');
+  allOpt.value = 'all';
+  allOpt.textContent = 'All Glyphs';
+  levelFilter.appendChild(allOpt);
 
-for (let i = 0; i <= 12; i++) {
-  const opt = document.createElement('option');
-  opt.value = i;                  // still filters by the numeric value
-  opt.textContent = `Tier ${i}`;  // now reads "Tier 0", "Tier 1", …
-  levelFilter.appendChild(opt);
-}
-  // Schools list
+  for (let i = 0; i <= 12; i++) {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = `Tier ${i}`;
+    levelFilter.appendChild(opt);
+  }
+
+  // 2) Build the school checkboxes (unchecked by default)
   const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
   schools.forEach(s => {
     const id = `sch-${s}`;
@@ -29,68 +32,82 @@ for (let i = 0; i <= 12; i++) {
     schoolFilters.appendChild(label);
   });
 
+  // 3) The render function: filter & draw cards
   function render() {
-    const levelVal = levelFilter.value;
+    const levelVal      = levelFilter.value;
     const activeSchools = schools.filter(s => document.getElementById(`sch-${s}`).checked);
-    const q = searchInput.value.toLowerCase();
-    const inDetails = searchToggle.checked;
+    const q             = searchInput.value.toLowerCase();
+    const inDetails     = searchToggle.checked;
 
     container.innerHTML = '';
-    glyphs.filter(g => {
-      if (levelVal !== 'all' && +g.Tier !== +levelVal) return false;
-      if (activeSchools.length > 0 && !activeSchools.includes(g.School)) return false;
-      if (q) {
-        if (g.Name.toLowerCase().includes(q)) return true;
-        if (inDetails && Object.values(g).some(v => String(v).toLowerCase().includes(q))) return true;
-        return false;
-      }
-      return true;
-    }).forEach(g => {
-      const card = document.createElement('div'); card.className = 'card';
-      const header = document.createElement('div'); header.className = 'card-header';
-      // build name/school/vs
-  const info = document.createElement('div');
-  info.className = 'info';
 
-  // pick V or S, wrap in its own <span> for styling
-  const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
-  info.innerHTML = `
-    <b>${g.Name}</b>
-    ${g.School}
-    <span class="vs">${vsLabel}</span>
-  `;
+    glyphs
+      .filter(g => {
+        // level filter
+        if (levelVal !== 'all' && +g.Tier !== +levelVal) return false;
+        // school filter (only when at least one box is checked)
+        if (activeSchools.length > 0 && !activeSchools.includes(g.School)) return false;
+        // text search
+        if (q) {
+          if (g.Name.toLowerCase().includes(q)) return true;
+          if (inDetails && Object.values(g).some(v =>
+            String(v).toLowerCase().includes(q)
+          )) return true;
+          return false;
+        }
+        return true;
+      })
+      .forEach(g => {
+        // create card
+        const card = document.createElement('div');
+        card.className = 'card';
 
-  // build tier & mana text
-  const meta = document.createElement('div');
-  meta.className = 'meta';
-  meta.textContent = `Tier ${g.Tier} • ${g.Points} Mana`;
+        // create header
+        const header = document.createElement('div');
+        header.className = 'card-header';
 
-      header.appendChild(info);
-      header.appendChild(meta);
-      card.appendChild(header);
+        // info: only the Name
+        const info = document.createElement('div');
+        info.className = 'info';
+        info.innerHTML = `<b>${g.Name}</b>`;
 
-      const body = document.createElement('div'); body.className = 'card-body';
-      const ct = document.createElement('p'); ct.textContent = `Casting Time: ${g['Casting Time']}`;
-      const dur = document.createElement('p');
-      dur.textContent = `Duration: ${g.Duration}${g.Concentration === true ? ' (Concentration)' : ''}`;
-      const txt = document.createElement('p'); txt.textContent = g['New Text'];
-      const hr = document.createElement('hr');
-      const high = document.createElement('p'); high.textContent = g['Higher Tiers'];
+        // meta: School, V/S, Tier & Mana
+        const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.innerHTML = `
+          ${g.School}
+          <span class="vs">${vsLabel}</span>
+          • Tier ${g.Tier}
+          • ${g.Points} Mana
+        `;
 
-      body.append(ct, dur, txt, hr, high);
-      card.appendChild(body);
+        // assemble header
+        header.appendChild(info);
+        header.appendChild(meta);
+        card.appendChild(header);
 
-    header.addEventListener('click', () => {
-  const isOpen = body.style.display === 'block';
-  body.style.display = isOpen ? 'none' : 'block';
-  card.classList.toggle('open', !isOpen);
-});
-      container.appendChild(card);
-    });
-  }
+        // create body
+        const body = document.createElement('div');
+        body.className = 'card-body';
+        body.style.display = 'none';  // start collapsed
 
-  [levelFilter, searchInput, searchToggle, ...Array.from(schoolFilters.querySelectorAll('input'))]
-    .forEach(el => el.addEventListener('input', render));
+        // body contents
+        const ct  = document.createElement('p');
+        ct.textContent = `Casting Time: ${g['Casting Time']}`;
+        const dur = document.createElement('p');
+        dur.textContent = `Duration: ${g.Duration}${g.Concentration ? ' (Concentration)' : ''}`;
+        const txt = document.createElement('p');
+        txt.textContent = g['New Text'];
+        const hr  = document.createElement('hr');
+        const high = document.createElement('p');
+        high.textContent = g['Higher Tiers'];
 
-  render();
-})();
+        body.append(ct, dur, txt, hr, high);
+        card.appendChild(body);
+
+        // toggle open/close & card opacity
+        header.addEventListener('click', () => {
+          const isOpen = body.style.display === 'block';
+          body.style.display = isOpen ? 'none' : 'block';
+          card.classList.toggle('open', !

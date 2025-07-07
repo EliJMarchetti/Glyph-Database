@@ -145,3 +145,36 @@ button {
     max-width: 45%;
   }
 }
+
+/* ————— DESKTOP & TABLET ————— */
+@media (min-width: 769px) {
+  /* force all 8 boxes into one row, shrinking to fit */
+  #schoolFilters {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  #schoolFilters label {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+/* ————— MOBILE CARDS ————— */
+@media (max-width: 480px) {
+  /* stack each card-header into two lines */
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  /* make each inner block full-width */
+  .card-header .info,
+  .card-header .meta {
+    width: 100%;
+  }
+  /* ensure the name is its own line */
+  .card-header .info b {
+    display: block;
+  }
+}
