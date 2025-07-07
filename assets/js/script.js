@@ -8,14 +8,18 @@
   const searchToggle = document.getElementById('searchTextToggle');
   const container = document.getElementById('cardsContainer');
 
-  // Populate level dropdown
-  for (let i = 0; i <= 12; i++) {
-    const opt = document.createElement('option');
-    opt.value = i;
-    opt.textContent = i;
-    levelFilter.appendChild(opt);
-  }
+  // Populate level dropdown with "Tier X"
+const allOpt = document.createElement('option');
+allOpt.value = 'all';
+allOpt.textContent = 'All Glyphs';
+levelFilter.appendChild(allOpt);
 
+for (let i = 0; i <= 12; i++) {
+  const opt = document.createElement('option');
+  opt.value = i;                  // still filters by the numeric value
+  opt.textContent = `Tier ${i}`;  // now reads "Tier 0", "Tier 1", …
+  levelFilter.appendChild(opt);
+}
   // Schools list
   const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
   schools.forEach(s => {
