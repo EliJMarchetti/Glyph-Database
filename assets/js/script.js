@@ -131,14 +131,18 @@
   // 7) Initial draw
   render();
 
-  // 8) Mobile-only: hide/show filter row on scroll
+  // 8) Mobile-only: hide/show the entire header on scroll
   if (window.innerWidth < 768) {
-    const filterRow = document.getElementById('schoolFilters');
-    let lastScroll  = container.scrollTop;
-    container.addEventListener('scroll', () => {
-      const st = container.scrollTop;
-      filterRow.style.transform = st > lastScroll ? 'translateY(-100%)' : 'translateY(0)';
-      lastScroll = st;
-    });
-  }
+   const headerEl  = document.querySelector('header');
+   let lastScroll  = container.scrollTop;
+   container.addEventListener('scroll', () => {
+    const st = container.scrollTop;
+    // scroll down → hide header; scroll up → show it
+    headerEl.style.transform = st > lastScroll 
+      ? 'translateY(-100%)'
+      : 'translateY(0)';
+    lastScroll = st;
+  });
+}
+
 })();

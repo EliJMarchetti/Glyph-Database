@@ -2,7 +2,10 @@
 html {
   font-size: 150%;
 }
-
+/* animate header sliding on mobile scroll */
+header {
+  transition: transform 0.3s ease;
+}
 /* Use a light-weight system serif so numbers work, no licensing needed */
 body, #app {
   font-family: Georgia, 'Times New Roman', serif;
