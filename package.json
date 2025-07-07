@@ -5,9 +5,10 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:data": "node assets/js/convert.js"
+   "scripts": {
+    "build:data": "node assets/js/convert.js",
+    "deploy:data": "npm run build:data && git add data/glyphs.json && git commit -m \"Update glyph data\" && git push origin main",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
