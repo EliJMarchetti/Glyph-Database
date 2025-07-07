@@ -144,6 +144,19 @@ button {
 
 /* ——— Mobile (<768px): shrink base font & two-line clamp ——— */
 @media (max-width: 767px) {
+   /* pin the header to the top so it can slide out of view */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  /* push the card container down by the header’s height */
+  #cardsContainer {
+    /* this should match roughly the header’s computed height */
+    margin-top: 4rem;
+  }
   /* make text a bit smaller so cards stay uniform */
   html {
     font-size: 120%;

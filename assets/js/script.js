@@ -131,18 +131,28 @@
   // 7) Initial draw
   render();
 
-  // 8) Mobile-only: hide/show the entire header on scroll
+    // 8) Mobile-only: pin & hide/show header on scroll, and adjust card top-margin
   if (window.innerWidth < 768) {
-   const headerEl  = document.querySelector('header');
-   let lastScroll  = container.scrollTop;
-   container.addEventListener('scroll', () => {
-    const st = container.scrollTop;
-    // scroll down → hide header; scroll up → show it
-    headerEl.style.transform = st > lastScroll 
-      ? 'translateY(-100%)'
-      : 'translateY(0)';
-    lastScroll = st;
-  });
-}
+    const headerEl = document.querySelector('header');
+    const container = document.getElementById('cardsContainer');
+
+    // 8a) Keep the container pushed down by the header height
+    function adjustMargin() {
+      container.style.marginTop = headerEl.offsetHeight + 'px';
+    }
+    adjustMargin();
+    window.addEventListener('resize', adjustMargin);
+
+    // 8b) Hide header on scroll down, show on scroll up
+    let lastScroll = container.scrollTop;
+    container.addEventListener('scroll', () => {
+      const st = container.scrollTop;
+      headerEl.style.transform = st > lastScroll
+        ? 'translateY(-100%)'
+        : 'translateY(0)';
+      lastScroll = st;
+    });
+  }
+
 
 })();
