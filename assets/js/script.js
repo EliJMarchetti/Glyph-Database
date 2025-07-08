@@ -1,3 +1,5 @@
+// assets/js/script.js
+
 (async () => {
   // 1) Load glyph data
   const res    = await fetch('data/glyphs.json');
@@ -122,11 +124,24 @@
 
   // 8) Mobile-only: manual header dropdown
   if (window.innerWidth < 768) {
-    const toggle = document.getElementById('mobileHeaderToggle');
+    const headerEl = document.querySelector('header');
+    const toggle   = document.getElementById('mobileHeaderToggle');
+
+    // ensure collapsed state off at start
     document.body.classList.remove('collapsed');
+    // initial offset adjustment
+    function setOffset() {
+      container.style.marginTop = headerEl.offsetHeight + 'px';
+    }
+    setOffset();
+    window.addEventListener('resize', setOffset);
+
+    // toggle collapse/expand
     toggle.addEventListener('click', () => {
-      const isCollapsed = document.body.classList.toggle('collapsed');
-      toggle.textContent = isCollapsed ? '▲' : '▼';
+      const collapsed = document.body.classList.toggle('collapsed');
+      toggle.textContent = collapsed ? '▲' : '▼';
+      // adjust container margin
+      container.style.marginTop = collapsed ? '0' : headerEl.offsetHeight + 'px';
     });
   }
 })();

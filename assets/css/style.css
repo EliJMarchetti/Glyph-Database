@@ -134,21 +134,40 @@ input, select, textarea, button {
   }
 }
 
-/* MOBILE: manual dropdown toggle + title clamp */
+/* ——— MOBILE-ONLY (max-width:767px) ——— */
 @media (max-width: 767px) {
-  /* show toggle button, hide by default on larger screens */
+  /* 1) FIXED HEADER */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+
+  /* 2) GLYPH LIST OFFSET */
+  #cardsContainer {
+    margin-top: 4rem; /* adjusted by JS too */
+  }
+
+  /* 3) TOGGLE BUTTON (always on screen) */
   .header-toggle {
     display: block;
-    margin-left: auto;
-    background: transparent;
+    position: fixed;
+    top: 0.5rem;
+    right: 1rem;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.4);
     border: none;
     color: white;
     font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
   }
 
-  /* when body.collapsed, slide header up */
+  /* 4) COLLAPSED STATE */
   body.collapsed header {
     transform: translateY(-100%);
   }
@@ -156,7 +175,7 @@ input, select, textarea, button {
     transform: rotate(180deg);
   }
 
-  /* clamp titles to two lines */
+  /* 5) Two-line title clamp & smaller font */
   html {
     font-size: 120%;
   }
@@ -167,7 +186,7 @@ input, select, textarea, button {
     overflow: hidden;
   }
 
-  /* stack header rows */
+  /* 6) Stack headers & wrap buttons two-per-row */
   .card-header {
     display: flex;
     flex-direction: column;
@@ -177,8 +196,6 @@ input, select, textarea, button {
   .card-header .meta {
     width: 100%;
   }
-
-  /* wrap schools two-per-row */
   .school-button {
     flex: 1 1 45%;
     max-width: 45%;
