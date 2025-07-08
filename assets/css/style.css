@@ -227,3 +227,41 @@ input, select, textarea, button {
     display: none;
   }
 }
+/* 1) Hide our mobile‐only toggle by default on all screens */
+#mobileHeaderToggle {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* 2) Only show the toggle button on phones */
+@media (max-width: 767px) {
+  #mobileHeaderToggle {
+    display: block;
+  }
+}
+
+/* 3) Remove any horizontal scrollbar on the school-filter row on desktop/tablet */
+@media (min-width: 768px) {
+  #schoolFilters {
+    overflow-x: hidden;
+    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  #schoolFilters::-webkit-scrollbar {
+    display: none;            /* Chrome/Safari */
+  }
+}
+
+/* 4) Remove the vertical scrollbar on the cards list on desktop/tablet */
+@media (min-width: 768px) {
+  #cardsContainer {
+    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  #cardsContainer::-webkit-scrollbar {
+    display: none;            /* Chrome/Safari */
+  }
+}
