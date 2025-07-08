@@ -300,3 +300,12 @@ input, select, textarea, button {
     display: none !important;            /* Chrome/Safari */
   }
 }
+/* school buttons: always dark border by default */
+.school-button {
+  border: 2px solid rgba(0, 0, 0, 0.4) !important;
+}
+
+/* when active, border goes white */
+.school-button.active {
+  border-color: white !important;
+}
