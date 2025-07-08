@@ -202,3 +202,28 @@ input, select, textarea, button {
     margin-bottom: 0.5rem;
   }
 }
+/* ——— Always hide the mobile toggle by default ——— */
+.header-toggle {
+  display: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* ——— Show it only on phones (<768px) ——— */
+@media (max-width: 767px) {
+  .header-toggle {
+    display: block !important;
+  }
+}
+
+/* ——— Remove any scrollbar on the school-filter row on desktop/tablet ——— */
+@media (min-width: 768px) {
+  #schoolFilters {
+    overflow-x: hidden !important;
+    scrollbar-width: none;            /* Firefox */
+    -ms-overflow-style: none;         /* IE 10+ */
+  }
+  #schoolFilters::-webkit-scrollbar { /* Chrome/Safari */
+    display: none;
+  }
+}
