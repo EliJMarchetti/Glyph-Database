@@ -120,6 +120,17 @@ input, select, textarea, button {
 .school-button.active {
   border-color: white;                  /* white when selected */
 }
+/* make school buttons fully transparent when inactive */
+.school-button {
+  background: transparent !important;
+  border: 2px solid transparent !important;
+}
+
+/* only active buttons get a white border */
+.school-button.active {
+  border-color: white !important;
+}
+
 
 /* DESKTOP & TABLET: one full row of 8 buttons */
 @media (min-width: 768px) {
