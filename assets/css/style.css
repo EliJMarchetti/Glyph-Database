@@ -265,3 +265,39 @@ input, select, textarea, button {
     display: none;            /* Chrome/Safari */
   }
 }
+/* —— Hide the mobile‐only header toggle on desktop/tablet —— */
+@media (min-width: 768px) {
+  #mobileHeaderToggle {
+    display: none !important;
+  }
+}
+
+/* —— Show it again on phones (just to be safe) —— */
+@media (max-width: 767px) {
+  #mobileHeaderToggle {
+    display: block !important;
+  }
+}
+
+/* —— Remove horizontal scrollbar on the school‐filters row —— */
+@media (min-width: 768px) {
+  #schoolFilters {
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;    /* Firefox */
+    -ms-overflow-style: none !important;  /* IE 10+ */
+  }
+  #schoolFilters::-webkit-scrollbar {
+    display: none !important;             /* Chrome/Safari */
+  }
+}
+
+/* —— Remove vertical scrollbar on cards list on desktop/tablet —— */
+@media (min-width: 768px) {
+  #cardsContainer {
+    scrollbar-width: none !important;    /* Firefox */
+    -ms-overflow-style: none !important; /* IE 10+ */
+  }
+  #cardsContainer::-webkit-scrollbar {
+    display: none !important;            /* Chrome/Safari */
+  }
+}
