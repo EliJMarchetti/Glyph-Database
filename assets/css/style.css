@@ -107,19 +107,18 @@ input, select, textarea, button {
   justify-content: center; gap: 0.5rem;
   margin-top: 0.5rem;
 }
-
 .school-button {
-  background: rgba(0,0,0,0.4);
-  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);  /* same as the bg */
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   color: white;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
 }
+
 .school-button.active {
-  border-color: magenta;
-  background: rgba(255,0,255,0.1);
+  border-color: white;                  /* white when selected */
 }
 
 /* DESKTOP & TABLET: one full row of 8 buttons */
