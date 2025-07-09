@@ -969,6 +969,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Brainrot",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You target a caster with a severe detriment to attention span. The target cannot cast glyphs that require concentration and must make a save to maintain concentration at the start of each of its turns. ",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Branding Smite",
     "Name": "Branding Smite",
     "Tier": 2,
@@ -1085,23 +1102,6 @@
     "Rite": false,
     "Old Text": "",
     "New Text": "You make a calming gesture, and up to three willing creatures of your choice that you can see within range fall unconscious for the glyph’s duration. The glyph ends on a target early if it takes damage or someone uses an action to shake or slap it awake. If a target remains unconscious for the full duration, that target gains the benefit of a short rest, and it can’t be affected by this glyph again until it finishes a long rest.",
-    "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Catnap",
-    "Name": "Catnap",
-    "Tier": 4,
-    "Points": 15,
-    "School": "Arcane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "10 minutes",
-    "Range": "30 feet",
-    "Rite": false,
-    "Old Text": "You make a calming gesture, and up to three willing creatures of your choice that you can see within range fall unconscious for the spell's duration. The spell ends on a target early if it takes damage or someone uses an action to shake or slap it awake. If a target remains unconscious for the full duration, that target gains the benefit of a short rest, and it can't be affected by this spell again until it finishes a long rest.",
-    "New Text": "You make a calming gesture, and up to three willing creatures of your choice that you can see within range fall unconscious for the glyph's duration. The glyph ends on a target early if it takes damage or someone uses an action to shake or slap it awake. If a target remains unconscious for the full duration, that target gains the benefit of a short rest, and it can't be affected by this glyph again until it finishes a long rest.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional willing creature for each slot level above 3rd."
   },
   {
@@ -2244,6 +2244,23 @@
     "Higher Tiers": "If you cast this Glyph using a Glyph slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a Glyph slot of 5th level or higher, the duration is 8 hours. If you use a Glyph slot of 7th level or higher, the duration is 24 hours. If you use a 9th level Glyph slot, the Glyph lasts until it is dispelled. Using a Glyph slot of 5th level or higher grants a duration that doesn't require concentration."
   },
   {
+    "Chat Name": "",
+    "Name": "Decrypt",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (120 feet)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You harmlessly shunt one corpse from the nearest crypt within range. ",
+    "Higher Tiers": "When you cast this at a higher level, you can target a greater number of corpses each time you cast. "
+  },
+  {
     "Chat Name": "Delayed Blast Fireball",
     "Name": "Delayed Blast Fireball",
     "Tier": 9,
@@ -2921,6 +2938,23 @@
     "Rite": false,
     "Old Text": "You pull a memory, an idea, or a message from your mind and transform it into a tangible string of glowing energy called a thought strand, which persists for the duration or until you cast this spell again. The thought strand appears in an unoccupied space within 5 feet of you as a Tiny, weightless, semisolid object that can be held and carried like a ribbon. It is otherwise stationary. If you cast this spell while concentrating on a spell or an ability that allows you to read or manipulate the thoughts of others (such as detect thoughts or modify memory), you can transform the thoughts or memories you read, rather than your own, into a thought strand. Casting this spell while holding a thought strand allows you to instantly receive whatever memory, idea, or message the thought strand contains (casting detect thoughts on the strand has the same effect).",
     "New Text": "You pull a memory, an idea, or a message from your mind and transform it into a tangible string of glowing energy called a thought strand, which persists for the duration or until you cast this glyph again. The thought strand appears in an unoccupied space within 5 feet of you as a Tiny, weightless, semisolid object that can be held and carried like a ribbon. It is otherwise stationary. If you cast this glyph while concentrating on a glyph or an ability that allows you to read or manipulate the thoughts of others (such as detect thoughts or modify memory), you can transform the thoughts or memories you read, rather than your own, into a thought strand. Casting this glyph while holding a thought strand allows you to instantly receive whatever memory, idea, or message the thought strand contains (casting detect thoughts on the strand has the same effect).",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Encrypt",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 minute",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You alter the writing on a scroll or piece of paper, making it unintelligible. A creature that spends a minute or more trying to decipher the text can make an Intelligence check against your spell saving throw DC; success indicates they decipher the text",
     "Higher Tiers": ""
   },
   {
