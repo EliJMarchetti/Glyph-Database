@@ -1,5 +1,4 @@
 // assets/js/script.js
-
 (async function() {
   //
   // 1) LOAD GLYPH DATA
@@ -53,11 +52,13 @@
   //
   // 5) ADMIN STATE & OCTOKIT
   //
-  let isAdmin = false, octokit, repoInfo;
+  let isAdmin = false;
+  let octokit, repoInfo;
   enterBtn.addEventListener('click', () => {
+    // first click → ask for PAT & init Octokit
     if (!octokit) {
       const token = prompt('🔑 Enter your GitHub Personal Access Token:');
-      if (!token) return;
+      if (!token) return;                  // user cancelled
       localStorage.setItem('gh_token', token);
       octokit = new window.Octokit({ auth: token });
       repoInfo = {
@@ -66,21 +67,33 @@
         path:  'data/glyphs.json'
       };
     }
+    // then toggle Admin UI
     isAdmin = !isAdmin;
     enterBtn.textContent = isAdmin ? '🔓 Exit Admin' : '🔒 Admin';
-    saveBtn.style.display = isAdmin ? 'inline-block' : 'none';
+    saveBtn.style.display  = isAdmin ? 'inline-block' : 'none';
     document.body.classList.toggle('admin-mode', isAdmin);
     render();
   });
+
   saveBtn.addEventListener('click', async () => {
+    // unicode-safe base64 encoder
+    function utoa(str) {
+      return btoa(unescape(encodeURIComponent(str)));
+    }
     try {
+      // fetch current file to get its SHA
       const { data: file } = await octokit.repos.getContent(repoInfo);
       const sha = file.sha;
-      const content = btoa(JSON.stringify(glyphs, null, 2));
+
+      // push updated glyphs[]
+      const json = JSON.stringify(glyphs, null, 2);
+      const content = utoa(json);
+
       await octokit.repos.createOrUpdateFileContents({
         ...repoInfo,
         message: '📦 Admin update of glyph data',
-        content, sha
+        content,
+        sha
       });
       alert('✅ glyphs.json updated on GitHub!');
     } catch (err) {
@@ -90,11 +103,11 @@
   });
 
   //
-  // 6) RENDER FUNCTION (with inline editing in Admin Mode)
+  // 6) RENDER FUNCTION
   //
   function render() {
-    const levelVal    = levelFilter.value;
-    let activeSchools = schools.filter(s => schoolBtns[s].classList.contains('active'));
+    const levelVal      = levelFilter.value;
+    let activeSchools   = schools.filter(s => schoolBtns[s].classList.contains('active'));
     if (activeSchools.length === 0) activeSchools = [...schools];
 
     const q         = searchInput.value.toLowerCase();
@@ -115,40 +128,40 @@
         return true;
       })
       .forEach((g, idx) => {
-        const card   = document.createElement('div');   card.className = 'card';
-        const header = document.createElement('div');   header.className = 'card-header';
+        // card
+        const card   = document.createElement('div'); card.className = 'card';
+        const header = document.createElement('div'); header.className = 'card-header';
 
-        // — Name (editable) —
-        const info = document.createElement('div');
-        info.className = 'info';
-        info.textContent = g.Name;
+        // — Name
+        const info = document.createElement('div'); info.className = 'info';
         if (isAdmin) {
           info.contentEditable = 'true';
-          info.dataset.field   = 'Name';
-          info.dataset.index   = idx;
+          info.dataset.field = 'Name';
+          info.dataset.index = idx;
           info.addEventListener('blur', e => {
             glyphs[e.target.dataset.index].Name = e.target.textContent.trim();
           });
         }
+        info.textContent = g.Name;
 
-        // — Meta (School, V/S, Tier, Mana) —
-        const meta = document.createElement('div');
-        meta.className = 'meta';
+        // — Meta (School, V/S, Tier, Mana)
+        // wrap each in a span with class
+        const meta = document.createElement('div'); meta.className = 'meta';
         meta.innerHTML = `
-          <span class="field-school">${g.School}</span>
+          <span class="field-School">${g.School}</span>
           <span class="vs">${g.V?'V':g.S?'S':''}</span>
-          • Tier <span class="field-Tier">${g.Tier}</span>
+          • <span class="field-Tier">${g.Tier}</span>
           • <span class="field-Points">${g.Points}</span> Mana
         `;
         if (isAdmin) {
-          ['school','Tier','Points'].forEach(fld => {
+          ['School','Tier','Points'].forEach(fld => {
             const el = meta.querySelector(`.field-${fld}`);
             el.contentEditable = 'true';
-            el.dataset.field   = fld;
-            el.dataset.index   = idx;
+            el.dataset.field = fld;
+            el.dataset.index = idx;
             el.addEventListener('blur', e => {
               let val = e.target.textContent.trim();
-              if (fld === 'Tier' || fld === 'Points') val = +val;
+              if (fld==='Tier'||fld==='Points') val = +val;
               glyphs[e.target.dataset.index][fld] = val;
             });
           });
@@ -157,40 +170,41 @@
         header.append(info, meta);
         card.append(header);
 
-        // — Body (editable paragraphs) —
-        const body = document.createElement('div');
-        body.className     = 'card-body';
+        // — Body
+        const body = document.createElement('div'); body.className = 'card-body';
         body.style.display = 'none';
+
+        // four fields: Casting Time, Duration, New Text, Higher Tiers
         const sections = [
-          { label: 'Casting Time', key: 'Casting Time' },
-          { label: 'Duration',     key: 'Duration',     suffix: g.Concentration ? ' (Concentration)' : '' },
-          { label: 'New Text',     key: 'New Text' },
-          { label: 'Higher Tiers', key: 'Higher Tiers' }
+          { label:'Casting Time', key:'Casting Time' },
+          { label:'Duration',    key:'Duration', suffix: g.Concentration ? ' (Concentration)' : '' },
+          { label:'New Text',    key:'New Text' },
+          { label:'Higher Tiers',key:'Higher Tiers' }
         ];
-        sections.forEach(sec => {
+        sections.forEach(({label,key,suffix}) => {
           const p = document.createElement('p');
-          p.textContent = `${sec.label}: ${g[sec.key] || ''}${sec.suffix||''}`;
+          p.textContent = `${label}: ${g[key]||''}${suffix||''}`;
           if (isAdmin) {
             p.contentEditable = 'true';
-            p.dataset.field   = sec.key;
-            p.dataset.index   = idx;
+            p.dataset.field = key;
+            p.dataset.index = idx;
             p.addEventListener('blur', e => {
-              let txt = e.target.textContent.replace(new RegExp(`^${sec.label}:\\s*`), '')
-                                            .replace(sec.suffix||'', '')
-                                            .trim();
-              glyphs[e.target.dataset.index][sec.key] = txt;
+              // strip off "Label: " prefix and any suffix
+              let txt = e.target.textContent.replace(new RegExp(`^${label}:\\s*`), '')
+                        .replace(suffix||'','').trim();
+              glyphs[e.target.dataset.index][key] = txt;
             });
           }
           body.append(p);
         });
-        card.append(body);
 
         header.addEventListener('click', () => {
-          const open = body.style.display === 'block';
+          const open = body.style.display==='block';
           body.style.display = open ? 'none' : 'block';
           card.classList.toggle('open', !open);
         });
 
+        card.append(body);
         container.append(card);
       });
   }
