@@ -922,9 +922,9 @@
     "Name": "Booming Blade",
     "Tier": 0,
     "Points": 0,
-    "School": "Nature",
-    "V": true,
-    "S": false,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
     "Casting Time": "2 AP",
     "Concentration": false,
     "Duration": "1 round",
@@ -1798,7 +1798,7 @@
     "Range": "60 feet",
     "Rite": false,
     "Old Text": "You choose a nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways: You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location; You instantaneously extinguish the flames within the cube; You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour; You cause simple shapes - such as the vague form of a creature, an inanimate object, or a location - to appear within the flames and animate as you like. The shapes last for 1 hour. If you cast this spell multiple times, you can have up to three non-instantaneous effects created by it active at a time, and you can dismiss such an effect as an action.",
-    "New Text": "You choose a nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways: You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location; You instantaneously extinguish the flames within the cube; You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour; You cause simple shapes - such as the vague form of a creature, an inanimate object, or a location - to appear within the flames and animate as you like. The shapes last for 1 hour. If you cast this glyph multiple times, you can have up to three non-instantaneous effects created by it active at a time, and you can dismiss such an effect as an action.",
+    "New Text": "You choose a source of flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways: You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location; You instantaneously extinguish the flames within the cube; You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour; You cause simple shapes - such as the vague form of a creature, an inanimate object, or a location - to appear within the flames and animate as you like. The shapes last for 1 hour. If you cast this glyph multiple times, you can have up to three non-instantaneous effects created by it active at a time, and you can dismiss such an effect as an action.",
     "Higher Tiers": ""
   },
   {
@@ -2095,7 +2095,7 @@
     "Name": "Dancing Lights",
     "Tier": 0,
     "Points": 0,
-    "School": "Nature",
+    "School": "Celestial",
     "V": true,
     "S": false,
     "Casting Time": "2 AP",
@@ -4968,9 +4968,9 @@
     "Name": "Infestation",
     "Tier": 0,
     "Points": 0,
-    "School": "Chaos",
-    "V": false,
-    "S": true,
+    "School": "Nature",
+    "V": true,
+    "S": false,
     "Casting Time": "2 AP",
     "Concentration": false,
     "Duration": "Instantaneous",
@@ -6664,23 +6664,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "",
-    "Name": "Primal Savagery",
-    "Tier": 0,
-    "Points": 0,
-    "School": "Nature",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "Self",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee glyph attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal.",
-    "Higher Tiers": "At Higher Mana Cost. This glyph’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10). "
-  },
-  {
     "Chat Name": "Primal Savagery",
     "Name": "Primal Savagery",
     "Tier": 0,
@@ -6694,8 +6677,8 @@
     "Range": "Self",
     "Rite": false,
     "Old Text": "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee spell attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal. The spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
-    "New Text": "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee glyph attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal. The glyph's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
-    "Higher Tiers": ""
+    "New Text": "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee glyph attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal. ",
+    "Higher Tiers": "The glyph's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."
   },
   {
     "Chat Name": "Divine Favor",
