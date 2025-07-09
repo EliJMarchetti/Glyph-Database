@@ -358,6 +358,23 @@
   },
   {
     "Chat Name": "",
+    "Name": "Arcane Detonator",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP ",
+    "Concentration": false,
+    "Duration": "10 minutes",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You place a bead of magical force on a point or object within range. At any time before the end of the glyph's duration, you can use 1 AP to detonate it. All creatures within 5 feet of the bead must make a Constitution saving throw, taking 1d8 damage of your afinity's type on a failure. ",
+    "Higher Tiers": "Increase duration and damage / level up. "
+  },
+  {
+    "Chat Name": "",
     "Name": "Arcane Eruption",
     "Tier": 4,
     "Points": 15,
@@ -1324,6 +1341,23 @@
     "Old Text": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can affect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see). Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends, subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
     "New Text": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this glyph can affect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see). Starting with the creature that has the lowest current hit points, each creature affected by this glyph is blinded until the glyph ends, subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Colour",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You magicly create an illusin to mask or create a colorful effect on an object within range. ",
+    "Higher Tiers": ""
   },
   {
     "Chat Name": "",
@@ -8769,6 +8803,23 @@
     "Rite": false,
     "Old Text": "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered. You can use this transportation ability once per round for the duration. You must end each turn outside a tree.",
     "New Text": "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered. You can use this transportation ability once per round for the duration. You must end each turn outside a tree.",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Trickster's Quirk",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You attempt to cause a creature within range that you can see to make an involuntary expression or sound. The creature must succeed on a Wisdom saving throw. On a failure, choose one of the following: The creature's facial muscles contract, causing it to wink, blink, grin, grimace or drop its jaw (your choice). The creature lets out an involuntary belch, cough, laugh, scream or sneeze, or says a random word (your choice, but you don't get to choose the word if you choose to make it say a word).If the creature was concentrating on a spell or ability when it failed the saving throw, it must succeed on a Constitution saving throw against your spell save DC to maintain concentration.",
     "Higher Tiers": ""
   },
   {
