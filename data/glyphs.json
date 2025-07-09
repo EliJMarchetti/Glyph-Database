@@ -2873,6 +2873,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Echo Mute",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You make a sealing gesture, stealing the target’s voice. One creature you can see must make a Charisma saving throw. On a failure, it cannot speak or cast spells with verbal components until the end of its next turn.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Elemental Bane",
     "Name": "Elemental Bane",
     "Tier": 5,
@@ -8090,6 +8107,23 @@
     "Old Text": "",
     "New Text": "You release a burst of static electricity in a 15-foot line. Each creature in the line must succeed on a Agility saving throw or take 1d8 lightning damage and be pushed 5 feet away from you. ",
     "Higher Tiers": "At Higher Mana Cost. The damage increases by 1d8 at 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Static Pin",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "A jab of your finger sends a pinprick shock to a creature’s nervous system. Make a ranged spell attack. On a hit, the target takes 1d6 lightning damage and can’t take reactions until the start of its next turn.",
+    "Higher Tiers": ""
   },
   {
     "Chat Name": "Steel Wind Strike",
