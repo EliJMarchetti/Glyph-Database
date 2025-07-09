@@ -19,8 +19,8 @@
       </select>
 
       <!-- Admin Mode toggles -->
-      <button id="enterAdmin">🔒 Admin</button>
-      <button id="saveAdmin" style="display:none">💾 Save Changes</button>
+      <button id="enterAdmin" class="school-button">🔒 Admin</button>
+      <button id="saveAdmin" class="school-button" style="display:none">💾 Save Changes</button>
 
       <div id="schoolFilters"></div>
     </header>
@@ -31,8 +31,11 @@
     <main id="cardsContainer"></main>
   </div>
 
-  <!-- 1) Octokit UMD (must come before your script) -->
-  <script src="https://cdn.jsdelivr.net/npm/@octokit/rest/dist/octokit.umd.min.js"></script>
+  <!-- 1) Octokit via ES module (must come before your script) -->
+  <script type="module">
+    import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest';
+    window.Octokit = Octokit;
+  </script>
   <!-- 2) Your app script -->
   <script src="assets/js/script.js?v=6"></script>
 </body>
