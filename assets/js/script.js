@@ -2,30 +2,6 @@
 
 (async function() {
   //
-  // 0) ADMIN MODE SETUP
-  //
-  let octokit, repoInfo;
-  try {
-    // Grab the global Octokit constructor (from the UMD build)
-    const OctokitClass = window.Octokit;
-    let token = localStorage.getItem('gh_token');
-    if (!token) {
-      token = prompt('🔑 Enter your GitHub Personal Access Token:');
-      if (token) localStorage.setItem('gh_token', token);
-    }
-    if (token && OctokitClass) {
-      octokit = new OctokitClass({ auth: token });
-      repoInfo = {
-        owner: 'EliJMarchetti',
-        repo:  'Glyph-Database',
-        path:  'data/glyphs.json'
-      };
-    }
-  } catch (err) {
-    console.warn('⚠️ Admin Mode disabled:', err);
-  }
-
-  //
   // 1) LOAD GLYPH DATA
   //
   const res    = await fetch('data/glyphs.json');
@@ -76,12 +52,12 @@
   // 5) RENDER FUNCTION
   //
   function render() {
-    const levelVal      = levelFilter.value;
-    let activeSchools   = schools.filter(s => schoolBtns[s].classList.contains('active'));
+    const levelVal    = levelFilter.value;
+    let activeSchools = schools.filter(s => schoolBtns[s].classList.contains('active'));
     if (activeSchools.length === 0) activeSchools = [...schools];
 
-    const q             = searchInput.value.toLowerCase();
-    const inDetails     = searchToggle.checked;
+    const q         = searchInput.value.toLowerCase();
+    const inDetails = searchToggle.checked;
 
     container.innerHTML = '';
     glyphs
@@ -140,7 +116,7 @@
   }
 
   //
-  // 6) HOOK UP FILTERS
+  // 6) HOOK UP FILTERS → render
   //
   levelFilter.addEventListener('change', render);
   searchInput.addEventListener('input', render);
@@ -172,42 +148,44 @@
   }
 
   //
-  // 9) ADMIN MODE: toggle & save via Octokit
+  // 9) ADMIN MODE: on-demand GitHub token + Octokit
   //
   const enterBtn = document.getElementById('enterAdmin');
   const saveBtn  = document.getElementById('saveAdmin');
-  let   isAdmin  = false;
+  let   octokit, repoInfo, isAdmin = false;
 
   enterBtn.addEventListener('click', () => {
+    // first click → ask for PAT & init Octokit
     if (!octokit) {
-      alert('⚠️ Admin Mode unavailable: no GitHub token or Octokit.');
-      return;
+      const token = prompt('🔑 Enter your GitHub Personal Access Token:');
+      if (!token) return;                  // user cancelled
+      localStorage.setItem('gh_token', token);
+      octokit = new window.Octokit({ auth: token });
+      repoInfo = {
+        owner: 'EliJMarchetti',
+        repo:  'Glyph-Database',
+        path:  'data/glyphs.json'
+      };
     }
+    // then toggle Admin UI
     isAdmin = !isAdmin;
     enterBtn.textContent = isAdmin ? '🔓 Exit Admin' : '🔒 Admin';
-    saveBtn.style.display = isAdmin ? 'inline-block' : 'none';
+    saveBtn.style.display  = isAdmin ? 'inline-block' : 'none';
     document.body.classList.toggle('admin-mode', isAdmin);
   });
 
   saveBtn.addEventListener('click', async () => {
     try {
-      // fetch current file SHA
-      const { data: file } = await octokit.repos.getContent({
-        owner: repoInfo.owner,
-        repo:  repoInfo.repo,
-        path:  repoInfo.path,
-      });
+      // fetch current file to get its SHA
+      const { data: file } = await octokit.repos.getContent(repoInfo);
       const sha = file.sha;
 
-      // commit updated glyphs array
+      // push updated glyphs[]
       const content = btoa(JSON.stringify(glyphs, null, 2));
       await octokit.repos.createOrUpdateFileContents({
-        owner:   repoInfo.owner,
-        repo:    repoInfo.repo,
-        path:    repoInfo.path,
+        ...repoInfo,
         message: '📦 Admin update of glyph data',
-        content: content,
-        sha:     sha,
+        content, sha
       });
       alert('✅ glyphs.json updated on GitHub!');
     } catch (err) {
