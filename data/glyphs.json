@@ -68,6 +68,57 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Agron's Dome od Life Transference",
+    "Tier": 6,
+    "Points": 27,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "Self (20-foot radius sphere)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Upon invoking Agron’s Life Transference, you conjure a sinister dome of pulsating energy that emanates from you, extending outward to form a 20-foot-radius sphere. This void energy siphons the life force from other creatures to bolster your own vitality. Each creature within the sphere, other than you, must make a Constitution saving throw at the start of its turn. On a failed save, a creature takes 7d6 void damage, and you gain temporary hit points equal to half the total damage dealt. On a successful save, a creature takes half as much damage, and you gain no temporary hit points. In addition, a creature's movement speed is halved while it remains inside the sphere.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended. "
+  },
+  {
+    "Chat Name": "",
+    "Name": "Agron's Lightning Arrow",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "90 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "A crackling bolt of lightning streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 lightning damage and must succeed on a Constitution saving throw or be stunned until the end of its next turn. If the bolt hits, it can arc to one additional creature within 10 feet of the original target. Make a separate attack roll for the second target.",
+    "Higher Tiers": "At higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 and the bolt can jump to one additional target within 10 feet of the previous target  for every 3 additional mana expended."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Agron's Storm Armor",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 hour",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You channel your arcane energy, creating a protective aura of crackling lightning that surrounds you until the glyph ends. Your base AC becomes 15 + your Agility modifier. The glyph ends if you don armor or dismiss it as an action. While this aura is active, your movement speed increases by 20 feet. Additionally, any creature that starts its turn within 5 feet of you must make a Agility saving throw. On a failed save, the creature takes 4d4 lightning damage, or half as much damage on a successful save.",
+    "Higher Tiers": "At higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d4 and the movement speed increases by 5 feet for every 3 additional mana expended."
+  },
+  {
     "Chat Name": "Aid",
     "Name": "Aid",
     "Tier": 3,
@@ -134,6 +185,40 @@
     "Old Text": "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one. Aquatic Adaptation. You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. Change Appearance. You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again. Natural Weapons. You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon you have is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
     "New Text": "You assume a different form. When you cast the glyph, choose one of the following options, the effects of which last for the duration of the glyph. While the glyph lasts, you can end one option as an action to gain the benefits of a different one. Aquatic Adaptation. You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. Change Appearance. You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this glyph to become quadrupedal, for instance. At any time for the duration of the glyph, you can use your action to change your appearance in this way again. Natural Weapons. You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon you have is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Analyze Blood",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 minute",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": true,
+    "Old Text": "",
+    "New Text": "You are able to learn a number of qualities from one ounce of fresh blood, as long as it is no more than 24 hours old. Roll a d4 and choose a number of qualities, up to the number rolled, from the following list; The creature’s type, The creature’s age (if applicable), The creature’s gender (if applicable), If the blood carries any trace of poison or disease, If the creature is within 20 miles of your location, You may also see, from the creature’s perspective, the moment before this blood was spilled. The qualities you notice and the duration of this vision are up to GM discretion. ",
+    "Higher Tiers": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you learn one additional quality from the list for every 3 additional mana expended. "
+  },
+  {
+    "Chat Name": "",
+    "Name": "Anesthesia",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Nature",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "10 minutes",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You flood a creature’s body with a powerful magical anesthetic, dulling their sense of pain to the point of near invincibility. Choose one creature within range. For the duration, if the target’s hit points are reduced to 0, they do not fall unconscious. Instead, they remain conscious and continue to act normally, sustained by a pool of temporary hit points equal to 5x your glyph casting ability modifier + your character level. Once these temporary hit points are depleted, the spell ends, and the creature immediately falls unconscious. If the target is stabilized after falling unconscious, they suffer 1 level of exhaustion. If the target is healed and their hit points are restored above 0, they do not suffer any exhaustion.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the temporary hit points gained increases by 5 for every 3 additional mana expended. "
   },
   {
     "Chat Name": "Animal Friendship",
@@ -221,6 +306,23 @@
     "Higher Tiers": "If you cast this Glyph using a Glyph slot of 6th level or higher, you can animate two additional objects for each slot level above 5th."
   },
   {
+    "Chat Name": "",
+    "Name": "Antagonize",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You whisper magical words that antagonize one creature of your choice within range. The target must make a Wits saving throw. On a failed save, the target takes 4d4 psychic damage and must immediately use its reaction to make a melee attack against another creature of your choice that you can see. If the target can’t make this attack (for example, because there is no one within its reach or because its reaction is unavailable), the target instead has disadvantage on the next attack roll it makes before the start of your next turn. On a successful save, the target takes half as much damage only.",
+    "Higher Tiers": "At higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d4 for every 3 additional mana expended."
+  },
+  {
     "Chat Name": "Antilife Shell",
     "Name": "Antilife Shell",
     "Tier": 6,
@@ -272,6 +374,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Arcane Eruption",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "120 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Churning magical energy explodes in a 20-foot- radius sphere centered on a point you choose within range. When you cast the glyph, you select the type of damage dealt by the explosion: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder. Each creature in the sphere must make a Agility saving throw. On a failed save, a creature takes 6d6 damage of the chosen type. On a successful save, a creature takes half as much damage. Choose one of those d6s. The number rolled on that die determines a condition that’s applied to each creature that failed the save, as shown below. A creature has the condition until the end of your next turn. D6 Additional Effect\r\n1. Incapacitated\r\n2. Blinded\r\n3. Frightened\r\n4. Poisoned\r\n5. Charmed\r\n6. Deafened ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Nystul's Magic Aura",
     "Name": "Arcane Forgery",
     "Tier": 2,
@@ -303,6 +422,23 @@
     "Rite": false,
     "Old Text": "You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost. The portals are two dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal. Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction.",
     "New Text": "You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the glyph fails, and the casting is lost. The portals are two dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal. Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction.",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Arcane Key",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "You touch a locked, non-magical door, chest, or other object, as well as any toolset, temporarily transmuting the lock mechanism, when you or an ally within 5 feet of you attempts to pick a lock, you can add your Wellspring (arcana) modifier in place of Profession for the check to anyone attempting the to pick the lock. Additionally, the toolst counts as Tinkerer's Tools for the sake of picking that lock. This effect lasts for 1 minute or until the lockpicking attempt is completed.",
+    "New Text": "",
     "Higher Tiers": ""
   },
   {
@@ -338,6 +474,23 @@
     "Old Text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage.",
     "New Text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, both the temporary hit points and the cold damage increases by 5 for each slot level above 1st."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Armor of the Red Prince",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 hour",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You touch a willing creature, enveloping them in a protective layer of force imbued with fiery energy. The target's Armor Class increases by +3 for the duration. Additionally, any creature that hits the target with a melee attack takes 2d6 fire damage. You can dismiss this glyph as a bonus action.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6  for every 3 additional mana expended. If you expend an additional 9 mana the armor class bonus increases to +4. If you expend 13 additional mana the armor class bonus increases to +5. "
   },
   {
     "Chat Name": "Tasha's Mind Whip",
@@ -561,6 +714,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Black Bolt",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "With a motion of your hand, you summon a bolt of void energy and hurl it at up to three creatures within range and within your line of sight. Each target must make a Constitution saving throw. On a failed save, a target takes 3d12 void damage and suffers 1 level of exhaustion. On a successful save, the target takes half damage and suffers no exhaustion.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d12 for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Blade Barrier",
     "Name": "Blade Barrier",
     "Tier": 8,
@@ -610,6 +780,40 @@
     "Old Text": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
     "New Text": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Blade Ward",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP, spent when you are targeted with a melee attack",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "You release a pulse of protective mana, imposing disadvantage on the creature’s attack roll. ",
+    "New Text": "You release a pulse of protective mana, imposing disadvantage on the creature’s attack roll. ",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Blades of Shielding Blizzard",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You conjure two blades of ice that hover around you for the duration, or until you use them to attack. While these ice blades are hovering around you, your Armor Class increases by +1 for each blade. As a bonus action on the turn you create them, and on each of your subsequent turns, you can send one of the blades flying toward a creature you can see within 60 feet of you. Make a ranged glyph attack against the target. On a hit, the target takes 1d8 slashing damage plus 2d8 cold damage. The blade shatters upon hitting the target or reaching the end of its range, and is lost. Additionally, when you take damage while at least one blade is hovering around you, you can use your reaction to sacrifice any number of your remaining ice blades. For each blade you sacrifice, you reduce the damage by 1d8. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you conjure one additional ice blade for every 3 additional mana expended. "
   },
   {
     "Chat Name": "Blight",
@@ -663,6 +867,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
   },
   {
+    "Chat Name": "",
+    "Name": "Blood Bind",
+    "Tier": 7,
+    "Points": 36,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "8 hours",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You sacrifice a portion of your own vitality to harm your enemies. Choose one creature within range. For the duration of the glyph, each time you take damage, the target must make a Constitution saving throw. On a failed save, the target takes the same amount of damage that you suffered. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can target an additional target for every 6 additional mana expended. "
+  },
+  {
     "Chat Name": "Blur",
     "Name": "Blur",
     "Tier": 2,
@@ -712,6 +933,23 @@
     "Old Text": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes 1d8 thunder damage, and the spell ends. This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d8 thunder damage to the target on a hit, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level (2d8 and 3d8) and again at 17th level (3d8 and 4d8).",
     "New Text": "You brandish the weapon used in the glyph's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes 1d8 thunder damage, and the glyph ends. This glyph's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d8 thunder damage to the target on a hit, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level (2d8 and 3d8) and again at 17th level (3d8 and 4d8).",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Boreal Strike",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 minute",
+    "Concentration": false,
+    "Duration": "8 hours",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You touch one willing creature at the conclusion of this glyph’s casting. The next time that creature rolls initiative or begins a surprise round they instantly vanish, appearing within 100 feet of their original location at the start of their next turn. Their first attack on this turn is made with advantage. ",
+    "Higher Tiers": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you can target one additional creature for every 3 additional mana expended. "
   },
   {
     "Chat Name": "Borrowed Knowledge",
@@ -833,6 +1071,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the maximum weight of objects that you can target with this Glyph increases by 5 pounds, and the damage increases by 1d8, for each slot level a bove 1st."
   },
   {
+    "Chat Name": "",
+    "Name": "Catnap",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "10 minutes",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You make a calming gesture, and up to three willing creatures of your choice that you can see within range fall unconscious for the glyph’s duration. The glyph ends on a target early if it takes damage or someone uses an action to shake or slap it awake. If a target remains unconscious for the full duration, that target gains the benefit of a short rest, and it can’t be affected by this glyph again until it finishes a long rest.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Catnap",
     "Name": "Catnap",
     "Tier": 4,
@@ -899,6 +1154,23 @@
     "Old Text": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts. A target must make a Dexterity saving throw. The target takes 10d8 lightning damage on a failed save, or half as much damage on a successful one.",
     "New Text": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts. A target must make a agility saving throw. The target takes 10d8 lightning damage on a failed save, or half as much damage on a successful one.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Chaos Blast",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "A swirling, multi-colored streak of energy flashes from your open hand to a point you choose within range, then blossoms with an inverse roar into an explosion of chaotic energy. Each creature in a 20-foot-radius sphere centered on that point must make an Agility saving throw. A target takes 4d6 damage on a failed save, or half as much damage on a successful one. After rolling the damage, roll a d10 to determine the type of damage and additional effect as detailed below. The chaotic energy spreads around corners. 1) Acid- Creatures affected by the blast take an additional 1d6 acid damage. Organic material (not including creatures) in the area takes 1d6 acid damage. 2) Cold- Creatures affected by the blast have their movement speed reduced to zero. Extinguishes flames (that are no greater than 20 feet cubed) in the area. * 3) Fire- Creatures affected by the blast receive an additional 1d6 fire damage. Ignites flammable objects in the area that aren't being worn or carried.  3) Fire- 4) Force- Creatures affected by the blast are pushed 5 feet in a random direction (determined by the GM). Objects in the area that aren't being worn or carried are blasted 20 feet in a random direction. 5) Lightning- Creatures affected by the blast are unable to take reactions until the start of their next turn. Metal objects in the area that aren't being worn or carried become red hot causing 2d6 fire damage on touch. 6) Poison- creatures affected by the blast take an additional 1d6 poison damage and must make a successful constitution saving throw or be poisoned until the end of their next turn  7) Psychic- sentient or normal creatures must make a successful wisdom saving throw or become frightened of you until the end of their next turn.  8) Thunder- creatures affected by the blast must make a successful constitution saving throw or become deafened until the end of their next turn the blast is heard up to 600 ft away 9) Radiant- creatures must make a successful wisdom saving through or take an additional 2d6 radiant damage. Undead and fiends take 4d6 radiant damage 10) Void- creatures affected by the blast must make a successful constitution saving throw or take an additional 1d6 void damage and the caster then gains temporary hit points equal to half the damage dealt.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended. "
   },
   {
     "Chat Name": "Chaos Bolt",
@@ -1071,6 +1343,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
   },
   {
+    "Chat Name": "",
+    "Name": "Combustion",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You snap your fingers, directing a sudden eruption of flame at a target within range. The target must make an Agility saving throw. On a failed save, the target takes 6d10 fire damage, or half as much on a successful save. The glyph also creates a small magical fire in the creature's space that lingers for the duration. A creature that enters the flames for the first time on its turn or ends its turn there takes 2d6 fire damage.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 and 1d6  for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Command",
     "Name": "Command",
     "Tier": 1,
@@ -1137,6 +1426,23 @@
     "Old Text": "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.",
     "New Text": "For the duration, you have advantage on all wellspring checks directed at one creature of your choice that isn't hostile toward you. When the glyph ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Companions",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "For the duration, you exude an aura of camaraderie, making it easier to win others over. When you cast this spell, choose one creature within 30 feet that you can see. The chosen creature must make a Wits saving throw against your glyp save DC. On a failed save, the creature regards you as a companion. While under the effects of this glyph, the target is inclined to be helpful, cooperative, and less likely to view your actions negatively. However, once the glyph ends, the target realizes it was magically charmed and may react accordingly.",
+    "Higher Tiers": "At Higher Mana Cost. When you reach 5th level, you can choose two creatures within 30 feet of you. At 11th level, you can choose three creatures, and the duration of the cantrip increases to 10 minutes. At 17th level, you can choose four creatures, and the duration of the cantrip increases to 1 hour."
   },
   {
     "Chat Name": "Compelled Duel",
@@ -1428,6 +1734,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Contort Bone",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You reach out with your wellspring and attempt to crush a creature’s bones. One creature that you choose within range must succeed on a strength saving throw or take 3d6 piercing damage and be knocked prone. On subsequent turns, you can use your action to force the creature to repeat the saving throw. If a creature fails the saving throw against this glyph three times during the duration, the creature has disadvantage on ability checks and saving throws that use one ability of your choice for the duration. In addition, such a creature cannot move more than 25 feet on its turn, due to crippling pain. ",
+    "Higher Tiers": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you deal an additional 2d6 damage for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Control Flames",
     "Name": "Control Flames",
     "Tier": 0,
@@ -1700,6 +2023,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Crushing Despair",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You unleash a wave of despair, instilling overwhelming sorrow and fatigue into the hearts of those who behold it. Each creature in a 30-foot cone must make a Constitution saving throw. On a failed save, a creature with 2 or fewer levels of exhaustion is treated as if it has 3 levels of exhaustion for the duration of the glyph.",
+    "Higher Tiers": "At the end of each of its turns, an affected creature can repeat the saving throw, ending the effect on itself on a success."
+  },
+  {
     "Chat Name": "Cure Wounds",
     "Name": "Cure Wounds",
     "Tier": 1,
@@ -1883,7 +2223,7 @@
     "Range": "Touch",
     "Rite": false,
     "Old Text": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options: Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score; While cursed, the target has disadvantage on attack rolls against you; While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing; While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target. A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.",
-    "New Text": "You touch a creature, and that creature must succeed on a wits saving throw or become cursed for the duration of the glyph. When you cast this glyph, choose the nature of the curse from the following options: Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score; While cursed, the target has disadvantage on attack rolls against you; While cursed, the target must make a wits saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing; While the target is cursed, your attacks and glyphs deal an extra 1d8 necrotic damage to the target. A remove curse glyph ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.",
+    "New Text": "You touch a creature and place a Glyph on their body that slows the flow of their wellspring, and that creature must succeed on a Wits saving throw or becomes weakened for the duration of the glyph. When you cast this glyph, choose the nature of the effects from the following options:\r\n\r\nChoose one ability score. While under the effects, the target has disadvantage on ability checks and saving throws made with that ability score.\r\nWhile effected, the target has disadvantage on attack rolls against you.\r\nWhile effected, the target must make a Wits saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.\r\nWhile the target is effected, your attacks and glyphs deal an extra 1d8 void damage to the target.\r\nThe Rehabilitation, or Greater Restoration glyph ends this effect. At the DM's option, you may choose an alternative effect, but it should be no more powerful than those described above. The DM has final say on such effects.",
     "Higher Tiers": "If you cast this Glyph using a Glyph slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a Glyph slot of 5th level or higher, the duration is 8 hours. If you use a Glyph slot of 7th level or higher, the duration is 24 hours. If you use a 9th level Glyph slot, the Glyph lasts until it is dispelled. Using a Glyph slot of 5th level or higher grants a duration that doesn't require concentration."
   },
   {
@@ -1919,6 +2259,23 @@
     "Old Text": "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side. Each time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
     "New Text": "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the glyph ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side. Each time you cast this glyph, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this glyph. Additionally, if you know the nature and contents of a demiplane created by a casting of this glyph by another creature, you can have the shadowy door connect to its demiplane instead.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Deplete",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "120 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You attempt to douse out the wellspring of another creature. Make a ranged wellspring attack against the creature to assail it. On a hit, the target takes 1d8 void damage, and it can’t regain hit points until the start of your next turn. ",
+    "Higher Tiers": "At Higher Mana Cost. This glyph’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8). "
   },
   {
     "Chat Name": "Destructive Wave",
@@ -2023,6 +2380,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Disarm",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "As an action, the caster mutters an arcane word and waves their hand dismissively. Choose a creature you can see within 30 ft of yourself. That creature must make a strength saving throw against your glyph save DC. If the target fails, any object that the creature is holding flies out of their hands in a random direction and lands 10 ft away. The glyph can affect two items if both items are held by the target creature. On a successful save, the glyph does not disarm the target.",
+    "Higher Tiers": "At Higher Mana Cost. When you reach 5th level, the cantrip can affect up to 3 items if all items are held by the target creature, and the distance the objects fly increases to 20 feet. At 11th level, the cantrip can affect up to 4 items, and the distance increases to 30 feet. At 17th level, the cantrip can affect up to 5 items, and the distance increases to 40 feet."
+  },
+  {
     "Chat Name": "Augury",
     "Name": "Discern Reality",
     "Tier": 3,
@@ -2125,6 +2499,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
   },
   {
+    "Chat Name": "",
+    "Name": "Distort Recollection",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You attempt to erase yourself from a creature's memory. Choose one creature you can see within range. The target must make a Mind saving throw, with advantage if you or your allies are currently fighting it. On a failed save, the creature forgets any memories associated with you from the past 10 minutes, including the casting of this glyph. The creature will forget any direct interactions or observations involving you, such as a conversation you had or an object you broke in its presence. However, the target will retain memories of how other creatures interacted with you, though it will not associate those interactions with you. For example, if you spoke to the creature, it would remember talking but perceive it as if it were speaking to itself. If you were merely present during a significant event but did not directly interact with the target, such as making a sound without the target seeing you, the target retains the memory of the event but not of your involvement. If you met the target within the last 10 minutes, the target forgets your existence entirely. A remove curse or greater restoration spell cast on the target restores the creature's true memory.",
+    "Higher Tiers": "At Higher Mana cost: For every 3 additional mana you expend, you can target one additional creature."
+  },
+  {
     "Chat Name": "Distort Value",
     "Name": "Distort Value",
     "Tier": 1,
@@ -2140,6 +2531,23 @@
     "Old Text": "You cast this spell on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusionary flourish or reducing its perceived value by half with the help of illusionary dents and scratches. Anyone examining the object must roll an Investigation check against your spell DC.",
     "New Text": "You cast this glyph on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusionary flourish or reducing its perceived value by half with the help of illusionary dents and scratches. Anyone examining the object must roll an Investigation check against your glyph DC.",
     "Higher Tiers": "When you cast this Glyph using a higher Glyph slot, you increase the size of the object by 1 foot per Glyph slot over 1st."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Divine Shackle",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": " You shout a binding command, causing ethereal shackles to clench around the wrists, neck, and ankles of a creature you can see within range. The target must make a Mind saving throw. On a failed save, the creature takes 4d10 radiant damage and is unable to attack or cast glyphs and is compelled to follow your commands. At the start of each of its turns, the target can make another Mind saving throw, ending the effect on itself on a success. If the target takes damage while under this glyphs effect, it has advantage on the saving throw.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can target an additional creature for every 3 additional mana expended. "
   },
   {
     "Chat Name": "Divine Word",
@@ -2242,6 +2650,23 @@
     "Old Text": "You touch one willing creature and imbue it with the power to spew magical energy from its mouth, provided it has one. Choose acid, cold, fire, lightning, or poison. Until the spell ends, the creature can use an action to exhale energy of the chosen type in a 15-foot cone. Each creature in that area must make a Dexterity saving throw, taking 3d6 damage of the chosen type on a failed save, or half as much damage on a successful one.",
     "New Text": "You touch one willing creature and imbue it with the power to spew magical energy from its mouth, provided it has one. Choose acid, cold, fire, lightning, or poison. Until the glyph ends, the creature can use an action to exhale energy of the chosen type in a 15-foot cone. Each creature in that area must make a agility saving throw, taking 3d6 damage of the chosen type on a failed save, or half as much damage on a successful one.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Drain Vitality",
+    "Tier": 1,
+    "Points": 3,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (10-foot radius spere)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You pull the wellspring out of living things within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 void damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended."
   },
   {
     "Chat Name": "Dream",
@@ -2410,8 +2835,8 @@
     "Range": "120 feet",
     "Rite": false,
     "Old Text": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
-    "New Text": "A beam of crackling energy streaks toward a creature within range. Make a ranged glyph attack against the target. On a hit, the target takes 1d10 force damage. The glyph creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
-    "Higher Tiers": ""
+    "New Text": "A pop of energy strikes a creature within range. Make a ranged wellspring attack against the target. On a hit, the target takes 1d10 damage of your affinity’s type.",
+    "Higher Tiers": "At Higher Mana Cost. The glyph creates more than one burst when you reach higher levels: two bursts at 5th level, three bursts at 11th level, and four bursts at 17th level. You can direct the bursts at the same target or at different ones. Make a separate attack roll for each burst. "
   },
   {
     "Chat Name": "Elemental Weapon",
@@ -2429,6 +2854,40 @@
     "Old Text": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
     "New Text": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a Glyph slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Ellaine's Minor Fortification",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 hour",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Do your doors keep getting broken down during raids or perhaps you have one last stretch till you reach town and your carriage needs one last push? Take this knowledge of wondrous wonder that will do all those things and more! You touch an object, granting it a magical fortification. The object gains a +2 bonus to AC and 1d8 temporary hit points. The object can be anything determined by the FM, such as a piece of paper, a rotten door, or a spell book. The cantrip does not affect armor, clothing being worn, or weapons. If the object is used as armor, a weapon, or a mobile shield (not cover), the glyph ends immediately. Once the cantrip ends, the object loses the AC bonus and any remaining temporary hit points. The object cannot be larger than 10 feet in any direction.",
+    "Higher Tiers": "At Higher Mana Cost. The temporary hit points provided increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Emberflame",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "120 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You hurl a small ember of flame at a creature or object within range. Make a ranged glyph attack against the target. On a hit, the target takes 1d8 fire damage.Ignition Effect: If the target is a creature, it must make an agility saving throw against your glyph save DC. On a failed save, the target catches fire. Until someone or the creature takes an action to douse the fire, the target takes 1d4 fire damage at the start of each of its turns.",
+    "Higher Tiers": "At Higher Mana Cost. The glyph's damage increases by 1d8 and 1d4 when you reach 5th level (2d8/2d4), 11th level (3d8/3d4)), and 17th level (4d8/4d4)."
   },
   {
     "Chat Name": "Encode Thoughts",
@@ -2582,6 +3041,23 @@
     "Old Text": "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand.",
     "New Text": "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a agility saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Estelle's Flourish",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "20 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You attempt to erase yourself from a creature's memory. Choose one creature you can see within range. The target must make a Mind saving throw, with advantage if you or your allies are currently fighting it. On a failed save, the creature forgets any memories associated with you from the past 10 minutes, including the casting of this glyph. The creature will forget any direct interactions or observations involving you, such as a conversation you had or an object you broke in its presence. However, the target will retain memories of how other creatures interacted with you, though it will not associate those interactions with you. For example, if you spoke to the creature, it would remember talking but perceive it as if it were speaking to itself. If you were merely present during a significant event but did not directly interact with the target, such as making a sound without the target seeing you, the target retains the memory of the event but not of your involvement. If you met the target within the last 10 minutes, the target forgets your existence entirely. A remove curse or greater restoration spell cast on the target restores the creature's true memory.",
+    "Higher Tiers": "At higher Mana cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d12 for every 3 additional mana expended."
   },
   {
     "Chat Name": "Clairvoyance",
@@ -3060,6 +3536,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Flashbang",
+    "Tier": 1,
+    "Points": 3,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You conjure a shimmering orb of crackling electricity and hurl it at a creature within range. Make a ranged spell attack against the target. On a hit, the orb erupts in a brilliant flash of azure lightning. The target takes 1d8 lightning damage plus your glyph casting ability modifier and must succeed on a Constitution saving throw or be blinded until the end of your next turn. Additionally, each creature within a 10-foot radius of the target must make a Constitution saving throw or be blinded until the end of your next turn. If the spell attack misses, the orb dissipates harmlessly with no further effect.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended and the radius of the blinding effect increases by 5 feet for every 3 additional mana expended."
+  },
+  {
     "Chat Name": "Flesh to Stone",
     "Name": "Flesh to Stone",
     "Tier": 8,
@@ -3179,6 +3672,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Forge Form",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Using the art of illusion you may appear different to others. You make one of the alterations to your body; Your hair/facial hair seems to change in length and/or style,  You appear to alter the color of your skin, hair, lips or eyes, You fabricate a facial blemish such as a scar, You appear to lose a tooth or multiple teeth, You fabricate a distinct body marking or tattoo. If you cast this glyph multiple times you may have up to three of its effects active at a time, you may dismiss one or multiple effects as an action.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Fortune's Favor",
     "Name": "Fortune's Favor",
     "Tier": 3,
@@ -3264,6 +3774,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Frozen Tomb",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 AP, which is spent when you are missed by a melee attack",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "When a creature within 5 feet of you misses a melee attack, you can unleash a burst of frigid energy in retaliation. The creature must make a Constitution saving throw against your glyph save DC. On a failed save, the creature takes 5d10 cold damage and becomes restrained, encased in ice until the end of its next turn. On a successful save, the creature takes half as much damage and is not restrained.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Aganazzar's Scorcher",
     "Name": "Gas Station Scorcher",
     "Tier": 2,
@@ -3332,6 +3859,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Gate Seal",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 minute",
+    "Concentration": false,
+    "Duration": "24 hours",
+    "Range": "60 feet",
+    "Rite": true,
+    "Old Text": "",
+    "New Text": "You fortify the fabric of the planes within a 30-foot cube you can see within range. Within that area, portals close and can't be opened for the duration. glyphs and other effects that allow planar travel or open portals such as gate or plane shift, fail if used to enter or leave the area. The cube is stationary.",
+    "Higher Tiers": "At Higher Levels. When you cast this glyph using a glyph slot of 6th level or higher, the glyph lasts until dissipated. "
+  },
+  {
     "Chat Name": "Geas",
     "Name": "Geas",
     "Tier": 6,
@@ -3364,6 +3908,23 @@
     "Old Text": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead. The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead.",
     "New Text": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become fallen. The glyph also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this glyph don't count against the time limit of glyphs such as raise dead.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Ghostwalk",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "As you activate a stopwatch, you seemingly vanish from existence, leaving behind only the memory of your starting point. You become invisible for the duration, or until you attack, cast a spell, or take damage. While invisible, you can move freely, and when the spell ends, you teleport back to the location where you originally cast the spell. As a bonus action, you can click the stopwatch to immediately teleport back to your original position. You can also choose to end the spell without teleporting, remaining where you are. Even if the invisibility ends early, the teleportation effect still triggers at the conclusion of the spell's duration. You can end the spell early as a bonus action, teleporting back to your original position.",
+    "Higher Tiers": "At Higher Mana Cost. You can expend extra mana to increase the effects of the glyph, for every 3 additional mana expended the duration of the glyph increases by 1 minute. "
   },
   {
     "Chat Name": "Giant Insect",
@@ -3685,8 +4246,8 @@
     "Range": "Touch",
     "Rite": false,
     "Old Text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.",
-    "New Text": "You touch one willing creature. Once before the glyph ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The glyph then ends.",
-    "Higher Tiers": ""
+    "New Text": "You touch one willing creature. Once before the Glyph ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The glyph then ends.",
+    "Higher Tiers": "At Higher Mana Cost. When you reach 5th level, the bonus die can be added to attack rolls. "
   },
   {
     "Chat Name": "Guiding Bolt",
@@ -4216,21 +4777,21 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Shillelagh",
+    "Chat Name": "True Strike",
     "Name": "Imbue Wellspring",
     "Tier": 0,
     "Points": 0,
-    "School": "Nature",
+    "School": "Harmony",
     "V": true,
     "S": false,
-    "Casting Time": "1 AP",
+    "Casting Time": "2 AP",
     "Concentration": false,
     "Duration": "1 minute",
     "Range": "Touch",
     "Rite": false,
-    "Old Text": "The wood of a club or quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.",
-    "New Text": "The wood of a club or quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The glyph ends if you cast it again or if you let go of the weapon.",
-    "Higher Tiers": ""
+    "Old Text": "",
+    "New Text": "You brandish a weapon used in the glyph’s casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack’s normal effects, and you can cause energy to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes damage, of your affinity’s type, equal to your wellspring modifier.",
+    "Higher Tiers": "At Higher Mana Cost. At 5th level, the melee attack deals an extra 1d8 damage, of your affinity’s type, to the target on a hit, and the damage to the second creature increases to 1d8 + your wellspring modifier. Both damage rolls increase by 1d8 at 11th level (2d8 and 2d8) and 17th level (3d8 and 3d8)."
   },
   {
     "Chat Name": "Immolation",
@@ -4520,6 +5081,23 @@
     "Old Text": "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access. A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked. If you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally. When you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object.",
     "New Text": "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access. A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked. If you choose a target that is held shut with mystical lock, that glyph is suppressed for 10 minutes, during which time the target can be opened and shut normally. When you cast the glyph, a loud knock, audible from as far away as 300 feet, emanates from the target object.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Lacerate",
+    "Tier": 1,
+    "Points": 3,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "With the swipe of the hand, make a ranged glyph attack to cause many small cuts to appear on one creature whose skin you can see, dealing 1d10 slashing damage. If the attack hits, the target must succeed at a constitution saving throw or be stunned until the end of their next turn. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended."
   },
   {
     "Chat Name": "Legend Lore",
@@ -4845,6 +5423,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, the bonus increases to +2. When you use a Glyph slot of 6th level or higher, the bonus increases to +3."
   },
   {
+    "Chat Name": "",
+    "Name": "Magisters Brand",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "10 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Speaking a Word of Creation, you brand a creature's body and soul with a rune of weakness. Choose a creature you can see within range and select a rune from the list below. The target must make a Constitution saving throw. On a failed save, the target takes 3d10 damage of the associated type and suffers an additional effect based on the chosen rune. On a successful save, the target takes half the damage and suffers no additional effects. Vutha (Acid): The target takes acid damage and suffers a -2 penalty to AC for the duration of the glyph. Aussir (Cold): The target takes cold damage, and its movement speed is reduced by 10 feet for the duration of the glyph. Ixen (Fire): The target takes fire damage, and the damage increases to 6d10 instead of 3d10. Ulhar (Lightning): The target takes lightning damage and suffers a -2 penalty to saving throws for the duration of the glyph. Kear (Radiant): The target takes radiant damage and suffers a -2 penalty to attack rolls for the duration of the glyph. Loex (Necrotic): The target takes necrotic damage, and you regain hit points equal to half the necrotic damage dealt. Kepesk (Thunder): The target takes thunder damage, and you push the target 10 feet and knock it prone.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended. Additionally, if you expend 9 additional mana you can brand one additional rune onto a target (total of 2). You may target the same creature or different ones, but you cannot brand the same rune onto the same creature more than once. An additional saving throw must be made for each additional brand. "
+  },
+  {
     "Chat Name": "Magnify Gravity",
     "Name": "Magnify Gravity",
     "Tier": 1,
@@ -4877,6 +5472,57 @@
     "Old Text": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench). As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.",
     "New Text": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench). As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful mind (Investigation) check against your glyph save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 6th level or higher, the Glyph lasts until dispelled, without requiring your concentration."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Make Tree",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You seed the ground with wellspring energy, causing a tree to sprout and grow rapidly. The tree grows in height at a rate of 5 feet per round, and continues growing for the duration of the glyph. When the duration is concluded, or when you stop concentrating on this glyph, the tree remains as a living, mundane tree. ",
+    "Higher Tiers": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you can seed another tree within range for every 3 additional mana expended. "
+  },
+  {
+    "Chat Name": "",
+    "Name": "Mana Skin",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 round",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You cover yourself with a protective skin of mana. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
+    "Higher Tiers": "At Higher Mana Cost. The duration of this cantrip increases to 2 rounds at 5th level, 3 rounds at 11th level, and 4 rounds at 17th level."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Mana to Oil",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP, spent when a creature within range casts a glyph",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You attempt to cause a caster's mana to thicken while they cast. The affected caster must make a Constitution saving throw, or delay their casting for a round and waste any expended AP. ",
+    "Higher Tiers": ""
   },
   {
     "Chat Name": "Drawmij's Instant Summons",
@@ -5151,6 +5797,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Mind Needle",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You project a psychic spike into the mind of one creature within range. The target must make an Mind saving throw. On a failed save, it takes 1d6 psychic damage and suffers disadvantage on its next attack roll before the end of its next turn. ",
+    "Higher Tiers": "At Higher Mana Cost. The damage increases by 1d6 at 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+  },
+  {
     "Chat Name": "Mind Sliver",
     "Name": "Mind Sliver",
     "Tier": 0,
@@ -5304,6 +5967,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Molotov",
+    "Tier": 1,
+    "Points": 3,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Effect: You conjure a magical bottle of flaming liquor to your hand. At any point before the glyph ends, you can throw this bottle onto a point on the ground within 30 feet of you, forcing all creatures within 10 feet of that point, and in contact with the ground, to make an Agility saving throw. A creature that fails the saving throw takes 3d6 fire damage and is subject to the Burning condition for duration of the glyph. A creature that succeeds on the save takes half as much damage and is not subject to the Burning condition. ",
+    "Higher Tiers": "Upcast: When this glyph is cast with higher tiers of mana, you conjure an additional bottle for each tier above first. Additionally, the duration of the glyph extends for every three tiers above first, 10 minutes at tier three, an hour at tier 6, 1 day at tier 9, and indefinitely at tier 12."
+  },
+  {
     "Chat Name": "Moonbeam",
     "Name": "Moonbeam",
     "Tier": 3,
@@ -5372,6 +6052,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, increase your speed by 5 feet for each Glyph slot level above 3rd. The Glyph deals an additional 1d6 fire damage for each slot level above 3rd."
   },
   {
+    "Chat Name": "Shilleleghgh",
+    "Name": "Nature's Weapon",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "The wood of a club or quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.",
+    "New Text": "The weapon you are holding is imbued with nature’s power. For the duration, you can use your wellspring instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon’s damage die becomes a d8 if it is not already higher. The weapon also becomes magical, if it isn’t already. The glyph ends if you cast it again or if you let go of the weapon. ",
+    "Higher Tiers": "At Higher Mana Cost: As you level up, the power of this glyph increases; At 5th level you can apply the weapon’s mastery property, and at 11th level, the weapon does an additional die of damage. "
+  },
+  {
     "Chat Name": "Druidcraft",
     "Name": "Nature's Whimsy ",
     "Tier": 0,
@@ -5385,8 +6082,8 @@
     "Range": "30 feet",
     "Rite": false,
     "Old Text": "Whispering to the spirits of nature, you create one of the following effects within range: You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round; You instantly make a flower blossom, a seed pod open, or a leaf bud bloom; You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube; You instantly light or snuff out a candle, a torch, or a small campfire.",
-    "New Text": "Whispering to the spirits of nature, you create one of the following effects within range: You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round; You instantly make a flower blossom, a seed pod open, or a leaf bud bloom; You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube; You instantly light or snuff out a candle, a torch, or a small campfire.",
-    "Higher Tiers": ""
+    "New Text": "You weave a more potent connection with nature, allowing you to create a captivating and minor magical effect. This might manifest as a burst of vibrant flowers, a flurry of colorful butterflies, or a soft, melodic chime of natural origin. The effect is both beautiful and enchanting, captivating those who witness it. Additionally, when cast on animals, this glyph can have a calming or soothing effect. Animals within the area of the enchantment become more inclined to approach you peacefully, and they may be less likely to react aggressively. Additionally, you can now predict more detailed and specific weather conditions in a 2 mile radius for the next 48 hours.",
+    "Higher Tiers": "At Higher Mana Cost.  The radius in which you discern the weather increases by 1 mile at 5th level (3 miles), 11th level (4 miles), 17 level (5 miles)."
   },
   {
     "Chat Name": "Negative Energy Flood",
@@ -5848,6 +6545,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Primal Savagery",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee glyph attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal.",
+    "Higher Tiers": "At Higher Mana Cost. This glyph’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10). "
+  },
+  {
     "Chat Name": "Primal Savagery",
     "Name": "Primal Savagery",
     "Tier": 0,
@@ -6154,7 +6868,7 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd or 4th level, you can maintain your concentration on the Glyph for up to 8 hours. When you use a Glyph slot of 5th level or higher, you can maintain your concentration on the Glyph for up to 24 hours."
   },
   {
-    "Chat Name": "Hunter's Mark",
+    "Chat Name": "",
     "Name": "Quary",
     "Tier": 1,
     "Points": 3,
@@ -6163,12 +6877,12 @@
     "S": false,
     "Casting Time": "1 AP",
     "Concentration": true,
-    "Duration": "Up to 1 hour",
+    "Duration": "1 hour",
     "Range": "90 feet",
     "Rite": false,
-    "Old Text": "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.",
-    "New Text": "You choose a creature you can see within range and mystically mark it as your quarry. Until the glyph ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any wits (Perception) or wits (Survival) check you make to find it. If the target drops to 0 hit points before this glyph ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.",
-    "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd or 4th level, you can maintain your concentration on the Glyph for up to 8 hours. When you use a Glyph slot of 5th level or higher, you can maintain your concentration on the Glyph for up to 24 hours."
+    "Old Text": "",
+    "New Text": "You choose a creature you can see within range and mark it as your quarry. Until the Glyph ends, you deal an extra 1d6 damage to the target whenever you hit it with an attack, and you have advantage on any contested check you make to against it. If the target drops to 0 hit points before this Glyph ends, you can use a bonus action on a subsequent turn of yours to mark a new creature. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can concentrate on this glyph for an additional 2 hours for every 3 additional mana expended."
   },
   {
     "Chat Name": "Raise Dead",
@@ -6307,6 +7021,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "Revivify",
+    "Name": "Reignite Wellspring",
+    "Tier": 5,
+    "Points": 21,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.",
+    "New Text": "You touch a creature that has died within the last minute and attempt to reignite the flow of mana within them, rekindling their Wellspring. If the creature is willing, their inner wellspring is restored, drawing upon the ambient energy to return them to life with 1d8 hit points. The creature's soul must be free and willing to return for this glyph to take effect. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the target regains an additional 1d8 hit points for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Reincarnate",
     "Name": "Reincarnate",
     "Tier": 7,
@@ -6406,23 +7137,6 @@
     "Rite": false,
     "Old Text": "This spell reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range. All creatures and objects that aren't somehow anchored to the ground in the area fall upward and reach the top of the area when you cast this spell. A creature can make a Dexterity saving throw to grab onto a fixed object it can reach, thus avoiding the fall. If some solid object (such as a ceiling) is encountered in this fall, falling objects and creatures strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the duration. At the end of the duration, affected objects and creatures fall back down.",
     "New Text": "This glyph reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range. All creatures and objects that aren't somehow anchored to the ground in the area fall upward and reach the top of the area when you cast this glyph. A creature can make a agility saving throw to grab onto a fixed object it can reach, thus avoiding the fall. If some solid object (such as a ceiling) is encountered in this fall, falling objects and creatures strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the duration. At the end of the duration, affected objects and creatures fall back down.",
-    "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Revivify",
-    "Name": "Revivify",
-    "Tier": 5,
-    "Points": 21,
-    "School": "Harmony",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "Touch",
-    "Rite": false,
-    "Old Text": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.",
-    "New Text": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This glyph can't return to life a creature that has died of old age, nor can it restore any missing body parts.",
     "Higher Tiers": ""
   },
   {
@@ -6528,6 +7242,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you create one additional ray for each slot level above 2nd."
   },
   {
+    "Chat Name": "",
+    "Name": "Searing Choker",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You conjure a searing band of superheated metal around the neck of a creature within range. The red-hot choker sheds bright light in a 15-foot radius and dim light for an additional 15 feet. The target takes 2d6 + 2 fire damage when you cast this glyph, and at the start of each of your turns, you can use a bonus action to cause the target to take this fire damage again. On each of its turns, the target can use its action to make a Strength saving throw, ending the glyph on a success.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 + 1 for every 3 additional mana expended."
+  },
+  {
     "Chat Name": "Searing Smite",
     "Name": "Searing Smite",
     "Tier": 1,
@@ -6562,6 +7293,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Seeker's Vitality",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You draw on your innate mana to fill yourself with vitality. You regain a number of Hit Points equal to 2d6 + your glyphcasting ability modifier, and if you have any of the following conditions, they end on you: Blinded, Deafened, and Poisoned.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the healing increases by 1d6 for every 3 additional mana expended. "
+  },
+  {
     "Chat Name": "Seeming",
     "Name": "Seeming",
     "Tier": 6,
@@ -6577,6 +7325,23 @@
     "Old Text": "This spell allows you to change the appearance of any number of creatures that you can see within range. You give each target you choose a new, illusory appearance. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell. The spell disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or in between. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The spell lasts for the duration, unless you use your action to dismiss it sooner. The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature's outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair. A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.",
     "New Text": "This glyph allows you to change the appearance of any number of creatures that you can see within range. You give each target you choose a new, illusory appearance. An unwilling target can make a wellspring saving throw, and if it succeeds, it is unaffected by this glyph. The glyph disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or in between. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The glyph lasts for the duration, unless you use your action to dismiss it sooner. The changes wrought by this glyph fail to hold up to physical inspection. For example, if you use this glyph to add a hat to a creature's outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this glyph to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair. A creature can use its action to inspect a target and make an mind (Investigation) check against your glyph save DC. If it succeeds, it becomes aware that the target is disguised.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Semipermanency",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": true,
+    "Old Text": "",
+    "New Text": "You touch one person who has cast a glyph this round, doubling the duration of that glyph. If your concentration on this glyph ends, the glyph it is modifying is dispeled only if its original duration is also concluded. A glyph can be effected by this only once. ",
+    "Higher Tiers": "At Higher Mana Cost: for every 6 additional Mana expended on this glyph, the duration is increased by the base amount yet again. If this glyph is cast using 36 or more mana, it no longer requires concentration. "
   },
   {
     "Chat Name": "Sending",
@@ -6662,6 +7427,23 @@
     "Old Text": "Flame-like shadows wreathe your body until the spell ends, causing you to become heavily obscured to others. The shadows turn dim light within 10 feet of you into darkness, and bright light in the same area to dim light. Until the spell ends, you have resistance to radiant damage. In addition, whenever a creature within 10 feet of you hits you with an attack, the shadows lash out at that creature, dealing it 2d8 necrotic damage.",
     "New Text": "Flame-like shadows wreathe your body until the glyph ends, causing you to become heavily obscured to others. The shadows turn dim light within 10 feet of you into darkness, and bright light in the same area to dim light. Until the glyph ends, you have resistance to radiant damage. In addition, whenever a creature within 10 feet of you hits you with an attack, the shadows lash out at that creature, dealing it 2d8 necrotic damage.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Shadow Siphon",
+    "Tier": 1,
+    "Points": 3,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You reach out as shadow like tendrils wrap around the targeted creature sapping it’s energy for your own. The creature must make a constitution saving throw upon a failed save The target takes 2d6 void damage and you gain a number of hit points equal to half the damage rounded down. If the creature succeeds it takes no damage and the effect fails. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended."
   },
   {
     "Chat Name": "Evard's Black Tentacles",
@@ -6781,6 +7563,23 @@
     "Old Text": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn. The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "New Text": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee glyph attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn. The glyph's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Shroud of Shadows",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You stare down your attacker with the most malevolent glare. After being attacked you may use your reaction to summon a large beam of darkness or light that shoots out from underneath them and their soul is ripped. The target must make an agility saving throw on a failed save they take 1D8 void or radiant Damage. ",
+    "Higher Tiers": "At Higher Mana Cost. This glyph’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8). "
   },
   {
     "Chat Name": "Sickening Radiance",
@@ -7000,7 +7799,7 @@
     "Range": "Touch",
     "Rite": false,
     "Old Text": "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
-    "New Text": "You touch a living creature that has 0 hit points. The creature becomes stable. This glyph has no effect on fallen or constructs.",
+    "New Text": "You touch a creature that is in the Last Stand condition. The creature no longer accrues Mortality Points until the start of your next turn. During this time, the creature can move and act without triggering additional Mortality Points or having to roll constitution saving throws. If the creature has reached 3 Mortality Points, instead of dying, it becomes stabilized and remains at 0 hit points. The creature does not regain hit points but is no longer at risk of death unless damaged further. Once the glyph ends, if the creature has not been healed, they resume accumulating Mortality Points as normal.",
     "Higher Tiers": ""
   },
   {
@@ -7106,6 +7905,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above the 2nd."
   },
   {
+    "Chat Name": "",
+    "Name": "Spray of Cards",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (15-foot cone)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You spray a 15-foot cone of spectral cards. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d10 force damage and has the blinded condition until the end of its next turn. On a successful save, a creature takes half as much damage only.",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended."
+  },
+  {
     "Chat Name": "Staggering Smite",
     "Name": "Staggering Smite",
     "Tier": 5,
@@ -7121,6 +7937,23 @@
     "Old Text": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
     "New Text": "The next time you hit a creature with a melee weapon attack during this glyph's duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a wits saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Static Lash",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (15 foot line)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You release a burst of static electricity in a 15-foot line. Each creature in the line must succeed on a Agility saving throw or take 1d8 lightning damage and be pushed 5 feet away from you. ",
+    "Higher Tiers": "At Higher Mana Cost. The damage increases by 1d8 at 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
   },
   {
     "Chat Name": "Steel Wind Strike",
@@ -7155,6 +7988,23 @@
     "Old Text": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners, and its area is heavily obscured. The cloud lingers in the air for the duration. Each creature that is completely within the cloud at the start af its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw. A moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds. A strong wind (at least 20 miles per hour) disperses it after 1 round.",
     "New Text": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners, and its area is heavily obscured. The cloud lingers in the air for the duration. Each creature that is completely within the cloud at the start af its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw. A moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds. A strong wind (at least 20 miles per hour) disperses it after 1 round.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Stone Fists",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Nature",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You transform your fist into solid stone, allowing you to make unarmed strikes that deal 1d6 bludgeoning damage. While this cantrip is active, your unarmed strikes are considered magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The bludgeoning damage dealt by Stone Fists does double damage to structures.",
+    "Higher Tiers": "At Higher Mana Cost. The damage increases by 1d6 at 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
   },
   {
     "Chat Name": "Stone Shape",
@@ -7223,6 +8073,23 @@
     "Old Text": "A 20-foot-radius sphere of whirling air springs into existence, centered on a point you choose within range. The sphere remains for the spell's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 2d6 bludgeoning damage. The sphere's space is difficult terrain. Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage. Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
     "New Text": "A 20-foot-radius sphere of whirling air springs into existence, centered on a point you choose within range. The sphere remains for the glyph's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 2d6 bludgeoning damage. The sphere's space is difficult terrain. Until the glyph ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged glyph attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage. Creatures within 30 feet of the sphere have disadvantage on wits (Perception) checks made to listen.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage for each of its effects increases by 1d6 for each slot level above 4th."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Sudden Awakening",
+    "Tier": 1,
+    "Points": 3,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "10 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Each sleeping creature you choose within range awakens, and then each prone creature within range can stand up without expending any movement.",
+    "Higher Tiers": ""
   },
   {
     "Chat Name": "Suggestion",
@@ -7820,6 +8687,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "",
+    "Name": "Toxic Bloom",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You cause a burst of poisonous spores to erupt in a 20-foot radius centered on a point you choose within range. The area becomes lightly obscured and difficult terrain. When a creature enters the area for the first time on a turn or starts its turn there, it must make a Constitution saving throw. On a failed save, it takes 4d6 poison damage and is poisoned until the start of its next turn. On a successful save, it takes half damage and is not poisoned.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Transmute Rock",
     "Name": "Transmute Rock",
     "Tier": 6,
@@ -7954,6 +8838,23 @@
     "Old Text": "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet.",
     "New Text": "This glyph gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "True Strike",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You force mana into your weapon, causing it to move as you will. You make a weapon attack using your Wellspring modifier for the attack and damage roll. Additionally, you may convert the weapon’s damage to your affinity’s type. ",
+    "Higher Tiers": "At Higher Level. You deal additional damage of your affinity’s type at each of level 5 (1d6),  level 11 (2d6), and level 17 (3d6). "
   },
   {
     "Chat Name": "True Strike",
@@ -8106,6 +9007,23 @@
     "Rite": false,
     "Old Text": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn. This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
     "New Text": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a wits saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn. This glyph's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Virtue",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You touch one creature, imbuing it with vitality. If the target has at least 1 hit point, it gains a number of temporary hit points equal to 1d4 + your glyph casting ability modifier. The temporary hit points are lost when the glyph ends. ",
     "Higher Tiers": ""
   },
   {
