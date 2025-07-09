@@ -15,6 +15,8 @@
   const searchInput   = document.getElementById('search');
   const searchToggle  = document.getElementById('searchTextToggle');
   const container     = document.getElementById('cardsContainer');
+  const enterBtn      = document.getElementById('enterAdmin');
+  const saveBtn       = document.getElementById('saveAdmin');
 
   //
   // 3) POPULATE TIER DROPDOWN
@@ -49,7 +51,46 @@
   });
 
   //
-  // 5) RENDER FUNCTION
+  // 5) ADMIN STATE & OCTOKIT
+  //
+  let isAdmin = false, octokit, repoInfo;
+  enterBtn.addEventListener('click', () => {
+    if (!octokit) {
+      const token = prompt('🔑 Enter your GitHub Personal Access Token:');
+      if (!token) return;
+      localStorage.setItem('gh_token', token);
+      octokit = new window.Octokit({ auth: token });
+      repoInfo = {
+        owner: 'EliJMarchetti',
+        repo:  'Glyph-Database',
+        path:  'data/glyphs.json'
+      };
+    }
+    isAdmin = !isAdmin;
+    enterBtn.textContent = isAdmin ? '🔓 Exit Admin' : '🔒 Admin';
+    saveBtn.style.display = isAdmin ? 'inline-block' : 'none';
+    document.body.classList.toggle('admin-mode', isAdmin);
+    render();
+  });
+  saveBtn.addEventListener('click', async () => {
+    try {
+      const { data: file } = await octokit.repos.getContent(repoInfo);
+      const sha = file.sha;
+      const content = btoa(JSON.stringify(glyphs, null, 2));
+      await octokit.repos.createOrUpdateFileContents({
+        ...repoInfo,
+        message: '📦 Admin update of glyph data',
+        content, sha
+      });
+      alert('✅ glyphs.json updated on GitHub!');
+    } catch (err) {
+      console.error(err);
+      alert('❌ Save failed: ' + err.message);
+    }
+  });
+
+  //
+  // 6) RENDER FUNCTION (with inline editing in Admin Mode)
   //
   function render() {
     const levelVal    = levelFilter.value;
@@ -73,59 +114,94 @@
         }
         return true;
       })
-      .forEach(g => {
-        const card   = document.createElement('div');    card.className = 'card';
-        const header = document.createElement('div');    header.className = 'card-header';
+      .forEach((g, idx) => {
+        const card   = document.createElement('div');   card.className = 'card';
+        const header = document.createElement('div');   header.className = 'card-header';
 
-        // Name
-        const info    = document.createElement('div');    info.className = 'info';
-        info.innerHTML = `<b>${g.Name}</b>`;
+        // — Name (editable) —
+        const info = document.createElement('div');
+        info.className = 'info';
+        info.textContent = g.Name;
+        if (isAdmin) {
+          info.contentEditable = 'true';
+          info.dataset.field   = 'Name';
+          info.dataset.index   = idx;
+          info.addEventListener('blur', e => {
+            glyphs[e.target.dataset.index].Name = e.target.textContent.trim();
+          });
+        }
 
-        // Meta
-        const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
-        const meta    = document.createElement('div');    meta.className = 'meta';
+        // — Meta (School, V/S, Tier, Mana) —
+        const meta = document.createElement('div');
+        meta.className = 'meta';
         meta.innerHTML = `
-          ${g.School}
-          <span class="vs">${vsLabel}</span>
-          • Tier ${g.Tier}
-          • ${g.Points} Mana
+          <span class="field-school">${g.School}</span>
+          <span class="vs">${g.V?'V':g.S?'S':''}</span>
+          • Tier <span class="field-Tier">${g.Tier}</span>
+          • <span class="field-Points">${g.Points}</span> Mana
         `;
+        if (isAdmin) {
+          ['school','Tier','Points'].forEach(fld => {
+            const el = meta.querySelector(`.field-${fld}`);
+            el.contentEditable = 'true';
+            el.dataset.field   = fld;
+            el.dataset.index   = idx;
+            el.addEventListener('blur', e => {
+              let val = e.target.textContent.trim();
+              if (fld === 'Tier' || fld === 'Points') val = +val;
+              glyphs[e.target.dataset.index][fld] = val;
+            });
+          });
+        }
 
         header.append(info, meta);
         card.append(header);
 
-        // Body
-        const body = document.createElement('div');      body.className = 'card-body';
+        // — Body (editable paragraphs) —
+        const body = document.createElement('div');
+        body.className     = 'card-body';
         body.style.display = 'none';
-        const ct  = document.createElement('p');         ct.textContent = `Casting Time: ${g['Casting Time']}`;
-        const dur = document.createElement('p');         dur.textContent = `Duration: ${g.Duration}${g.Concentration ? ' (Concentration)' : ''}`;
-        const txt = document.createElement('p');         txt.textContent = g['New Text'];
-        const hr  = document.createElement('hr');
-        const high= document.createElement('p');         high.textContent = g['Higher Tiers'];
-        body.append(ct, dur, txt, hr, high);
+        const sections = [
+          { label: 'Casting Time', key: 'Casting Time' },
+          { label: 'Duration',     key: 'Duration',     suffix: g.Concentration ? ' (Concentration)' : '' },
+          { label: 'New Text',     key: 'New Text' },
+          { label: 'Higher Tiers', key: 'Higher Tiers' }
+        ];
+        sections.forEach(sec => {
+          const p = document.createElement('p');
+          p.textContent = `${sec.label}: ${g[sec.key] || ''}${sec.suffix||''}`;
+          if (isAdmin) {
+            p.contentEditable = 'true';
+            p.dataset.field   = sec.key;
+            p.dataset.index   = idx;
+            p.addEventListener('blur', e => {
+              let txt = e.target.textContent.replace(new RegExp(`^${sec.label}:\\s*`), '')
+                                            .replace(sec.suffix||'', '')
+                                            .trim();
+              glyphs[e.target.dataset.index][sec.key] = txt;
+            });
+          }
+          body.append(p);
+        });
+        card.append(body);
 
         header.addEventListener('click', () => {
-          const isOpen = body.style.display === 'block';
-          body.style.display = isOpen ? 'none' : 'block';
-          card.classList.toggle('open', !isOpen);
+          const open = body.style.display === 'block';
+          body.style.display = open ? 'none' : 'block';
+          card.classList.toggle('open', !open);
         });
 
-        card.append(body);
         container.append(card);
       });
   }
 
   //
-  // 6) HOOK UP FILTERS → render
+  // 7) HOOK UP FILTERS & INITIAL DRAW
   //
   levelFilter.addEventListener('change', render);
   searchInput.addEventListener('input', render);
   searchToggle.addEventListener('change', render);
   Object.values(schoolBtns).forEach(btn => btn.addEventListener('click', render));
-
-  //
-  // 7) INITIAL DRAW
-  //
   render();
 
   //
@@ -147,51 +223,4 @@
     });
   }
 
-  //
-  // 9) ADMIN MODE: on-demand GitHub token + Octokit
-  //
-  const enterBtn = document.getElementById('enterAdmin');
-  const saveBtn  = document.getElementById('saveAdmin');
-  let   octokit, repoInfo, isAdmin = false;
-
-  enterBtn.addEventListener('click', () => {
-    // first click → ask for PAT & init Octokit
-    if (!octokit) {
-      const token = prompt('🔑 Enter your GitHub Personal Access Token:');
-      if (!token) return;                  // user cancelled
-      localStorage.setItem('gh_token', token);
-      octokit = new window.Octokit({ auth: token });
-      repoInfo = {
-        owner: 'EliJMarchetti',
-        repo:  'Glyph-Database',
-        path:  'data/glyphs.json'
-      };
-    }
-    // then toggle Admin UI
-    isAdmin = !isAdmin;
-    enterBtn.textContent = isAdmin ? '🔓 Exit Admin' : '🔒 Admin';
-    saveBtn.style.display  = isAdmin ? 'inline-block' : 'none';
-    document.body.classList.toggle('admin-mode', isAdmin);
-  });
-
-  saveBtn.addEventListener('click', async () => {
-    try {
-      // fetch current file to get its SHA
-      const { data: file } = await octokit.repos.getContent(repoInfo);
-      const sha = file.sha;
-
-      // push updated glyphs[]
-      const content = btoa(JSON.stringify(glyphs, null, 2));
-      await octokit.repos.createOrUpdateFileContents({
-        ...repoInfo,
-        message: '📦 Admin update of glyph data',
-        content, sha
-      });
-      alert('✅ glyphs.json updated on GitHub!');
-    } catch (err) {
-      console.error(err);
-      alert('❌ Save failed: ' + err.message);
-    }
-  });
-
-})();  
+})();
