@@ -1003,6 +1003,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd."
   },
   {
+    "Chat Name": "",
+    "Name": "Burden Shared",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 AP, spent when an ally fails a Str. Or Con. Save within range",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "15 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Through a whispered prayer, you lessen the toll on an ally’s body. The creature rerolls the saving throw, taking the new result, but the caster also suffers 1d4 aetherial damage due to the shared burden.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Burning Hands",
     "Name": "Burning Hands",
     "Tier": 1,
@@ -2701,6 +2718,23 @@
     "Old Text": "",
     "New Text": "You pull the wellspring out of living things within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 void damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.",
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended."
+  },
+  {
+    "Chat Name": "Toll the Dead",
+    "Name": "Draining Residence",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage. The spell's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).",
+    "New Text": "You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a wits saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage. The glyph's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).",
+    "Higher Tiers": ""
   },
   {
     "Chat Name": "Dream",
@@ -6953,6 +6987,40 @@
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can concentrate on this glyph for an additional 2 hours for every 3 additional mana expended."
   },
   {
+    "Chat Name": "Sacred Flame",
+    "Name": "Radiant Ember",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw. The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "New Text": "You hurl a mote of divine flame at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d6 radiant damage. If the target is in dim light or darkness, it takes an additional +1 radiant damage. The ember ignites flammable objects in the area that aren't being worn or carried.",
+    "Higher Tiers": "At Higher Levels. The spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+  },
+  {
+    "Chat Name": "",
+    "Name": "Radiant Haste",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "15 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You summon a faint wind of sacred breath. One ally within range can immediately move up to 30 feet without provoking opportunity attacks. If the creature is prone, restrained, or grappled, they may instead use their reaction to immediately attempt to escape or stand up without using movement.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Raise Dead",
     "Name": "Raise Dead",
     "Tier": 7,
@@ -7222,23 +7290,6 @@
     "Rite": false,
     "Old Text": "You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the spell ends. The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space. Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope. Anything inside the extradimensional space drops out when the spell ends.",
     "New Text": "You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the glyph ends. The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space. Attacks and glyphs can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope. Anything inside the extradimensional space drops out when the glyph ends.",
-    "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Sacred Flame",
-    "Name": "Sacred Flame",
-    "Tier": 0,
-    "Points": 0,
-    "School": "Celestial",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "60 feet",
-    "Rite": false,
-    "Old Text": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw. The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "New Text": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a agility saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw. The glyph's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "Higher Tiers": ""
   },
   {
@@ -7835,6 +7886,23 @@
     "Old Text": "As you cast this spell, you use the rope to create a circle with a 5-foot radius on the ground or the floor. When you finish casting, the rope disappears and the circle becomes a magic trap. This trap is nearly invisible, requiring a successful Intelligence (Investigation) check against your spell save DC to be discerned. The trap triggers when a Small, Medium, or Large creature moves onto the ground or the floor in the spell's radius. That creature must succeed on a Dexterity saving throw or be magically hoisted into the air, leaving it hanging upside down 3 feet above the ground or the floor. The creature is restrained there until the spell ends. A restrained creature can make a Dexterity saving throw at the end of each of its turns, ending the effect on itself on a success. Alternatively, the creature or someone else who can reach it can use an action to make an Intelligence (Arcana) check against your spell save DC. On a success, the restrained effect ends. After the trap is triggered, the spell ends when no creature is restrained by it.",
     "New Text": "As you cast this glyph, you use the rope to create a circle with a 5-foot radius on the ground or the floor. When you finish casting, the rope disappears and the circle becomes a magic trap. This trap is nearly invisible, requiring a successful mind (Investigation) check against your glyph save DC to be discerned. The trap triggers when a Small, Medium, or Large creature moves onto the ground or the floor in the glyph's radius. That creature must succeed on a agility saving throw or be magically hoisted into the air, leaving it hanging upside down 3 feet above the ground or the floor. The creature is restrained there until the glyph ends. A restrained creature can make a agility saving throw at the end of each of its turns, ending the effect on itself on a success. Alternatively, the creature or someone else who can reach it can use an action to make an mind (Arcana) check against your glyph save DC. On a success, the restrained effect ends. After the trap is triggered, the glyph ends when no creature is restrained by it.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Solar Sigil",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 minute",
+    "Concentration": false,
+    "Duration": "10 minutes",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You trace a glowing glyph onto a weapon, shield, or surface. The glyph remains for the duration or until triggered. Weapon: The next time the weapon hits a creature, the target takes an additional 1d8 radiant damage, and the weapon emits bright light in a 10-foot radius for 1 round. Surface: The first creature that enters the glyph’s space must succeed on a Dexterity saving throw or take 1d8 radiant damage.",
+    "Higher Tiers": "At Higher Levels. The spell’s radiant damage increases by 1d8 at 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
   },
   {
     "Chat Name": "Soul Cage",
@@ -8857,23 +8925,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Toll the Dead",
-    "Name": "Troll the Dead",
-    "Tier": 0,
-    "Points": 0,
-    "School": "Bane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "60 feet",
-    "Rite": false,
-    "Old Text": "You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage. The spell's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).",
-    "New Text": "You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a wits saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage. The glyph's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).",
-    "Higher Tiers": ""
-  },
-  {
     "Chat Name": "True Polymorph",
     "Name": "True Polymorph",
     "Tier": 12,
@@ -9092,6 +9143,23 @@
     "Rite": false,
     "Old Text": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn. This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
     "New Text": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a wits saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn. This glyph's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "Vigilant Light",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "10 minutes",
+    "Range": "Touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You enchant an ally with divine light that wards against surprise. The target gains advantage on the next initiative roll while the spell lasts.",
     "Higher Tiers": ""
   },
   {
