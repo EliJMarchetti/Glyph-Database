@@ -1,46 +1,48 @@
 // assets/js/script.js
 
-(async () => {
-  // ───────────────
-  // 0) Admin Mode Setup
-  // ───────────────
-
-  // Prompt for a GitHub Personal Access Token (PAT) once and store it
+(async function() {
+  //
+  // 0) ADMIN MODE SETUP
+  //
   let octokit, repoInfo;
-  if (!localStorage.getItem('gh_token')) {
-    const token = prompt('🔑 Enter your GitHub Personal Access Token:');
-    if (token) localStorage.setItem('gh_token', token);
-  }
-  const ghToken = localStorage.getItem('gh_token');
-  if (ghToken) {
-    // Initialize Octokit
-    octokit = new Octokit.Octokit({ auth: ghToken });
-    // Your repo details (owner/repo and path to glyphs.json)
-    repoInfo = {
-      owner: 'EliJMarchetti',
-      repo:  'Glyph-Database',
-      path:  'data/glyphs.json'
-    };
+  try {
+    // Grab the global Octokit constructor (from the UMD build)
+    const OctokitClass = window.Octokit;
+    let token = localStorage.getItem('gh_token');
+    if (!token) {
+      token = prompt('🔑 Enter your GitHub Personal Access Token:');
+      if (token) localStorage.setItem('gh_token', token);
+    }
+    if (token && OctokitClass) {
+      octokit = new OctokitClass({ auth: token });
+      repoInfo = {
+        owner: 'EliJMarchetti',
+        repo:  'Glyph-Database',
+        path:  'data/glyphs.json'
+      };
+    }
+  } catch (err) {
+    console.warn('⚠️ Admin Mode disabled:', err);
   }
 
-  // ───────────────────────────
-  // 1) Load glyph data normally
-  // ───────────────────────────
+  //
+  // 1) LOAD GLYPH DATA
+  //
   const res    = await fetch('data/glyphs.json');
   const glyphs = await res.json();
 
-  // ─────────────────────────────────
-  // 2) Grab your filters & container
-  // ─────────────────────────────────
+  //
+  // 2) GRAB CONTROLS
+  //
   const levelFilter   = document.getElementById('levelFilter');
   const schoolFilters = document.getElementById('schoolFilters');
   const searchInput   = document.getElementById('search');
   const searchToggle  = document.getElementById('searchTextToggle');
   const container     = document.getElementById('cardsContainer');
 
-  // ────────────────────────────────────
-  // 3) Populate the Tier dropdown
-  // ────────────────────────────────────
+  //
+  // 3) POPULATE TIER DROPDOWN
+  //
   const allOpt = document.createElement('option');
   allOpt.value = 'all';
   allOpt.textContent = 'All Glyphs';
@@ -52,9 +54,9 @@
     levelFilter.appendChild(opt);
   }
 
-  // ────────────────────────────────────
-  // 4) Build the school‐filter buttons
-  // ────────────────────────────────────
+  //
+  // 4) BUILD SCHOOL FILTER BUTTONS
+  //
   const schools    = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
   const schoolBtns = {};
   schools.forEach(s => {
@@ -70,9 +72,9 @@
     });
   });
 
-  // ────────────────────────────────────
-  // 5) Render function: draws all cards
-  // ────────────────────────────────────
+  //
+  // 5) RENDER FUNCTION
+  //
   function render() {
     const levelVal      = levelFilter.value;
     let activeSchools   = schools.filter(s => schoolBtns[s].classList.contains('active'));
@@ -96,17 +98,16 @@
         return true;
       })
       .forEach(g => {
-        // build card
         const card   = document.createElement('div');    card.className = 'card';
         const header = document.createElement('div');    header.className = 'card-header';
 
         // Name
-        const info = document.createElement('div');      info.className = 'info';
+        const info    = document.createElement('div');    info.className = 'info';
         info.innerHTML = `<b>${g.Name}</b>`;
 
         // Meta
         const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
-        const meta    = document.createElement('div');   meta.className = 'meta';
+        const meta    = document.createElement('div');    meta.className = 'meta';
         meta.innerHTML = `
           ${g.School}
           <span class="vs">${vsLabel}</span>
@@ -118,13 +119,13 @@
         card.append(header);
 
         // Body
-        const body = document.createElement('div'); body.className = 'card-body';
+        const body = document.createElement('div');      body.className = 'card-body';
         body.style.display = 'none';
-        const ct   = document.createElement('p');  ct.textContent = `Casting Time: ${g['Casting Time']}`;
-        const dur  = document.createElement('p');  dur.textContent = `Duration: ${g.Duration}${g.Concentration ? ' (Concentration)' : ''}`;
-        const txt  = document.createElement('p');  txt.textContent = g['New Text'];
-        const hr   = document.createElement('hr');
-        const high = document.createElement('p');  high.textContent = g['Higher Tiers'];
+        const ct  = document.createElement('p');         ct.textContent = `Casting Time: ${g['Casting Time']}`;
+        const dur = document.createElement('p');         dur.textContent = `Duration: ${g.Duration}${g.Concentration ? ' (Concentration)' : ''}`;
+        const txt = document.createElement('p');         txt.textContent = g['New Text'];
+        const hr  = document.createElement('hr');
+        const high= document.createElement('p');         high.textContent = g['Higher Tiers'];
         body.append(ct, dur, txt, hr, high);
 
         header.addEventListener('click', () => {
@@ -138,22 +139,22 @@
       });
   }
 
-  // ────────────────────────────────────
-  // 6) Wire up filter controls → render
-  // ────────────────────────────────────
+  //
+  // 6) HOOK UP FILTERS
+  //
   levelFilter.addEventListener('change', render);
   searchInput.addEventListener('input', render);
   searchToggle.addEventListener('change', render);
   Object.values(schoolBtns).forEach(btn => btn.addEventListener('click', render));
 
-  // ────────────────────────────────────
-  // 7) Initial draw
-  // ────────────────────────────────────
+  //
+  // 7) INITIAL DRAW
+  //
   render();
 
-  // ────────────────────────────────────
-  // 8) Mobile dropdown toggle (unchanged)
-  // ────────────────────────────────────
+  //
+  // 8) MOBILE HEADER TOGGLE (unchanged)
+  //
   if (window.innerWidth < 768) {
     const headerEl = document.querySelector('header');
     const toggle   = document.getElementById('mobileHeaderToggle');
@@ -170,14 +171,8 @@
     });
   }
 
-  // ────────────────────────────────────
-  // 9) ADMIN MODE: toggle & save
-  // ────────────────────────────────────
-
-  // NOTE: In your HTML header, add:
   //
-  //   <button id="enterAdmin">🔒 Admin</button>
-  //   <button id="saveAdmin" style="display:none">💾 Save Changes</button>
+  // 9) ADMIN MODE: toggle & save via Octokit
   //
   const enterBtn = document.getElementById('enterAdmin');
   const saveBtn  = document.getElementById('saveAdmin');
@@ -185,7 +180,7 @@
 
   enterBtn.addEventListener('click', () => {
     if (!octokit) {
-      alert('⚠️ No GitHub token found. Unable to enter Admin Mode.');
+      alert('⚠️ Admin Mode unavailable: no GitHub token or Octokit.');
       return;
     }
     isAdmin = !isAdmin;
@@ -196,7 +191,7 @@
 
   saveBtn.addEventListener('click', async () => {
     try {
-      // 1) fetch current file to get its SHA
+      // fetch current file SHA
       const { data: file } = await octokit.repos.getContent({
         owner: repoInfo.owner,
         repo:  repoInfo.repo,
@@ -204,10 +199,8 @@
       });
       const sha = file.sha;
 
-      // 2) prepare new content (the in-memory `glyphs` array)
+      // commit updated glyphs array
       const content = btoa(JSON.stringify(glyphs, null, 2));
-
-      // 3) update via GitHub API
       await octokit.repos.createOrUpdateFileContents({
         owner:   repoInfo.owner,
         repo:    repoInfo.repo,
@@ -216,12 +209,11 @@
         content: content,
         sha:     sha,
       });
-
       alert('✅ glyphs.json updated on GitHub!');
     } catch (err) {
       console.error(err);
-      alert('❌ Failed to save changes:\n' + err.message);
+      alert('❌ Save failed: ' + err.message);
     }
   });
 
-})();
+})();  

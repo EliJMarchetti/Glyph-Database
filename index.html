@@ -1,36 +1,39 @@
-<!-- Octokit REST library -->
-<script src="https://cdn.jsdelivr.net/npm/@octokit/rest/dist/octokit.umd.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glyph Database</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
+  <!-- fallback background -->
   <div id="bg-fallback"></div>
-  <div id="app">
 
-    <!-- HEADER -->
+  <div id="app">
     <header>
-      <input type="text" id="search" placeholder="Search glyphs..." />
+      <input type="text" id="search" placeholder="Search glyphs…" />
       <label><input type="checkbox" id="searchTextToggle" /> Search in details</label>
       <select id="levelFilter">
         <option value="all">All Glyphs</option>
       </select>
+
+      <!-- Admin Mode toggles -->
       <button id="enterAdmin">🔒 Admin</button>
       <button id="saveAdmin" style="display:none">💾 Save Changes</button>
+
       <div id="schoolFilters"></div>
     </header>
 
-    <!-- MOBILE-ONLY TOGGLE BUTTON (always visible) -->
+    <!-- mobile-only dropdown toggle -->
     <button id="mobileHeaderToggle" class="header-toggle">▼</button>
 
-    <!-- GLYPH CARDS -->
     <main id="cardsContainer"></main>
   </div>
 
+  <!-- 1) Octokit UMD (must come before your script) -->
+  <script src="https://cdn.jsdelivr.net/npm/@octokit/rest/dist/octokit.umd.min.js"></script>
+  <!-- 2) Your app script -->
   <script src="assets/js/script.js?v=6"></script>
 </body>
 </html>
