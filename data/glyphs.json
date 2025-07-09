@@ -1445,23 +1445,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Friends",
-    "Name": "Companions",
-    "Tier": 0,
-    "Points": 0,
-    "School": "Mind",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "Up to 1 minute",
-    "Range": "Self",
-    "Rite": false,
-    "Old Text": "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.",
-    "New Text": "For the duration, you have advantage on all wellspring checks directed at one creature of your choice that isn't hostile toward you. When the glyph ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.",
-    "Higher Tiers": ""
-  },
-  {
     "Chat Name": "",
     "Name": "Companions",
     "Tier": 0,
@@ -6953,23 +6936,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Hex",
-    "Name": "Quary",
-    "Tier": 1,
-    "Points": 3,
-    "School": "Nature",
-    "V": true,
-    "S": false,
-    "Casting Time": "1 AP",
-    "Concentration": true,
-    "Duration": "Up to 1 hour",
-    "Range": "90 feet",
-    "Rite": false,
-    "Old Text": "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature. A remove curse cast on the target ends this spell early.",
-    "New Text": "You place a curse on a creature that you can see within range. Until the glyph ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the glyph. The target has disadvantage on ability checks made with the chosen ability. If the target drops to 0 hit points before this glyph ends, you can use a bonus action on a subsequent turn of yours to curse a new creature. A remove curse cast on the target ends this glyph early.",
-    "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd or 4th level, you can maintain your concentration on the Glyph for up to 8 hours. When you use a Glyph slot of 5th level or higher, you can maintain your concentration on the Glyph for up to 24 hours."
-  },
-  {
     "Chat Name": "",
     "Name": "Quary",
     "Tier": 1,
@@ -7229,7 +7195,7 @@
     "Name": "Resistance",
     "Tier": 0,
     "Points": 0,
-    "School": "Elemental",
+    "School": "Harmony",
     "V": true,
     "S": false,
     "Casting Time": "2 AP",
