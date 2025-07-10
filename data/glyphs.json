@@ -52,6 +52,23 @@
   },
   {
     "Chat Name": "",
+    "Name": "Acrimony",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP, spent when you take damage from an attack or glyph.",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You are filled with corrosive hatred towards one creature who harmed you. One creature who targeted you with an attack or glyph within range becomes the focus of your ire and is subject to aditional effects on glyphs you cast in the future; Any time you cast a glyph which only targets that creature, for the duration of this effect, you treat that glyph as being cast with 3 aditional mana.",
+    "Higher Tiers": "For every 3 aditional mana you expend in the casting of this glyph, equally as much mana is applied to subsequent glyphs effected by this one. "
+  },
+  {
+    "Chat Name": "",
     "Name": "Agron's Dome of Life Transference",
     "Tier": 6,
     "Points": 27,
@@ -8959,23 +8976,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "",
-    "Name": "True Strike",
-    "Tier": 0,
-    "Points": 0,
-    "School": "Nature",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "Self",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You force mana into your weapon, causing it to move as you will. You make a weapon attack using your Wellspring modifier for the attack and damage roll. Additionally, you may convert the weapon’s damage to your affinity’s type. ",
-    "Higher Tiers": "At Higher Level. You deal additional damage of your affinity’s type at each of level 5 (1d6),  level 11 (2d6), and level 17 (3d6). "
-  },
-  {
     "Chat Name": "True Strike",
     "Name": "True Strike",
     "Tier": 0,
@@ -8991,6 +8991,23 @@
     "Old Text": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
     "New Text": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this glyph hasn't ended.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "",
+    "Name": "True Strike",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You force mana into your weapon, causing it to move as you will. You make a weapon attack using your Wellspring modifier for the attack and damage roll. Additionally, you may convert the weapon’s damage to your affinity’s type. ",
+    "Higher Tiers": "At Higher Level. You deal additional damage of your affinity’s type at each of level 5 (1d6),  level 11 (2d6), and level 17 (3d6). "
   },
   {
     "Chat Name": "Tsunami",
