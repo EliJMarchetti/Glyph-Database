@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Prevent any browser caching of the HTML -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glyph Database</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <!-- Bumped version to force CSS fetch -->
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
   <div id="bg-fallback"></div>
@@ -27,6 +32,15 @@
     <main id="cardsContainer"></main>
   </div>
 
-  <script src="assets/js/script.js?v=6"></script>
+  <!-- Bumped version to force JS fetch -->
+  <script src="assets/js/script.js?v=7"></script>
+  <!-- Unregister any old service workers so they can’t cache your site -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs =>
+        regs.forEach(r => r.unregister())
+      );
+    }
+  </script>
 </body>
 </html>
