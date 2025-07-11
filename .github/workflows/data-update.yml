@@ -1,0 +1,41 @@
+name: 🗓️ Scheduled glyph-data update
+
+# Run on every push to main, and also on an hourly schedule
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 * * * *'   # every hour at minute 0
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build glyph JSON
+        run: npm run build:data
+
+      - name: Commit & push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/glyphs.json
+          if git diff --cached --quiet; then
+            echo "No changes to glyphs.json"
+            exit 0
+          fi
+          git commit -m "chore: auto-update glyph data [skip ci]"
+          git push origin main
