@@ -153,6 +153,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can create two additional globes of fresh air for each slot level above 2nd."
   },
   {
+    "Chat Name": "Air Bullet",
+    "Name": "Air Bullet",
+    "Tier": 9,
+    "Points": 54,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 Feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You fire a super-compressed blast of air at a target. Make a ranged glyph attack. On a hit, the target takes 10d10 piercing damage. If the target is a structure, the attack deals double damage, and if it deals enough damage to destroy part of the structure, it creates a 5-foot-diameter hole.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 10 or higher, the damage increases by 2d10 for each tier above Tier 9."
+  },
+  {
     "Chat Name": "Alarm",
     "Name": "Alarm",
     "Tier": 1,
@@ -510,6 +527,23 @@
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6  for every 3 additional mana expended. If you expend an additional 9 mana the armor class bonus increases to +4. If you expend 13 additional mana the armor class bonus increases to +5. "
   },
   {
+    "Chat Name": "Arsenal of Radiance",
+    "Name": "Arsenal of Radiance",
+    "Tier": 12,
+    "Points": 90,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "120 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "Tapping into the boundless forges beyond the planes, you manifest spectral echoes of armaments. When you cast this glyph, and by spending 2 AP on each of your subsequent turns, 5 phantasmal weapons materialize and lash out at your enemies. Each weapon targets a creature you can see within range, striking simultaneously. You can direct them to strike one creature or divide them among several. Each weapon deals 2d10 damage of your choice: bludgeoning, piercing, or slashing. This damage is magical for the sake of overcoming magical resistance.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Tasha's Mind Whip",
     "Name": "Astrions's Mind Whip",
     "Tier": 2,
@@ -610,6 +644,23 @@
     "Old Text": "Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
     "New Text": "Up to three creatures of your choice that you can see within range must make wellspring saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the glyph ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+  },
+  {
+    "Chat Name": "Baneful Infection",
+    "Name": "Baneful Infection",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 week",
+    "Range": "touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You mark a creature’s fate with a silent curse, branding it with a future calamity. The creature must succeed on a Wits saving throw or have their wellspring corrupted temporarily.\r\n\r\nAt any time before the duration ends, you may use a spend 1 AP to invoke the glyph, causing the creatures wellspring to erupt causing immense pain. When you do, the target takes 4d6 aetherial damage. The target is also blinded until the end of your next turn.\r\n\r\nOnce you invoke the corruption, the glyph ends. You may also end the glyph by spending 1 AP on your turn. If the duration expires before you invoke it, the glyph fades harmlessly. This glyph can also be removed by lesser restoration or greater restoration. ",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 5 or higher, the damage increases by 1d6. At tier 6 you can cause the corruption 2 times, 3 times at tier 9 and 4 times at tier 12."
   },
   {
     "Chat Name": "Banishing Smite",
@@ -746,6 +797,23 @@
     "Old Text": "",
     "New Text": "With a motion of your hand, you summon a bolt of void energy and hurl it at up to three creatures within range and within your line of sight. Each target must make a Constitution saving throw. On a failed save, a target takes 3d12 void damage and suffers 1 level of exhaustion. On a successful save, the target takes half damage and suffers no exhaustion.",
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d12 for every 3 additional mana expended. "
+  },
+  {
+    "Chat Name": "Black Fireball",
+    "Name": "Black Fireball",
+    "Tier": 9,
+    "Points": 54,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 round",
+    "Range": "190 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "A swirling orb of volatile black fire manifests around your hands, flickering with both heat and decay. The glyph builds for one round. On your next turn, by spending a 2 AP , you hurl the orb toward a point within range. If you do not release it before the duration ends, the glyph fades harmlessly.\r\n\r\nWhen released, the orb detonates in a 40-foot-radius sphere, centered on the chosen point. Each creature in that area must make a Agility saving throw. On a failed save, a creature takes 10d6 fire damage and 10d6 void damage. On a successful save, the creature takes half as much of each damage type.\r\n\r\nThe black fire spreads around corners. It ignites flammable objects not being worn or carried, and withers nonmagical plant life within the area.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 10 or higher, the fire and void damage increases by 2d6 for each tier above Tier 9."
   },
   {
     "Chat Name": "Blade Barrier",
@@ -899,6 +967,23 @@
     "Old Text": "",
     "New Text": "You sacrifice a portion of your own vitality to harm your enemies. Choose one creature within range. For the duration of the glyph, each time you take damage, the target must make a Constitution saving throw. On a failed save, the target takes the same amount of damage that you suffered. ",
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can target an additional target for every 6 additional mana expended. "
+  },
+  {
+    "Chat Name": "Blood Infusion",
+    "Name": "Blood Infusion",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "self",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You channel bloodletting  into your weapon. As part of casting this glyph, make a melee weapon attack. On a hit, the target takes an additional 2d8 bleed damage and begins to bleed profusely.\r\n\r\nWhile you maintain concentration, at the start of the targets turn, the target takes 1d4 bleed damage and its speed is halved. This bleeding ends if the target is healed or you lose concentration.",
+    "Higher Tiers": "When cast using a glyph of Tier 3 or higher, the initial bleed damage increases by 1d8 for each tier above Tier 2. The d4 damage increases at tier 5 (2d4), tier 8 (3d4), tier 12 (4d4)"
   },
   {
     "Chat Name": "Blur",
@@ -1989,6 +2074,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."
   },
   {
+    "Chat Name": "Crimson Mark",
+    "Name": "Crimson Mark",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "touch",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You smear your own blood onto a creature, marking them with a detrimental feeling. Roll 2d8 and take that much bleed damage, and reduce your maximum hit points by half that amount until you finish a short rest.\r\n\r\nThe target must succeed on a Wits saving throw or become marked. Choose one of the following effects:\r\n\r\n    The target has disadvantage on checks and saves with one ability score of your choice.\r\n\r\n    The target has disadvantage on attack rolls against you.\r\n\r\n    Your attacks and glyphs deal an additional 1d8 void damage to the target.\r\n\r\nA lesser restoration or similar glyph ends this effect. The mark also ends if you lose concentration.",
+    "Higher Tiers": "When cast using a glyph of Tier 3 or higher, the void damage dealt by your attacks (if you choose that option) increases by 1d8 for each tier above Tier 2. At tier 5 you can choose 2 options. At tier 7 you can have all effects active."
+  },
+  {
     "Chat Name": "Rime's Binding Ice",
     "Name": "Crippling Rime",
     "Tier": 2,
@@ -2139,6 +2241,23 @@
     "Rite": false,
     "Old Text": "This spell creates a sphere centered on a point you choose within range. The sphere can have a radius of up to 40 feet. The area within this sphere is filled with magical darkness and crushing gravitational force. For the duration, the spell's area is difficult terrain. A creature with darkvision can't see through the magical darkness, and nonmagical light can't illuminate it. No sound can be created within or pass through the area. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there. Any creature that enters the spell's area for the first time on a turn or starts its turn there must make a Constitution saving throw. The creature takes 8d10 force damage on a failed save, or half as much damage on a successful one. A creature reduced to 0 hit points by this damage is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust.",
     "New Text": "This glyph creates a sphere centered on a point you choose within range. The sphere can have a radius of up to 40 feet. The area within this sphere is filled with magical darkness and crushing gravitational force. For the duration, the glyph's area is difficult terrain. A creature with darkvision can't see through the magical darkness, and nonmagical light can't illuminate it. No sound can be created within or pass through the area. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a glyph that includes a verbal component is impossible there. Any creature that enters the glyph's area for the first time on a turn or starts its turn there must make a Constitution saving throw. The creature takes 8d10 force damage on a failed save, or half as much damage on a successful one. A creature reduced to 0 hit points by this damage is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust.",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "Darkened Oblivion",
+    "Name": "Darknened Oblivion",
+    "Tier": 12,
+    "Points": 90,
+    "School": "bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "10 minutes",
+    "Range": "Self (300-foot radius sphere)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "With a wave of your hand, you draw yourself and willing creatures into a vast illusory  realm of your own creation. This  realm extends in a 300-foot radius centered on you and moves with you for the duration.\r\n\r\nYou and any number of creatures of your choice within the area are hidden within this illusory realm. You perceive the real world as normal, but to hostile creatures, it becomes a twisted dimension.  When a hostile creature enters the area for the first time or starts its turn there, it must succeed on a Mind saving throw or take 6d12 psychic damage. On a failed save, the creature perceives the area as magical darkness and its movement speed is reduced by half until the end of its next turn. While affected in this way, the creature is blinded, and you and your allies within the area are considered invisible and heavily obscured to it. \r\n\r\nOn a successful save, the creature takes half damage and is not otherwise affected.",
     "Higher Tiers": ""
   },
   {
@@ -3162,6 +3281,23 @@
     "Higher Tiers": "At higher Mana cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d12 for every 3 additional mana expended."
   },
   {
+    "Chat Name": "Execution",
+    "Name": "Execution",
+    "Tier": 12,
+    "Points": 90,
+    "School": "bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "3 AP",
+    "Concentration": true,
+    "Duration": "1 round",
+    "Range": "sight",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You feel the hatred for all living things and are given the power from the Betrayers. A beam of seething black energy erupts from beneath your feet, casting your form into the sky like a spear of shadow. You soar up to 1 mile straight into the air, darkening the sky with your presence. In that moment of silence, death decides.\r\n\r\nChoose any number of creatures you can see from your position. Each target is struck by a withering bolt of voidfire, taking 15d10 + 40 void damage. This damage ignores immunity to void damage. If this damage reduces the target to 0 hit points, they fade from existence and cannot be revived by anymeans.\r\n\r\nOnce the glyph resolves, you return to the space you left in a sudden impact of crackling shadow and scorched earth.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Clairvoyance",
     "Name": "Expand Senses",
     "Tier": 5,
@@ -3553,6 +3689,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
   },
   {
+    "Chat Name": "Fissure",
+    "Name": "Fissure",
+    "Tier": 12,
+    "Points": 90,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (100-foot line)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "A massive fissure tears open in a 100-foot-long, 10-foot-wide, 50-foot-deep line in front of you. Each creature in that line must make a Agility saving throw.\r\n\r\nOn a failed save, the creature falls and takes 26d8 bludgeoning damage from collapsing debris. On a success, it avoids the fissure entirely.  After 1d4 rounds the fissure fills with debris and any huge or smaller creature remains inside the fissure after 1d4 rounds they die instantly.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Flame Arrows",
     "Name": "Flame Arrows",
     "Tier": 3,
@@ -3908,6 +4061,23 @@
     "Old Text": "",
     "New Text": "When a creature within 5 feet of you misses a melee attack, you can unleash a burst of frigid energy in retaliation. The creature must make a Constitution saving throw against your glyph save DC. On a failed save, the creature takes 5d10 cold damage and becomes restrained, encased in ice until the end of its next turn. On a successful save, the creature takes half as much damage and is not restrained.",
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended. "
+  },
+  {
+    "Chat Name": "Gale",
+    "Name": "Gale",
+    "Tier": 7,
+    "Points": 36,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 Foot Cone ",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You hurl a blast of compressed air in a wide cone. Each creature in a 60-foot cone must make a Constitution saving throw. On a failed save, a creature takes 5d8 bludgeoning damage, 5d8 slashing damage, and is pushed 15 feet away from you. On a successful save, the creature takes half damage and is not moved. Medium unsecured objects in the area are flung away. Creatures that are flying have disadvantage on the saving throw.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 7 or higher, both damage rolls (bludgeoning and slashing) increase by 1d8 for each tier above Tier 7."
   },
   {
     "Chat Name": "Aganazzar's Scorcher",
@@ -4794,6 +4964,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "Hurricane",
+    "Name": "Hurricane",
+    "Tier": 12,
+    "Points": 90,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "Self (90-foot radius)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You cause the air to swirl around you ferociously , filling a 90-foot-radius sphere with roaring wind. Creatures entering or starting their turn in the area must make a Constitution saving throw. On a failed save, a creature takes 8d12 bludgeoning damage and is knocked prone. On a success, it takes half damage.\r\n\r\nTiny creatures and flying creatures automatically fail. Small creatures have disadvantage. Movement inside the area is halved. Creatures smaller than Gargantuan that try to fly are knocked prone. Ranged attacks in the area have disadvantage and max range of 20 feet. The storm moves with you.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Hypnotic Pattern",
     "Name": "Hypnotic Pattern",
     "Tier": 4,
@@ -5151,6 +5338,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
   },
   {
+    "Chat Name": "Judgement",
+    "Name": "Judgement",
+    "Tier": 12,
+    "Points": 90,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "3 AP",
+    "Concentration": true,
+    "Duration": "1 round",
+    "Range": "sight",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You are blessed with the gavel of the Enduring Arbiter up to 1 mile above where you stand. All creatures that you can see are individually judged, and dealt 10d10 radiant damage or healing. depending on your choice. Afterwards, you reappear where you stood in a flash of light.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Jump",
     "Name": "Jump",
     "Tier": 1,
@@ -5166,6 +5370,23 @@
     "Old Text": "You touch a creature. The creature's jump distance is tripled until the spell ends.",
     "New Text": "You touch a creature. The creature's jump distance is tripled until the glyph ends.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "Kinematic",
+    "Name": "Kinematic",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You create a magical tether between two creatures or objects within range. Choose two targets that are each within 30 feet of one another, both of which must be visible to you. There must be no solid barriers or creatures between them that would obstruct direct movement.\r\n\r\nIf both targets are the same size, they are pulled toward each other and collide at the midpoint between their starting locations. If one target is at least one size category larger than the other or is fixed in place (such as being attached to a structure), the smaller target is pulled the full distance toward the larger one and collides with it. Huge or larger targets cannot be moved by this glyph.\r\n\r\nA creature that would be moved by this effect must make a Strength saving throw. On a failed save, it is moved as described and automatically fails any Dexterity saving throws caused by this glyph. On a successful save, the tether is broken, no targets move, and the glyph ends.\r\n\r\nIf a creature is in the path of a target being pulled, it must make a Agility saving throw. On a failed save, the creature is struck and considered hit by the moving target. On a successful save, the creature avoids the collision.\r\n\r\nIf the two tethered targets collide, each takes 1d6 damage for every 10 feet moved (minimum 1d6). The damage type—bludgeoning, slashing, or piercing—is determined by the GM based on the materials and nature of the targets.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 3 or higher, the range and the maximum distance between the targets increase by 10 feet for each tier above Tier 2. When you cast this glyph at tier 6 it can affect Huge creatures. At tier 10 it can effect gargantuan creatures. At tier 12 it can effect all creature sizes."
   },
   {
     "Chat Name": "Kinetic Jaunt",
@@ -5270,6 +5491,23 @@
     "Higher Tiers": ""
   },
   {
+    "Chat Name": "Life Drinker",
+    "Name": "Life Drinker",
+    "Tier": 6,
+    "Points": 27,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "Self (30-foot radius sphere)",
+    "Rite": "",
+    "Old Text": "",
+    "New Text": "You cloak yourself in a draining force, negating healing within a 30-foot radius. When you cast this glyph, roll 8d10 to create a healing suppression pool. While active, any magical or natural healing within the area is negated, reducing the pool by an amount equal to the healing prevented.\r\n\r\nIf healing from any source (glyph, item, feature) is used within the radius, that source is expended, but no healing occurs. When the glyph’s pool is fully depleted, the glyph ends. If an effect would exceed the remaining pool, the excess healing applies normally, and the glyph ends immediately afterward.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 7 or higher, roll +2d10 per tier above Tier 6 to increase the healing suppression pool."
+  },
+  {
     "Chat Name": "Life Transference",
     "Name": "Life Transference",
     "Tier": 4,
@@ -5338,6 +5576,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
   },
   {
+    "Chat Name": "Lightning Helix",
+    "Name": "Lightning Helix",
+    "Tier": 3,
+    "Points": 9,
+    "School": "arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (30-foot cone)",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You channel electric power through a metal object in your hand, discharging a blast of lightning in a wide arc. Each creature in a 30-foot cone must make a Constitution saving throw. On a failed save, a creature takes 5d6 lightning damage and can’t take reactions until the start of its next turn. On a successful save, the creature takes half damage and suffers no additional effects.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 4 or higher, the lightning damage increases by 1d6 for each tier above Tier 3."
+  },
+  {
     "Chat Name": "Lightning Lure",
     "Name": "Lightning Lure",
     "Tier": 0,
@@ -5353,6 +5608,23 @@
     "Old Text": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15 feet of you. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you. This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "New Text": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15 feet of you. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you. This glyph's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "Lightning Spear",
+    "Name": "Lightning Spear",
+    "Tier": 9,
+    "Points": 54,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "300 Feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You form a spear of crackling lightning in your hand, shaped from raw eneng. As part of casting this glyph, you make a glyph attack against one creature. Choose one of the following: a melee glyph attack against a creature within 5 feet of you or a ranged glyph attack against a creature you can see within range. On a hit, the target takes 4d8 + 15 lightning damage. If the target is not immune to lightning damage, it must succeed on a Constitution saving throw or be knocked prone and paralyzed for the duration. The target may repeat the saving throw at the end of each of its turns, ending the effect on a success. On a miss, the target takes half as much damage and suffers no other effects.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 10 or higher, the damage increases by 2d8 for each tier above 9."
   },
   {
     "Chat Name": "Locate Animals or Plants",
@@ -6645,6 +6917,23 @@
     "Old Text": "Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability moditier. This spell has no effect on undead or constructs.",
     "New Text": "Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability moditier. This glyph has no effect on fallen or constructs.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd."
+  },
+  {
+    "Chat Name": "Precipice Spire",
+    "Name": "Precipice Spire",
+    "Tier": 6,
+    "Points": 27,
+    "School": "Elemental",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You slam your hand to the ground and erupt a 5-foot-radius, 30-foot-long stone column in a direction of your choice. Each creature in its path must make a Agility saving throw. On a failed save, the creature takes 6d8 bludgeoning damage, or half as much on a success.\r\n\r\nThe pillar remains for 3d4 rounds, can hold 1,000 pounds, and counts as difficult terrain.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 7 or higher, the damage increases by 1d8 for each tier above Tier 6."
   },
   {
     "Chat Name": "Prestidigitation",
@@ -8430,6 +8719,23 @@
     "Old Text": "Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 12d6 radiant damage and is blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded by this spell. Undead and oozes have disadvantage on this saving throw. A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded. This spell dispels any darkness in its area that was created by a spell.",
     "New Text": "Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 12d6 radiant damage and is blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded by this glyph. fallen and oozes have disadvantage on this saving throw. A creature blinded by this glyph makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded. This glyph dispels any darkness in its area that was created by a glyph.",
     "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "Sunscorch",
+    "Name": "Sunscorch",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You invoke the searing power of the sun, targeting a creature you can see within 60 feet that is either outdoors in bright sunlight or within an area illuminated by an artificial sunlight effect (such as the daylight glyph).\r\n\r\nThe target must make a Constitution saving throw. On a failed save, the creature takes 2d8 fire damage and 2d8 radiant damage. Or takes half damage on a successful one.",
+    "Higher Tiers": "When you cast this glyph using a glyph of Tier 3 or higher, the fire and radiant damage each increase by 1d8 for every tier above Tier 2."
   },
   {
     "Chat Name": "Swift Quiver",
