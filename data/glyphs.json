@@ -5695,6 +5695,23 @@
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
   },
   {
+    "Chat Name": "Lunar Fortune",
+    "Name": "Lunar Fortune",
+    "Tier": 4,
+    "Points": 15,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "24 Hours",
+    "Range": "self",
+    "Rite": true,
+    "Old Text": "",
+    "New Text": "By invoking the moon’s gentle radiance beneath the open night sky, you trace a lunar glyph that aligns your fate with celestial threads of fortune. This glyph can only be inscribed under the moon’s visible light.\r\n\r\nUpon completion, three pale motes—glowing like miniature moons—circle your body, casting moonlight in a 15-foot radius of bright light and dim light for an additional 15 feet. Each time a mote is used, both ranges diminish by 5 feet.\r\n\r\nWhile the glyph persists, whenever you make an attack roll, ability check, or saving throw and the number rolled on the d20 is less than 10, you may expend one mote to treat the roll as though you had rolled a 10.\r\n\r\nAlternatively, regardless of the number rolled, you may expend all three motes simultaneously to treat the result as a natural 20.",
+    "Higher Tiers": ""
+  },
+  {
     "Chat Name": "Maddening Darkness",
     "Name": "Maddening Darkness",
     "Tier": 11,
@@ -7562,6 +7579,23 @@
     "Rite": false,
     "Old Text": "You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the spell ends. The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space. Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope. Anything inside the extradimensional space drops out when the spell ends.",
     "New Text": "You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the glyph ends. The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space. Attacks and glyphs can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope. Anything inside the extradimensional space drops out when the glyph ends.",
+    "Higher Tiers": ""
+  },
+  {
+    "Chat Name": "Sage Manacles",
+    "Name": "Sage Manacles",
+    "Tier": 2,
+    "Points": 6,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 hour",
+    "Range": "30 feet",
+    "Rite": false,
+    "Old Text": "",
+    "New Text": "You speak a binding glyph, conjuring a pair of spectral manacles that lash out toward a creature within range. Choose one Medium or smaller creature you can see that has hands. The target must succeed on a Agility saving throw or be shackled by the glyph-bound restraints for the duration.\r\n\r\nWhile bound, the creature cannot cast glyphs that require somatic components, nor can it perform actions that require the use of its hands, such as wielding held weapons or manipulating objects.\r\n\r\n\r\nA creature proficient with thieves’ tools may use its action to make an agility  check with those tools against your spell save DC to attempt to unlock the glyph. On a success, the manacles vanish.",
     "Higher Tiers": ""
   },
   {
