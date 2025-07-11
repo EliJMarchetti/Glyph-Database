@@ -2,7 +2,7 @@
 
 (async () => {
   // 1) Load glyph data
-  const res    = await fetch('data/glyphs.json');
+  const res = await fetch(`data/glyphs.json?v=${Date.now()}`);
   const glyphs = await res.json();
 
   // 2) Grab controls & container
