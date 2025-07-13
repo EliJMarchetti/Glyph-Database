@@ -544,23 +544,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Astral Blade",
-    "Name": "Astral Blade",
-    "Tier": 4,
-    "Points": 15,
-    "School": "Celestial",
-    "V": true,
-    "S": false,
-    "Casting Time": "1 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "self",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You coat a weapon you are currently wielding with psychic energy. Making it a magical weapon. It deals an extra 1d8 psychic damage on a hit. ",
-    "Higher Tiers": "When you cast this glyph using tier 5 or 6, the damage increases to 2d8. When you cast it using a tier 7 or 8, the damage increases to 3d8. When you cast it using a tier 9-11 the damage increases to 5d8. When you cast it using a tier 12 the damage increases to 6d8"
-  },
-  {
     "Chat Name": "Tasha's Mind Whip",
     "Name": "Astrions's Mind Whip",
     "Tier": 2,
@@ -1020,23 +1003,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Bolstered Arrow",
-    "Name": "Bolstered Arrow",
-    "Tier": 1,
-    "Points": 3,
-    "School": "Harmony",
-    "V": true,
-    "S": false,
-    "Casting Time": "1 AP",
-    "Concentration": true,
-    "Duration": "10 minutes",
-    "Range": "touch",
-    "Rite": true,
-    "Old Text": "",
-    "New Text": "Your words bring forth an arrow of light orit coats an arrow you have. The arrow shaft it begins to strengthen with immense durability. The arrow becomes strong enough to hold itself in place along any surface. The arrow is also able to withstand over 500 pounds of weight without it snapping. \r\n",
-    "Higher Tiers": "When you cast this glyph using a tier 2 or higher the weight increases by 200 pounds per tier above 1."
-  },
-  {
     "Chat Name": "Bones of the Earth",
     "Name": "Bones of the Earth",
     "Tier": 7,
@@ -1442,23 +1408,6 @@
     "Rite": false,
     "Old Text": "Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw.",
     "New Text": "Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the glyph ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against glyphs and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a glyph or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw.",
-    "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Circle of Seclusion",
-    "Name": "Circle of Seclusion",
-    "Tier": 2,
-    "Points": 6,
-    "School": "Celestial",
-    "V": true,
-    "S": false,
-    "Casting Time": "1 minute",
-    "Concentration": false,
-    "Duration": "8 hours",
-    "Range": "self (20-foot diameter radius)",
-    "Rite": true,
-    "Old Text": "",
-    "New Text": "You sprinkle radiant energy in a circle around your location while you cast this glyph. For the duration, sounds and scents generated within the circle are muted. All perception checks made to locate anything within the circle using hearing or smell are at disadvantage.",
     "Higher Tiers": ""
   },
   {
@@ -2414,23 +2363,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Debilitate",
-    "Name": "Debilitate",
-    "Tier": 2,
-    "Points": 6,
-    "School": "bane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "30 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You motion a glyph of unraveling upon a creature within range, attempting to weaken its resistance to a specific form of energy or force. Choose one creature you can see within range. That creature must make a Constitution saving throw. On a failed save, if the creature is resistant to the damage type they are no longer resistant.  A creature can make another Constitution saving throw at the end of each of its turns, ending the effect on a success.",
-    "Higher Tiers": "When you cast this glyph at  tier 2 or higher, you may target one additional creature for each tier above 1st. Additionally, when you cast this glyph at tier 4 or higher, if the creature is immune to the damage they instead take normal damage. "
-  },
-  {
     "Chat Name": "Bestow Curse",
     "Name": "Debilitate",
     "Tier": 4,
@@ -2618,23 +2550,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Dire Charm",
-    "Name": "Dire Charm",
-    "Tier": 4,
-    "Points": 15,
-    "School": "Bane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "120 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You magically infect a living creature with murderous impulses. The targeted creature must make a Mind saving throw. On a failed save, the target will instantly go feral, similar to a berserkers rage, and will instantly seek to destroy everyone around, friend and foe alike. While raging, the creature has advantage on strength checks and strength saving throws, does bonus damage equal to your half your wellspring modifier. They also gains resistance to bludgeoning, piercing, and slashing damage. The creature cannot cast glyphs or use missile attacks. At the end of the rage, the creature will take 2 levels of exhaustion. If cast on a berserker they do not get the benefits of thier rage along with this effect.",
-    "Higher Tiers": ""
-  },
-  {
     "Chat Name": "",
     "Name": "Disarm",
     "Tier": 0,
@@ -2786,23 +2701,6 @@
     "Old Text": "You cast this spell on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusionary flourish or reducing its perceived value by half with the help of illusionary dents and scratches. Anyone examining the object must roll an Investigation check against your spell DC.",
     "New Text": "You cast this glyph on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusionary flourish or reducing its perceived value by half with the help of illusionary dents and scratches. Anyone examining the object must roll an Investigation check against your glyph DC.",
     "Higher Tiers": "When you cast this Glyph using a higher Glyph slot, you increase the size of the object by 1 foot per Glyph slot over 1st."
-  },
-  {
-    "Chat Name": "Divine Aid",
-    "Name": "Divine Aid",
-    "Tier": 4,
-    "Points": 14,
-    "School": "Harmony",
-    "V": true,
-    "S": false,
-    "Casting Time": " 2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "touch",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": " Until the glyph ends choose one of the following effects, the targets gain a +2 bonus to its AC and Strength, Dexterity and Constitution saving throws, Its movement speed increases by 30 feet, or it gains an additional reaction on each of its turns. In addition, when it is targeted by an attack or a glyph (including by an area of effect), the target can expend its reaction to move up to 30 feet, potentially avoiding the effect.",
-    "Higher Tiers": "When you cast this glyph using a glyph of Tier 6 you may choose one additional affect. When you cast this glyph using a glyph tier of 8 you gain all effects. "
   },
   {
     "Chat Name": "",
@@ -3007,23 +2905,6 @@
     "Old Text": "You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet). While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica. After 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost.",
     "New Text": "You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the glyph. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet). While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica. After 60 days, there is a cumulative 5 percent chance per day that the glyph's effect ends. This effect ends if you cast this glyph again, if the smaller replica chest is destroyed, or if you choose to end the glyph as an action. If the glyph ends and the larger chest is on the Ethereal Plane, it is irretrievably lost.",
     "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Dusk Shield",
-    "Name": "Dusk Shield",
-    "Tier": 2,
-    "Points": 6,
-    "School": "Celestial",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "self",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "Your shadow rises to intercept a blow meant for you. You cannot cast this glyph if any portion of the incoming damage is radiant.\r\n\r\nWhen you do, reduce the damage taken by 2d8 + your glyphcasting ability modifier. The amount of damage reduced in this way is stored as shadow charge.\r\n\r\nThe next time you hit a creature with a glyph attack or weapon attack before the end of your next turn, the stored shadow charge is released, dealing additional void damage equal to the amount absorbed. If the stored energy is not released by the end of your next turn, it fades harmlessly.",
-    "Higher Tiers": "When you cast this glyph using a tier 2  glyph or higher, the damage reduced (and thus the potential stored) increases by 1d8 for each slot level above tier 2."
   },
   {
     "Chat Name": "Dust Devil",
@@ -3296,23 +3177,6 @@
     "Old Text": "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends. Bear's Endurance. The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends. Bull's Strength. The target has advantage on Strength checks, and their carrying capacity doubles. Cat's Grace. The target has advantage on Dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated. Eagle's Splendor. The target has advantage on Charisma checks. Fox's Cunning. The target has advantage on Intelligence checks. Owl's Wisdom. The target has advantage on Wisdom checks. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
     "New Text": "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the glyph ends. Bear's Endurance. The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the glyph ends. Bull's Strength. The target has advantage on Strength checks, and their carrying capacity doubles. Cat's Grace. The target has advantage on agility checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated. Eagle's Splendor. The target has advantage on wellspring checks. Fox's Cunning. The target has advantage on mind checks. Owl's wits. The target has advantage on wits checks. At Higher Tiers. When you cast this glyph using a glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
     "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Enhanced Wisdom",
-    "Name": "Enhanced Wisdom",
-    "Tier": 2,
-    "Points": 6,
-    "School": "Harmony",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "10 minutes",
-    "Range": "touch",
-    "Rite": true,
-    "Old Text": "",
-    "New Text": "You touch a willing creature and grant them magical wisdom granting advantage on wisdom saving throws and a +3 to wisdom ability checks and saving throws.\r\n",
-    "Higher Tiers": "When you cast this glyph using a tier 4  you can apply it to another creature and another at tier 6, tier 8 and tier 11."
   },
   {
     "Chat Name": "Enlarge/Reduce",
@@ -4046,23 +3910,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Force Cannon",
-    "Name": "Force Cannon",
-    "Tier": 1,
-    "Points": 3,
-    "School": "bane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "120 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You conjure a spear of pure kinetic energy and hurl it toward a distant foe. Make a ranged glyph attack against a creature within range. On a hit, the target takes 2d12 force damage, and if it is Huge or smaller, it is pushed 10 feet away from you in a straight line.\r\n\r\nThis glyph’s forceful impact is audible out to 300 feet.",
-    "Higher Tiers": "When you cast this glyph using a tier 2 or higher, its damage increases by 1d12 per tier above 1. "
-  },
-  {
     "Chat Name": "Forcecage",
     "Name": "Forcecage",
     "Tier": 10,
@@ -4486,23 +4333,6 @@
     "Old Text": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day. The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
     "New Text": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day. The berries lose their potency if they have not been consumed within 24 hours of the casting of this glyph.",
     "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Grasping Shadow",
-    "Name": "Grasping Shadow",
-    "Tier": 3,
-    "Points": 9,
-    "School": "Celestial",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "30 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You command your shadow to slip across the ground and seize that of another creature within range. Make a melee glyph attack against a creature you can see. On a hit, the target’s shadow is bound, and it becomes grappled for the duration.\r\n\r\nWhile the target remains grappled by this glyph, you can spend 1 AP on your turn to deal 4d6 void damage to it.\r\n\r\nThe target may attempt to escape by using its action to make a Strength (Athletics) or Agility (Acrobatics) check against your glyph save DC. You do not contest this check. The glyph immediately ends if the target is exposed to bright light created by a glyph of tier 3 or higher, or if the grapple is broken by any means.",
-    "Higher Tiers": "When you cast this glyph using a tier 4 or higher, its damage increases by 1d6 per tier above 3. "
   },
   {
     "Chat Name": "Grasping Vine",
@@ -5168,23 +4998,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Ice Beam",
-    "Name": "Ice Beam",
-    "Tier": 2,
-    "Points": 6,
-    "School": "Elemental",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "60 feet ",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "A beam of pale blue light forming a line 60 feet long and 5 feet wide flashes out from your outstretched hand in a direction you choose. Each creature in the line must make a Constitution saving throw. On a failed save, a creature takes 3d8 cold damage, and until the beginning of your next turn its speed is halved and it can't take reactions. On a successful save, a creature takes half as much damage and does not suffer the other effects. ",
-    "Higher Tiers": "When you cast this glyph using a tier 3 or higher, the cold  damage increases by 1d8 per tier above 2. "
-  },
-  {
     "Chat Name": "Ice Knife",
     "Name": "Ice Knife",
     "Tier": 1,
@@ -5387,23 +5200,6 @@
     "Old Text": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain. When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.",
     "New Text": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain. When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the glyph's area for the first time on a turn or ends its turn there.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
-  },
-  {
-    "Chat Name": "Instant Escape",
-    "Name": "Instant Escape",
-    "Tier": 3,
-    "Points": 6,
-    "School": "Harmony",
-    "V": true,
-    "S": false,
-    "Casting Time": "Reaction or 1 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "self",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "Its not fleeing it is simply a strategic repositioning of your body to avoid the brunt of an attack. Upon taking damage, you teleport to a position in view within 90ft. You also gain resistance to the triggering damage.",
-    "Higher Tiers": ""
   },
   {
     "Chat Name": "Intellect Fortress",
@@ -6392,23 +6188,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Mind Fog",
-    "Name": "Mind Fog",
-    "Tier": 5,
-    "Points": 21,
-    "School": "chaos",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": 120,
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You conjure a swirling 20-foot-radius sphere of neurotoxic, synapse-clouding fog at a point you can see within range. The fog is a ghostly blue-grey and clings unnaturally to the air, spreading around corners. It lightly obscures its area and remains for the duration or until dispersed by a strong wind.\r\n\r\nWhen a creature enters the glyph’s area for the first time on a turn, or starts its turn there, it must make a Constitution saving throw. On a failed save, the creature takes 4d6 poison damage, 4d6 psychic damage, and cannot concentrate on glyph until the start of its next turn. On a successful save, the creature takes half damage and is affected by normal concentration rules.\r\n\r\nThis fog seeps through nostrils, skin, and thought—creatures are affected even if holding their breath or otherwise attempting to resist inhalation.",
-    "Higher Tiers": "When you cast this glyph using a tier 6 or higher, the psychic and poison damage increases by 1d6 per tier above 5. "
-  },
-  {
     "Chat Name": "",
     "Name": "Mind Needle",
     "Tier": 0,
@@ -6814,23 +6593,6 @@
     "Rite": false,
     "Old Text": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical plants in the area that aren't creatures, such as trees and shrubs, wither and die instantly.",
     "New Text": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and fallen aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical plants in the area that aren't creatures, such as trees and shrubs, wither and die instantly.",
-    "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Orb of Infatuation",
-    "Name": "Orb of Infatuation",
-    "Tier": 5,
-    "Points": 21,
-    "School": "Mind",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "30 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You place a beautiful orb in front of a creature of your choice. Choose one creature within 30ft, they must succeed on a Wits saving throw, or take 3d8 psychic damage, and be considered incapacitated and charmed until the end of thier next turn. The creature will spend their movement on their turn walking harmlessly toward the caster taking no actions. Finally, the affected creature is also considered vulnerable to any damage dealt by the caster until the end of the casters next turn. On a successful save, they take half damage and suffer no additional effect.",
     "Higher Tiers": ""
   },
   {
@@ -7701,23 +7463,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Relativity ",
-    "Name": "Relativity",
-    "Tier": 3,
-    "Points": 9,
-    "School": "chaos",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "60 feet ",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You warp the ambient temporal field around your targets. Choose one creature within range to slow. The target must succeed on a Wits saving throw or have its movement speed reduced by 10 feet for the duration. If the target fails, you may choose a second creature within range to gain 10 feet of movement speed until the glyph ends.\r\n\r\nThis effect cannot reduce a target’s speed below 0, and the increased speed cannot exceed the amount reduced. Creatures with no movement speed are unaffected and automatically succeed the saving throw.",
-    "Higher Tiers": "When you cast this glyph using a tier 4 or higher, the movement adjustment increases by 5 feet for each tier above 3."
-  },
-  {
     "Chat Name": "Remove Curse",
     "Name": "Remove Curse",
     "Tier": 4,
@@ -8398,23 +8143,6 @@
     "Higher Tiers": ""
   },
   {
-    "Chat Name": "Snap Freeze",
-    "Name": "Snap Freeze",
-    "Tier": 5,
-    "Points": 21,
-    "School": "Elemental",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "60 feet ",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You manipulate the moisture in the air, flash-freezing it around a creature within range. Choose one Large or smaller creature you can see. The target must make a Constitution saving throw.\r\n\r\nOn a failed save, the target takes 4d8 cold damage and is frozen solid, becoming restrained. If the creature fails the saving throw by 5 or more, it is instead paralyzed while frozen. On a successful save, the creature takes half damage and suffers no additional effects.\r\n\r\nA frozen creature may repeat the saving throw at the end of each of its turns, ending the effect on a success. If the creature fails a repeated save by 5 or more, it becomes paralyzed until the effect ends.\r\n\r\nThe freezing effect ends early if the creature takes 15 or more points of fire, bludgeoning, piercing, or slashing damage from a single source.",
-    "Higher Tiers": "When you cast this glyph using a tier 4 or higher, its damage increases by 1d8 per tier above 3. "
-  },
-  {
     "Chat Name": "Snare",
     "Name": "Snare",
     "Tier": 1,
@@ -8463,23 +8191,6 @@
     "Rite": false,
     "Old Text": "This spell snatches the soul of a humanoid as it dies and traps it inside the tiny cage you use for the material component. A stolen soul remains inside the cage until the spell ends or until you destroy the cage, which ends the spell. While you have a soul inside the cage, you can exploit it in any of the ways described below. You can use a trapped soul up to six times. Once you exploit a soul for the sixth time, it is released, and the spell ends. While a soul is trapped, the dead humanoid it came from can't be revived. Steal Life - You can use a bonus action to drain vigor from the soul and regain 2d8 hit points; Query Soul - You ask the soul a question (no action required) and receive a brief telepathic answer, which you can understand regardless of the language used. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic; Borrow Experience - You can use a bonus action to bolster yourself with the soul's life experience, making your next attack roll, ability check, or saving throw with advantage. If you don't use this benefit before the start of your next turn, it is lost; Eyes of the Dead - You can use an action to name a place the humanoid saw in life, which creates an invisible sensor somewhere in that place if it is on the plane of existence you're currently on. The sensor remains for as long as you concentrate, up to 10 minutes (as if you were concentrating on a spell). You receive visual and auditory information from the sensor as if you were in its space using your senses. A creature that can see the sensor (such as one using see invisibility or truesight) sees a translucent image of the tormented humanoid whose soul you caged.",
     "New Text": "This glyph snatches the soul of a humanoid as it dies and traps it inside the tiny cage you use for the material component. A stolen soul remains inside the cage until the glyph ends or until you destroy the cage, which ends the glyph. While you have a soul inside the cage, you can exploit it in any of the ways described below. You can use a trapped soul up to six times. Once you exploit a soul for the sixth time, it is released, and the glyph ends. While a soul is trapped, the dead humanoid it came from can't be revived. Steal Life - You can use a bonus action to drain vigor from the soul and regain 2d8 hit points; Query Soul - You ask the soul a question (no action required) and receive a brief telepathic answer, which you can understand regardless of the language used. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic; Borrow Experience - You can use a bonus action to bolster yourself with the soul's life experience, making your next attack roll, ability check, or saving throw with advantage. If you don't use this benefit before the start of your next turn, it is lost; Eyes of the Dead - You can use an action to name a place the humanoid saw in life, which creates an invisible sensor somewhere in that place if it is on the plane of existence you're currently on. The sensor remains for as long as you concentrate, up to 10 minutes (as if you were concentrating on a glyph). You receive visual and auditory information from the sensor as if you were in its space using your senses. A creature that can see the sensor (such as one using see invisibility or truesight) sees a translucent image of the tormented humanoid whose soul you caged.",
-    "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Spacial Shift",
-    "Name": "Spacial Shift",
-    "Tier": 7,
-    "Points": 36,
-    "School": "arcane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 minute",
-    "Range": "90 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You create a 40-foot-radius sphere of shifting spatial energy centered on a point within range. Inside this sphere, space folds and realigns at your will.\r\n\r\nWhen you cast this glyph, and by spending 1 AP on each of your turns thereafter, you may choose one creature you can see within the sphere. That creature is instantly teleported up to 20 feet to an unoccupied space you can see within the sphere.\r\n\r\nUnwilling creatures must succeed on a Wellspring saving throw to resist the displacement. Willing creatures are moved automatically.",
     "Higher Tiers": ""
   },
   {
@@ -9042,23 +8753,6 @@
     "Old Text": "You transmute your quiver so it produces an endless supply of nonmagical ammunition, which seems to leap into your hand when you reach for it. On each of your turns until the spell ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this spell disintegrate when the spell ends. If the quiver leaves your possession, the spell ends.",
     "New Text": "You transmute your quiver so it produces an endless supply of nonmagical ammunition, which seems to leap into your hand when you reach for it. On each of your turns until the glyph ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this glyph disintegrate when the glyph ends. If the quiver leaves your possession, the glyph ends.",
     "Higher Tiers": ""
-  },
-  {
-    "Chat Name": "Switcheroo",
-    "Name": "Switcheroo",
-    "Tier": 3,
-    "Points": 9,
-    "School": "Harmony",
-    "V": true,
-    "S": false,
-    "Casting Time": "2 AP",
-    "Concentration": false,
-    "Duration": "Instantaneous",
-    "Range": "90 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You mark space itself with a twisting glyph and attempt to transpose your position with that of a creature you can see within range. Choose one Large or smaller creature. The target must succeed on a Wellspring saving throw or be instantly teleported into your space as you simultaneously shift into its former location.\r\n\r\nIf either location lacks sufficient space to accommodate the respective creature, the effect automatically fails for that creature, and no teleportation occurs. A creature may choose to willingly fail this saving throw.",
-    "Higher Tiers": "When you cast this glyph using a tierf 4 or higher, its range increases by 30 feet tier above 3. At tier 6 you may also target huge creatures. At tier 9 you may target gargantuan creatures"
   },
   {
     "Chat Name": "Sword Burst",
@@ -10198,23 +9892,6 @@
     "Old Text": "You invoke both death and life upon a 10-foot-radius sphere centered on a point within range. Each creature of your choice in that area must make a Constitution saving throw, taking 2d6 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical vegetation in that area withers. In addition, one creature of your choice in that area can spend and roll one of its unspent Hit Dice and regain a number of hit points equal to the roll plus your spellcasting ability modifier.",
     "New Text": "You invoke both death and life upon a 10-foot-radius sphere centered on a point within range. Each creature of your choice in that area must make a Constitution saving throw, taking 2d6 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical vegetation in that area withers. In addition, one creature of your choice in that area can spend and roll one of its unspent Hit Dice and regain a number of hit points equal to the roll plus your spellcasting ability modifier.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot above 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd."
-  },
-  {
-    "Chat Name": "Withering Seal",
-    "Name": "Withering Seal",
-    "Tier": 8,
-    "Points": 45,
-    "School": "Bane",
-    "V": false,
-    "S": true,
-    "Casting Time": "2 AP",
-    "Concentration": true,
-    "Duration": "1 hour",
-    "Range": "90 feet",
-    "Rite": false,
-    "Old Text": "",
-    "New Text": "You brand a target you can see within range with a glyph of cruel inversion, a sigil that twists the sacred essence of healing into agony. Choose one creature within range. That creature must succeed on a Wellspring saving throw or become affected by the withering seal.\r\n\r\nWhile affected, the target cannot regain hit points by any means—magical or non-magical, including regeneration, potions, or resting. Additionally, whenever the target would be healed, it instead takes void damage equal to twice the amount of hit points it would have regained. This glyph counts as a magical affliction and cannot be removed by Dispel Magic. It can be ended early by Greater Restoration or divine intervention.",
-    "Higher Tiers": "When you cast this glyph at 9th tier or higher, the maximum duration increases:\r\n\r\n    9th: Concentration, up to 8 hour, 10th: Concentration, up to 12 hours, 11th: Concentration, up to 24 hours, 12th: The duration becomes indefinite. The glyph remains until it is removed by Greater Restoration or similar magic."
   },
   {
     "Chat Name": "Word of Radiance",
