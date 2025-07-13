@@ -1,9 +1,22 @@
 // assets/js/script.js
 
+// Debug: confirm this file is actually loading
+document.getElementById('debug').innerText = '🟢 script.js loaded';
+
 (async () => {
+  console.log('🟢 Entering IIFE—script is running');
+  console.log('🔍 about to fetch glyphs.json');
+
   // 0) Always fetch a fresh copy—never from cache or service worker
   const res = await fetch('data/glyphs.json', { cache: 'no-store' });
+  console.log('⚡ response:', res);
+  if (!res.ok) {
+    document.getElementById('debug').innerText = `❌ fetch failed: ${res.status}`;
+    throw new Error(`Failed to fetch glyphs.json: HTTP ${res.status}`);
+  }
+
   const glyphs = await res.json();
+  console.log('✅ loaded', glyphs.length, 'glyphs');
 
   // 1) Grab controls & container
   const levelFilter   = document.getElementById('levelFilter');
@@ -130,17 +143,14 @@
     const headerEl = document.querySelector('header');
     const toggle   = document.getElementById('mobileHeaderToggle');
 
-    // ensure header starts expanded
     document.body.classList.remove('collapsed');
 
-    // keep container offset correct
     function setOffset() {
       container.style.marginTop = headerEl.offsetHeight + 'px';
     }
     setOffset();
     window.addEventListener('resize', setOffset);
 
-    // toggle collapse/expand
     toggle.addEventListener('click', () => {
       const collapsed = document.body.classList.toggle('collapsed');
       toggle.textContent = collapsed ? '▲' : '▼';

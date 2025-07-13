@@ -8,14 +8,15 @@
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glyph Database</title>
-  <!-- Bump this query‐string whenever you update style.css -->
+  <!-- Bump this when updating your CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 <body>
+  <!-- debug indicator -->
+  <div id="debug" style="color: lime; padding: 0.5rem;"></div>
+
   <div id="bg-fallback"></div>
   <div id="app">
-
-    <!-- HEADER -->
     <header>
       <input type="text" id="search" placeholder="Search glyphs..." />
       <label><input type="checkbox" id="searchTextToggle" /> Search in details</label>
@@ -25,16 +26,14 @@
       <div id="schoolFilters"></div>
     </header>
 
-    <!-- MOBILE-ONLY HEADER TOGGLE -->
+    <!-- mobile toggle -->
     <button id="mobileHeaderToggle" class="header-toggle">▼</button>
 
-    <!-- GLYPH CARDS -->
     <main id="cardsContainer"></main>
   </div>
 
-  <!-- Bump this query‐string whenever you update script.js -->
+  <!-- Bump this when updating your JS -->
   <script src="assets/js/script.js?v=9"></script>
-  <!-- Unregister any service workers so they can’t serve stale files -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations()
