@@ -8,13 +8,10 @@
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glyph Database</title>
-  <!-- Bump this when updating your CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <!-- Bumped version to force CSS fetch -->
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
 </head>
 <body>
-  <!-- debug indicator -->
-  <div id="debug" style="color: lime; padding: 0.5rem;"></div>
-
   <div id="bg-fallback"></div>
   <div id="app">
     <header>
@@ -26,18 +23,20 @@
       <div id="schoolFilters"></div>
     </header>
 
-    <!-- mobile toggle -->
+    <!-- MOBILE-ONLY TOGGLE BUTTON -->
     <button id="mobileHeaderToggle" class="header-toggle">▼</button>
 
     <main id="cardsContainer"></main>
   </div>
 
-  <!-- Bump this when updating your JS -->
-  <script src="assets/js/script.js?v=9"></script>
+  <!-- Bumped version to force JS fetch -->
+  <script src="assets/js/script.js?v=10"></script>
   <script>
+    // Unregister any old service workers so they can’t cache your site
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations()
-        .then(regs => regs.forEach(r => r.unregister()));
+      navigator.serviceWorker.getRegistrations().then(regs =>
+        regs.forEach(r => r.unregister())
+      );
     }
   </script>
 </body>

@@ -1,22 +1,10 @@
 // assets/js/script.js
 
-// Debug: confirm this file is actually loading
-document.getElementById('debug').innerText = '🟢 script.js loaded';
-
 (async () => {
-  console.log('🟢 Entering IIFE—script is running');
-  console.log('🔍 about to fetch glyphs.json');
-
   // 0) Always fetch a fresh copy—never from cache or service worker
   const res = await fetch('data/glyphs.json', { cache: 'no-store' });
-  console.log('⚡ response:', res);
-  if (!res.ok) {
-    document.getElementById('debug').innerText = `❌ fetch failed: ${res.status}`;
-    throw new Error(`Failed to fetch glyphs.json: HTTP ${res.status}`);
-  }
-
+  if (!res.ok) throw new Error(`Failed to fetch glyphs.json: ${res.status}`);
   const glyphs = await res.json();
-  console.log('✅ loaded', glyphs.length, 'glyphs');
 
   // 1) Grab controls & container
   const levelFilter   = document.getElementById('levelFilter');
@@ -26,16 +14,15 @@ document.getElementById('debug').innerText = '🟢 script.js loaded';
   const container     = document.getElementById('cardsContainer');
 
   // 2) Populate Tier dropdown
-  const allOpt = document.createElement('option');
-  allOpt.value = 'all';
-  allOpt.textContent = 'All Glyphs';
-  levelFilter.appendChild(allOpt);
+  //    (we already have one <option value="all"> in HTML)
   for (let i = 0; i <= 12; i++) {
     const opt = document.createElement('option');
     opt.value = i;
     opt.textContent = `Tier ${i}`;
     levelFilter.appendChild(opt);
   }
+  // ensure it’s reset on load
+  levelFilter.value = 'all';
 
   // 3) Build school filter buttons
   const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
@@ -133,7 +120,6 @@ document.getElementById('debug').innerText = '🟢 script.js loaded';
   levelFilter.addEventListener('change', render);
   searchInput.addEventListener('input', render);
   searchToggle.addEventListener('change', render);
-  Object.values(schoolBtns).forEach(btn => btn.addEventListener('click', render));
 
   // 6) Initial draw
   render();
@@ -143,8 +129,9 @@ document.getElementById('debug').innerText = '🟢 script.js loaded';
     const headerEl = document.querySelector('header');
     const toggle   = document.getElementById('mobileHeaderToggle');
 
+    // no “collapsed” class on load
     document.body.classList.remove('collapsed');
-
+    // push glyph list down by header height
     function setOffset() {
       container.style.marginTop = headerEl.offsetHeight + 'px';
     }
