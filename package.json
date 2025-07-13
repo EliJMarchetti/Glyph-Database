@@ -2,12 +2,10 @@
   "name": "glyph-database",
   "version": "1.0.0",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "directories": { "doc": "docs" },
   "scripts": {
     "build:data": "node assets/js/convert.js",
-    "deploy:data": "git add src/sheet.xlsx && git pull --rebase origin main && npm run build:data && git add data/glyphs.json && git commit -m \"Update glyph data\" && git push origin main",
+    "deploy:data": "git pull --rebase --autostash origin main && npm run build:data && git add src/sheet.xlsx data/glyphs.json && git commit -m \"Update glyph data\" && git push origin main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
