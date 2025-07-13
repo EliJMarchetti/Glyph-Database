@@ -1,7 +1,7 @@
 // assets/js/script.js
 
 (async () => {
-  // 0) Fetch JSON bypassing any HTTP or service-worker cache
+  // 0) Always fetch a fresh copy—never from cache or service worker
   const res = await fetch('data/glyphs.json', { cache: 'no-store' });
   const glyphs = await res.json();
 
@@ -53,7 +53,7 @@
     glyphs
       .filter(g => {
         if (levelVal !== 'all' && +g.Tier !== +levelVal) return false;
-        if (!activeSchools.includes(g.School)) return false;
+        if (!activeSchools.includes(g.School))             return false;
         if (q) {
           if (g.Name.toLowerCase().includes(q)) return true;
           if (inDetails && Object.values(g).some(v =>
@@ -64,10 +64,11 @@
         return true;
       })
       .forEach(g => {
+        // build card
         const card = document.createElement('div');
         card.className = 'card';
 
-        // Header
+        // header
         const header = document.createElement('div');
         header.className = 'card-header';
 
@@ -89,7 +90,7 @@
         header.appendChild(meta);
         card.appendChild(header);
 
-        // Body (collapsed)
+        // body
         const body = document.createElement('div');
         body.className = 'card-body';
         body.style.display = 'none';
@@ -102,9 +103,7 @@
         const hr   = document.createElement('hr');
         const high = document.createElement('p');
         high.textContent = g['Higher Tiers'];
-
         body.append(ct, dur, txt, hr, high);
-        card.appendChild(body);
 
         header.addEventListener('click', () => {
           const isOpen = body.style.display === 'block';
@@ -112,6 +111,7 @@
           card.classList.toggle('open', !isOpen);
         });
 
+        card.appendChild(body);
         container.appendChild(card);
       });
   }
@@ -130,7 +130,7 @@
     const headerEl = document.querySelector('header');
     const toggle   = document.getElementById('mobileHeaderToggle');
 
-    // remove collapsed class at start
+    // ensure header starts expanded
     document.body.classList.remove('collapsed');
 
     // keep container offset correct
