@@ -1,18 +1,18 @@
 // assets/js/script.js
 
 (async () => {
-  // 1) Load glyph data
-  const res = await fetch(`data/glyphs.json?v=${Date.now()}`);
+  // 0) Fetch JSON bypassing any HTTP or service-worker cache
+  const res = await fetch('data/glyphs.json', { cache: 'no-store' });
   const glyphs = await res.json();
 
-  // 2) Grab controls & container
+  // 1) Grab controls & container
   const levelFilter   = document.getElementById('levelFilter');
   const schoolFilters = document.getElementById('schoolFilters');
   const searchInput   = document.getElementById('search');
   const searchToggle  = document.getElementById('searchTextToggle');
   const container     = document.getElementById('cardsContainer');
 
-  // 3) Populate Tier dropdown
+  // 2) Populate Tier dropdown
   const allOpt = document.createElement('option');
   allOpt.value = 'all';
   allOpt.textContent = 'All Glyphs';
@@ -24,7 +24,7 @@
     levelFilter.appendChild(opt);
   }
 
-  // 4) Build school filter buttons
+  // 3) Build school filter buttons
   const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
   const schoolBtns = {};
   schools.forEach(s => {
@@ -40,7 +40,7 @@
     });
   });
 
-  // 5) Render function
+  // 4) Render function
   function render() {
     const levelVal = levelFilter.value;
     let activeSchools = schools.filter(s => schoolBtns[s].classList.contains('active'));
@@ -67,6 +67,7 @@
         const card = document.createElement('div');
         card.className = 'card';
 
+        // Header
         const header = document.createElement('div');
         header.className = 'card-header';
 
@@ -88,6 +89,7 @@
         header.appendChild(meta);
         card.appendChild(header);
 
+        // Body (collapsed)
         const body = document.createElement('div');
         body.className = 'card-body';
         body.style.display = 'none';
@@ -100,7 +102,9 @@
         const hr   = document.createElement('hr');
         const high = document.createElement('p');
         high.textContent = g['Higher Tiers'];
+
         body.append(ct, dur, txt, hr, high);
+        card.appendChild(body);
 
         header.addEventListener('click', () => {
           const isOpen = body.style.display === 'block';
@@ -108,28 +112,28 @@
           card.classList.toggle('open', !isOpen);
         });
 
-        card.appendChild(body);
         container.appendChild(card);
       });
   }
 
-  // 6) Wire up controls
+  // 5) Wire up controls
   levelFilter.addEventListener('change', render);
   searchInput.addEventListener('input', render);
   searchToggle.addEventListener('change', render);
   Object.values(schoolBtns).forEach(btn => btn.addEventListener('click', render));
 
-  // 7) Initial draw
+  // 6) Initial draw
   render();
 
-  // 8) Mobile-only: manual header dropdown
+  // 7) Mobile-only: manual header dropdown
   if (window.innerWidth < 768) {
     const headerEl = document.querySelector('header');
     const toggle   = document.getElementById('mobileHeaderToggle');
 
-    // ensure collapsed state off at start
+    // remove collapsed class at start
     document.body.classList.remove('collapsed');
-    // initial offset adjustment
+
+    // keep container offset correct
     function setOffset() {
       container.style.marginTop = headerEl.offsetHeight + 'px';
     }
@@ -140,7 +144,6 @@
     toggle.addEventListener('click', () => {
       const collapsed = document.body.classList.toggle('collapsed');
       toggle.textContent = collapsed ? '▲' : '▼';
-      // adjust container margin
       container.style.marginTop = collapsed ? '0' : headerEl.offsetHeight + 'px';
     });
   }
