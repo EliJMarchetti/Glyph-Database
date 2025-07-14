@@ -1,9 +1,14 @@
 // assets/js/script.js
 
 (async () => {
-  // 0) Always fetch a fresh copy—never from cache or service worker
-  const res = await fetch('data/glyphs.json', { cache: 'no-store' });
-  if (!res.ok) throw new Error(`Failed to fetch glyphs.json: ${res.status}`);
+  // —— FORCE A FRESH JSON FETCH ——
+  // give the URL a changing query-string so the browser (and GitHub Pages CDN) can’t cache it
+  const jsonUrl = `data/glyphs.json?ts=${Date.now()}`;
+  const res     = await fetch(jsonUrl, { cache: 'no-store' });
+  if (!res.ok) {
+    console.error(`Failed to load ${jsonUrl}:`, res.status);
+    return;
+  }
   const glyphs = await res.json();
 
   // 1) Grab controls & container
