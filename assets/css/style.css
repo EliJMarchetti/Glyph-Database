@@ -320,3 +320,17 @@ input, select, textarea, button {
 .school-button.active {
   border-color: white !important;
 }
+
+.tier-mode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tier-mode span {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+.tier-mode input {
+  margin-right: 0.25rem;
+}
