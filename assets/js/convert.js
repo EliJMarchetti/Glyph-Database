@@ -5,45 +5,42 @@ const path = require('path');
 
 // helper: title-case a string
 function titleCase(str) {
-  if (!str) return '';
-  const s = String(str).trim().toLowerCase();
+  const s = String(str||'').trim().toLowerCase();
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-// helper: coerce to boolean
+// helper: coerce to Boolean
 function toBool(val) {
-  if (typeof val === 'boolean') return val;
   const v = String(val).trim().toLowerCase();
-  return v === 'true' || v === 'yes' || v === '1';
+  return (v==='true' || v==='yes' || v==='1');
 }
 
-// 1) Load the spreadsheet
-const workbook = XLSX.readFile(path.join(__dirname, '..', 'src', 'sheet.xlsx'));
-const sheet    = workbook.SheetNames[0];
-const rows     = XLSX.utils.sheet_to_json(workbook.Sheets[sheet], { defval: '' });
+// locate files relative to project root:
+const ROOT = path.resolve(__dirname, '..','..');  
+const SHEET_PATH = path.join(ROOT, 'src', 'sheet.xlsx');
+const OUT_PATH   = path.join(ROOT, 'data', 'glyphs.json');
 
-// 2) Normalize each row
+// 1) read the spreadsheet
+const wb = XLSX.readFile(SHEET_PATH);
+const ws = wb.SheetNames[0];
+const rows = XLSX.utils.sheet_to_json(wb.Sheets[ws], { defval: '' });
+
+// 2) normalize & clean up each row
 const processed = rows.map(r => ({
   ...r,
-  // ensure proper-case school names
-  School: titleCase(r.School),
-  // Booleans
-  V:           toBool(r.V),
-  S:           toBool(r.S),
+  School:        titleCase(r.School),
+  V:             toBool(r.V),
+  S:             toBool(r.S),
   Concentration: toBool(r.Concentration),
-  // numeric coercion (optional, but keeps JSON tidy)
   Tier:      Number(r.Tier),
   Points:    Number(r.Points)
-  // leave all other fields (Name, Casting Time, Duration, New Text, Higher Tiers) as-is
 }));
 
-// 3) Sort by Name, case-insensitive
-processed.sort((a, b) =>
-  a.Name.localeCompare(b.Name, undefined, { sensitivity: 'base' })
+// 3) sort by Name, case-insensitive
+processed.sort((a,b)=>
+  a.Name.localeCompare(b.Name, undefined, { sensitivity:'base' })
 );
 
-// 4) Write out the JSON
-const outPath = path.join(__dirname, '..', 'data', 'glyphs.json');
-fs.writeFileSync(outPath, JSON.stringify(processed, null, 2), 'utf8');
-
+// 4) write out JSON
+fs.writeFileSync(OUT_PATH, JSON.stringify(processed, null, 2), 'utf8');
 console.log(`glyphs.json generated with ${processed.length} entries`);
