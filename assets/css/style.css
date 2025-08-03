@@ -287,3 +287,16 @@ header .tier-mode {            /* the wrapper <label class="tier-mode"> */
 
 /* ===  C. show coloured title even when card is collapsed === */
 .card-header .info b { display:inline-block; }
+/* keep tier controls on row-1, push right */
+header .controls-row{display:flex;flex:1 1 100%;align-items:center;gap:1rem;}
+header .tier-mode{margin-left:auto;display:flex;align-items:center;gap:.5rem;}
+
+/* school-based title colours */
+.info.school-nature    b{color:#00aa00}
+.info.school-mind      b{color:#cccc00}
+.info.school-elemental b{color:#cc0000}
+.info.school-arcane    b{color:#cc00cc}
+.info.school-celestial b{color:#4b0082}
+.info.school-chaos     b{color:#00cccc}
+.info.school-harmony   b{color:#ffffff}
+.info.school-bane      b{color:#888888}
