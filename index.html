@@ -17,15 +17,18 @@
     <header>
       <input type="text" id="search" placeholder="Search glyphs..." />
       <label><input type="checkbox" id="searchTextToggle" /> Search in details</label>
+      
+      <!-- Tier dropdown + “up to” toggle -->
       <label class="tier-mode">
-  <select id="levelFilter">
-    <option value="all">All Glyphs</option>
-  </select>
-  <span>
-    <input type="checkbox" id="tierUpTo" />
-    <label for="tierUpTo">Up to</label>
-  </span>
-</label>
+        <select id="levelFilter">
+          <option value="all">All Glyphs</option>
+        </select>
+        <span>
+          <input type="checkbox" id="tierUpTo" />
+          <label for="tierUpTo">Up to</label>
+        </span>
+      </label>
+      
       <div id="schoolFilters"></div>
     </header>
 
@@ -47,4 +50,3 @@
   </script>
 </body>
 </html>
-
