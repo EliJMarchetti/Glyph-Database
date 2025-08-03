@@ -266,3 +266,24 @@ input, select, textarea, button {
 .info.school-chaos     b { color: #00CCCC; } /* cyan */
 .info.school-harmony   b { color: #FFFFFF; } /* white */
 .info.school-bane      b { color: #888888; } /* gray */
+/* ===  A. keep tier dropdown + “Up to” on first line  === */
+
+header .tier-mode {            /* the wrapper <label class="tier-mode"> */
+  margin-left: auto;           /* pushes it to the far right of row-1   */
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* ===  B. per-school colours  === */
+.school-harmony   b { color:#ffffff; }  /* white   */
+.school-elemental b { color:#ff0000; }  /* red     */
+.school-celestial b { color:#4b0082; }  /* indigo  */
+.school-nature    b { color:#00ff00; }  /* green   */
+.school-arcane    b { color:#ff00ff; }  /* magenta */
+.school-mind      b { color:#ffff00; }  /* yellow  */
+.school-chaos     b { color:#00ffff; }  /* cyan    */
+.school-bane      b { color:#b0b0b0; }  /* light-grey against black */
+
+/* ===  C. show coloured title even when card is collapsed === */
+.card-header .info b { display:inline-block; }
