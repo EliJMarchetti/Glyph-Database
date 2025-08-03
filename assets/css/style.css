@@ -108,29 +108,17 @@ input, select, textarea, button {
   margin-top: 0.5rem;
 }
 .school-button {
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(0, 0, 0, 0.4);  /* same as the bg */
+  background: transparent !important;
+  border: 2px solid transparent !important;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   color: white;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
 }
-
-.school-button.active {
-  border-color: white;                  /* white when selected */
-}
-/* make school buttons fully transparent when inactive */
-.school-button {
-  background: transparent !important;
-  border: 2px solid transparent !important;
-}
-
-/* only active buttons get a white border */
 .school-button.active {
   border-color: white !important;
 }
-
 
 /* DESKTOP & TABLET: one full row of 8 buttons */
 @media (min-width: 768px) {
@@ -212,6 +200,7 @@ input, select, textarea, button {
     margin-bottom: 0.5rem;
   }
 }
+
 /* ——— Always hide the mobile toggle by default ——— */
 .header-toggle {
   display: none !important;
@@ -237,35 +226,8 @@ input, select, textarea, button {
     display: none;
   }
 }
-/* 1) Hide our mobile‐only toggle by default on all screens */
-#mobileHeaderToggle {
-  display: none;
-  background: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
 
-/* 2) Only show the toggle button on phones */
-@media (max-width: 767px) {
-  #mobileHeaderToggle {
-    display: block;
-  }
-}
-
-/* 3) Remove any horizontal scrollbar on the school-filter row on desktop/tablet */
-@media (min-width: 768px) {
-  #schoolFilters {
-    overflow-x: hidden;
-    scrollbar-width: none;    /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-  }
-  #schoolFilters::-webkit-scrollbar {
-    display: none;            /* Chrome/Safari */
-  }
-}
-
-/* 4) Remove the vertical scrollbar on the cards list on desktop/tablet */
+/* ——— Remove the vertical scrollbar on the cards list on desktop/tablet ——— */
 @media (min-width: 768px) {
   #cardsContainer {
     scrollbar-width: none;    /* Firefox */
@@ -275,52 +237,8 @@ input, select, textarea, button {
     display: none;            /* Chrome/Safari */
   }
 }
-/* —— Hide the mobile‐only header toggle on desktop/tablet —— */
-@media (min-width: 768px) {
-  #mobileHeaderToggle {
-    display: none !important;
-  }
-}
 
-/* —— Show it again on phones (just to be safe) —— */
-@media (max-width: 767px) {
-  #mobileHeaderToggle {
-    display: block !important;
-  }
-}
-
-/* —— Remove horizontal scrollbar on the school‐filters row —— */
-@media (min-width: 768px) {
-  #schoolFilters {
-    overflow-x: hidden !important;
-    scrollbar-width: none !important;    /* Firefox */
-    -ms-overflow-style: none !important;  /* IE 10+ */
-  }
-  #schoolFilters::-webkit-scrollbar {
-    display: none !important;             /* Chrome/Safari */
-  }
-}
-
-/* —— Remove vertical scrollbar on cards list on desktop/tablet —— */
-@media (min-width: 768px) {
-  #cardsContainer {
-    scrollbar-width: none !important;    /* Firefox */
-    -ms-overflow-style: none !important; /* IE 10+ */
-  }
-  #cardsContainer::-webkit-scrollbar {
-    display: none !important;            /* Chrome/Safari */
-  }
-}
-/* school buttons: always dark border by default */
-.school-button {
-  border: 2px solid rgba(0, 0, 0, 0.4) !important;
-}
-
-/* when active, border goes white */
-.school-button.active {
-  border-color: white !important;
-}
-
+/* ——— Tier-mode styling ——— */
 .tier-mode {
   display: flex;
   align-items: center;
@@ -334,3 +252,17 @@ input, select, textarea, button {
 .tier-mode input {
   margin-right: 0.25rem;
 }
+
+/* ——— Glyph-name coloring by school ——— */
+/* default: white */
+.card-header .info b {
+  color: white;
+}
+.info.school-nature    b { color: #00AA00; } /* green */
+.info.school-mind      b { color: #CCCC00; } /* yellow */
+.info.school-elemental b { color: #CC0000; } /* red */
+.info.school-arcane    b { color: #CC00CC; } /* magenta */
+.info.school-celestial b { color: #4B0082; } /* indigo */
+.info.school-chaos     b { color: #00CCCC; } /* cyan */
+.info.school-harmony   b { color: #FFFFFF; } /* white */
+.info.school-bane      b { color: #888888; } /* gray */
