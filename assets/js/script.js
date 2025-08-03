@@ -85,8 +85,13 @@
         const hdr = document.createElement('div');
         hdr.className = 'card-header';
         const info = document.createElement('div');
-        info.className = 'info';
+        // normalize school name → lowercase, spaces → hyphens
+        const schoolKey = g.School
+        ? g.School.toLowerCase().replace(/\s+/g,'-')
+        : 'unknown';
+        info.className = `info school-${schoolKey}`;
         info.innerHTML = `<b>${g.Name}</b>`;
+        info.classList.add(`school-${g.School.toLowerCase()}`);
         const vs = g.V ? 'V' : g.S ? 'S' : '';
         const meta = document.createElement('div');
         meta.className = 'meta';
