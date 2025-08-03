@@ -1,166 +1,135 @@
-// assets/js/script.js
+/* assets/js/script.js
+   (full file – copy / overwrite) */
 
 ;(async () => {
-  // 0) Fetch fresh JSON (no cache)
-  const url   = `data/glyphs.json?ts=${Date.now()}`;
-  const resp  = await fetch(url, { cache: 'no-store' });
-  if (!resp.ok) {
-    console.error(`Failed to load ${url}:`, resp.status);
-    return;
-  }
-  const glyphs = await resp.json();
+  /* 0 ) always fetch fresh JSON – never cached */
+  const jsonUrl = `data/glyphs.json?ts=${Date.now()}`;
+  const res     = await fetch(jsonUrl, { cache: 'no-store' });
+  if (!res.ok) { console.error('Failed to load glyphs.json', res.status); return; }
+  const glyphs = await res.json();
 
-  // 1) Controls & container
-  const levelFilter   = document.getElementById('levelFilter');
-  const tierUpToToggle = document.getElementById('tierUpTo');
-  const schoolFilters = document.getElementById('schoolFilters');
-  const searchInput   = document.getElementById('search');
-  const searchToggle  = document.getElementById('searchTextToggle');
-  const container     = document.getElementById('cardsContainer');
+  /* 1 ) controls & container */
+  const levelFilter     = document.getElementById('levelFilter');
+  const tierUpToToggle  = document.getElementById('tierUpTo');
+  const schoolFilters   = document.getElementById('schoolFilters');
+  const searchInput     = document.getElementById('search');
+  const searchToggle    = document.getElementById('searchTextToggle');
+  const container       = document.getElementById('cardsContainer');
 
-  // 2) Populate Tier dropdown
+  /* 2 ) tier dropdown */
   for (let i = 0; i <= 12; i++) {
     const o = document.createElement('option');
-    o.value       = i;
-    o.textContent = `Tier ${i}`;
+    o.value = i;  o.textContent = `Tier ${i}`;
     levelFilter.appendChild(o);
   }
   levelFilter.value = 'all';
 
-  // 3) Build school buttons
-  const schools = ['Harmony','Elemental','Celestial','Nature','Arcane','Mind','Chaos','Bane'];
+  /* 3 ) school buttons */
+  const schools = ['Harmony','Elemental','Celestial','Nature',
+                   'Arcane','Mind','Chaos','Bane'];
   const schoolBtns = {};
   schools.forEach(s => {
     const btn = document.createElement('button');
-    btn.type        = 'button';
-    btn.className   = 'school-button';
+    btn.className = 'school-button';
     btn.textContent = s;
+    btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
     schoolFilters.appendChild(btn);
     schoolBtns[s] = btn;
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      render();
-    });
   });
 
-  // 4) Render
-  function render() {
-    const lvl    = levelFilter.value;
-    const numLvl = +lvl;
-    let active   = schools.filter(s => schoolBtns[s].classList.contains('active'));
-    if (active.length === 0) active = schools.slice();
-
-    const q  = searchInput.value.toLowerCase();
-    const det = searchToggle.checked;
+  /* 4 ) RENDER */
+  function render () {
+    const tierSel     = levelFilter.value;
+    const tierNum     = +tierSel;
+    const upTo        = tierUpToToggle.checked;
+    const activeSch   = Object.entries(schoolBtns)
+                              .filter(([_,b]) => b.classList.contains('active'))
+                              .map(([s]) => s);
+    const q           = searchInput.value.trim().toLowerCase();
+    const searchBody  = searchToggle.checked;
 
     container.innerHTML = '';
+
     glyphs
       .filter(g => {
-        // tier filter
-        if (lvl !== 'all') {
-          if (tierUpToToggle.checked) {
-            if (+g.Tier > numLvl) return false;
-          } else {
-            if (+g.Tier !== numLvl) return false;
-          }
+        /* --- normalise keys coming from JSON ---------------- */
+        const name   = g.Name  ?? g.name  ?? '';
+        const school = g.School?? g.school?? '';
+        const tier   = +g.Tier ?? +g.tier ?? 0;
+
+        /* tier filter */
+        if (tierSel !== 'all') {
+          if (upTo ? tier > tierNum : tier !== tierNum) return false;
         }
-        // school filter
-        if (!active.includes(g.School)) return false;
-        // text search
+        /* school filter */
+        if (activeSch.length && !activeSch.includes(school)) return false;
+        /* text search */
         if (q) {
-          const nameMatches = g.Name.toLowerCase().includes(q);
-          const detailMatches = det && Object.values(g).some(v =>
-            String(v).toLowerCase().includes(q)
-          );
-          return nameMatches || detailMatches;
+          if (name.toLowerCase().includes(q)) return true;
+          if (searchBody &&
+              Object.values(g).some(v => String(v).toLowerCase().includes(q))) return true;
+          return false;
         }
         return true;
       })
-      .forEach(g => {
-        // card
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        // header
-        const hdr = document.createElement('div');
-        hdr.className = 'card-header';
-        const info = document.createElement('div');
-        // normalize school name → lowercase, spaces → hyphens
-        const schoolKey = g.School
-        ? g.School.toLowerCase().replace(/\s+/g,'-')
-        : 'unknown';
-        info.className = `info school-${schoolKey}`;
-        info.innerHTML = `<b>${g.Name}</b>`;
-        info.classList.add(`school-${g.School.toLowerCase()}`);
-        const vs = g.V ? 'V' : g.S ? 'S' : '';
-        const meta = document.createElement('div');
-        meta.className = 'meta';
-        meta.innerHTML = `
-          ${g.School}
-          <span class="vs">${vs}</span>
-          • Tier ${g.Tier}
-          • ${g.Points} Mana
-        `;
-        hdr.append(info, meta);
-        card.appendChild(hdr);
-
-        // body
-        const body = document.createElement('div');
-        body.className = 'card-body';
-        body.style.display = 'none';
-
-        const pCT    = document.createElement('p');
-        pCT.textContent = `Casting Time: ${g['Casting Time'] || '—'}`;
-        const pRange = document.createElement('p');
-        pRange.textContent = `Range: ${g.Range || '—'}`;
-        const pDur   = document.createElement('p');
-        pDur.textContent = `Duration: ${g.Duration || '—'}` +
-                            (g.Concentration ? ' (Concentration)' : '');
-        const pTxt   = document.createElement('p');
-        pTxt.textContent = g['New Text'] || '';
-        const hr     = document.createElement('hr');
-        const pHigh  = document.createElement('p');
-        pHigh.textContent = g['Higher Tiers'] || '';
-
-        body.append(pCT, pRange, pDur, pTxt, hr, pHigh);
-        card.appendChild(body);
-
-        // toggle
-        hdr.addEventListener('click', () => {
-          const open = body.style.display === 'block';
-          body.style.display = open ? 'none' : 'block';
-          card.classList.toggle('open', !open);
-        });
-
-        container.appendChild(card);
-      });
+      .forEach(g => buildCard(g));
   }
 
-  // 5) Wire up controls
-  levelFilter.addEventListener('change', render);
-  tierUpToToggle.addEventListener('change', render);
-  searchInput.addEventListener('input', render);
-  searchToggle.addEventListener('change', render);
+  /* helper: build one card */
+  function buildCard (g) {
+    const name   = g.Name   ?? g.name   ?? '???';
+    const school = g.School ?? g.school ?? 'Unknown';
+    const tier   = g.Tier   ?? g.tier   ?? '?';
 
-  // 6) First draw
-  render();
+    const card   = document.createElement('div');
+    card.className = 'card';
 
-  // 7) Mobile header toggle
-  if (window.innerWidth < 768) {
-    const headerEl = document.querySelector('header');
-    const toggle   = document.getElementById('mobileHeaderToggle');
-    document.body.classList.remove('collapsed');
+    /* ---------- header ---------- */
+    const header = document.createElement('div');
+    header.className = 'card-header';
 
-    function setOffset() {
-      container.style.marginTop = headerEl.offsetHeight + 'px';
-    }
-    setOffset();
-    window.addEventListener('resize', setOffset);
+    const info   = document.createElement('div');
+    const schoolKey = school.toLowerCase().replace(/\s+/g,'-');
+    info.className  = `info school-${schoolKey}`;
+    info.innerHTML  = `<b>${name}</b>`;
 
-    toggle.addEventListener('click', () => {
-      const collapsed = document.body.classList.toggle('collapsed');
-      toggle.textContent = collapsed ? '▲' : '▼';
-      container.style.marginTop = collapsed ? '0' : headerEl.offsetHeight + 'px';
+    const vsLabel = g.V ? 'V' : g.S ? 'S' : '';
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.innerHTML = `
+      ${school}
+      <span class="vs">${vsLabel}</span>
+      • Tier ${tier}
+      • ${g.Points ?? g.points ?? '?'} Mana
+    `;
+    header.append(info, meta);
+    card.appendChild(header);
+
+    /* ---------- body ---------- */
+    const body = document.createElement('div');
+    body.className = 'card-body';
+    body.style.display = 'none';
+    body.innerHTML = `
+      <p>Casting Time: ${g['Casting Time'] ?? g.castingtime ?? '?'}</p>
+      <p>Range: ${g.Range ?? g.range ?? '?'}</p>
+      <p>Duration: ${g.Duration ?? g.duration ?? '?'}${g.Concentration ? ' (Concentration)' : ''}</p>
+      <p>${g['New Text'] ?? g.text ?? ''}</p>
+      <hr>
+      <p>${g['Higher Tiers'] ?? g.highertiers ?? ''}</p>
+    `;
+    header.addEventListener('click', () => {
+      const open = body.style.display === 'block';
+      body.style.display = open ? 'none' : 'block';
+      card.classList.toggle('open', !open);
     });
+
+    card.appendChild(body);
+    container.appendChild(card);
   }
+
+  /* 5 ) wire up controls */
+  [levelFilter, tierUpToToggle, searchInput, searchToggle]
+    .forEach(el => el.addEventListener('input', render));
+
+  render();
 })();
