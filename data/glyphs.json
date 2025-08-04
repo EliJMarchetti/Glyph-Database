@@ -1,6 +1,6 @@
 [
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -18,7 +18,7 @@
     "Higher Tiers_1": "For every 3 aditional mana you expend in the casting of this glyph, equally as much mana is applied to subsequent glyphs effected by this one. "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 6,
     "Points": 27,
@@ -36,7 +36,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 33 or more mana, the extra damage increases by 2d6 for every 6 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -54,7 +54,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 12 or more mana, the extra damage increases by 1d6 and the bolt can jump to one additional target within 10 feet of the previous target, for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -72,7 +72,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 21 or more mana, the extra damage increases by 2d4 and the movement speed increases by 10 feet, for every 6 additional mana expended.     "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -90,7 +90,7 @@
     "Higher Tiers_1": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you learn one additional quality from the list for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -108,7 +108,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the temporary hit points gained increases by 5 for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -126,7 +126,7 @@
     "Higher Tiers_1": "At higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d4 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -144,7 +144,7 @@
     "Higher Tiers_1": "Increase duration and damage / level up. "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -162,7 +162,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -180,7 +180,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -198,7 +198,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6Â  for every 3 additional mana expended. If you expend an additional 9 mana the armor class bonus increases to +4. If you expend 13 additional mana the armor class bonus increases to +5.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -216,7 +216,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d12 for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -234,7 +234,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -252,7 +252,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you conjure one additional ice blade for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 7,
     "Points": 36,
@@ -270,7 +270,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can target an additional target for every 6 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -288,7 +288,7 @@
     "Higher Tiers_1": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you can target one additional creature for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -306,7 +306,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -324,7 +324,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -342,7 +342,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional willing creature for each slot level above 3rd."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -360,7 +360,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -378,7 +378,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -396,7 +396,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 and 1d6Â  for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -414,7 +414,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. When you reach 5th level, you can choose two creatures within 30 feet of you. At 11th level, you can choose three creatures, and the duration of the cantrip increases to 10 minutes. At 17th level, you can choose four creatures, and the duration of the cantrip increases to 1 hour."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -432,7 +432,7 @@
     "Higher Tiers_1": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you deal an additional 2d6 damage for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -450,7 +450,7 @@
     "Higher Tiers_1": "At the end of each of its turns, an affected creature can repeat the saving throw, ending the effect on itself on a success."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -468,7 +468,7 @@
     "Higher Tiers_1": "When you cast this at a higher level, you can target a greater number of corpses each time you cast. "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -486,7 +486,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. This glyphâ€™s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -504,7 +504,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. When you reach 5th level, the cantrip can affect up to 3 items if all items are held by the target creature, and the distance the objects fly increases to 20 feet. At 11th level, the cantrip can affect up to 4 items, and the distance increases to 30 feet. At 17th level, the cantrip can affect up to 5 items, and the distance increases to 40 feet."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -522,7 +522,7 @@
     "Higher Tiers_1": "At Higher Mana cost: For every 3 additional mana you expend, you can target one additional creature."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -540,7 +540,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can target an additional creature for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -558,7 +558,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -576,7 +576,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -594,7 +594,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The temporary hit points provided increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -612,7 +612,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The glyph's damage increases by 1d8 and 1d4 when you reach 5th level (2d8/2d4), 11th level (3d8/3d4)), and 17th level (4d8/4d4)."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -630,7 +630,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -648,7 +648,7 @@
     "Higher Tiers_1": "At higher Mana cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d12 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -666,7 +666,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended and the radius of the blinding effect increases by 5 feet for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -684,7 +684,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -702,7 +702,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -720,7 +720,7 @@
     "Higher Tiers_1": "At Higher Levels. When you cast this glyph using a glyph slot of 6th level or higher, the glyph lasts until dissipated.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -738,7 +738,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. You can expend extra mana to increase the effects of the glyph, for every 3 additional mana expended the duration of the glyph increases by 1 minute.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -756,7 +756,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -774,7 +774,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended. Additionally, if you expend 9 additional mana you can brand one additional rune onto a target (total of 2). You may target the same creature or different ones, but you cannot brand the same rune onto the same creature more than once. An additional saving throw must be made for each additional brand.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -792,7 +792,7 @@
     "Higher Tiers_1": "At Higher Levels. You can expend extra mana to increase the effects of the glyph, you can seed another tree within range for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -810,7 +810,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The duration of this cantrip increases to 2 rounds at 5th level, 3 rounds at 11th level, and 4 rounds at 17th level."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -828,7 +828,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -846,7 +846,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The damage increases by 1d6 at 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -864,7 +864,7 @@
     "Higher Tiers_1": "Upcast: When this glyph is cast with higher tiers of mana, you conjure an additional bottle for each tier above first. Additionally, the duration of the glyph extends for every three tiers above first, 10 minutes at tier three, an hour at tier 6, 1 day at tier 9, and indefinitely at tier 12."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -882,7 +882,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can concentrate on this glyph for an additional 2 hours for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -900,7 +900,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -918,7 +918,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 + 1 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -936,7 +936,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the healing increases by 1d6 for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 4,
     "Points": 15,
@@ -954,7 +954,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: for every 6 additional Mana expended on this glyph, the duration is increased by the base amount yet again. If this glyph is cast using 36 or more mana, it no longer requires concentration. "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -972,7 +972,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d6 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -990,7 +990,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. This glyphâ€™s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1008,7 +1008,7 @@
     "Higher Tiers_1": "At Higher Levels. The spellâ€™s radiant damage increases by 1d8 at 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -1026,7 +1026,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1044,7 +1044,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The damage increases by 1d8 at 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1062,7 +1062,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1080,7 +1080,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The damage increases by 1d6 at 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 1,
     "Points": 3,
@@ -1098,7 +1098,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 3,
     "Points": 9,
@@ -1116,7 +1116,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1134,7 +1134,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1152,7 +1152,7 @@
     "Higher Tiers_1": "At Higher Level. You deal additional damage of your affinityâ€™s type at each of level 5 (1d6),Â  level 11 (2d6), and level 17 (3d6).Â "
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 2,
     "Points": 6,
@@ -1170,7 +1170,7 @@
     "Higher Tiers_1": "When you cast this glyph using 9 or more mana, the maximum weight of the object you can move with Object Movement increases by 50 pounds for each tier above 2nd, and the distance you can push a creature with Forced Shove increases by 5 feet for each tier above 2nd. Additionally, the Forced Shove effect can target a creature weighing up to 200 pounds for each tier above 2nd."
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1188,7 +1188,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "",
+    "Ignore": "",
     "Name": "",
     "Tier": 0,
     "Points": 0,
@@ -1206,7 +1206,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Abi-Dalzim's Horrid Wilting",
+    "Ignore": "Abi-Dalzim's Horrid Wilting",
     "Name": "Abi-Dalzim's Horrid Wilting",
     "Tier": 10,
     "Points": 66,
@@ -1224,7 +1224,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Absorb Elements",
+    "Ignore": "Absorb Elements",
     "Name": "Absorb Elements",
     "Tier": 1,
     "Points": 3,
@@ -1242,7 +1242,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 6 or more mana, the extra damage increases by 1d6 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "Absorb  Life",
+    "Ignore": "Absorb  Life",
     "Name": "Absorb Life",
     "Tier": 2,
     "Points": 6,
@@ -1260,7 +1260,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Abyssal Armor",
+    "Ignore": "Abyssal Armor",
     "Name": "Abyssal Armor",
     "Tier": 2,
     "Points": 6,
@@ -1278,7 +1278,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Abyssal Prison",
+    "Ignore": "Abyssal Prison",
     "Name": "Abyssal Prison",
     "Tier": 6,
     "Points": 27,
@@ -1296,7 +1296,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Acid Splash",
+    "Ignore": "Acid Splash",
     "Name": "Acid Splash",
     "Tier": 0,
     "Points": 0,
@@ -1314,7 +1314,7 @@
     "Higher Tiers_1": "This glyph's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
   },
   {
-    "Chat Name": "Aganazzar's Scorcher",
+    "Ignore": "Aganazzar's Scorcher",
     "Name": "Aganazzar's Scorcher",
     "Tier": 2,
     "Points": 6,
@@ -1332,7 +1332,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Agron's Storm Creation",
+    "Ignore": "Agron's Storm Creation",
     "Name": "Agron's Storm Creation",
     "Tier": 7,
     "Points": 36,
@@ -1350,7 +1350,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Agron's Volt Strider",
+    "Ignore": "Agron's Volt Strider",
     "Name": "Agron's Volt Strider",
     "Tier": 9,
     "Points": 54,
@@ -1368,7 +1368,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Aid",
+    "Ignore": "Aid",
     "Name": "Aid",
     "Tier": 3,
     "Points": 9,
@@ -1386,7 +1386,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 6 or more mana,  a target's hit points increase by an additional 5 for every 3 additional mana expended. "
   },
   {
-    "Chat Name": "Air Bubble",
+    "Ignore": "Air Bubble",
     "Name": "Air Bubble",
     "Tier": 2,
     "Points": 6,
@@ -1404,7 +1404,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can create two additional globes of fresh air for each slot level above 2nd."
   },
   {
-    "Chat Name": "Air Bullet",
+    "Ignore": "Air Bullet",
     "Name": "Air Bullet",
     "Tier": 9,
     "Points": 54,
@@ -1422,7 +1422,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 10 or higher, the damage increases by 2d10 for each tier above Tier 9."
   },
   {
-    "Chat Name": "Alarm",
+    "Ignore": "Alarm",
     "Name": "Alarm",
     "Tier": 1,
     "Points": 3,
@@ -1440,7 +1440,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Alter Self",
+    "Ignore": "Alter Self",
     "Name": "Alter Self",
     "Tier": 2,
     "Points": 6,
@@ -1458,7 +1458,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Amputation",
+    "Ignore": "Amputation",
     "Name": "Amputation",
     "Tier": 9,
     "Points": 54,
@@ -1476,7 +1476,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Anchoring Smite",
+    "Ignore": "Anchoring Smite",
     "Name": "Anchoring Smite",
     "Tier": 4,
     "Points": 15,
@@ -1494,7 +1494,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Animal Friendship",
+    "Ignore": "Animal Friendship",
     "Name": "Animal Friendship",
     "Tier": 1,
     "Points": 3,
@@ -1512,7 +1512,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st."
   },
   {
-    "Chat Name": "Animal Messenger",
+    "Ignore": "Animal Messenger",
     "Name": "Animal Messenger",
     "Tier": 2,
     "Points": 6,
@@ -1530,7 +1530,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 9 or more mana, the duration of the Glyph increases by 48 hours for every 3 additional mana expended."
   },
   {
-    "Chat Name": "Animal Shapes",
+    "Ignore": "Animal Shapes",
     "Name": "Animal Shapes",
     "Tier": 10,
     "Points": 66,
@@ -1548,7 +1548,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Animate Dead",
+    "Ignore": "Animate Dead",
     "Name": "Animate Dead",
     "Tier": 3,
     "Points": 9,
@@ -1566,7 +1566,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you animate or reassert control over two additional creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones."
   },
   {
-    "Chat Name": "Animate Echoes",
+    "Ignore": "Animate Echoes",
     "Name": "Animate Echoes",
     "Tier": 4,
     "Points": 15,
@@ -1584,7 +1584,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Animate Objects",
+    "Ignore": "Animate Objects",
     "Name": "Animate Objects",
     "Tier": 7,
     "Points": 36,
@@ -1602,7 +1602,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 45 or more mana, you can animate two additional objects for every 9 additional mana expended."
   },
   {
-    "Chat Name": "Antilife Shell",
+    "Ignore": "Antilife Shell",
     "Name": "Antilife Shell",
     "Tier": 6,
     "Points": 27,
@@ -1620,7 +1620,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Antimagic Field",
+    "Ignore": "Antimagic Field",
     "Name": "Antimagic Field",
     "Tier": 10,
     "Points": 66,
@@ -1638,7 +1638,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Antipathy/Sympathy",
+    "Ignore": "Antipathy/Sympathy",
     "Name": "Antipathy/Sympathy",
     "Tier": 10,
     "Points": 66,
@@ -1656,7 +1656,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Arcane Eye",
+    "Ignore": "Arcane Eye",
     "Name": "Arcane Eye",
     "Tier": 5,
     "Points": 21,
@@ -1674,7 +1674,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Arcane Fletching",
+    "Ignore": "Arcane Fletching",
     "Name": "Arcane Fletching",
     "Tier": 2,
     "Points": 6,
@@ -1692,7 +1692,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Arcane Gate",
+    "Ignore": "Arcane Gate",
     "Name": "Arcane Gate",
     "Tier": 8,
     "Points": 45,
@@ -1710,7 +1710,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Arcane Lock",
+    "Ignore": "Arcane Lock",
     "Name": "Arcane Lock",
     "Tier": 3,
     "Points": 9,
@@ -1728,7 +1728,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Arleva's Ribbon",
+    "Ignore": "Arleva's Ribbon",
     "Name": "Arleva's Ribbon",
     "Tier": 4,
     "Points": 15,
@@ -1746,7 +1746,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Armor of Agathys",
+    "Ignore": "Armor of Agathys",
     "Name": "Armor of Agathys",
     "Tier": 1,
     "Points": 3,
@@ -1764,7 +1764,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, both the temporary hit points and the cold damage increases by 5 for each slot level above 1st."
   },
   {
-    "Chat Name": "Arms of Hadar",
+    "Ignore": "Arms of Hadar",
     "Name": "Arms of Hadar",
     "Tier": 1,
     "Points": 3,
@@ -1782,7 +1782,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "Arsenal of Radiance",
+    "Ignore": "Arsenal of Radiance",
     "Name": "Arsenal of Radiance",
     "Tier": 12,
     "Points": 90,
@@ -1800,7 +1800,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ashardalon's Stride",
+    "Ignore": "Ashardalon's Stride",
     "Name": "Ashardalon's Stride",
     "Tier": 3,
     "Points": 9,
@@ -1818,7 +1818,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, increase your speed by 5 feet for each Glyph slot level above 3rd. The Glyph deals an additional 1d6 fire damage for each slot level above 3rd."
   },
   {
-    "Chat Name": "Astral Blade",
+    "Ignore": "Astral Blade",
     "Name": "Astral Blade",
     "Tier": 4,
     "Points": 15,
@@ -1836,7 +1836,7 @@
     "Higher Tiers_1": "When you cast this glyph using tier 5 or 6, the damage increases to 2d8. When you cast it using a tier 7 or 8, the damage increases to 3d8. When you cast it using a tier 9-11 the damage increases to 5d8. When you cast it using a tier 12 the damage increases to 6d8"
   },
   {
-    "Chat Name": "Astral Projection",
+    "Ignore": "Astral Projection",
     "Name": "Astral Projection",
     "Tier": 11,
     "Points": 78,
@@ -1854,7 +1854,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Augury",
+    "Ignore": "Augury",
     "Name": "Augury",
     "Tier": 3,
     "Points": 9,
@@ -1872,7 +1872,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Aura of Life",
+    "Ignore": "Aura of Life",
     "Name": "Aura of Life",
     "Tier": 5,
     "Points": 21,
@@ -1890,7 +1890,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Aura of Purity",
+    "Ignore": "Aura of Purity",
     "Name": "Aura of Purity",
     "Tier": 5,
     "Points": 21,
@@ -1908,7 +1908,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Aura of Vitality",
+    "Ignore": "Aura of Vitality",
     "Name": "Aura of Vitality",
     "Tier": 4,
     "Points": 15,
@@ -1926,7 +1926,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Awaken",
+    "Ignore": "Awaken",
     "Name": "Awaken",
     "Tier": 7,
     "Points": 36,
@@ -1944,7 +1944,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Bane",
+    "Ignore": "Bane",
     "Name": "Bane",
     "Tier": 1,
     "Points": 3,
@@ -1962,7 +1962,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
   },
   {
-    "Chat Name": "Baneful Infection",
+    "Ignore": "Baneful Infection",
     "Name": "Baneful Infection",
     "Tier": 4,
     "Points": 15,
@@ -1980,7 +1980,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 5 or higher, the damage increases by 1d6. At tier 6 you can cause the corruption 2 times, 3 times at tier 9 and 4 times at tier 12."
   },
   {
-    "Chat Name": "Banishing Smite",
+    "Ignore": "Banishing Smite",
     "Name": "Banishing Smite",
     "Tier": 6,
     "Points": 27,
@@ -1998,7 +1998,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Banishment",
+    "Ignore": "Banishment",
     "Name": "Banishment",
     "Tier": 5,
     "Points": 21,
@@ -2016,7 +2016,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, you can target one additional creature for each slot level above 4th."
   },
   {
-    "Chat Name": "Barkskin",
+    "Ignore": "Barkskin",
     "Name": "Barkskin",
     "Tier": 2,
     "Points": 6,
@@ -2034,7 +2034,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Battle Anthem",
+    "Ignore": "Battle Anthem",
     "Name": "Battle Anthem",
     "Tier": 3,
     "Points": 9,
@@ -2052,7 +2052,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Beacon of Hope",
+    "Ignore": "Beacon of Hope",
     "Name": "Beacon of Hope",
     "Tier": 3,
     "Points": 9,
@@ -2070,7 +2070,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Beast Bond",
+    "Ignore": "Beast Bond",
     "Name": "Beast Bond",
     "Tier": 1,
     "Points": 3,
@@ -2088,7 +2088,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Beast Sense",
+    "Ignore": "Beast Sense",
     "Name": "Beast Sense",
     "Tier": 2,
     "Points": 6,
@@ -2106,7 +2106,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Bell of Judgment",
+    "Ignore": "Bell of Judgment",
     "Name": "Bell of Judgment",
     "Tier": 6,
     "Points": 27,
@@ -2124,7 +2124,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Bestow Curse",
+    "Ignore": "Bestow Curse",
     "Name": "Bestow Curse",
     "Tier": 4,
     "Points": 15,
@@ -2142,7 +2142,7 @@
     "Higher Tiers_1": "If you cast this Glyph using a Glyph slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a Glyph slot of 5th level or higher, the duration is 8 hours. If you use a Glyph slot of 7th level or higher, the duration is 24 hours. If you use a 9th level Glyph slot, the Glyph lasts until it is dispelled. Using a Glyph slot of 5th level or higher grants a duration that doesn't require concentration."
   },
   {
-    "Chat Name": "Bigby's Hand",
+    "Ignore": "Bigby's Hand",
     "Name": "Bigby's Hand",
     "Tier": 6,
     "Points": 27,
@@ -2160,7 +2160,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th."
   },
   {
-    "Chat Name": "Black Fireball",
+    "Ignore": "Black Fireball",
     "Name": "Black Fireball",
     "Tier": 9,
     "Points": 54,
@@ -2178,7 +2178,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 10 or higher, the fire and void damage increases by 2d6 for each tier above Tier 9."
   },
   {
-    "Chat Name": "Blade Barrier",
+    "Ignore": "Blade Barrier",
     "Name": "Blade Barrier",
     "Tier": 8,
     "Points": 45,
@@ -2196,7 +2196,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Blade of Disaster",
+    "Ignore": "Blade of Disaster",
     "Name": "Blade of Disaster",
     "Tier": 12,
     "Points": 90,
@@ -2214,7 +2214,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Blade Ward",
+    "Ignore": "Blade Ward",
     "Name": "Blade Ward",
     "Tier": 0,
     "Points": 0,
@@ -2232,7 +2232,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Bless",
+    "Ignore": "Bless",
     "Name": "Bless",
     "Tier": 1,
     "Points": 3,
@@ -2250,7 +2250,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
   },
   {
-    "Chat Name": "Blight",
+    "Ignore": "Blight",
     "Name": "Blight",
     "Tier": 5,
     "Points": 21,
@@ -2268,7 +2268,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
   },
   {
-    "Chat Name": "Blighted Smite",
+    "Ignore": "Blighted Smite",
     "Name": "Blighted Smite",
     "Tier": 1,
     "Points": 3,
@@ -2286,7 +2286,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Blinding Smite",
+    "Ignore": "Blinding Smite",
     "Name": "Blinding Smite",
     "Tier": 3,
     "Points": 9,
@@ -2304,7 +2304,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Blindness/Deafness",
+    "Ignore": "Blindness/Deafness",
     "Name": "Blindness/Deafness",
     "Tier": 2,
     "Points": 6,
@@ -2322,7 +2322,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
   },
   {
-    "Chat Name": "Blink",
+    "Ignore": "Blink",
     "Name": "Blink",
     "Tier": 4,
     "Points": 15,
@@ -2340,7 +2340,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Blood Infusion",
+    "Ignore": "Blood Infusion",
     "Name": "Blood Infusion",
     "Tier": 2,
     "Points": 6,
@@ -2358,7 +2358,7 @@
     "Higher Tiers_1": "When cast using a glyph of Tier 3 or higher, the initial bleed damage increases by 1d8 for each tier above Tier 2. The d4 damage increases at tier 5 (2d4), tier 8 (3d4), tier 12 (4d4)"
   },
   {
-    "Chat Name": "Blur",
+    "Ignore": "Blur",
     "Name": "Blur",
     "Tier": 2,
     "Points": 6,
@@ -2376,7 +2376,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Bolstered Arrow",
+    "Ignore": "Bolstered Arrow",
     "Name": "Bolstered Arrow",
     "Tier": 1,
     "Points": 3,
@@ -2394,7 +2394,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 2 or higher the weight increases by 200 pounds per tier above 1."
   },
   {
-    "Chat Name": "Bolt of Mana Drain",
+    "Ignore": "Bolt of Mana Drain",
     "Name": "Bolt of Mana Drain",
     "Tier": 1,
     "Points": 3,
@@ -2412,7 +2412,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Bones of the Earth",
+    "Ignore": "Bones of the Earth",
     "Name": "Bones of the Earth",
     "Tier": 7,
     "Points": 36,
@@ -2430,7 +2430,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, you can create two additional pillars for each slot level above 6th."
   },
   {
-    "Chat Name": "Booming Blade",
+    "Ignore": "Booming Blade",
     "Name": "Booming Blade",
     "Tier": 0,
     "Points": 0,
@@ -2448,7 +2448,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Borrowed Knowledge",
+    "Ignore": "Borrowed Knowledge",
     "Name": "Borrowed Knowledge",
     "Tier": 2,
     "Points": 6,
@@ -2466,7 +2466,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Borrowed Time",
+    "Ignore": "Borrowed Time",
     "Name": "Borrowed Time",
     "Tier": 3,
     "Points": 9,
@@ -2484,7 +2484,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Branding Smite",
+    "Ignore": "Branding Smite",
     "Name": "Branding Smite",
     "Tier": 2,
     "Points": 6,
@@ -2502,7 +2502,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Burning Hands",
+    "Ignore": "Burning Hands",
     "Name": "Burning Hands",
     "Tier": 1,
     "Points": 3,
@@ -2520,7 +2520,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "Call Lightning",
+    "Ignore": "Call Lightning",
     "Name": "Call Lightning",
     "Tier": 4,
     "Points": 15,
@@ -2538,7 +2538,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d10 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Calm Emotions",
+    "Ignore": "Calm Emotions",
     "Name": "Calm Emotions",
     "Tier": 2,
     "Points": 6,
@@ -2556,7 +2556,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Catapult",
+    "Ignore": "Catapult",
     "Name": "Catapult",
     "Tier": 1,
     "Points": 3,
@@ -2574,7 +2574,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the maximum weight of objects that you can target with this Glyph increases by 5 pounds, and the damage increases by 1d8, for each slot level a bove 1st."
   },
   {
-    "Chat Name": "Cause Fear",
+    "Ignore": "Cause Fear",
     "Name": "Cause Fear",
     "Tier": 1,
     "Points": 3,
@@ -2592,7 +2592,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Ceremony",
+    "Ignore": "Ceremony",
     "Name": "Ceremony",
     "Tier": 2,
     "Points": 6,
@@ -2610,7 +2610,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Chain Lightning",
+    "Ignore": "Chain Lightning",
     "Name": "Chain Lightning",
     "Tier": 8,
     "Points": 45,
@@ -2628,7 +2628,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th."
   },
   {
-    "Chat Name": "Chaos Bolt",
+    "Ignore": "Chaos Bolt",
     "Name": "Chaos Bolt",
     "Tier": 1,
     "Points": 3,
@@ -2646,7 +2646,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, each target takes 1d6 extra damage of the type rolled for each slot level above 1st."
   },
   {
-    "Chat Name": "Charm Monster",
+    "Ignore": "Charm Monster",
     "Name": "Charm Monster",
     "Tier": 5,
     "Points": 21,
@@ -2664,7 +2664,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Charm Person",
+    "Ignore": "Charm Person",
     "Name": "Charm Person",
     "Tier": 1,
     "Points": 3,
@@ -2682,7 +2682,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Chill Touch",
+    "Ignore": "Chill Touch",
     "Name": "Chill Touch",
     "Tier": 0,
     "Points": 0,
@@ -2700,7 +2700,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Chromatic Orb",
+    "Ignore": "Chromatic Orb",
     "Name": "Chromatic Orb",
     "Tier": 2,
     "Points": 6,
@@ -2718,7 +2718,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage inereases by 1d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Chromatic Prism",
+    "Ignore": "Chromatic Prism",
     "Name": "Chromatic Prism",
     "Tier": 5,
     "Points": 21,
@@ -2736,7 +2736,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Circle of Death",
+    "Ignore": "Circle of Death",
     "Name": "Circle of Death",
     "Tier": 9,
     "Points": 54,
@@ -2754,7 +2754,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th."
   },
   {
-    "Chat Name": "Circle of Power",
+    "Ignore": "Circle of Power",
     "Name": "Circle of Power",
     "Tier": 6,
     "Points": 27,
@@ -2772,7 +2772,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Circle of Seclusion",
+    "Ignore": "Circle of Seclusion",
     "Name": "Circle of Seclusion",
     "Tier": 2,
     "Points": 6,
@@ -2790,7 +2790,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Clairvoyance",
+    "Ignore": "Clairvoyance",
     "Name": "Clairvoyance",
     "Tier": 5,
     "Points": 21,
@@ -2808,7 +2808,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Clone",
+    "Ignore": "Clone",
     "Name": "Clone",
     "Tier": 11,
     "Points": 78,
@@ -2826,7 +2826,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Cloud of Daggers",
+    "Ignore": "Cloud of Daggers",
     "Name": "Cloud of Daggers",
     "Tier": 2,
     "Points": 6,
@@ -2844,7 +2844,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Cloudkill",
+    "Ignore": "Cloudkill",
     "Name": "Cloudkill",
     "Tier": 6,
     "Points": 27,
@@ -2862,7 +2862,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
   },
   {
-    "Chat Name": "Color Spray",
+    "Ignore": "Color Spray",
     "Name": "Color Spray",
     "Tier": 1,
     "Points": 3,
@@ -2880,7 +2880,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
   },
   {
-    "Chat Name": "Command",
+    "Ignore": "Command",
     "Name": "Command",
     "Tier": 1,
     "Points": 3,
@@ -2898,7 +2898,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Commune",
+    "Ignore": "Commune",
     "Name": "Commune",
     "Tier": 6,
     "Points": 27,
@@ -2916,7 +2916,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Commune with Nature",
+    "Ignore": "Commune with Nature",
     "Name": "Commune with Nature",
     "Tier": 6,
     "Points": 27,
@@ -2934,7 +2934,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Compelled Duel",
+    "Ignore": "Compelled Duel",
     "Name": "Compelled Duel",
     "Tier": 1,
     "Points": 3,
@@ -2952,7 +2952,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Comprehend Languages",
+    "Ignore": "Comprehend Languages",
     "Name": "Comprehend Languages",
     "Tier": 1,
     "Points": 3,
@@ -2970,7 +2970,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Compulsion",
+    "Ignore": "Compulsion",
     "Name": "Compulsion",
     "Tier": 5,
     "Points": 21,
@@ -2988,7 +2988,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Cone of Cold",
+    "Ignore": "Cone of Cold",
     "Name": "Cone of Cold",
     "Tier": 7,
     "Points": 36,
@@ -3006,7 +3006,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
   },
   {
-    "Chat Name": "Confusion",
+    "Ignore": "Confusion",
     "Name": "Confusion",
     "Tier": 5,
     "Points": 21,
@@ -3024,7 +3024,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the radius of the sphere increases by 5 reet for each slot level above 4th."
   },
   {
-    "Chat Name": "Conjure Animals",
+    "Ignore": "Conjure Animals",
     "Name": "Conjure Animals",
     "Tier": 4,
     "Points": 15,
@@ -3042,7 +3042,7 @@
     "Higher Tiers_1": "When you cast this Glyph using certain higher-level Glyph slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level slot, and four times as many with a 9th-level slot."
   },
   {
-    "Chat Name": "Conjure Barrage",
+    "Ignore": "Conjure Barrage",
     "Name": "Conjure Barrage",
     "Tier": 3,
     "Points": 9,
@@ -3060,7 +3060,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Conjure Celestial",
+    "Ignore": "Conjure Celestial",
     "Name": "Conjure Celestial",
     "Tier": 9,
     "Points": 54,
@@ -3078,7 +3078,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a 9th-level Glyph slot, you summon a celestial of challenge rating 5 or lower."
   },
   {
-    "Chat Name": "Conjure Elemental",
+    "Ignore": "Conjure Elemental",
     "Name": "Conjure Elemental",
     "Tier": 6,
     "Points": 27,
@@ -3096,7 +3096,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
   },
   {
-    "Chat Name": "Conjure Fey",
+    "Ignore": "Conjure Fey",
     "Name": "Conjure Fey",
     "Tier": 8,
     "Points": 45,
@@ -3114,7 +3114,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th."
   },
   {
-    "Chat Name": "Conjure Minor Elementals",
+    "Ignore": "Conjure Minor Elementals",
     "Name": "Conjure Minor Elementals",
     "Tier": 5,
     "Points": 21,
@@ -3132,7 +3132,7 @@
     "Higher Tiers_1": "When you cast this Glyph using certain higher-level Glyph slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
   },
   {
-    "Chat Name": "Conjure Volley",
+    "Ignore": "Conjure Volley",
     "Name": "Conjure Volley",
     "Tier": 6,
     "Points": 27,
@@ -3150,7 +3150,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Conjure Woodland Beings",
+    "Ignore": "Conjure Woodland Beings",
     "Name": "Conjure Woodland Beings",
     "Tier": 5,
     "Points": 21,
@@ -3168,7 +3168,7 @@
     "Higher Tiers_1": "When you cast this Glyph using certain higher-level Glyph slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
   },
   {
-    "Chat Name": "Consultation",
+    "Ignore": "Consultation",
     "Name": "Consultation",
     "Tier": 0,
     "Points": 0,
@@ -3186,7 +3186,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Contact Other Plane",
+    "Ignore": "Contact Other Plane",
     "Name": "Contact Other Plane",
     "Tier": 6,
     "Points": 27,
@@ -3204,7 +3204,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Contagion",
+    "Ignore": "Contagion",
     "Name": "Contagion",
     "Tier": 6,
     "Points": 27,
@@ -3222,7 +3222,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Contigency",
+    "Ignore": "Contigency",
     "Name": "Contigency",
     "Tier": 9,
     "Points": 54,
@@ -3240,7 +3240,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Continual Flame",
+    "Ignore": "Continual Flame",
     "Name": "Continual Flame",
     "Tier": 3,
     "Points": 9,
@@ -3258,7 +3258,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Control Atmosphere",
+    "Ignore": "Control Atmosphere",
     "Name": "Control Atmosphere",
     "Tier": 12,
     "Points": 94,
@@ -3276,7 +3276,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Control Flames",
+    "Ignore": "Control Flames",
     "Name": "Control Flames",
     "Tier": 0,
     "Points": 0,
@@ -3294,7 +3294,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Control Water",
+    "Ignore": "Control Water",
     "Name": "Control Water",
     "Tier": 5,
     "Points": 21,
@@ -3312,7 +3312,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Control Weather",
+    "Ignore": "Control Weather",
     "Name": "Control Weather",
     "Tier": 10,
     "Points": 66,
@@ -3330,7 +3330,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Control Winds",
+    "Ignore": "Control Winds",
     "Name": "Control Winds",
     "Tier": 6,
     "Points": 27,
@@ -3348,7 +3348,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Convulsion",
+    "Ignore": "Convulsion",
     "Name": "Convulsion",
     "Tier": 1,
     "Points": 3,
@@ -3366,7 +3366,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Cordon of Arrows",
+    "Ignore": "Cordon of Arrows",
     "Name": "Cordon of Arrows",
     "Tier": 2,
     "Points": 6,
@@ -3384,7 +3384,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd."
   },
   {
-    "Chat Name": "Counterspell",
+    "Ignore": "Counterspell",
     "Name": "Counterspell",
     "Tier": 4,
     "Points": 15,
@@ -3402,7 +3402,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the interrupted Glyph has no effect if its level is less than or equal to the level of the Glyph slot you used."
   },
   {
-    "Chat Name": "Create Bonfire",
+    "Ignore": "Create Bonfire",
     "Name": "Create Bonfire",
     "Tier": 0,
     "Points": 0,
@@ -3420,7 +3420,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Create Food and Water",
+    "Ignore": "Create Food and Water",
     "Name": "Create Food and Water",
     "Tier": 4,
     "Points": 15,
@@ -3438,7 +3438,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Create or Destroy Water",
+    "Ignore": "Create or Destroy Water",
     "Name": "Create or Destroy Water",
     "Tier": 1,
     "Points": 3,
@@ -3456,7 +3456,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st."
   },
   {
-    "Chat Name": "Create Undead",
+    "Ignore": "Create Undead",
     "Name": "Create Undead",
     "Tier": 7,
     "Points": 36,
@@ -3474,7 +3474,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a 7th-level Glyph slot, you can animate or reassert control over four ghouls. When you cast this Glyph using an 8th-level Glyph slot, you can animate or reassert control over tive ghouls or two ghasts or wights. When you cast this Glyph using a 9th-level Glyph slot, you can animate or reassert control over six ghouls, three ghasts or wights, or two mummies."
   },
   {
-    "Chat Name": "Creation",
+    "Ignore": "Creation",
     "Name": "Creation",
     "Tier": 7,
     "Points": 36,
@@ -3492,7 +3492,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."
   },
   {
-    "Chat Name": "Crimson Mark",
+    "Ignore": "Crimson Mark",
     "Name": "Crimson Mark",
     "Tier": 3,
     "Points": 9,
@@ -3510,7 +3510,7 @@
     "Higher Tiers_1": "When cast using a glyph of Tier 3 or higher, the void damage dealt by your attacks (if you choose that option) increases by 1d8 for each tier above Tier 2. At tier 5 you can choose 2 options. At tier 7 you can have all effects active."
   },
   {
-    "Chat Name": "Crown of Madness",
+    "Ignore": "Crown of Madness",
     "Name": "Crown of Madness",
     "Tier": 2,
     "Points": 6,
@@ -3528,7 +3528,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Crown of Stars",
+    "Ignore": "Crown of Stars",
     "Name": "Crown of Stars",
     "Tier": 9,
     "Points": 54,
@@ -3546,7 +3546,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 8th level or higher, the number of motes created increases by two for each slot level above 7th."
   },
   {
-    "Chat Name": "Crusader's Mantle",
+    "Ignore": "Crusader's Mantle",
     "Name": "Crusader's Mantle",
     "Tier": 3,
     "Points": 9,
@@ -3564,7 +3564,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Cure Wounds",
+    "Ignore": "Cure Wounds",
     "Name": "Cure Wounds",
     "Tier": 1,
     "Points": 3,
@@ -3582,7 +3582,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Dancing Darkness",
+    "Ignore": "Dancing Darkness",
     "Name": "Dancing Darkness",
     "Tier": 0,
     "Points": 0,
@@ -3600,7 +3600,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dancing Lights",
+    "Ignore": "Dancing Lights",
     "Name": "Dancing Lights",
     "Tier": 0,
     "Points": 0,
@@ -3618,7 +3618,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Danse Macabre",
+    "Ignore": "Danse Macabre",
     "Name": "Danse Macabre",
     "Tier": 6,
     "Points": 27,
@@ -3636,7 +3636,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, you animate up to two additional corpses for each slot level above 5th."
   },
   {
-    "Chat Name": "Dark Star",
+    "Ignore": "Dark Star",
     "Name": "Dark Star",
     "Tier": 10,
     "Points": 66,
@@ -3654,7 +3654,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Darkened Oblivion",
+    "Ignore": "Darkened Oblivion",
     "Name": "Darkened Oblivion",
     "Tier": 12,
     "Points": 90,
@@ -3672,7 +3672,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Darkness",
+    "Ignore": "Darkness",
     "Name": "Darkness",
     "Tier": 3,
     "Points": 9,
@@ -3690,7 +3690,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Darkvision",
+    "Ignore": "Darkvision",
     "Name": "Darkvision",
     "Tier": 2,
     "Points": 6,
@@ -3708,7 +3708,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dawn",
+    "Ignore": "Dawn",
     "Name": "Dawn",
     "Tier": 7,
     "Points": 36,
@@ -3726,7 +3726,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Daylight",
+    "Ignore": "Daylight",
     "Name": "Daylight",
     "Tier": 3,
     "Points": 9,
@@ -3744,7 +3744,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Death Ward",
+    "Ignore": "Death Ward",
     "Name": "Death Ward",
     "Tier": 5,
     "Points": 21,
@@ -3762,7 +3762,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Debilitate",
+    "Ignore": "Debilitate",
     "Name": "Debilitate",
     "Tier": 2,
     "Points": 6,
@@ -3780,7 +3780,7 @@
     "Higher Tiers_1": "When you cast this glyph at  tier 2 or higher, you may target one additional creature for each tier above 1st. Additionally, when you cast this glyph at tier 4 or higher, if the creature is immune to the damage they instead take normal damage. "
   },
   {
-    "Chat Name": "Delayed Blast Fireball",
+    "Ignore": "Delayed Blast Fireball",
     "Name": "Delayed Blast Fireball",
     "Tier": 9,
     "Points": 54,
@@ -3798,7 +3798,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 8th level or higher, the base damage increases by 1d6 for each slot level above 7th."
   },
   {
-    "Chat Name": "Demiplane",
+    "Ignore": "Demiplane",
     "Name": "Demiplane",
     "Tier": 10,
     "Points": 66,
@@ -3816,7 +3816,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Destructive Wave",
+    "Ignore": "Destructive Wave",
     "Name": "Destructive Wave",
     "Tier": 6,
     "Points": 27,
@@ -3834,7 +3834,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Detect Evil and Good",
+    "Ignore": "Detect Evil and Good",
     "Name": "Detect Evil and Good",
     "Tier": 1,
     "Points": 3,
@@ -3852,7 +3852,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Detect Magic",
+    "Ignore": "Detect Magic",
     "Name": "Detect Magic",
     "Tier": 1,
     "Points": 3,
@@ -3870,7 +3870,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Detect Poison and Disease",
+    "Ignore": "Detect Poison and Disease",
     "Name": "Detect Poison and Disease",
     "Tier": 1,
     "Points": 3,
@@ -3888,7 +3888,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Detect Thoughts",
+    "Ignore": "Detect Thoughts",
     "Name": "Detect Thoughts",
     "Tier": 3,
     "Points": 9,
@@ -3906,7 +3906,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dimension Door",
+    "Ignore": "Dimension Door",
     "Name": "Dimension Door",
     "Tier": 5,
     "Points": 21,
@@ -3924,7 +3924,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dire Charm",
+    "Ignore": "Dire Charm",
     "Name": "Dire Charm",
     "Tier": 4,
     "Points": 15,
@@ -3942,7 +3942,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Disguise Self",
+    "Ignore": "Disguise Self",
     "Name": "Disguise Self",
     "Tier": 1,
     "Points": 3,
@@ -3960,7 +3960,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Disintegrate",
+    "Ignore": "Disintegrate",
     "Name": "Disintegrate",
     "Tier": 8,
     "Points": 45,
@@ -3978,7 +3978,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th."
   },
   {
-    "Chat Name": "Dispel Evil and Good",
+    "Ignore": "Dispel Evil and Good",
     "Name": "Dispel Evil and Good",
     "Tier": 6,
     "Points": 27,
@@ -3996,7 +3996,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dispel Magic",
+    "Ignore": "Dispel Magic",
     "Name": "Dispel Magic",
     "Tier": 4,
     "Points": 15,
@@ -4014,7 +4014,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you automatically end the effects of a Glyph on the target if the Glyph's level is equal to or less than the level of the Glyph slot you used."
   },
   {
-    "Chat Name": "Dissonant Whispers",
+    "Ignore": "Dissonant Whispers",
     "Name": "Dissonant Whispers",
     "Tier": 1,
     "Points": 3,
@@ -4032,7 +4032,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "Distort Value",
+    "Ignore": "Distort Value",
     "Name": "Distort Value",
     "Tier": 1,
     "Points": 3,
@@ -4050,7 +4050,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a higher Glyph slot, you increase the size of the object by 1 foot per Glyph slot over 1st."
   },
   {
-    "Chat Name": "Divination",
+    "Ignore": "Divination",
     "Name": "Divination",
     "Tier": 5,
     "Points": 21,
@@ -4068,7 +4068,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Divine Aid",
+    "Ignore": "Divine Aid",
     "Name": "Divine Aid",
     "Tier": 4,
     "Points": 14,
@@ -4086,7 +4086,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 6 you may choose one additional affect. When you cast this glyph using a glyph tier of 8 you gain all effects. "
   },
   {
-    "Chat Name": "Divine Favor",
+    "Ignore": "Divine Favor",
     "Name": "Divine Favor",
     "Tier": 1,
     "Points": 3,
@@ -4104,7 +4104,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Divine Favor",
+    "Ignore": "Divine Favor",
     "Name": "Divine Favor",
     "Tier": 1,
     "Points": 3,
@@ -4122,7 +4122,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Divine Word",
+    "Ignore": "Divine Word",
     "Name": "Divine Word",
     "Tier": 9,
     "Points": 54,
@@ -4140,7 +4140,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dominate Beast",
+    "Ignore": "Dominate Beast",
     "Name": "Dominate Beast",
     "Tier": 5,
     "Points": 21,
@@ -4158,7 +4158,7 @@
     "Higher Tiers_1": "When you cast this Glyph with a 5th-level Glyph slot, the duration is concentration, up to 10 minutes. When you use a 6th-level Glyph slot, the duration is concentration, up to 1 hour. When you use a Glyph slot of 7th level or higher, the duration is concentration, up to 8 hours."
   },
   {
-    "Chat Name": "Dominate Monster",
+    "Ignore": "Dominate Monster",
     "Name": "Dominate Monster",
     "Tier": 11,
     "Points": 78,
@@ -4176,7 +4176,7 @@
     "Higher Tiers_1": "When you cast this Glyph with a 9th-level Glyph slot, the duration is concentration, up to 8 hours."
   },
   {
-    "Chat Name": "Dominate Person",
+    "Ignore": "Dominate Person",
     "Name": "Dominate Person",
     "Tier": 7,
     "Points": 36,
@@ -4194,7 +4194,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a 6th-level Glyph slot, the duration is concentration, up to 10 minutes. When you use a 7th-level Glyph slot, the duration is concentration, up to 1 hour. When you use a Glyph slot of 8th level or higher, the duration is concentration, up to 8 hours."
   },
   {
-    "Chat Name": "Dominate Wellspring",
+    "Ignore": "Dominate Wellspring",
     "Name": "Dominate Wellspring",
     "Tier": 5,
     "Points": 21,
@@ -4212,7 +4212,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Draconic Transformation",
+    "Ignore": "Draconic Transformation",
     "Name": "Draconic Transformation",
     "Tier": 9,
     "Points": 54,
@@ -4230,7 +4230,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dragon's Breath",
+    "Ignore": "Dragon's Breath",
     "Name": "Dragon's Breath",
     "Tier": 2,
     "Points": 6,
@@ -4248,7 +4248,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Drawmij's Instant Summons",
+    "Ignore": "Drawmij's Instant Summons",
     "Name": "Drawmij's Instant Summons",
     "Tier": 9,
     "Points": 54,
@@ -4266,7 +4266,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dream",
+    "Ignore": "Dream",
     "Name": "Dream",
     "Tier": 6,
     "Points": 27,
@@ -4284,7 +4284,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Dream of the Blue Veil",
+    "Ignore": "Dream of the Blue Veil",
     "Name": "Dream of the Blue Veil",
     "Tier": 9,
     "Points": 54,
@@ -4302,7 +4302,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Druid Grove",
+    "Ignore": "Druid Grove",
     "Name": "Druid Grove",
     "Tier": 8,
     "Points": 45,
@@ -4320,7 +4320,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Druidcraft",
+    "Ignore": "Druidcraft",
     "Name": "Druidcraft",
     "Tier": 0,
     "Points": 0,
@@ -4338,7 +4338,7 @@
     "Higher Tiers_1": "At Higher Mana Cost.Â  The radius in which you discern the weather increases by 1 mile at 5th level (3 miles), 11th level (4 miles), 17 level (5 miles)."
   },
   {
-    "Chat Name": "Dusk Shield",
+    "Ignore": "Dusk Shield",
     "Name": "Dusk Shield",
     "Tier": 2,
     "Points": 6,
@@ -4356,7 +4356,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 2  glyph or higher, the damage reduced (and thus the potential stored) increases by 1d8 for each slot level above tier 2."
   },
   {
-    "Chat Name": "Dust Devil",
+    "Ignore": "Dust Devil",
     "Name": "Dust Devil",
     "Tier": 2,
     "Points": 6,
@@ -4374,7 +4374,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Earth Tremor",
+    "Ignore": "Earth Tremor",
     "Name": "Earth Tremor",
     "Tier": 1,
     "Points": 3,
@@ -4392,7 +4392,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "Earthbind",
+    "Ignore": "Earthbind",
     "Name": "Earthbind",
     "Tier": 3,
     "Points": 9,
@@ -4410,7 +4410,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Earthquake",
+    "Ignore": "Earthquake",
     "Name": "Earthquake",
     "Tier": 10,
     "Points": 66,
@@ -4428,7 +4428,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Eldritch Blast",
+    "Ignore": "Eldritch Blast",
     "Name": "Eldritch Blast",
     "Tier": 0,
     "Points": 0,
@@ -4446,7 +4446,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. The glyph creates more than one burst when you reach higher levels: two bursts at 5th level, three bursts at 11th level, and four bursts at 17th level. You can direct the bursts at the same target or at different ones. Make a separate attack roll for each burst.Â "
   },
   {
-    "Chat Name": "Elemental Bane",
+    "Ignore": "Elemental Bane",
     "Name": "Elemental Bane",
     "Tier": 5,
     "Points": 21,
@@ -4464,7 +4464,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Elemental Weapon",
+    "Ignore": "Elemental Weapon",
     "Name": "Elemental Weapon",
     "Tier": 3,
     "Points": 9,
@@ -4482,7 +4482,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a Glyph slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4."
   },
   {
-    "Chat Name": "Encode Thoughts",
+    "Ignore": "Encode Thoughts",
     "Name": "Encode Thoughts",
     "Tier": 0,
     "Points": 0,
@@ -4500,7 +4500,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Enemies Abound",
+    "Ignore": "Enemies Abound",
     "Name": "Enemies Abound",
     "Tier": 4,
     "Points": 15,
@@ -4518,7 +4518,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Enervation",
+    "Ignore": "Enervation",
     "Name": "Enervation",
     "Tier": 6,
     "Points": 27,
@@ -4536,7 +4536,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
   },
   {
-    "Chat Name": "Enhance Ability",
+    "Ignore": "Enhance Ability",
     "Name": "Enhance Ability",
     "Tier": 2,
     "Points": 6,
@@ -4554,7 +4554,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Enhanced Wisdom",
+    "Ignore": "Enhanced Wisdom",
     "Name": "Enhanced Wisdom",
     "Tier": 2,
     "Points": 6,
@@ -4572,7 +4572,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 4  you can apply it to another creature and another at tier 6, tier 8 and tier 11."
   },
   {
-    "Chat Name": "Enlarge/Reduce",
+    "Ignore": "Enlarge/Reduce",
     "Name": "Enlarge/Reduce",
     "Tier": 2,
     "Points": 6,
@@ -4590,7 +4590,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ensnaring Strike",
+    "Ignore": "Ensnaring Strike",
     "Name": "Ensnaring Strike",
     "Tier": 1,
     "Points": 3,
@@ -4608,7 +4608,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 6 or more mana, the damage increases by 1d6 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "Entangle",
+    "Ignore": "Entangle",
     "Name": "Entangle",
     "Tier": 1,
     "Points": 3,
@@ -4626,7 +4626,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Enthrall",
+    "Ignore": "Enthrall",
     "Name": "Enthrall",
     "Tier": 2,
     "Points": 6,
@@ -4644,7 +4644,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "`Erase Presence",
+    "Ignore": "`Erase Presence",
     "Name": "Erase Presence",
     "Tier": 5,
     "Points": 21,
@@ -4662,7 +4662,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Erupting Earth",
+    "Ignore": "Erupting Earth",
     "Name": "Erupting Earth",
     "Tier": 4,
     "Points": 15,
@@ -4680,7 +4680,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Eternal Mandate",
+    "Ignore": "Eternal Mandate",
     "Name": "Eternal Mandate",
     "Tier": 12,
     "Points": 96,
@@ -4698,7 +4698,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Etherealness",
+    "Ignore": "Etherealness",
     "Name": "Etherealness",
     "Tier": 9,
     "Points": 54,
@@ -4716,7 +4716,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 8th levet or higher, you can target up to three willing crealures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the Glyph."
   },
   {
-    "Chat Name": "Evard's Black Tentacles",
+    "Ignore": "Evard's Black Tentacles",
     "Name": "Evard's Black Tentacles",
     "Tier": 5,
     "Points": 21,
@@ -4734,7 +4734,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Execution",
+    "Ignore": "Execution",
     "Name": "Execution",
     "Tier": 12,
     "Points": 90,
@@ -4752,7 +4752,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Expeditious Retreat",
+    "Ignore": "Expeditious Retreat",
     "Name": "Expeditious Retreat",
     "Tier": 1,
     "Points": 3,
@@ -4770,7 +4770,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Explosive Glacier",
+    "Ignore": "Explosive Glacier",
     "Name": "Explosive Glacier",
     "Tier": 7,
     "Points": 36,
@@ -4788,7 +4788,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Explosive Remains",
+    "Ignore": "Explosive Remains",
     "Name": "Explosive Remains",
     "Tier": 3,
     "Points": 9,
@@ -4806,7 +4806,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Eyebite",
+    "Ignore": "Eyebite",
     "Name": "Eyebite",
     "Tier": 7,
     "Points": 36,
@@ -4824,7 +4824,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fabricate",
+    "Ignore": "Fabricate",
     "Name": "Fabricate",
     "Tier": 5,
     "Points": 21,
@@ -4842,7 +4842,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Faerie Fire",
+    "Ignore": "Faerie Fire",
     "Name": "Faerie Fire",
     "Tier": 1,
     "Points": 3,
@@ -4860,7 +4860,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "False Life",
+    "Ignore": "False Life",
     "Name": "False Life",
     "Tier": 1,
     "Points": 3,
@@ -4878,7 +4878,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st."
   },
   {
-    "Chat Name": "Far Step",
+    "Ignore": "Far Step",
     "Name": "Far Step",
     "Tier": 6,
     "Points": 27,
@@ -4896,7 +4896,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fast Friends",
+    "Ignore": "Fast Friends",
     "Name": "Fast Friends",
     "Tier": 4,
     "Points": 15,
@@ -4914,7 +4914,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
   },
   {
-    "Chat Name": "Fear",
+    "Ignore": "Fear",
     "Name": "Fear",
     "Tier": 4,
     "Points": 15,
@@ -4932,7 +4932,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Feather Fall",
+    "Ignore": "Feather Fall",
     "Name": "Feather Fall",
     "Tier": 1,
     "Points": 3,
@@ -4950,7 +4950,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Feeblemind",
+    "Ignore": "Feeblemind",
     "Name": "Feeblemind",
     "Tier": 10,
     "Points": 66,
@@ -4968,7 +4968,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Feign Death",
+    "Ignore": "Feign Death",
     "Name": "Feign Death",
     "Tier": 3,
     "Points": 9,
@@ -4986,7 +4986,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Find Familiar",
+    "Ignore": "Find Familiar",
     "Name": "Find Familiar",
     "Tier": 1,
     "Points": 3,
@@ -5004,7 +5004,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Find Greater Steed",
+    "Ignore": "Find Greater Steed",
     "Name": "Find Greater Steed",
     "Tier": 5,
     "Points": 21,
@@ -5022,7 +5022,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Find Steed",
+    "Ignore": "Find Steed",
     "Name": "Find Steed",
     "Tier": 2,
     "Points": 6,
@@ -5040,7 +5040,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Find the Path",
+    "Ignore": "Find the Path",
     "Name": "Find the Path",
     "Tier": 7,
     "Points": 36,
@@ -5058,7 +5058,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Find Traps",
+    "Ignore": "Find Traps",
     "Name": "Find Traps",
     "Tier": 2,
     "Points": 6,
@@ -5076,7 +5076,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Finger of Death",
+    "Ignore": "Finger of Death",
     "Name": "Finger of Death",
     "Tier": 9,
     "Points": 54,
@@ -5094,7 +5094,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fire Bolt",
+    "Ignore": "Fire Bolt",
     "Name": "Fire Bolt",
     "Tier": 0,
     "Points": 0,
@@ -5112,7 +5112,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fire Shield",
+    "Ignore": "Fire Shield",
     "Name": "Fire Shield",
     "Tier": 5,
     "Points": 21,
@@ -5130,7 +5130,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fire Storm",
+    "Ignore": "Fire Storm",
     "Name": "Fire Storm",
     "Tier": 9,
     "Points": 54,
@@ -5148,7 +5148,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fireball",
+    "Ignore": "Fireball",
     "Name": "Fireball",
     "Tier": 4,
     "Points": 15,
@@ -5166,7 +5166,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Fissure",
+    "Ignore": "Fissure",
     "Name": "Fissure",
     "Tier": 12,
     "Points": 90,
@@ -5184,7 +5184,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fizban's Platinum Shield",
+    "Ignore": "Fizban's Platinum Shield",
     "Name": "Fizban's Platinum Shield",
     "Tier": 8,
     "Points": 45,
@@ -5202,7 +5202,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Flame Arrows",
+    "Ignore": "Flame Arrows",
     "Name": "Flame Arrows",
     "Tier": 3,
     "Points": 9,
@@ -5220,7 +5220,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the number of pieces of ammunition you can affect with this Glyph increases by two for each slot level above 3rd."
   },
   {
-    "Chat Name": "Flame Blade",
+    "Ignore": "Flame Blade",
     "Name": "Flame Blade",
     "Tier": 2,
     "Points": 6,
@@ -5238,7 +5238,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage inereases by 1d6 for every two slot levels above 2nd."
   },
   {
-    "Chat Name": "Flame Strike",
+    "Ignore": "Flame Strike",
     "Name": "Flame Strike",
     "Tier": 6,
     "Points": 27,
@@ -5256,7 +5256,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th."
   },
   {
-    "Chat Name": "Flaming Sphere",
+    "Ignore": "Flaming Sphere",
     "Name": "Flaming Sphere",
     "Tier": 2,
     "Points": 6,
@@ -5274,7 +5274,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Flesh to Stone",
+    "Ignore": "Flesh to Stone",
     "Name": "Flesh to Stone",
     "Tier": 8,
     "Points": 45,
@@ -5292,7 +5292,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Flickering Scry",
+    "Ignore": "Flickering Scry",
     "Name": "Flickering Scry",
     "Tier": 5,
     "Points": 21,
@@ -5310,7 +5310,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Flock of Familiars",
+    "Ignore": "Flock of Familiars",
     "Name": "Flock of Familiars",
     "Tier": 2,
     "Points": 6,
@@ -5328,7 +5328,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you conjure an additional familiar for each slot level above 2nd."
   },
   {
-    "Chat Name": "Fly",
+    "Ignore": "Fly",
     "Name": "Fly",
     "Tier": 4,
     "Points": 15,
@@ -5346,7 +5346,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
   },
   {
-    "Chat Name": "Fog Cloud",
+    "Ignore": "Fog Cloud",
     "Name": "Fog Cloud",
     "Tier": 1,
     "Points": 3,
@@ -5364,7 +5364,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st."
   },
   {
-    "Chat Name": "Forbiddance",
+    "Ignore": "Forbiddance",
     "Name": "Forbiddance",
     "Tier": 9,
     "Points": 54,
@@ -5382,7 +5382,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Force Cannon",
+    "Ignore": "Force Cannon",
     "Name": "Force Cannon",
     "Tier": 1,
     "Points": 3,
@@ -5400,7 +5400,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 2 or higher, its damage increases by 1d12 per tier above 1. "
   },
   {
-    "Chat Name": "Forcecage",
+    "Ignore": "Forcecage",
     "Name": "Forcecage",
     "Tier": 10,
     "Points": 54,
@@ -5418,7 +5418,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Foresight",
+    "Ignore": "Foresight",
     "Name": "Foresight",
     "Tier": 11,
     "Points": 78,
@@ -5436,7 +5436,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Fortune's Favor",
+    "Ignore": "Fortune's Favor",
     "Name": "Fortune's Favor",
     "Tier": 3,
     "Points": 9,
@@ -5454,7 +5454,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
   },
   {
-    "Chat Name": "Freedom of Movement",
+    "Ignore": "Freedom of Movement",
     "Name": "Freedom of Movement",
     "Tier": 5,
     "Points": 21,
@@ -5472,7 +5472,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Frost Fingers",
+    "Ignore": "Frost Fingers",
     "Name": "Frost Fingers",
     "Tier": 1,
     "Points": 3,
@@ -5490,7 +5490,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Frostbite",
+    "Ignore": "Frostbite",
     "Name": "Frostbite",
     "Tier": 0,
     "Points": 0,
@@ -5508,7 +5508,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Galder's Speedy Courier",
+    "Ignore": "Galder's Speedy Courier",
     "Name": "Galder's Speedy Courier",
     "Tier": 5,
     "Points": 21,
@@ -5526,7 +5526,7 @@
     "Higher Tiers_1": "When you cast this Glyph using an 8th-level Glyph slot, you can send the chest to a creature on a different plane of existence from you."
   },
   {
-    "Chat Name": "Galder's Tower",
+    "Ignore": "Galder's Tower",
     "Name": "Galder's Tower",
     "Tier": 4,
     "Points": 15,
@@ -5544,7 +5544,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the tower can have one additional story for each slot level beyond 3rd."
   },
   {
-    "Chat Name": "Gale",
+    "Ignore": "Gale",
     "Name": "Gale",
     "Tier": 7,
     "Points": 36,
@@ -5562,7 +5562,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 7 or higher, both damage rolls (bludgeoning and slashing) increase by 1d8 for each tier above Tier 7."
   },
   {
-    "Chat Name": "Gaseous Form",
+    "Ignore": "Gaseous Form",
     "Name": "Gaseous Form",
     "Tier": 4,
     "Points": 15,
@@ -5580,7 +5580,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Gate",
+    "Ignore": "Gate",
     "Name": "Gate",
     "Tier": 12,
     "Points": 90,
@@ -5598,7 +5598,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Gather Round the Campfire",
+    "Ignore": "Gather Round the Campfire",
     "Name": "Gather Round the Campfire",
     "Tier": 2,
     "Points": 6,
@@ -5616,7 +5616,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Geas",
+    "Ignore": "Geas",
     "Name": "Geas",
     "Tier": 6,
     "Points": 27,
@@ -5634,7 +5634,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th or 8th level, the duration is 1 year. When you cast this Glyph using a Glyph slot of 9th level, the Glyph lasts until it is ended by one of the spells mentioned above."
   },
   {
-    "Chat Name": "Gentle Repose",
+    "Ignore": "Gentle Repose",
     "Name": "Gentle Repose",
     "Tier": 2,
     "Points": 6,
@@ -5652,7 +5652,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ghrian's Bane",
+    "Ignore": "Ghrian's Bane",
     "Name": "Ghrian's Bane",
     "Tier": 11,
     "Points": 78,
@@ -5670,7 +5670,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ghrian's Spear",
+    "Ignore": "Ghrian's Spear",
     "Name": "Ghrian's Spear",
     "Tier": 4,
     "Points": 15,
@@ -5688,7 +5688,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Giant Insect",
+    "Ignore": "Giant Insect",
     "Name": "Giant Insect",
     "Tier": 5,
     "Points": 21,
@@ -5706,7 +5706,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Gift of Alacrity",
+    "Ignore": "Gift of Alacrity",
     "Name": "Gift of Alacrity",
     "Tier": 1,
     "Points": 3,
@@ -5724,7 +5724,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Gift of Gab",
+    "Ignore": "Gift of Gab",
     "Name": "Gift of Gab",
     "Tier": 2,
     "Points": 6,
@@ -5742,7 +5742,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Glibness",
+    "Ignore": "Glibness",
     "Name": "Glibness",
     "Tier": 10,
     "Points": 66,
@@ -5760,7 +5760,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Globe of Invulnerability",
+    "Ignore": "Globe of Invulnerability",
     "Name": "Globe of Invulnerability",
     "Tier": 8,
     "Points": 45,
@@ -5778,7 +5778,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th."
   },
   {
-    "Chat Name": "Glyph of Warding",
+    "Ignore": "Glyph of Warding",
     "Name": "Glyph of Warding",
     "Tier": 5,
     "Points": 21,
@@ -5796,7 +5796,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a Glyph glyph, you can store any Glyph of up to the same level as the slot you use for the glyph of warding."
   },
   {
-    "Chat Name": "Goodberry",
+    "Ignore": "Goodberry",
     "Name": "Goodberry",
     "Tier": 1,
     "Points": 3,
@@ -5814,7 +5814,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Grasping Shadow",
+    "Ignore": "Grasping Shadow",
     "Name": "Grasping Shadow",
     "Tier": 3,
     "Points": 9,
@@ -5832,7 +5832,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 4 or higher, its damage increases by 1d6 per tier above 3. "
   },
   {
-    "Chat Name": "Grasping Vine",
+    "Ignore": "Grasping Vine",
     "Name": "Grasping Vine",
     "Tier": 5,
     "Points": 21,
@@ -5850,7 +5850,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Grasping Void",
+    "Ignore": "Grasping Void",
     "Name": "Grasping Void",
     "Tier": 2,
     "Points": 6,
@@ -5868,7 +5868,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Gravity Fissure",
+    "Ignore": "Gravity Fissure",
     "Name": "Gravity Fissure",
     "Tier": 8,
     "Points": 45,
@@ -5886,7 +5886,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the damage increases by 1d8 for each slot level above 6th."
   },
   {
-    "Chat Name": "Gravity Sinkhole",
+    "Ignore": "Gravity Sinkhole",
     "Name": "Gravity Sinkhole",
     "Tier": 5,
     "Points": 21,
@@ -5904,7 +5904,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th."
   },
   {
-    "Chat Name": "Grease",
+    "Ignore": "Grease",
     "Name": "Grease",
     "Tier": 1,
     "Points": 3,
@@ -5922,7 +5922,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Greater Invisibility",
+    "Ignore": "Greater Invisibility",
     "Name": "Greater Invisibility",
     "Tier": 5,
     "Points": 21,
@@ -5940,7 +5940,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Greater Mana Armor",
+    "Ignore": "Greater Mana Armor",
     "Name": "Greater Mana Armor",
     "Tier": 4,
     "Points": 15,
@@ -5958,7 +5958,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Greater Restoration",
+    "Ignore": "Greater Restoration",
     "Name": "Greater Restoration",
     "Tier": 7,
     "Points": 36,
@@ -5976,7 +5976,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Green-Flame Blade",
+    "Ignore": "Green-Flame Blade",
     "Name": "Green-Flame Blade",
     "Tier": 0,
     "Points": 0,
@@ -5994,7 +5994,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Guardian of Faith",
+    "Ignore": "Guardian of Faith",
     "Name": "Guardian of Faith",
     "Tier": 5,
     "Points": 21,
@@ -6012,7 +6012,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Guardian of Nature",
+    "Ignore": "Guardian of Nature",
     "Name": "Guardian of Nature",
     "Tier": 5,
     "Points": 21,
@@ -6030,7 +6030,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Guards and Wards",
+    "Ignore": "Guards and Wards",
     "Name": "Guards and Wards",
     "Tier": 8,
     "Points": 45,
@@ -6048,7 +6048,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Guidance",
+    "Ignore": "Guidance",
     "Name": "Guidance",
     "Tier": 0,
     "Points": 0,
@@ -6066,7 +6066,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. When you reach 5th level, the bonus die can be added to attack rolls.Â "
   },
   {
-    "Chat Name": "Guiding Bolt",
+    "Ignore": "Guiding Bolt",
     "Name": "Guiding Bolt",
     "Tier": 1,
     "Points": 3,
@@ -6084,7 +6084,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "Gust",
+    "Ignore": "Gust",
     "Name": "Gust",
     "Tier": 0,
     "Points": 0,
@@ -6102,7 +6102,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Gust of Wind",
+    "Ignore": "Gust of Wind",
     "Name": "Gust of Wind",
     "Tier": 2,
     "Points": 6,
@@ -6120,7 +6120,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Hail of Thorns",
+    "Ignore": "Hail of Thorns",
     "Name": "Hail of Thorns",
     "Tier": 1,
     "Points": 3,
@@ -6138,7 +6138,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 6 or more mana, the damage increases by 1d10 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "Hallow",
+    "Ignore": "Hallow",
     "Name": "Hallow",
     "Tier": 7,
     "Points": 36,
@@ -6156,7 +6156,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Hallucinatory Terrain",
+    "Ignore": "Hallucinatory Terrain",
     "Name": "Hallucinatory Terrain",
     "Tier": 5,
     "Points": 21,
@@ -6174,7 +6174,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Harm",
+    "Ignore": "Harm",
     "Name": "Harm",
     "Tier": 8,
     "Points": 45,
@@ -6192,7 +6192,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Haste",
+    "Ignore": "Haste",
     "Name": "Haste",
     "Tier": 4,
     "Points": 15,
@@ -6210,7 +6210,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Heal",
+    "Ignore": "Heal",
     "Name": "Heal",
     "Tier": 8,
     "Points": 45,
@@ -6228,7 +6228,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th."
   },
   {
-    "Chat Name": "Healing Pulse",
+    "Ignore": "Healing Pulse",
     "Name": "Healing Pulse",
     "Tier": 3,
     "Points": 9,
@@ -6246,7 +6246,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Healing Spirit",
+    "Ignore": "Healing Spirit",
     "Name": "Healing Spirit",
     "Tier": 3,
     "Points": 9,
@@ -6264,7 +6264,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a s pell slot of 3rd level or higher, the healing increases by 1d6 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Healing Word",
+    "Ignore": "Healing Word",
     "Name": "Healing Word",
     "Tier": 1,
     "Points": 3,
@@ -6282,7 +6282,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the healing increases by ld4 for each slot level above 1st."
   },
   {
-    "Chat Name": "Heat Metal",
+    "Ignore": "Heat Metal",
     "Name": "Heat Metal",
     "Tier": 3,
     "Points": 9,
@@ -6300,7 +6300,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Hellish Rebuke",
+    "Ignore": "Hellish Rebuke",
     "Name": "Hellish Rebuke",
     "Tier": 1,
     "Points": 3,
@@ -6318,7 +6318,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
   },
   {
-    "Chat Name": "Heroes' Feast",
+    "Ignore": "Heroes' Feast",
     "Name": "Heroes' Feast",
     "Tier": 9,
     "Points": 54,
@@ -6336,7 +6336,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Heroism",
+    "Ignore": "Heroism",
     "Name": "Heroism",
     "Tier": 1,
     "Points": 3,
@@ -6354,7 +6354,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
   },
   {
-    "Chat Name": "Hold Monster",
+    "Ignore": "Hold Monster",
     "Name": "Hold Monster",
     "Tier": 6,
     "Points": 27,
@@ -6372,7 +6372,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Hold Person",
+    "Ignore": "Hold Person",
     "Name": "Hold Person",
     "Tier": 2,
     "Points": 6,
@@ -6390,7 +6390,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Holy Aura",
+    "Ignore": "Holy Aura",
     "Name": "Holy Aura",
     "Tier": 11,
     "Points": 78,
@@ -6408,7 +6408,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Holy Weapon",
+    "Ignore": "Holy Weapon",
     "Name": "Holy Weapon",
     "Tier": 7,
     "Points": 36,
@@ -6426,7 +6426,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Hunger of Hadar",
+    "Ignore": "Hunger of Hadar",
     "Name": "Hunger of Hadar",
     "Tier": 4,
     "Points": 15,
@@ -6444,7 +6444,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Hurricane",
+    "Ignore": "Hurricane",
     "Name": "Hurricane",
     "Tier": 12,
     "Points": 90,
@@ -6462,7 +6462,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Hypnotic Pattern",
+    "Ignore": "Hypnotic Pattern",
     "Name": "Hypnotic Pattern",
     "Tier": 4,
     "Points": 15,
@@ -6480,7 +6480,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ice Beam",
+    "Ignore": "Ice Beam",
     "Name": "Ice Beam",
     "Tier": 2,
     "Points": 6,
@@ -6498,7 +6498,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 3 or higher, the cold  damage increases by 1d8 per tier above 2. "
   },
   {
-    "Chat Name": "Ice Knife",
+    "Ignore": "Ice Knife",
     "Name": "Ice Knife",
     "Tier": 1,
     "Points": 3,
@@ -6516,7 +6516,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the cold damage increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "Ice Storm",
+    "Ignore": "Ice Storm",
     "Name": "Ice Storm",
     "Tier": 5,
     "Points": 21,
@@ -6534,7 +6534,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the bludgeoning damage increases by 1d8 for each slot level above 4th."
   },
   {
-    "Chat Name": "Identify",
+    "Ignore": "Identify",
     "Name": "Identify",
     "Tier": 2,
     "Points": 6,
@@ -6552,7 +6552,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Illusory Dragon",
+    "Ignore": "Illusory Dragon",
     "Name": "Illusory Dragon",
     "Tier": 10,
     "Points": 66,
@@ -6570,7 +6570,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Illusory Script",
+    "Ignore": "Illusory Script",
     "Name": "Illusory Script",
     "Tier": 1,
     "Points": 3,
@@ -6588,7 +6588,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Immolation",
+    "Ignore": "Immolation",
     "Name": "Immolation",
     "Tier": 6,
     "Points": 27,
@@ -6606,7 +6606,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Immovable Object",
+    "Ignore": "Immovable Object",
     "Name": "Immovable Object",
     "Tier": 2,
     "Points": 6,
@@ -6624,7 +6624,7 @@
     "Higher Tiers_1": "If you cast this Glyph using a Glyph slot of 4th or 5th level, the DC to move the object increases by 5, it can carry up to 8000 pounds of weight, and the duration increases to 24 hours. If you cast this Glyph using a Glyph slot of 6th level or higher, the DC to move the object increases by 10, it can carry up to 20000 pounds of weight, and the effect is permanent until dispelled."
   },
   {
-    "Chat Name": "Imprisonment",
+    "Ignore": "Imprisonment",
     "Name": "Imprisonment",
     "Tier": 12,
     "Points": 90,
@@ -6642,7 +6642,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Incendiary Cloud",
+    "Ignore": "Incendiary Cloud",
     "Name": "Incendiary Cloud",
     "Tier": 10,
     "Points": 66,
@@ -6660,7 +6660,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Infestation",
+    "Ignore": "Infestation",
     "Name": "Infestation",
     "Tier": 0,
     "Points": 0,
@@ -6678,7 +6678,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Inflict Wounds",
+    "Ignore": "Inflict Wounds",
     "Name": "Inflict Wounds",
     "Tier": 1,
     "Points": 3,
@@ -6696,7 +6696,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
   },
   {
-    "Chat Name": "Insect Plague",
+    "Ignore": "Insect Plague",
     "Name": "Insect Plague",
     "Tier": 6,
     "Points": 27,
@@ -6714,7 +6714,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
   },
   {
-    "Chat Name": "Instant Escape",
+    "Ignore": "Instant Escape",
     "Name": "Instant Escape",
     "Tier": 3,
     "Points": 6,
@@ -6732,7 +6732,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Intellect Fortress",
+    "Ignore": "Intellect Fortress",
     "Name": "Intellect Fortress",
     "Tier": 4,
     "Points": 15,
@@ -6750,7 +6750,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Investiture of Flame",
+    "Ignore": "Investiture of Flame",
     "Name": "Investiture of Flame",
     "Tier": 8,
     "Points": 45,
@@ -6768,7 +6768,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Investiture of Ice",
+    "Ignore": "Investiture of Ice",
     "Name": "Investiture of Ice",
     "Tier": 8,
     "Points": 45,
@@ -6786,7 +6786,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Investiture of Stone",
+    "Ignore": "Investiture of Stone",
     "Name": "Investiture of Stone",
     "Tier": 8,
     "Points": 45,
@@ -6804,7 +6804,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Investiture of Wind",
+    "Ignore": "Investiture of Wind",
     "Name": "Investiture of Wind",
     "Tier": 8,
     "Points": 45,
@@ -6822,7 +6822,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Invisibility",
+    "Ignore": "Invisibility",
     "Name": "Invisibility",
     "Tier": 3,
     "Points": 9,
@@ -6840,7 +6840,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
   },
   {
-    "Chat Name": "Invulnerability",
+    "Ignore": "Invulnerability",
     "Name": "Invulnerability",
     "Tier": 12,
     "Points": 90,
@@ -6858,7 +6858,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Judgement",
+    "Ignore": "Judgement",
     "Name": "Judgement",
     "Tier": 12,
     "Points": 90,
@@ -6876,7 +6876,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Jump",
+    "Ignore": "Jump",
     "Name": "Jump",
     "Tier": 1,
     "Points": 3,
@@ -6894,7 +6894,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Kinematic",
+    "Ignore": "Kinematic",
     "Name": "Kinematic",
     "Tier": 2,
     "Points": 6,
@@ -6912,7 +6912,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 3 or higher, the range and the maximum distance between the targets increase by 10 feet for each tier above Tier 2. When you cast this glyph at tier 6 it can affect Huge creatures. At tier 10 it can effect gargantuan creatures. At tier 12 it can effect all creature sizes."
   },
   {
-    "Chat Name": "Kinetic Jaunt",
+    "Ignore": "Kinetic Jaunt",
     "Name": "Kinetic Jaunt",
     "Tier": 2,
     "Points": 6,
@@ -6930,7 +6930,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Knock",
+    "Ignore": "Knock",
     "Name": "Knock",
     "Tier": 2,
     "Points": 6,
@@ -6948,7 +6948,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Legend Lore",
+    "Ignore": "Legend Lore",
     "Name": "Legend Lore",
     "Tier": 7,
     "Points": 36,
@@ -6966,7 +6966,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Leomund's Secret Chest",
+    "Ignore": "Leomund's Secret Chest",
     "Name": "Leomund's Secret Chest",
     "Tier": 6,
     "Points": 27,
@@ -6984,7 +6984,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Leomund's Tiny Hut",
+    "Ignore": "Leomund's Tiny Hut",
     "Name": "Leomund's Tiny Hut",
     "Tier": 3,
     "Points": 9,
@@ -7002,7 +7002,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Lesser Restoration",
+    "Ignore": "Lesser Restoration",
     "Name": "Lesser Restoration",
     "Tier": 2,
     "Points": 6,
@@ -7020,7 +7020,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Levitate",
+    "Ignore": "Levitate",
     "Name": "Levitate",
     "Tier": 2,
     "Points": 6,
@@ -7038,7 +7038,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Life Drinker",
+    "Ignore": "Life Drinker",
     "Name": "Life Drinker",
     "Tier": 6,
     "Points": 27,
@@ -7056,7 +7056,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 7 or higher, roll +2d10 per tier above Tier 6 to increase the healing suppression pool."
   },
   {
-    "Chat Name": "Life Exchange",
+    "Ignore": "Life Exchange",
     "Name": "Life Exchange",
     "Tier": 1,
     "Points": 3,
@@ -7074,7 +7074,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Life Transference",
+    "Ignore": "Life Transference",
     "Name": "Life Transference",
     "Tier": 4,
     "Points": 15,
@@ -7092,7 +7092,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Light",
+    "Ignore": "Light",
     "Name": "Light",
     "Tier": 0,
     "Points": 0,
@@ -7110,7 +7110,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Lightning Arrow",
+    "Ignore": "Lightning Arrow",
     "Name": "Lightning Arrow",
     "Tier": 3,
     "Points": 9,
@@ -7128,7 +7128,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage for both effects of the Glyph increases by 1d8 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Lightning Bolt",
+    "Ignore": "Lightning Bolt",
     "Name": "Lightning Bolt",
     "Tier": 4,
     "Points": 15,
@@ -7146,7 +7146,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Lightning Helix",
+    "Ignore": "Lightning Helix",
     "Name": "Lightning Helix",
     "Tier": 3,
     "Points": 9,
@@ -7164,7 +7164,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 4 or higher, the lightning damage increases by 1d6 for each tier above Tier 3."
   },
   {
-    "Chat Name": "Lightning Lure",
+    "Ignore": "Lightning Lure",
     "Name": "Lightning Lure",
     "Tier": 0,
     "Points": 0,
@@ -7182,7 +7182,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Lightning Spear",
+    "Ignore": "Lightning Spear",
     "Name": "Lightning Spear",
     "Tier": 9,
     "Points": 54,
@@ -7200,7 +7200,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 10 or higher, the damage increases by 2d8 for each tier above 9."
   },
   {
-    "Chat Name": "Living Shadow",
+    "Ignore": "Living Shadow",
     "Name": "Living Shadow",
     "Tier": 6,
     "Points": 27,
@@ -7218,7 +7218,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Locate Animals or Plants",
+    "Ignore": "Locate Animals or Plants",
     "Name": "Locate Animals or Plants",
     "Tier": 2,
     "Points": 6,
@@ -7236,7 +7236,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Locate Creature",
+    "Ignore": "Locate Creature",
     "Name": "Locate Creature",
     "Tier": 5,
     "Points": 21,
@@ -7254,7 +7254,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Locate Object",
+    "Ignore": "Locate Object",
     "Name": "Locate Object",
     "Tier": 2,
     "Points": 6,
@@ -7272,7 +7272,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Longstrider",
+    "Ignore": "Longstrider",
     "Name": "Longstrider",
     "Tier": 1,
     "Points": 3,
@@ -7290,7 +7290,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
   },
   {
-    "Chat Name": "Lunar Fortune",
+    "Ignore": "Lunar Fortune",
     "Name": "Lunar Fortune",
     "Tier": 4,
     "Points": 15,
@@ -7308,7 +7308,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Maddening Darkness",
+    "Ignore": "Maddening Darkness",
     "Name": "Maddening Darkness",
     "Tier": 11,
     "Points": 78,
@@ -7326,7 +7326,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Maelstrom",
+    "Ignore": "Maelstrom",
     "Name": "Maelstrom",
     "Tier": 6,
     "Points": 27,
@@ -7344,7 +7344,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mage Armor",
+    "Ignore": "Mage Armor",
     "Name": "Mage Armor",
     "Tier": 1,
     "Points": 3,
@@ -7362,7 +7362,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mage Hand",
+    "Ignore": "Mage Hand",
     "Name": "Mage Hand",
     "Tier": 0,
     "Points": 0,
@@ -7380,7 +7380,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Magic Circle",
+    "Ignore": "Magic Circle",
     "Name": "Magic Circle",
     "Tier": 5,
     "Points": 21,
@@ -7398,7 +7398,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd."
   },
   {
-    "Chat Name": "Magic Jar",
+    "Ignore": "Magic Jar",
     "Name": "Magic Jar",
     "Tier": 8,
     "Points": 45,
@@ -7416,7 +7416,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Magic Missile",
+    "Ignore": "Magic Missile",
     "Name": "Magic Missile",
     "Tier": 1,
     "Points": 3,
@@ -7434,7 +7434,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the Glyph creates one more dart for each slot level above 1st."
   },
   {
-    "Chat Name": "Magic Mouth",
+    "Ignore": "Magic Mouth",
     "Name": "Magic Mouth",
     "Tier": 3,
     "Points": 9,
@@ -7452,7 +7452,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Magic Stone",
+    "Ignore": "Magic Stone",
     "Name": "Magic Stone",
     "Tier": 0,
     "Points": 0,
@@ -7470,7 +7470,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Magic Weapon",
+    "Ignore": "Magic Weapon",
     "Name": "Magic Weapon",
     "Tier": 2,
     "Points": 6,
@@ -7488,7 +7488,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the bonus increases to +2. When you use a Glyph slot of 6th level or higher, the bonus increases to +3."
   },
   {
-    "Chat Name": "Magnify Gravity",
+    "Ignore": "Magnify Gravity",
     "Name": "Magnify Gravity",
     "Tier": 1,
     "Points": 3,
@@ -7506,7 +7506,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Major Image",
+    "Ignore": "Major Image",
     "Name": "Major Image",
     "Tier": 4,
     "Points": 15,
@@ -7524,7 +7524,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the Glyph lasts until dispelled, without requiring your concentration."
   },
   {
-    "Chat Name": "Mana Lock",
+    "Ignore": "Mana Lock",
     "Name": "Mana Lock",
     "Tier": 5,
     "Points": 21,
@@ -7542,7 +7542,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mana Overload",
+    "Ignore": "Mana Overload",
     "Name": "Mana Overload",
     "Tier": 4,
     "Points": 15,
@@ -7560,7 +7560,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Manipulate Shadows ",
+    "Ignore": "Manipulate Shadows ",
     "Name": "Manipulate Shadows",
     "Tier": 0,
     "Points": 0,
@@ -7578,7 +7578,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mass Cure Wounds",
+    "Ignore": "Mass Cure Wounds",
     "Name": "Mass Cure Wounds",
     "Tier": 7,
     "Points": 36,
@@ -7596,7 +7596,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th."
   },
   {
-    "Chat Name": "Mass Heal",
+    "Ignore": "Mass Heal",
     "Name": "Mass Heal",
     "Tier": 12,
     "Points": 90,
@@ -7614,7 +7614,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mass Healing Word",
+    "Ignore": "Mass Healing Word",
     "Name": "Mass Healing Word",
     "Tier": 4,
     "Points": 15,
@@ -7632,7 +7632,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Mass Polymorph",
+    "Ignore": "Mass Polymorph",
     "Name": "Mass Polymorph",
     "Tier": 12,
     "Points": 90,
@@ -7650,7 +7650,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mass Suggestion",
+    "Ignore": "Mass Suggestion",
     "Name": "Mass Suggestion",
     "Tier": 8,
     "Points": 45,
@@ -7668,7 +7668,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a 7th-level Glyph slot, the duration is 10 days. When you use an 8th-level Glyph slot, the duration is 30 days. When you use a 9th-level Glyph slot, the duration is a year and a day."
   },
   {
-    "Chat Name": "Mass Vicious Mockery",
+    "Ignore": "Mass Vicious Mockery",
     "Name": "Mass Vicious Mockery",
     "Tier": 3,
     "Points": 9,
@@ -7686,7 +7686,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Maximilian's Earthen Grasp",
+    "Ignore": "Maximilian's Earthen Grasp",
     "Name": "Maximilian's Earthen Grasp",
     "Tier": 2,
     "Points": 6,
@@ -7704,7 +7704,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Maze",
+    "Ignore": "Maze",
     "Name": "Maze",
     "Tier": 10,
     "Points": 66,
@@ -7722,7 +7722,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Maze of Shades",
+    "Ignore": "Maze of Shades",
     "Name": "Maze of Shades",
     "Tier": 5,
     "Points": 21,
@@ -7740,7 +7740,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Meld into Stone",
+    "Ignore": "Meld into Stone",
     "Name": "Meld into Stone",
     "Tier": 4,
     "Points": 15,
@@ -7758,7 +7758,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Melf's Acid Arrow",
+    "Ignore": "Melf's Acid Arrow",
     "Name": "Melf's Acid Arrow",
     "Tier": 2,
     "Points": 6,
@@ -7776,7 +7776,7 @@
     "Higher Tiers_1": "When you cast this Glyph using 9 or more mana, the damage (both initial and later) increases by 1d4 for every 3 additional mana expended."
   },
   {
-    "Chat Name": "Melf's Minute Meteors",
+    "Ignore": "Melf's Minute Meteors",
     "Name": "Melf's Minute Meteors",
     "Tier": 3,
     "Points": 9,
@@ -7794,7 +7794,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd."
   },
   {
-    "Chat Name": "Mending",
+    "Ignore": "Mending",
     "Name": "Mending",
     "Tier": 0,
     "Points": 0,
@@ -7812,7 +7812,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mental Prison",
+    "Ignore": "Mental Prison",
     "Name": "Mental Prison",
     "Tier": 8,
     "Points": 45,
@@ -7830,7 +7830,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Message",
+    "Ignore": "Message",
     "Name": "Message",
     "Tier": 0,
     "Points": 0,
@@ -7848,7 +7848,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Meteor Swarm",
+    "Ignore": "Meteor Swarm",
     "Name": "Meteor Swarm",
     "Tier": 12,
     "Points": 90,
@@ -7866,7 +7866,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mighty Fortress",
+    "Ignore": "Mighty Fortress",
     "Name": "Mighty Fortress",
     "Tier": 10,
     "Points": 66,
@@ -7884,7 +7884,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mind Blank",
+    "Ignore": "Mind Blank",
     "Name": "Mind Blank",
     "Tier": 10,
     "Points": 66,
@@ -7902,7 +7902,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mind Fog",
+    "Ignore": "Mind Fog",
     "Name": "Mind Fog",
     "Tier": 5,
     "Points": 21,
@@ -7920,7 +7920,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 6 or higher, the psychic and poison damage increases by 1d6 per tier above 5. "
   },
   {
-    "Chat Name": "Mind Fracture",
+    "Ignore": "Mind Fracture",
     "Name": "Mind Fracture",
     "Tier": 6,
     "Points": 27,
@@ -7938,7 +7938,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mind Sliver",
+    "Ignore": "Mind Sliver",
     "Name": "Mind Sliver",
     "Tier": 0,
     "Points": 0,
@@ -7956,7 +7956,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mind Spike",
+    "Ignore": "Mind Spike",
     "Name": "Mind Spike",
     "Tier": 2,
     "Points": 6,
@@ -7974,7 +7974,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Minor Illusion",
+    "Ignore": "Minor Illusion",
     "Name": "Minor Illusion",
     "Tier": 0,
     "Points": 0,
@@ -7992,7 +7992,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mirage Arcane",
+    "Ignore": "Mirage Arcane",
     "Name": "Mirage Arcane",
     "Tier": 9,
     "Points": 54,
@@ -8010,7 +8010,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mirror Image",
+    "Ignore": "Mirror Image",
     "Name": "Mirror Image",
     "Tier": 3,
     "Points": 9,
@@ -8028,7 +8028,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mislead",
+    "Ignore": "Mislead",
     "Name": "Mislead",
     "Tier": 6,
     "Points": 27,
@@ -8046,7 +8046,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Misty Step",
+    "Ignore": "Misty Step",
     "Name": "Misty Step",
     "Tier": 2,
     "Points": 6,
@@ -8064,7 +8064,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Modify Memory",
+    "Ignore": "Modify Memory",
     "Name": "Modify Memory",
     "Tier": 7,
     "Points": 36,
@@ -8082,7 +8082,7 @@
     "Higher Tiers_1": "If you cast this Glyph using a Glyph slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level)."
   },
   {
-    "Chat Name": "Mold Earth",
+    "Ignore": "Mold Earth",
     "Name": "Mold Earth",
     "Tier": 0,
     "Points": 0,
@@ -8100,7 +8100,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Moonbeam",
+    "Ignore": "Moonbeam",
     "Name": "Moonbeam",
     "Tier": 3,
     "Points": 9,
@@ -8118,7 +8118,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d10 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Mordenkainen's Faithful Hound",
+    "Ignore": "Mordenkainen's Faithful Hound",
     "Name": "Mordenkainen's Faithful Hound",
     "Tier": 5,
     "Points": 21,
@@ -8136,7 +8136,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mordenkainen's Magnificent Mansion",
+    "Ignore": "Mordenkainen's Magnificent Mansion",
     "Name": "Mordenkainen's Magnificent Mansion",
     "Tier": 9,
     "Points": 54,
@@ -8154,7 +8154,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Mordenkainen's Private Sanctum",
+    "Ignore": "Mordenkainen's Private Sanctum",
     "Name": "Mordenkainen's Private Sanctum",
     "Tier": 5,
     "Points": 21,
@@ -8172,7 +8172,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a Glyph slot of 5th level."
   },
   {
-    "Chat Name": "Mordenkainen's Sword",
+    "Ignore": "Mordenkainen's Sword",
     "Name": "Mordenkainen's Sword",
     "Tier": 10,
     "Points": 66,
@@ -8190,7 +8190,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Motivational Speech",
+    "Ignore": "Motivational Speech",
     "Name": "Motivational Speech",
     "Tier": 4,
     "Points": 15,
@@ -8208,7 +8208,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Move Earth",
+    "Ignore": "Move Earth",
     "Name": "Move Earth",
     "Tier": 7,
     "Points": 36,
@@ -8226,7 +8226,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Nameless Smite",
+    "Ignore": "Nameless Smite",
     "Name": "Nameless Smite",
     "Tier": 6,
     "Points": 27,
@@ -8244,7 +8244,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Negative Energy Flood",
+    "Ignore": "Negative Energy Flood",
     "Name": "Negative Energy Flood",
     "Tier": 6,
     "Points": 27,
@@ -8262,7 +8262,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Nondetection",
+    "Ignore": "Nondetection",
     "Name": "Nondetection",
     "Tier": 4,
     "Points": 15,
@@ -8280,7 +8280,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Nystul's Magic Aura",
+    "Ignore": "Nystul's Magic Aura",
     "Name": "Nystul's Magic Aura",
     "Tier": 2,
     "Points": 6,
@@ -8298,7 +8298,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Orb of Infatuation",
+    "Ignore": "Orb of Infatuation",
     "Name": "Orb of Infatuation",
     "Tier": 5,
     "Points": 21,
@@ -8316,7 +8316,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Otiluke's Freezing Sphere",
+    "Ignore": "Otiluke's Freezing Sphere",
     "Name": "Otiluke's Freezing Sphere",
     "Tier": 8,
     "Points": 45,
@@ -8334,7 +8334,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th."
   },
   {
-    "Chat Name": "Otiluke's Resilient Sphere",
+    "Ignore": "Otiluke's Resilient Sphere",
     "Name": "Otiluke's Resilient Sphere",
     "Tier": 5,
     "Points": 21,
@@ -8352,7 +8352,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Otto's Irresistible Dance",
+    "Ignore": "Otto's Irresistible Dance",
     "Name": "Otto's Irresistible Dance",
     "Tier": 7,
     "Points": 36,
@@ -8370,7 +8370,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Pass without Trace",
+    "Ignore": "Pass without Trace",
     "Name": "Pass without Trace",
     "Tier": 2,
     "Points": 6,
@@ -8388,7 +8388,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Passwall",
+    "Ignore": "Passwall",
     "Name": "Passwall",
     "Tier": 6,
     "Points": 27,
@@ -8406,7 +8406,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Phantasmal Force",
+    "Ignore": "Phantasmal Force",
     "Name": "Phantasmal Force",
     "Tier": 3,
     "Points": 9,
@@ -8424,7 +8424,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Phantasmal Killer",
+    "Ignore": "Phantasmal Killer",
     "Name": "Phantasmal Killer",
     "Tier": 5,
     "Points": 21,
@@ -8442,7 +8442,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th."
   },
   {
-    "Chat Name": "Phantom Steed",
+    "Ignore": "Phantom Steed",
     "Name": "Phantom Steed",
     "Tier": 4,
     "Points": 15,
@@ -8460,7 +8460,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Pictura",
+    "Ignore": "Pictura",
     "Name": "Pictura",
     "Tier": 1,
     "Points": 3,
@@ -8478,7 +8478,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Planar Ally",
+    "Ignore": "Planar Ally",
     "Name": "Planar Ally",
     "Tier": 8,
     "Points": 45,
@@ -8496,7 +8496,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Planar Binding",
+    "Ignore": "Planar Binding",
     "Name": "Planar Binding",
     "Tier": 6,
     "Points": 27,
@@ -8514,7 +8514,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of a higher level, the duration increases to 10 days with a 6th-level slot, to 30 days with a 7th-level slot, to 180 days with an 8th level slot, and to a year and a day with a 9th-level Glyph slot."
   },
   {
-    "Chat Name": "Plane Shift",
+    "Ignore": "Plane Shift",
     "Name": "Plane Shift",
     "Tier": 10,
     "Points": 66,
@@ -8532,7 +8532,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Plant Growth",
+    "Ignore": "Plant Growth",
     "Name": "Plant Growth",
     "Tier": 3,
     "Points": 9,
@@ -8550,7 +8550,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Poison Spray",
+    "Ignore": "Poison Spray",
     "Name": "Poison Spray",
     "Tier": 0,
     "Points": 0,
@@ -8568,7 +8568,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Polymorph",
+    "Ignore": "Polymorph",
     "Name": "Polymorph",
     "Tier": 5,
     "Points": 21,
@@ -8586,7 +8586,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Power Word Heal",
+    "Ignore": "Power Word Heal",
     "Name": "Power Word Heal",
     "Tier": 12,
     "Points": 90,
@@ -8604,7 +8604,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Power Word Kill",
+    "Ignore": "Power Word Kill",
     "Name": "Power Word Kill",
     "Tier": 12,
     "Points": 90,
@@ -8622,7 +8622,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Power Word Pain",
+    "Ignore": "Power Word Pain",
     "Name": "Power Word Pain",
     "Tier": 9,
     "Points": 54,
@@ -8640,7 +8640,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Power Word Stun",
+    "Ignore": "Power Word Stun",
     "Name": "Power Word Stun",
     "Tier": 10,
     "Points": 66,
@@ -8658,7 +8658,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Prayer of Healing",
+    "Ignore": "Prayer of Healing",
     "Name": "Prayer of Healing",
     "Tier": 2,
     "Points": 6,
@@ -8676,7 +8676,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Precipice Spire",
+    "Ignore": "Precipice Spire",
     "Name": "Precipice Spire",
     "Tier": 6,
     "Points": 27,
@@ -8694,7 +8694,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 7 or higher, the damage increases by 1d8 for each tier above Tier 6."
   },
   {
-    "Chat Name": "Prestidigitation",
+    "Ignore": "Prestidigitation",
     "Name": "Prestidigitation",
     "Tier": 0,
     "Points": 0,
@@ -8712,7 +8712,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Primal Savagery",
+    "Ignore": "Primal Savagery",
     "Name": "Primal Savagery",
     "Tier": 0,
     "Points": 0,
@@ -8730,7 +8730,7 @@
     "Higher Tiers_1": "The glyph's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."
   },
   {
-    "Chat Name": "Primordial Ward",
+    "Ignore": "Primordial Ward",
     "Name": "Primordial Ward",
     "Tier": 8,
     "Points": 45,
@@ -8748,7 +8748,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Prismatic Spray",
+    "Ignore": "Prismatic Spray",
     "Name": "Prismatic Spray",
     "Tier": 9,
     "Points": 54,
@@ -8766,7 +8766,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Prismatic Wall",
+    "Ignore": "Prismatic Wall",
     "Name": "Prismatic Wall",
     "Tier": 12,
     "Points": 90,
@@ -8784,7 +8784,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Produce Flame",
+    "Ignore": "Produce Flame",
     "Name": "Produce Flame",
     "Tier": 0,
     "Points": 0,
@@ -8802,7 +8802,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Programmed Illusion",
+    "Ignore": "Programmed Illusion",
     "Name": "Programmed Illusion",
     "Tier": 8,
     "Points": 45,
@@ -8820,7 +8820,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Project Image",
+    "Ignore": "Project Image",
     "Name": "Project Image",
     "Tier": 9,
     "Points": 54,
@@ -8838,7 +8838,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Protection from Energy",
+    "Ignore": "Protection from Energy",
     "Name": "Protection from Energy",
     "Tier": 3,
     "Points": 9,
@@ -8856,7 +8856,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Protection from Evil and Good",
+    "Ignore": "Protection from Evil and Good",
     "Name": "Protection from Evil and Good",
     "Tier": 1,
     "Points": 3,
@@ -8874,7 +8874,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Protection from Poison",
+    "Ignore": "Protection from Poison",
     "Name": "Protection from Poison",
     "Tier": 2,
     "Points": 6,
@@ -8892,7 +8892,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Psychic Scream",
+    "Ignore": "Psychic Scream",
     "Name": "Psychic Scream",
     "Tier": 12,
     "Points": 90,
@@ -8910,7 +8910,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Pulse Wave",
+    "Ignore": "Pulse Wave",
     "Name": "Pulse Wave",
     "Tier": 4,
     "Points": 15,
@@ -8928,7 +8928,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d6 and the distance pulled or pushed increases by 5 feet for each slot level above 3rd."
   },
   {
-    "Chat Name": "Purify Food and Drink",
+    "Ignore": "Purify Food and Drink",
     "Name": "Purify Food and Drink",
     "Tier": 1,
     "Points": 3,
@@ -8946,7 +8946,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Pyrotechnics",
+    "Ignore": "Pyrotechnics",
     "Name": "Pyrotechnics",
     "Tier": 2,
     "Points": 6,
@@ -8964,7 +8964,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Raise Dead",
+    "Ignore": "Raise Dead",
     "Name": "Raise Dead",
     "Tier": 7,
     "Points": 36,
@@ -8982,7 +8982,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ramming Smite",
+    "Ignore": "Ramming Smite",
     "Name": "Ramming Smite",
     "Tier": 3,
     "Points": 9,
@@ -9000,7 +9000,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Rary's Telepathic Bond",
+    "Ignore": "Rary's Telepathic Bond",
     "Name": "Rary's Telepathic Bond",
     "Tier": 6,
     "Points": 27,
@@ -9018,7 +9018,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Raulothim's Psychic Lance",
+    "Ignore": "Raulothim's Psychic Lance",
     "Name": "Raulothim's Psychic Lance",
     "Tier": 5,
     "Points": 21,
@@ -9036,7 +9036,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage increases by 1d6 for each slot level above 4th."
   },
   {
-    "Chat Name": "Ravenous Void",
+    "Ignore": "Ravenous Void",
     "Name": "Ravenous Void",
     "Tier": 12,
     "Points": 90,
@@ -9054,7 +9054,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ray of Enfeeblement",
+    "Ignore": "Ray of Enfeeblement",
     "Name": "Ray of Enfeeblement",
     "Tier": 2,
     "Points": 6,
@@ -9072,7 +9072,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ray of Frost",
+    "Ignore": "Ray of Frost",
     "Name": "Ray of Frost",
     "Tier": 0,
     "Points": 0,
@@ -9090,7 +9090,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ray of Sickness",
+    "Ignore": "Ray of Sickness",
     "Name": "Ray of Sickness",
     "Tier": 1,
     "Points": 3,
@@ -9108,7 +9108,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Reality Break",
+    "Ignore": "Reality Break",
     "Name": "Reality Break",
     "Tier": 10,
     "Points": 66,
@@ -9126,7 +9126,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Reaper of the Abyss",
+    "Ignore": "Reaper of the Abyss",
     "Name": "Reaper of the Abyss",
     "Tier": 7,
     "Points": 45,
@@ -9144,7 +9144,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Regenerate",
+    "Ignore": "Regenerate",
     "Name": "Regenerate",
     "Tier": 9,
     "Points": 54,
@@ -9162,7 +9162,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Reincarnate",
+    "Ignore": "Reincarnate",
     "Name": "Reincarnate",
     "Tier": 7,
     "Points": 36,
@@ -9180,7 +9180,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Relativity ",
+    "Ignore": "Relativity ",
     "Name": "Relativity",
     "Tier": 3,
     "Points": 9,
@@ -9198,7 +9198,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 4 or higher, the movement adjustment increases by 5 feet for each tier above 3."
   },
   {
-    "Chat Name": "Remove Curse",
+    "Ignore": "Remove Curse",
     "Name": "Remove Curse",
     "Tier": 4,
     "Points": 15,
@@ -9216,7 +9216,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Resistance",
+    "Ignore": "Resistance",
     "Name": "Resistance",
     "Tier": 0,
     "Points": 0,
@@ -9234,7 +9234,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Resurrection",
+    "Ignore": "Resurrection",
     "Name": "Resurrection",
     "Tier": 10,
     "Points": 66,
@@ -9252,7 +9252,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Reverse Gravity",
+    "Ignore": "Reverse Gravity",
     "Name": "Reverse Gravity",
     "Tier": 9,
     "Points": 54,
@@ -9270,7 +9270,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Revivify",
+    "Ignore": "Revivify",
     "Name": "Revivify",
     "Tier": 5,
     "Points": 21,
@@ -9288,7 +9288,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the target regains an additional 1d8 hit points for every 3 additional mana expended.Â "
   },
   {
-    "Chat Name": "Rime's Binding Ice",
+    "Ignore": "Rime's Binding Ice",
     "Name": "Rime's Binding Ice",
     "Tier": 2,
     "Points": 6,
@@ -9306,7 +9306,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, increase the cold damage by 1d8 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Rope Trick",
+    "Ignore": "Rope Trick",
     "Name": "Rope Trick",
     "Tier": 2,
     "Points": 6,
@@ -9324,7 +9324,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sacred Flame",
+    "Ignore": "Sacred Flame",
     "Name": "Sacred Flame",
     "Tier": 0,
     "Points": 0,
@@ -9342,7 +9342,7 @@
     "Higher Tiers_1": "At Higher Levels. The spellâ€™s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
   },
   {
-    "Chat Name": "Sage Manacles",
+    "Ignore": "Sage Manacles",
     "Name": "Sage Manacles",
     "Tier": 2,
     "Points": 6,
@@ -9360,7 +9360,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sanctuary",
+    "Ignore": "Sanctuary",
     "Name": "Sanctuary",
     "Tier": 1,
     "Points": 3,
@@ -9378,7 +9378,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sapping Sting",
+    "Ignore": "Sapping Sting",
     "Name": "Sapping Sting",
     "Tier": 0,
     "Points": 0,
@@ -9396,7 +9396,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Scatter",
+    "Ignore": "Scatter",
     "Name": "Scatter",
     "Tier": 7,
     "Points": 36,
@@ -9414,7 +9414,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Scorching Ray",
+    "Ignore": "Scorching Ray",
     "Name": "Scorching Ray",
     "Tier": 2,
     "Points": 6,
@@ -9432,7 +9432,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you create one additional ray for each slot level above 2nd."
   },
   {
-    "Chat Name": "Scry",
+    "Ignore": "Scry",
     "Name": "Scry",
     "Tier": 5,
     "Points": 21,
@@ -9450,7 +9450,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Scrying",
+    "Ignore": "Scrying",
     "Name": "Scrying",
     "Tier": 7,
     "Points": 36,
@@ -9468,7 +9468,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Searing Abyssal Orbs",
+    "Ignore": "Searing Abyssal Orbs",
     "Name": "Searing Abyssal Orbs",
     "Tier": 5,
     "Points": 21,
@@ -9486,7 +9486,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Searing Smite",
+    "Ignore": "Searing Smite",
     "Name": "Searing Smite",
     "Tier": 1,
     "Points": 3,
@@ -9504,7 +9504,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the initial extra damage dealt by the attack increases by 1d6 for each slot level above 1st."
   },
   {
-    "Chat Name": "See Invisibility",
+    "Ignore": "See Invisibility",
     "Name": "See Invisibility",
     "Tier": 2,
     "Points": 6,
@@ -9522,7 +9522,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Seeming",
+    "Ignore": "Seeming",
     "Name": "Seeming",
     "Tier": 6,
     "Points": 27,
@@ -9540,7 +9540,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sending",
+    "Ignore": "Sending",
     "Name": "Sending",
     "Tier": 4,
     "Points": 15,
@@ -9558,7 +9558,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sequester",
+    "Ignore": "Sequester",
     "Name": "Sequester",
     "Tier": 10,
     "Points": 66,
@@ -9576,7 +9576,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shadow Blade",
+    "Ignore": "Shadow Blade",
     "Name": "Shadow Blade",
     "Tier": 3,
     "Points": 9,
@@ -9594,7 +9594,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a 3rd or 4th-level Glyph slot, the damage increases to 3d8. When you cast it using a 5th or 6th-level Glyph slot, the damage increases to 4d8. When you cast it using a Glyph slot of 7th level or higher, the damage increases to 5d8."
   },
   {
-    "Chat Name": "Shadow Enchantment",
+    "Ignore": "Shadow Enchantment",
     "Name": "Shadow Enchantment",
     "Tier": 4,
     "Points": 15,
@@ -9612,7 +9612,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shadow of Moil",
+    "Ignore": "Shadow of Moil",
     "Name": "Shadow of Moil",
     "Tier": 5,
     "Points": 21,
@@ -9630,7 +9630,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shadow Scribe",
+    "Ignore": "Shadow Scribe",
     "Name": "Shadow Scribe",
     "Tier": 2,
     "Points": 6,
@@ -9648,7 +9648,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shape Water",
+    "Ignore": "Shape Water",
     "Name": "Shape Water",
     "Tier": 0,
     "Points": 0,
@@ -9666,7 +9666,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shapechange",
+    "Ignore": "Shapechange",
     "Name": "Shapechange",
     "Tier": 12,
     "Points": 90,
@@ -9684,7 +9684,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shatter",
+    "Ignore": "Shatter",
     "Name": "Shatter",
     "Tier": 2,
     "Points": 6,
@@ -9702,7 +9702,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Shield",
+    "Ignore": "Shield",
     "Name": "Shield",
     "Tier": 1,
     "Points": 3,
@@ -9720,7 +9720,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shield of Faith",
+    "Ignore": "Shield of Faith",
     "Name": "Shield of Faith",
     "Tier": 1,
     "Points": 3,
@@ -9738,7 +9738,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Shilleleghgh",
+    "Ignore": "Shilleleghgh",
     "Name": "Shilleleghgh",
     "Tier": 0,
     "Points": 0,
@@ -9756,7 +9756,7 @@
     "Higher Tiers_1": "At Higher Mana Cost: As you level up, the power of this glyph increases; At 5th level you can apply the weaponâ€™s mastery property, and at 11th level, the weapon does an additional die of damage.Â "
   },
   {
-    "Chat Name": "Shocking Grasp",
+    "Ignore": "Shocking Grasp",
     "Name": "Shocking Grasp",
     "Tier": 0,
     "Points": 0,
@@ -9774,7 +9774,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sickening Radiance",
+    "Ignore": "Sickening Radiance",
     "Name": "Sickening Radiance",
     "Tier": 5,
     "Points": 21,
@@ -9792,7 +9792,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Silence",
+    "Ignore": "Silence",
     "Name": "Silence",
     "Tier": 2,
     "Points": 6,
@@ -9810,7 +9810,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Silent Confessions",
+    "Ignore": "Silent Confessions",
     "Name": "Silent Confessions",
     "Tier": 7,
     "Points": 36,
@@ -9828,7 +9828,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Silent Image",
+    "Ignore": "Silent Image",
     "Name": "Silent Image",
     "Tier": 1,
     "Points": 3,
@@ -9846,7 +9846,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Silvery Barbs",
+    "Ignore": "Silvery Barbs",
     "Name": "Silvery Barbs",
     "Tier": 1,
     "Points": 3,
@@ -9864,7 +9864,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Simulacrum",
+    "Ignore": "Simulacrum",
     "Name": "Simulacrum",
     "Tier": 10,
     "Points": 66,
@@ -9882,7 +9882,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Siphoning Smite",
+    "Ignore": "Siphoning Smite",
     "Name": "Siphoning Smite",
     "Tier": 5,
     "Points": 21,
@@ -9900,7 +9900,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Skill Empowerment",
+    "Ignore": "Skill Empowerment",
     "Name": "Skill Empowerment",
     "Tier": 6,
     "Points": 27,
@@ -9918,7 +9918,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Skywrite",
+    "Ignore": "Skywrite",
     "Name": "Skywrite",
     "Tier": 2,
     "Points": 6,
@@ -9936,7 +9936,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sleep",
+    "Ignore": "Sleep",
     "Name": "Sleep",
     "Tier": 1,
     "Points": 3,
@@ -9954,7 +9954,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Sleet Storm",
+    "Ignore": "Sleet Storm",
     "Name": "Sleet Storm",
     "Tier": 3,
     "Points": 9,
@@ -9972,7 +9972,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Slow",
+    "Ignore": "Slow",
     "Name": "Slow",
     "Tier": 4,
     "Points": 15,
@@ -9990,7 +9990,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Snap Freeze",
+    "Ignore": "Snap Freeze",
     "Name": "Snap Freeze",
     "Tier": 5,
     "Points": 21,
@@ -10008,7 +10008,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tier 4 or higher, its damage increases by 1d8 per tier above 3. "
   },
   {
-    "Chat Name": "Snare",
+    "Ignore": "Snare",
     "Name": "Snare",
     "Tier": 1,
     "Points": 3,
@@ -10026,7 +10026,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Snilloc's Snowball Swarm",
+    "Ignore": "Snilloc's Snowball Swarm",
     "Name": "Snilloc's Snowball Swarm",
     "Tier": 2,
     "Points": 6,
@@ -10044,7 +10044,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
   },
   {
-    "Chat Name": "Soul Cage",
+    "Ignore": "Soul Cage",
     "Name": "Soul Cage",
     "Tier": 8,
     "Points": 45,
@@ -10062,7 +10062,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Spacial Shift",
+    "Ignore": "Spacial Shift",
     "Name": "Spacial Shift",
     "Tier": 7,
     "Points": 36,
@@ -10080,7 +10080,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Spare the Dying",
+    "Ignore": "Spare the Dying",
     "Name": "Spare the Dying",
     "Tier": 0,
     "Points": 0,
@@ -10098,7 +10098,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Spatial Shunt",
+    "Ignore": "Spatial Shunt",
     "Name": "Spatial Shunt",
     "Tier": 0,
     "Points": 0,
@@ -10116,7 +10116,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Speak with Animals",
+    "Ignore": "Speak with Animals",
     "Name": "Speak with Animals",
     "Tier": 1,
     "Points": 3,
@@ -10134,7 +10134,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Speak with Plants",
+    "Ignore": "Speak with Plants",
     "Name": "Speak with Plants",
     "Tier": 4,
     "Points": 15,
@@ -10152,7 +10152,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Spider Climb",
+    "Ignore": "Spider Climb",
     "Name": "Spider Climb",
     "Tier": 2,
     "Points": 6,
@@ -10170,7 +10170,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Spike Growth",
+    "Ignore": "Spike Growth",
     "Name": "Spike Growth",
     "Tier": 2,
     "Points": 6,
@@ -10188,7 +10188,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Spirit Guardians",
+    "Ignore": "Spirit Guardians",
     "Name": "Spirit Guardians",
     "Tier": 4,
     "Points": 15,
@@ -10206,7 +10206,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Spirit Shroud",
+    "Ignore": "Spirit Shroud",
     "Name": "Spirit Shroud",
     "Tier": 4,
     "Points": 15,
@@ -10224,7 +10224,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d8 for every two slot levels above 3rd."
   },
   {
-    "Chat Name": "Spiritual Weapon",
+    "Ignore": "Spiritual Weapon",
     "Name": "Spiritual Weapon",
     "Tier": 2,
     "Points": 6,
@@ -10242,7 +10242,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above the 2nd."
   },
   {
-    "Chat Name": "Staggering Smite",
+    "Ignore": "Staggering Smite",
     "Name": "Staggering Smite",
     "Tier": 5,
     "Points": 21,
@@ -10260,7 +10260,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Steel Wind Strike",
+    "Ignore": "Steel Wind Strike",
     "Name": "Steel Wind Strike",
     "Tier": 7,
     "Points": 36,
@@ -10278,7 +10278,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Stinking Cloud",
+    "Ignore": "Stinking Cloud",
     "Name": "Stinking Cloud",
     "Tier": 3,
     "Points": 9,
@@ -10296,7 +10296,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Stone Shape",
+    "Ignore": "Stone Shape",
     "Name": "Stone Shape",
     "Tier": 5,
     "Points": 21,
@@ -10314,7 +10314,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Stoneskin",
+    "Ignore": "Stoneskin",
     "Name": "Stoneskin",
     "Tier": 5,
     "Points": 21,
@@ -10332,7 +10332,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Storm of Vengeance",
+    "Ignore": "Storm of Vengeance",
     "Name": "Storm of Vengeance",
     "Tier": 12,
     "Points": 90,
@@ -10350,7 +10350,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Storm Sphere",
+    "Ignore": "Storm Sphere",
     "Name": "Storm Sphere",
     "Tier": 5,
     "Points": 21,
@@ -10368,7 +10368,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage for each of its effects increases by 1d6 for each slot level above 4th."
   },
   {
-    "Chat Name": "Suggestion",
+    "Ignore": "Suggestion",
     "Name": "Suggestion",
     "Tier": 3,
     "Points": 9,
@@ -10386,7 +10386,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Summon Aberration",
+    "Ignore": "Summon Aberration",
     "Name": "Summon Aberration",
     "Tier": 6,
     "Points": 27,
@@ -10404,7 +10404,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Beast",
+    "Ignore": "Summon Beast",
     "Name": "Summon Beast",
     "Tier": 6,
     "Points": 27,
@@ -10422,7 +10422,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Celestial",
+    "Ignore": "Summon Celestial",
     "Name": "Summon Celestial",
     "Tier": 7,
     "Points": 36,
@@ -10440,7 +10440,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Construct",
+    "Ignore": "Summon Construct",
     "Name": "Summon Construct",
     "Tier": 6,
     "Points": 27,
@@ -10458,7 +10458,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Draconic Spirit",
+    "Ignore": "Summon Draconic Spirit",
     "Name": "Summon Draconic Spirit",
     "Tier": 6,
     "Points": 27,
@@ -10476,7 +10476,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, use the higher level wherever the Glyphâ€™s level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Elemental",
+    "Ignore": "Summon Elemental",
     "Name": "Summon Elemental",
     "Tier": 6,
     "Points": 27,
@@ -10494,7 +10494,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Fey",
+    "Ignore": "Summon Fey",
     "Name": "Summon Fey",
     "Tier": 5,
     "Points": 21,
@@ -10512,7 +10512,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Glass Eyes",
+    "Ignore": "Summon Glass Eyes",
     "Name": "Summon Glass Eyes",
     "Tier": 6,
     "Points": 27,
@@ -10530,7 +10530,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Summon Shadowspawn",
+    "Ignore": "Summon Shadowspawn",
     "Name": "Summon Shadowspawn",
     "Tier": 5,
     "Points": 21,
@@ -10548,7 +10548,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Summon Undead",
+    "Ignore": "Summon Undead",
     "Name": "Summon Undead",
     "Tier": 5,
     "Points": 21,
@@ -10566,7 +10566,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, use the higher level wherever the Glyph's level appears in the stat block."
   },
   {
-    "Chat Name": "Sunbeam",
+    "Ignore": "Sunbeam",
     "Name": "Sunbeam",
     "Tier": 8,
     "Points": 45,
@@ -10584,7 +10584,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sunburst",
+    "Ignore": "Sunburst",
     "Name": "Sunburst",
     "Tier": 10,
     "Points": 66,
@@ -10602,7 +10602,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Sunscorch",
+    "Ignore": "Sunscorch",
     "Name": "Sunscorch",
     "Tier": 2,
     "Points": 6,
@@ -10620,7 +10620,7 @@
     "Higher Tiers_1": "When you cast this glyph using a glyph of Tier 3 or higher, the fire and radiant damage each increase by 1d8 for every tier above Tier 2."
   },
   {
-    "Chat Name": "Swift Quiver",
+    "Ignore": "Swift Quiver",
     "Name": "Swift Quiver",
     "Tier": 6,
     "Points": 27,
@@ -10638,7 +10638,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Switcheroo",
+    "Ignore": "Switcheroo",
     "Name": "Switcheroo",
     "Tier": 3,
     "Points": 9,
@@ -10656,7 +10656,7 @@
     "Higher Tiers_1": "When you cast this glyph using a tierf 4 or higher, its range increases by 30 feet tier above 3. At tier 6 you may also target huge creatures. At tier 9 you may target gargantuan creatures"
   },
   {
-    "Chat Name": "Sword Burst",
+    "Ignore": "Sword Burst",
     "Name": "Sword Burst",
     "Tier": 0,
     "Points": 0,
@@ -10674,7 +10674,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Symbol",
+    "Ignore": "Symbol",
     "Name": "Symbol",
     "Tier": 10,
     "Points": 66,
@@ -10692,7 +10692,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Synaptic Static",
+    "Ignore": "Synaptic Static",
     "Name": "Synaptic Static",
     "Tier": 6,
     "Points": 27,
@@ -10710,7 +10710,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tasha's Caustic Brew",
+    "Ignore": "Tasha's Caustic Brew",
     "Name": "Tasha's Caustic Brew",
     "Tier": 1,
     "Points": 3,
@@ -10728,7 +10728,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st."
   },
   {
-    "Chat Name": "Tasha's Hideous Laughter",
+    "Ignore": "Tasha's Hideous Laughter",
     "Name": "Tasha's Hideous Laughter",
     "Tier": 1,
     "Points": 3,
@@ -10746,7 +10746,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tasha's Mind Whip",
+    "Ignore": "Tasha's Mind Whip",
     "Name": "Tasha's Mind Whip",
     "Tier": 2,
     "Points": 6,
@@ -10764,7 +10764,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them."
   },
   {
-    "Chat Name": "Tasha's Otherworldly Guise",
+    "Ignore": "Tasha's Otherworldly Guise",
     "Name": "Tasha's Otherworldly Guise",
     "Tier": 8,
     "Points": 45,
@@ -10782,7 +10782,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Telekinesis",
+    "Ignore": "Telekinesis",
     "Name": "Telekinesis",
     "Tier": 6,
     "Points": 27,
@@ -10800,7 +10800,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Telepathy",
+    "Ignore": "Telepathy",
     "Name": "Telepathy",
     "Tier": 10,
     "Points": 66,
@@ -10818,7 +10818,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Teleport",
+    "Ignore": "Teleport",
     "Name": "Teleport",
     "Tier": 9,
     "Points": 54,
@@ -10836,7 +10836,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Teleportation Circle",
+    "Ignore": "Teleportation Circle",
     "Name": "Teleportation Circle",
     "Tier": 6,
     "Points": 27,
@@ -10854,7 +10854,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Temple of the Gods",
+    "Ignore": "Temple of the Gods",
     "Name": "Temple of the Gods",
     "Tier": 9,
     "Points": 54,
@@ -10872,7 +10872,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Temporal Shunt",
+    "Ignore": "Temporal Shunt",
     "Name": "Temporal Shunt",
     "Tier": 6,
     "Points": 27,
@@ -10890,7 +10890,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, you can target one additional creature for each slot level above 5th. All targets must be within 30 feet of each other."
   },
   {
-    "Chat Name": "Tenebrous Tether",
+    "Ignore": "Tenebrous Tether",
     "Name": "Tenebrous Tether",
     "Tier": 6,
     "Points": 27,
@@ -10908,7 +10908,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tenser's Floating Disk",
+    "Ignore": "Tenser's Floating Disk",
     "Name": "Tenser's Floating Disk",
     "Tier": 1,
     "Points": 3,
@@ -10926,7 +10926,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tenser's Transformation",
+    "Ignore": "Tenser's Transformation",
     "Name": "Tenser's Transformation",
     "Tier": 8,
     "Points": 45,
@@ -10944,7 +10944,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tether Essence",
+    "Ignore": "Tether Essence",
     "Name": "Tether Essence",
     "Tier": 9,
     "Points": 54,
@@ -10962,7 +10962,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Thaumaturgy",
+    "Ignore": "Thaumaturgy",
     "Name": "Thaumaturgy",
     "Tier": 0,
     "Points": 0,
@@ -10980,7 +10980,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Thorn Whip",
+    "Ignore": "Thorn Whip",
     "Name": "Thorn Whip",
     "Tier": 0,
     "Points": 0,
@@ -10998,7 +10998,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Thunder Step",
+    "Ignore": "Thunder Step",
     "Name": "Thunder Step",
     "Tier": 4,
     "Points": 15,
@@ -11016,7 +11016,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d10 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Thunderclap",
+    "Ignore": "Thunderclap",
     "Name": "Thunderclap",
     "Tier": 0,
     "Points": 0,
@@ -11034,7 +11034,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Thunderous Smite",
+    "Ignore": "Thunderous Smite",
     "Name": "Thunderous Smite",
     "Tier": 1,
     "Points": 3,
@@ -11052,7 +11052,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Thunderwave",
+    "Ignore": "Thunderwave",
     "Name": "Thunderwave",
     "Tier": 1,
     "Points": 3,
@@ -11070,7 +11070,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the damage inereases by 1d8 for each slot level above 1st."
   },
   {
-    "Chat Name": "Tidal Wave",
+    "Ignore": "Tidal Wave",
     "Name": "Tidal Wave",
     "Tier": 3,
     "Points": 9,
@@ -11088,7 +11088,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Time Ravage",
+    "Ignore": "Time Ravage",
     "Name": "Time Ravage",
     "Tier": 12,
     "Points": 90,
@@ -11106,7 +11106,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Time Snare",
+    "Ignore": "Time Snare",
     "Name": "Time Snare",
     "Tier": 6,
     "Points": 27,
@@ -11124,7 +11124,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Time Stop",
+    "Ignore": "Time Stop",
     "Name": "Time Stop",
     "Tier": 12,
     "Points": 90,
@@ -11142,7 +11142,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tiny Servant",
+    "Ignore": "Tiny Servant",
     "Name": "Tiny Servant",
     "Tier": 4,
     "Points": 15,
@@ -11160,7 +11160,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can animate two additional objects for each slot level above 3rd."
   },
   {
-    "Chat Name": "Toll the Dead",
+    "Ignore": "Toll the Dead",
     "Name": "Toll the Dead",
     "Tier": 0,
     "Points": 0,
@@ -11178,7 +11178,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tongues",
+    "Ignore": "Tongues",
     "Name": "Tongues",
     "Tier": 4,
     "Points": 15,
@@ -11196,7 +11196,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Transmute Rock",
+    "Ignore": "Transmute Rock",
     "Name": "Transmute Rock",
     "Tier": 6,
     "Points": 27,
@@ -11214,7 +11214,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Transport via Plants",
+    "Ignore": "Transport via Plants",
     "Name": "Transport via Plants",
     "Tier": 8,
     "Points": 45,
@@ -11232,7 +11232,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tree Stride",
+    "Ignore": "Tree Stride",
     "Name": "Tree Stride",
     "Tier": 6,
     "Points": 27,
@@ -11250,7 +11250,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "True Polymorph",
+    "Ignore": "True Polymorph",
     "Name": "True Polymorph",
     "Tier": 12,
     "Points": 90,
@@ -11268,7 +11268,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "True Resurrection",
+    "Ignore": "True Resurrection",
     "Name": "True Resurrection",
     "Tier": 12,
     "Points": 90,
@@ -11286,7 +11286,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "True Seeing",
+    "Ignore": "True Seeing",
     "Name": "True Seeing",
     "Tier": 8,
     "Points": 45,
@@ -11304,7 +11304,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "True Strike",
+    "Ignore": "True Strike",
     "Name": "True Strike",
     "Tier": 0,
     "Points": 0,
@@ -11322,7 +11322,7 @@
     "Higher Tiers_1": "At Higher Mana Cost. At 5th level, the melee attack deals an extra 1d8 damage, of your affinityâ€™s type, to the target on a hit, and the damage to the second creature increases to 1d8 + your wellspring modifier. Both damage rolls increase by 1d8 at 11th level (2d8 and 2d8) and 17th level (3d8 and 3d8)."
   },
   {
-    "Chat Name": "True Strike",
+    "Ignore": "True Strike",
     "Name": "True Strike",
     "Tier": 0,
     "Points": 0,
@@ -11340,7 +11340,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Tsunami",
+    "Ignore": "Tsunami",
     "Name": "Tsunami",
     "Tier": 10,
     "Points": 66,
@@ -11358,7 +11358,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Unseen Servant",
+    "Ignore": "Unseen Servant",
     "Name": "Unseen Servant",
     "Tier": 1,
     "Points": 3,
@@ -11376,7 +11376,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Vampiric Touch",
+    "Ignore": "Vampiric Touch",
     "Name": "Vampiric Touch",
     "Tier": 4,
     "Points": 15,
@@ -11394,7 +11394,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
   },
   {
-    "Chat Name": "Venomous Smite",
+    "Ignore": "Venomous Smite",
     "Name": "Venomous Smite",
     "Tier": 2,
     "Points": 6,
@@ -11412,7 +11412,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Ventriloquism",
+    "Ignore": "Ventriloquism",
     "Name": "Ventriloquism",
     "Tier": 0,
     "Points": 0,
@@ -11430,7 +11430,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Vicious Mockery",
+    "Ignore": "Vicious Mockery",
     "Name": "Vicious Mockery",
     "Tier": 0,
     "Points": 0,
@@ -11448,7 +11448,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Vitriolic Sphere",
+    "Ignore": "Vitriolic Sphere",
     "Name": "Vitriolic Sphere",
     "Tier": 5,
     "Points": 21,
@@ -11466,7 +11466,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the initial damage increases by 2d4 for each slot level above 4th."
   },
   {
-    "Chat Name": "Void of Nullification ",
+    "Ignore": "Void of Nullification ",
     "Name": "Void of Nullification",
     "Tier": 12,
     "Points": 90,
@@ -11484,7 +11484,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Vortex Warp",
+    "Ignore": "Vortex Warp",
     "Name": "Vortex Warp",
     "Tier": 2,
     "Points": 6,
@@ -11502,7 +11502,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the range of the Glyph increases by 30 feet for each slot level above 2nd."
   },
   {
-    "Chat Name": "Wall of Fire",
+    "Ignore": "Wall of Fire",
     "Name": "Wall of Fire",
     "Tier": 5,
     "Points": 21,
@@ -11520,7 +11520,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
   },
   {
-    "Chat Name": "Wall of Force",
+    "Ignore": "Wall of Force",
     "Name": "Wall of Force",
     "Tier": 7,
     "Points": 36,
@@ -11538,7 +11538,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wall of Ice",
+    "Ignore": "Wall of Ice",
     "Name": "Wall of Ice",
     "Tier": 7,
     "Points": 36,
@@ -11556,7 +11556,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, the damage the wall deals when it appears increases by 2d6, and the damage from passing through the sheet of frigid air increases by 1d6, for each slot level above 6th."
   },
   {
-    "Chat Name": "Wall of Light",
+    "Ignore": "Wall of Light",
     "Name": "Wall of Light",
     "Tier": 6,
     "Points": 27,
@@ -11574,7 +11574,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
   },
   {
-    "Chat Name": "Wall of Sand",
+    "Ignore": "Wall of Sand",
     "Name": "Wall of Sand",
     "Tier": 4,
     "Points": 15,
@@ -11592,7 +11592,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wall of Stone",
+    "Ignore": "Wall of Stone",
     "Name": "Wall of Stone",
     "Tier": 6,
     "Points": 27,
@@ -11610,7 +11610,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wall of Thorns",
+    "Ignore": "Wall of Thorns",
     "Name": "Wall of Thorns",
     "Tier": 8,
     "Points": 45,
@@ -11628,7 +11628,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 7th level or higher, both types of damage increase by 1d8 for each slot level above 6th."
   },
   {
-    "Chat Name": "Wall of Water",
+    "Ignore": "Wall of Water",
     "Name": "Wall of Water",
     "Tier": 4,
     "Points": 15,
@@ -11646,7 +11646,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Warding Bond",
+    "Ignore": "Warding Bond",
     "Name": "Warding Bond",
     "Tier": 3,
     "Points": 9,
@@ -11664,7 +11664,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Warding Wind",
+    "Ignore": "Warding Wind",
     "Name": "Warding Wind",
     "Tier": 2,
     "Points": 6,
@@ -11682,7 +11682,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Water Breathing",
+    "Ignore": "Water Breathing",
     "Name": "Water Breathing",
     "Tier": 4,
     "Points": 15,
@@ -11700,7 +11700,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Water Walk",
+    "Ignore": "Water Walk",
     "Name": "Water Walk",
     "Tier": 3,
     "Points": 9,
@@ -11718,7 +11718,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Watery Sphere",
+    "Ignore": "Watery Sphere",
     "Name": "Watery Sphere",
     "Tier": 5,
     "Points": 21,
@@ -11736,7 +11736,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Web",
+    "Ignore": "Web",
     "Name": "Web",
     "Tier": 2,
     "Points": 6,
@@ -11754,7 +11754,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Weird",
+    "Ignore": "Weird",
     "Name": "Weird",
     "Tier": 12,
     "Points": 90,
@@ -11772,7 +11772,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wellspring Containment",
+    "Ignore": "Wellspring Containment",
     "Name": "Wellspring Containment",
     "Tier": 9,
     "Points": 54,
@@ -11790,7 +11790,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "What are the Odds",
+    "Ignore": "What are the Odds",
     "Name": "What are the Odds",
     "Tier": 8,
     "Points": 45,
@@ -11808,7 +11808,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Whirlwind",
+    "Ignore": "Whirlwind",
     "Name": "Whirlwind",
     "Tier": 9,
     "Points": 54,
@@ -11826,7 +11826,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wind Walk",
+    "Ignore": "Wind Walk",
     "Name": "Wind Walk",
     "Tier": 8,
     "Points": 45,
@@ -11844,7 +11844,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wind Wall",
+    "Ignore": "Wind Wall",
     "Name": "Wind Wall",
     "Tier": 4,
     "Points": 15,
@@ -11862,7 +11862,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Witch Bolt",
+    "Ignore": "Witch Bolt",
     "Name": "Witch Bolt",
     "Tier": 1,
     "Points": 3,
@@ -11880,7 +11880,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 2nd level or higher, the initial damage increases by 1d12 for each slot level above 1st."
   },
   {
-    "Chat Name": "Wither and Bloom",
+    "Ignore": "Wither and Bloom",
     "Name": "Wither and Bloom",
     "Tier": 2,
     "Points": 6,
@@ -11898,7 +11898,7 @@
     "Higher Tiers_1": "When you cast this Glyph using a Glyph slot of 3rd level or higher, the damage increases by 1d6 for each slot above 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd."
   },
   {
-    "Chat Name": "Withering Seal",
+    "Ignore": "Withering Seal",
     "Name": "Withering Seal",
     "Tier": 8,
     "Points": 45,
@@ -11916,7 +11916,7 @@
     "Higher Tiers_1": "When you cast this glyph at 9th tier or higher, the maximum duration increases:\r\n\r\n    9th: Concentration, up to 8 hour, 10th: Concentration, up to 12 hours, 11th: Concentration, up to 24 hours, 12th: The duration becomes indefinite. The glyph remains until it is removed by Greater Restoration or similar magic."
   },
   {
-    "Chat Name": "Word of Radiance",
+    "Ignore": "Word of Radiance",
     "Name": "Word of Radiance",
     "Tier": 0,
     "Points": 0,
@@ -11934,7 +11934,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Word of Recall",
+    "Ignore": "Word of Recall",
     "Name": "Word of Recall",
     "Tier": 7,
     "Points": 36,
@@ -11952,7 +11952,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wrath of Nature",
+    "Ignore": "Wrath of Nature",
     "Name": "Wrath of Nature",
     "Tier": 6,
     "Points": 27,
@@ -11970,7 +11970,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wrathful Smite",
+    "Ignore": "Wrathful Smite",
     "Name": "Wrathful Smite",
     "Tier": 1,
     "Points": 3,
@@ -11988,7 +11988,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Wristpocket",
+    "Ignore": "Wristpocket",
     "Name": "Wristpocket",
     "Tier": 2,
     "Points": 6,
@@ -12006,7 +12006,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Zephyr Strike",
+    "Ignore": "Zephyr Strike",
     "Name": "Zephyr Strike",
     "Tier": 1,
     "Points": 3,
@@ -12024,7 +12024,7 @@
     "Higher Tiers_1": ""
   },
   {
-    "Chat Name": "Zone of Truth",
+    "Ignore": "Zone of Truth",
     "Name": "Zone of Truth",
     "Tier": 2,
     "Points": 6,
