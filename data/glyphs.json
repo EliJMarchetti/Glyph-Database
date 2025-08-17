@@ -6155,7 +6155,7 @@
     "Duration": "1 minute",
     "Range": "10 feet",
     "Rite": false,
-    "New Text": "Speaking a Word of Creation, you brand a creature's body and soul with a rune of weakness. Choose a creature you can see within range and select a rune from the list below. The target must make a Constitution saving throw. On a failed save, the target takes 3d10 damage of the associated type and suffers an additional effect based on the chosen rune. On a successful save, the target takes half the damage and suffers no additional effects. Vutha (Acid): The target takes acid damage and suffers a -2 penalty to AC for the duration of the glyph. Aussir (Cold): The target takes cold damage, and its movement speed is reduced by 10 feet for the duration of the glyph. Ixen (Fire): The target takes fire damage, and the damage increases to 6d10 instead of 3d10. Ulhar (Lightning): The target takes lightning damage and suffers a -2 penalty to saving throws for the duration of the glyph. Kear (Radiant): The target takes radiant damage and suffers a -2 penalty to attack rolls for the duration of the glyph. Loex (Necrotic): The target takes necrotic damage, and you regain hit points equal to half the necrotic damage dealt. Kepesk (Thunder): The target takes thunder damage, and you push the target 10 feet and knock it prone.",
+    "New Text": "Speaking a Word of Creation, you brand a creature's body and soul with a rune of weakness. Choose a creature you can see within range and select a rune from the list below. The target must make a Constitution saving throw. On a failed save, the target takes 3d10 damage of the associated type and suffers an additional effect based on the chosen rune. On a successful save, the target takes half the damage and suffers no additional effects. Vutha (Acid): The target takes acid damage and suffers a -2 penalty to AC for the duration of the glyph. Aussir (Cold): The target takes cold damage, and its movement speed is reduced by 10 feet for the duration of the glyph. Ixen (Fire): The target takes fire damage, and the damage increases to 6d10 instead of 3d10. Ulhar (Lightning): The target takes lightning damage and suffers a -2 penalty to saving throws for the duration of the glyph. Kear (Radiant): The target takes radiant damage and suffers a -2 penalty to attack rolls for the duration of the glyph. Loex (Void): The target takes necrotic damage, and you regain hit points equal to half the necrotic damage dealt. Kepesk (Thunder): The target takes thunder damage, and you push the target 10 feet and knock it prone.",
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended. Additionally, if you expend 9 additional mana you can brand one additional rune onto a target (total of 2). You may target the same creature or different ones, but you cannot brand the same rune onto the same creature more than once. An additional saving throw must be made for each additional brand. ",
     "Ignore": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended. Additionally, if you expend 9 additional mana you can brand one additional rune onto a target (total of 2). You may target the same creature or different ones, but you cannot brand the same rune onto the same creature more than once. An additional saving throw must be made for each additional brand.Â "
   },
@@ -7600,7 +7600,7 @@
     "Ignore": ""
   },
   {
-    "Name": "Quary",
+    "Name": "Quarry",
     "Tier": 1,
     "Points": 3,
     "School": "Nature",
@@ -7611,8 +7611,8 @@
     "Duration": "1 hour",
     "Range": "90 feet",
     "Rite": false,
-    "New Text": "You choose a creature you can see within range and mark it as your quarry. Until the Glyph ends, you deal an extra 1d6 damage to the target whenever you hit it with an attack, and you have advantage on any contested check you make to against it. If the target drops to 0 hit points before this Glyph ends, you can use a bonus action on a subsequent turn of yours to mark a new creature. ",
-    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can concentrate on this glyph for an additional 2 hours for every 3 additional mana expended.",
+    "New Text": "You choose a creature you can see within range and mark it as your quarry. Until the Glyph ends, you deal an extra 1d6 damage to the target whenever you hit it with an attack, and you have advantage on any contested check you make against it. If the target drops to 0 hit points before this Glyph ends, you can use a bonus action on a subsequent turn of yours to mark a new creature. ",
+    "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can concentrate on this glyph for an additional 2 hours for every 3 additional mana expended. If you expend at least 27 Mana, the glyph becomes permanent. ",
     "Ignore": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, you can concentrate on this glyph for an additional 2 hours for every 3 additional mana expended."
   },
   {
