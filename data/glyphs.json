@@ -3835,7 +3835,7 @@
     "Duration": "Instantaneous",
     "Range": "30 feet",
     "Rite": false,
-    "New Text": "You summon a fallen that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the fallen takes on a form you choose: a griffon, a pegasus, a peryton, a dire wolf, a rhinoceros, or a saber-toothed tiger. The creature has the statistics provided in the Monster Manual for the chosen form, though it is a celestial, a fey, or a Netherkin (your choice) instead of its normal creature type. Additionally, if it has an mind score of 5 or lower, its mind becomes 6, and it gains the ability to understand one language of your choice that you speak. You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any glyph you cast that targets only you also target the mount. The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this glyph again resummons the bonded mount, with all its hit points restored and any conditions removed. You can't have more than one mount bonded by this glyph or find steed at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently. Whenever the mount disappears, it leaves behind any objects it was wearing or carrying.",
+    "New Text": "You summon a spirit that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the spirit takes on a form you choose: a griffon, a pegasus, a peryton, a dire wolf, a rhinoceros, or a saber-toothed tiger. The creature has the statistics provided in the Hunter's Manual for the chosen form, though it is a Celestial, a Daya, or a Netherkin (your choice) instead of its normal creature type. Additionally, if it has a Mind score of 5 or lower, its Mind becomes 6, and it gains the ability to understand one language of your choice that you speak. You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any glyph you cast that targets only you also target the mount. The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this glyph again resummons the bonded mount, with all its hit points restored and any conditions removed. You can't have more than one mount bonded by this glyph or find steed at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently. Whenever the mount disappears, it leaves behind any objects it was wearing or carrying.",
     "Higher Tiers": "",
     "Ignore": ""
   },
@@ -3851,7 +3851,7 @@
     "Duration": "Instantaneous",
     "Range": "30 feet",
     "Rite": false,
-    "New Text": "You summon a fallen that assumes the form of an unusually intelligent, strong, and loyal steed, creating a long-lasting bond with it. Appearing in an unoccupied space within range, the steed takes on a form that you choose, such as a warhorse, a pony, a camel, an elk, or a mastiff (your DM might allow other animais to be summoned as steeds). The steed has the statistics of the chosen form, though it is a celestial, fey, or Netherkin (your choice) instead of its normal type. Additionally, if your steed has an mind of 5 or less, its mind becomes 6, and it gains the ability to understand one language of your choice that you speak. Your steed serves you as a mount, both in combat and out, and you have an instinctive bond with it that allows you to fight as a seamless unit. While mounted on your steed, you can make any glyph you cast that targets only you also target your steed. When the steed drops to 0 hit points, it disappears, leaving behind no physical form. You can also dismiss your steed at any time as an action, causing it to disappear. In either case, casting this glyph again summons the same steed, restored to its hit point maximum. While your steed is within 1 mile of you, you can communicate with it telepathically. You can't have more than one steed bonded by this glyph at a time. As an action, you can release the steed from its bond at any time, causing it to disappear.",
+    "New Text": "You summon a spirit that assumes the form of an unusually intelligent, strong, and loyal steed, creating a long-lasting bond with it. Appearing in an unoccupied space within range, the steed takes on a form that you choose, such as a warhorse, a pony, a camel, an elk, or a mastiff (your FM might allow other animais to be summoned as steeds). The steed has the statistics of the chosen form, though it is a Celestial, Daya, or Netherkin (your choice) instead of its normal type. Additionally, if your steed has a Mind of 5 or less, its Mind becomes 6, and it gains the ability to understand one language of your choice that you speak. Your steed serves you as a mount, both in combat and out, and you have an instinctive bond with it that allows you to fight as a seamless unit. While mounted on your steed, you can make any glyph you cast that targets only you also target your steed. When the steed drops to 0 hit points, it disappears, leaving behind no physical form. You can also dismiss your steed at any time as an action, causing it to disappear. In either case, casting this glyph again summons the same steed, restored to its hit point maximum. While your steed is within 1 mile of you, you can communicate with it telepathically. You can't have more than one steed bonded by this glyph at a time. As an action, you can release the steed from its bond at any time, causing it to disappear.",
     "Higher Tiers": "",
     "Ignore": ""
   },
@@ -3868,6 +3868,22 @@
     "Range": "120 feet",
     "Rite": false,
     "New Text": "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this glyph, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the glyph would sense an area affected by the alarm glyph, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole. This glyph merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
+    "Name": "Find Ultimate Steed",
+    "Tier": 8,
+    "Points": 45,
+    "School": "Nature",
+    "V": true,
+    "S": false,
+    "Casting Time": "10 Minutes",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 Feet",
+    "Rite": false,
+    "New Text": "You summon a spirit that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the spirit takes on a form you choose: Any non-humanoid creature, at least one size-category larger than you, whose CR is no greater than 5. The creature has the statistics provided in the Hunter's Manual for the chosen form, though it is a Celestial, a Daya, or a Netherkin (your choice) instead of its normal creature type. Additionally, if it has a Mind score of 5 or lower, its Mind becomes 6, and it gains the ability to understand one language of your choice that you speak. You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any glyph you cast that targets only you also target the mount. The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this glyph again resummons the bonded mount, with all its hit points restored and any conditions removed. You can't have more than one mount bonded by this glyph, find greater steed, or find steed at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently. Whenever the mount disappears, it leaves behind any objects it was wearing or carrying.\r\n",
     "Higher Tiers": "",
     "Ignore": ""
   },
