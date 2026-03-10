@@ -121,34 +121,42 @@ input, select, textarea, button {
 }
 .school-button.school-harmony.active {
   border-color: #ffffff !important;
+  background: rgba(255,255,255,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(255,255,255,0.55);
 }
 .school-button.school-elemental.active {
   border-color: #cc0000 !important;
+  background: rgba(204,0,0,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(204,0,0,0.55);
 }
 .school-button.school-nature.active {
   border-color: #00aa00 !important;
+  background: rgba(0,170,0,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(0,170,0,0.55);
 }
 .school-button.school-celestial.active {
   border-color: #4b0082 !important;
+  background: rgba(75,0,130,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(75,0,130,0.55);
 }
 .school-button.school-mind.active {
   border-color: #cccc00 !important;
+  background: rgba(204,204,0,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(204,204,0,0.55);
 }
 .school-button.school-arcane.active {
   border-color: #cc00cc !important;
+  background: rgba(204,0,204,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(204,0,204,0.55);
 }
 .school-button.school-chaos.active {
   border-color: #00cccc !important;
+  background: rgba(0,204,204,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(0,204,204,0.55);
 }
 .school-button.school-bane.active {
   border-color: #888888 !important;
+  background: rgba(136,136,136,0.16) !important;
   box-shadow: 0 0 0.5rem rgba(136,136,136,0.55);
 }
 
