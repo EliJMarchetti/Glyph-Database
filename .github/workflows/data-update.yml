@@ -1,11 +1,11 @@
-name: 🗓️ Scheduled glyph-data update
+name: Scheduled glyph-data update
 
-# Run on every push to main, and also on an hourly schedule
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'   # every hour at minute 0
+    - cron: '0 * * * *'
 
 jobs:
   update-data:
@@ -26,15 +26,18 @@ jobs:
         run: npm ci
 
       - name: Build glyph JSON
+        env:
+          GLYPH_SOURCE_URL: ${{ secrets.GLYPH_SOURCE_URL }}
+          SAVE_DOWNLOADED_SOURCE: 'true'
         run: npm run build:data
 
       - name: Commit & push if data changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/glyphs.json
+          git add src/sheet.xlsx data/glyphs.json
           if git diff --cached --quiet; then
-            echo "No changes to glyphs.json"
+            echo "No changes to glyph data"
             exit 0
           fi
           git commit -m "chore: auto-update glyph data [skip ci]"
