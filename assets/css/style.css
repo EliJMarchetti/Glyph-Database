@@ -267,34 +267,50 @@ input, select, textarea, button {
   .school-button.school-harmony.active {
     color: #ffffff;
     background: rgba(255,255,255,0.22) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0.65rem rgba(255,255,255,0.65) !important;
   }
   .school-button.school-elemental.active {
     color: #ff6b6b;
     background: rgba(204,0,0,0.22) !important;
+    border-color: #cc0000 !important;
+    box-shadow: 0 0 0.65rem rgba(204,0,0,0.65) !important;
   }
   .school-button.school-nature.active {
     color: #52d96b;
     background: rgba(0,170,0,0.22) !important;
+    border-color: #00aa00 !important;
+    box-shadow: 0 0 0.65rem rgba(0,170,0,0.65) !important;
   }
   .school-button.school-celestial.active {
     color: #a97cff;
     background: rgba(75,0,130,0.25) !important;
+    border-color: #4b0082 !important;
+    box-shadow: 0 0 0.65rem rgba(75,0,130,0.7) !important;
   }
   .school-button.school-mind.active {
     color: #f0e85c;
     background: rgba(204,204,0,0.22) !important;
+    border-color: #cccc00 !important;
+    box-shadow: 0 0 0.65rem rgba(204,204,0,0.65) !important;
   }
   .school-button.school-arcane.active {
     color: #ff72ff;
     background: rgba(204,0,204,0.22) !important;
+    border-color: #cc00cc !important;
+    box-shadow: 0 0 0.65rem rgba(204,0,204,0.65) !important;
   }
   .school-button.school-chaos.active {
     color: #63f0f0;
     background: rgba(0,204,204,0.22) !important;
+    border-color: #00cccc !important;
+    box-shadow: 0 0 0.65rem rgba(0,204,204,0.65) !important;
   }
   .school-button.school-bane.active {
     color: #c7c7c7;
     background: rgba(136,136,136,0.24) !important;
+    border-color: #888888 !important;
+    box-shadow: 0 0 0.65rem rgba(136,136,136,0.65) !important;
   }
 
   .controls-row,
@@ -362,6 +378,19 @@ input, select, textarea, button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.tier-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+.sub-toggle {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.sub-toggle.is-disabled {
+  opacity: 0.45;
 }
 .tier-mode span {
   display: flex;

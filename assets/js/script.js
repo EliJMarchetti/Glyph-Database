@@ -13,6 +13,8 @@
   const mobileToggle = document.getElementById('mobileHeaderToggle');
   const levelFilter = document.getElementById('levelFilter');
   const upToToggle = document.getElementById('tierUpTo');
+  const includeCantripsToggle = document.getElementById('includeCantrips');
+  const includeCantripsLabel = document.getElementById('includeCantripsLabel');
   const schoolFilters = document.getElementById('schoolFilters');
   const searchInput = document.getElementById('search');
   const searchToggle = document.getElementById('searchTextToggle');
@@ -55,6 +57,16 @@
     body.classList.toggle('mobile-menu-open', isOpen);
     body.classList.toggle('mobile-menu-closed', isMobile && !isOpen);
     mobileToggle.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  function syncTierOptions() {
+    const enabled = upToToggle.checked && levelFilter.value !== 'all';
+    includeCantripsToggle.disabled = !enabled;
+    includeCantripsLabel.classList.toggle('is-disabled', !enabled);
+
+    if (!enabled) {
+      includeCantripsToggle.checked = false;
+    }
   }
 
   function renderCard(glyph) {
@@ -104,6 +116,7 @@
     const tierSel = levelFilter.value;
     const tierNum = +tierSel;
     const upTo = upToToggle.checked;
+    const includeCantrips = includeCantripsToggle.checked;
     const activeSchools = Object.entries(schoolButtons)
       .filter(([, button]) => button.classList.contains('active'))
       .map(([school]) => school);
@@ -118,6 +131,10 @@
         const school = get(glyph, 'School') || '';
 
         if (tierSel !== 'all' && (upTo ? tier > tierNum : tier !== tierNum)) {
+          return false;
+        }
+
+        if (tierSel !== 'all' && upTo && !includeCantrips && tier === 0) {
           return false;
         }
 
@@ -143,9 +160,19 @@
       .forEach(renderCard);
   }
 
-  [levelFilter, upToToggle, searchInput, searchToggle].forEach(element => {
+  [includeCantripsToggle, searchInput, searchToggle].forEach(element => {
     element.oninput = render;
   });
+
+  levelFilter.oninput = () => {
+    syncTierOptions();
+    render();
+  };
+
+  upToToggle.oninput = () => {
+    syncTierOptions();
+    render();
+  };
 
   mobileToggle.onclick = () => {
     setMobileMenu(!body.classList.contains('mobile-menu-open'));
@@ -156,5 +183,6 @@
   });
 
   setMobileMenu(false);
+  syncTierOptions();
   render();
 })();
