@@ -27,7 +27,7 @@ jobs:
 
       - name: Build glyph JSON
         env:
-          GLYPH_SOURCE_URL: ${{ secrets.GLYPH_SOURCE_URL }}
+          GLYPH_SOURCE_URL: https://docs.google.com/spreadsheets/d/e/2PACX-1vSCEpYDEzWrpUaiujkZQhdMJUo5h_o8E_BCTeWPe0ZoNwcWvdtvoJ_qHsyh9stDmHkEE3U11MMvi4Ft/pub?output=xlsx
           SAVE_DOWNLOADED_SOURCE: 'true'
         run: npm run build:data
 

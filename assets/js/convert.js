@@ -22,6 +22,39 @@ const OUT_PATH = path.join(ROOT, 'data', 'glyphs.json');
 const SOURCE_URL = String(process.env.GLYPH_SOURCE_URL || '').trim();
 const SAVE_DOWNLOADED_SOURCE =
   String(process.env.SAVE_DOWNLOADED_SOURCE || '').trim().toLowerCase() === 'true';
+const EXPECTED_HEADERS = [
+  'Name',
+  'Tier',
+  'Points',
+  'School',
+  'V',
+  'S',
+  'Casting Time',
+  'Concentration',
+  'Duration',
+  'Range',
+  'Rite',
+  'New Text',
+  'Higher Tiers',
+  'Ignore'
+];
+
+function rowsToObjects(sheet) {
+  const rawRows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
+  const firstRow = rawRows[0] || [];
+  const hasExpectedHeader = EXPECTED_HEADERS.every(
+    (header, index) => String(firstRow[index] || '').trim() === header
+  );
+  const dataRows = hasExpectedHeader ? rawRows.slice(1) : rawRows;
+
+  return dataRows
+    .map(cols =>
+      Object.fromEntries(
+        EXPECTED_HEADERS.map((header, index) => [header, cols[index] ?? ''])
+      )
+    )
+    .filter(row => Object.values(row).some(value => String(value).trim() !== ''));
+}
 
 async function loadWorkbook() {
   if (!SOURCE_URL) {
@@ -72,7 +105,7 @@ async function main() {
   // 1) read the spreadsheet
   const wb = await loadWorkbook();
   const ws = wb.SheetNames[0];
-  const rows = XLSX.utils.sheet_to_json(wb.Sheets[ws], { defval: '' });
+  const rows = rowsToObjects(wb.Sheets[ws]);
 
   // 2) normalize & clean up each row
   const processed = rows.map(r => ({
@@ -86,13 +119,15 @@ async function main() {
   }));
 
   // 3) sort by Name, case-insensitive
-  processed.sort((a, b) =>
-    a.Name.localeCompare(b.Name, undefined, { sensitivity: 'base' })
-  );
+  const sorted = processed
+    .filter(r => String(r.Name || '').trim())
+    .sort((a, b) =>
+      a.Name.localeCompare(b.Name, undefined, { sensitivity: 'base' })
+    );
 
   // 4) write out JSON
-  fs.writeFileSync(OUT_PATH, JSON.stringify(processed, null, 2), 'utf8');
-  console.log(`glyphs.json generated with ${processed.length} entries`);
+  fs.writeFileSync(OUT_PATH, JSON.stringify(sorted, null, 2), 'utf8');
+  console.log(`glyphs.json generated with ${sorted.length} entries`);
 }
 
 main().catch(error => {
