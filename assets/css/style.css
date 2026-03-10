@@ -260,6 +260,42 @@ input, select, textarea, button {
     max-width: 45%;
     margin-bottom: 0.5rem;
   }
+  .school-button.active {
+    color: white;
+    border-width: 2px !important;
+  }
+  .school-button.school-harmony.active {
+    color: #ffffff;
+    background: rgba(255,255,255,0.22) !important;
+  }
+  .school-button.school-elemental.active {
+    color: #ff6b6b;
+    background: rgba(204,0,0,0.22) !important;
+  }
+  .school-button.school-nature.active {
+    color: #52d96b;
+    background: rgba(0,170,0,0.22) !important;
+  }
+  .school-button.school-celestial.active {
+    color: #a97cff;
+    background: rgba(75,0,130,0.25) !important;
+  }
+  .school-button.school-mind.active {
+    color: #f0e85c;
+    background: rgba(204,204,0,0.22) !important;
+  }
+  .school-button.school-arcane.active {
+    color: #ff72ff;
+    background: rgba(204,0,204,0.22) !important;
+  }
+  .school-button.school-chaos.active {
+    color: #63f0f0;
+    background: rgba(0,204,204,0.22) !important;
+  }
+  .school-button.school-bane.active {
+    color: #c7c7c7;
+    background: rgba(136,136,136,0.24) !important;
+  }
 
   .controls-row,
   #schoolFilters {
