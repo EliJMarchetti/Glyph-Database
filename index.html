@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<div class="controls-row"></div>
 <html lang="en">
 <head>
   <!-- BUILD STAMP: 2025-11-08 16:18:30 -->
@@ -16,9 +15,8 @@
   <div id="bg-fallback"></div>
   <div id="app">
     <header>
-      <!-- Row 1: search + tier controls -->
       <div class="controls-row">
-        <input type="text" id="search" placeholder="Search glyphs…" />
+        <input type="text" id="search" placeholder="Search glyphs..." />
         <label>
           <input type="checkbox" id="searchTextToggle" /> Search in details
         </label>
@@ -31,23 +29,25 @@
           </label>
         </div>
       </div>
-      <!-- Row 2: school buttons -->
       <div id="schoolFilters"></div>
     </header>
 
-    <!-- Mobile: show/hide header -->
-    <button id="mobileHeaderToggle" class="header-toggle">▼</button>
+    <button
+      id="mobileHeaderToggle"
+      class="header-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-label="Toggle filters"
+    >&#9662;</button>
 
-    <!-- Glyph cards -->
     <main id="cardsContainer"></main>
   </div>
 
   <script src="assets/js/script.js?v=1472385740"></script>
   <script>
-    // unregister old service‐workers so they don’t cache
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(regs =>
-        regs.forEach(r => r.unregister())
+        regs.forEach(reg => reg.unregister())
       );
     }
   </script>

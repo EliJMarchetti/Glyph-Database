@@ -134,18 +134,37 @@ input, select, textarea, button {
 
 /* ——— MOBILE-ONLY (max-width:767px) ——— */
 @media (max-width: 767px) {
-  /* 1) FIXED HEADER */
-  header {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 10;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
+  body,
+  #app {
+    height: 100dvh;
   }
 
-  /* 2) GLYPH LIST OFFSET */
+  /* 1) FIXED HEADER OVERLAY */
+  header {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    padding: 4rem 1rem 1.25rem;
+    align-content: flex-start;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.94);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  body.mobile-menu-open header {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* 2) GLYPH LIST USES FULL SCREEN EXCEPT TOGGLE */
   #cardsContainer {
-    margin-top: 4rem; /* adjusted by JS too */
+    flex: 1 1 auto;
+    padding: 3.5rem 1rem 1rem;
+    margin-top: 0;
   }
 
   /* 3) TOGGLE BUTTON (always on screen) */
@@ -154,9 +173,9 @@ input, select, textarea, button {
     position: fixed;
     top: 0.5rem;
     right: 1rem;
-    z-index: 11;
-    background: rgba(0, 0, 0, 0.4);
-    border: none;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255,255,255,0.35);
     color: white;
     font-size: 1.5rem;
     padding: 0.25rem 0.5rem;
@@ -165,12 +184,14 @@ input, select, textarea, button {
     transition: transform 0.3s ease;
   }
 
-  /* 4) COLLAPSED STATE */
-  body.collapsed header {
-    transform: translateY(-100%);
-  }
-  body.collapsed .header-toggle {
+  /* 4) OPEN STATE */
+  body.mobile-menu-open .header-toggle {
     transform: rotate(180deg);
+  }
+
+  body.mobile-menu-open #cardsContainer {
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /* 5) Two-line title clamp & smaller font */
@@ -198,6 +219,28 @@ input, select, textarea, button {
     flex: 1 1 45%;
     max-width: 45%;
     margin-bottom: 0.5rem;
+  }
+
+  .controls-row,
+  #schoolFilters {
+    width: 100%;
+  }
+
+  .controls-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #search,
+  .tier-mode,
+  #schoolFilters {
+    width: 100%;
+  }
+
+  .tier-mode {
+    margin-left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
