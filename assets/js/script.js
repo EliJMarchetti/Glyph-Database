@@ -32,7 +32,7 @@
 
   schools.forEach(school => {
     const button = document.createElement('button');
-    button.className = 'school-button';
+    button.className = `school-button school-${school.toLowerCase()}`;
     button.textContent = school;
     button.onclick = () => {
       button.classList.toggle('active');
