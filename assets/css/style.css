@@ -346,6 +346,11 @@ label,
   gap: 0.8rem;
 }
 
+.cast-cantrip-note {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
 .cast-summary,
 .cast-preview {
   display: flex;

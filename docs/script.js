@@ -164,7 +164,7 @@
         .map(([name, value]) => {
           const glyph = glyphMap.get(name);
           const tier = Number(get(glyph, 'Tier')) || 0;
-          const maxUpcast = Math.max(0, maxTier - tier);
+          const maxUpcast = tier === 0 ? 0 : Math.max(0, maxTier - tier);
           return [name, clampNumber(parseInt(value, 10), 0, maxUpcast, 0)];
         })
         .filter(([, value]) => value > 0)
@@ -670,6 +670,14 @@
     const panel = document.createElement('div');
     panel.className = 'cast-panel';
 
+    if (details.baseTier === 0) {
+      const note = document.createElement('div');
+      note.className = 'cast-cantrip-note';
+      note.textContent = 'Cantrip - no mana cost and no upcast.';
+      panel.appendChild(note);
+      return panel;
+    }
+
     const summary = document.createElement('div');
     summary.className = 'cast-summary';
 
@@ -745,7 +753,7 @@
     const name = get(glyph, 'Name') ?? '';
     const baseTier = Number(get(glyph, 'Tier')) || 0;
     const baseCost = Number(get(glyph, 'Points')) || 0;
-    const maxUpcast = Math.max(0, maxTier - baseTier);
+    const maxUpcast = baseTier === 0 ? 0 : Math.max(0, maxTier - baseTier);
     const upcast = clampNumber(Number(state.upcasts[name]) || 0, 0, maxUpcast, 0);
     const castTier = baseTier + upcast;
     const castCost = upcast === 0 ? baseCost : (tierCosts[castTier] ?? baseCost);
@@ -803,7 +811,7 @@
   }
 
   function adjustUpcast(name, baseTier, delta) {
-    const maxUpcast = Math.max(0, maxTier - baseTier);
+    const maxUpcast = baseTier === 0 ? 0 : Math.max(0, maxTier - baseTier);
     const nextValue = clampNumber((Number(state.upcasts[name]) || 0) + delta, 0, maxUpcast, 0);
     if (nextValue === 0) {
       delete state.upcasts[name];
