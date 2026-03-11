@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- BUILD STAMP: 2025-11-08 16:18:30 -->
+  <!-- BUILD STAMP: 2026-03-10 18:10:00 -->
   <meta charset="UTF-8" />
-  <!-- Prevent browser caching -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glyph Database</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=545978060">
+  <link rel="stylesheet" href="assets/css/style.css?v=202603101810">
 </head>
 <body>
   <div id="bg-fallback"></div>
   <div id="app">
     <header>
-      <div class="controls-row">
-        <input type="text" id="search" placeholder="Search glyphs..." />
-        <label>
-          <input type="checkbox" id="searchTextToggle" /> Search in details
-        </label>
-        <div class="tier-mode">
-          <select id="levelFilter">
-            <option value="all">All Glyphs</option>
-          </select>
-          <div class="tier-options">
-            <label for="tierUpTo">
-              <input type="checkbox" id="tierUpTo" /> Up to
+      <div id="pageOneHeader" class="page-panel active">
+        <div class="controls-row">
+          <input type="text" id="search" placeholder="Search glyphs..." />
+          <label class="control-check" for="searchTextToggle">
+            <input type="checkbox" id="searchTextToggle" />
+            <span>Search in details</span>
+          </label>
+          <div class="tier-mode">
+            <select id="levelFilter">
+              <option value="all">All Glyphs</option>
+            </select>
+            <div class="tier-options">
+              <label class="control-check" for="tierUpTo">
+                <input type="checkbox" id="tierUpTo" />
+                <span>Up to</span>
+              </label>
+              <label for="includeCantrips" id="includeCantripsLabel" class="control-check sub-toggle is-disabled">
+                <input type="checkbox" id="includeCantrips" disabled />
+                <span>Include Cantrips</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="schoolFilters"></div>
+      </div>
+
+      <div id="pageTwoHeader" class="page-panel page-panel-mana">
+        <div class="mana-dashboard">
+          <div id="manaReadout" class="mana-readout">7 / 7</div>
+
+          <div
+            id="manaBarButton"
+            class="mana-bar-shell"
+            role="button"
+            tabindex="0"
+            aria-label="Edit max mana"
+          >
+            <div id="manaBarFill" class="mana-bar-fill"></div>
+            <div id="manaBarLabel" class="mana-bar-label">Max. Mana: 7</div>
+            <label id="manaBarEditor" class="mana-bar-editor" for="manaMaxInput">
+              <span>Max. Mana</span>
+              <input id="manaMaxInput" type="number" min="1" step="1" inputmode="numeric" />
             </label>
-            <label for="includeCantrips" id="includeCantripsLabel" class="sub-toggle is-disabled">
-              <input type="checkbox" id="includeCantrips" disabled /> Include Cantrips
-            </label>
+          </div>
+
+          <div class="mana-control-stack">
+            <div class="mana-adjuster">
+              <button id="manaDecreaseBtn" class="mana-step-btn" type="button" aria-label="Spend mana">-</button>
+              <input
+                id="manaStepInput"
+                class="mana-step-input"
+                type="number"
+                min="1"
+                step="1"
+                inputmode="numeric"
+                value="1"
+                aria-label="Mana change amount"
+              />
+              <button id="manaIncreaseBtn" class="mana-step-btn" type="button" aria-label="Recover mana">+</button>
+            </div>
+
+            <button id="longRestButton" class="long-rest-button" type="button">
+              <span>Long Rest</span>
+            </button>
           </div>
         </div>
       </div>
-      <div id="schoolFilters"></div>
     </header>
 
     <button
@@ -42,13 +88,22 @@
       class="header-toggle"
       type="button"
       aria-expanded="false"
-      aria-label="Toggle filters"
+      aria-label="Toggle menu"
     >&#9662;</button>
 
-    <main id="cardsContainer"></main>
+    <main id="cardsContainer" aria-live="polite"></main>
+
+    <footer class="page-nav" aria-label="Page navigation">
+      <button id="pagePrev" class="page-arrow" type="button" aria-label="Previous page">&#8592;</button>
+      <div class="page-nav-center">
+        <div id="pageStatus" class="page-status">Page 1 of 2</div>
+        <div id="pageDots" class="page-dots" aria-label="Page indicator"></div>
+      </div>
+      <button id="pageNext" class="page-arrow" type="button" aria-label="Next page">&#8594;</button>
+    </footer>
   </div>
 
-  <script src="assets/js/script.js?v=1472385743"></script>
+  <script src="assets/js/script.js?v=202603101810"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(regs =>

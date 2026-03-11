@@ -1,486 +1,115 @@
-<!DOCTY<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BUILD STAMP: 2026-03-10 18:10:00 -->
   <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magiforge — Player HUD</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Glyph Database</title>
+  <link rel="stylesheet" href="style.css?v=202603101810">
 </head>
-<body class="bg-topo text-gray-100">
-  <header class="py-4 text-center text-3xl font-extrabold tracking-widest">
-    Magiforge
-  </header>
+<body>
+  <div id="bg-fallback"></div>
+  <div id="app">
+    <header>
+      <div id="pageOneHeader" class="page-panel active">
+        <div class="controls-row">
+          <input type="text" id="search" placeholder="Search glyphs..." />
+          <label class="control-check" for="searchTextToggle">
+            <input type="checkbox" id="searchTextToggle" />
+            <span>Search in details</span>
+          </label>
+          <div class="tier-mode">
+            <select id="levelFilter">
+              <option value="all">All Glyphs</option>
+            </select>
+            <div class="tier-options">
+              <label class="control-check" for="tierUpTo">
+                <input type="checkbox" id="tierUpTo" />
+                <span>Up to</span>
+              </label>
+              <label for="includeCantrips" id="includeCantripsLabel" class="control-check sub-toggle is-disabled">
+                <input type="checkbox" id="includeCantrips" disabled />
+                <span>Include Cantrips</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="schoolFilters"></div>
+      </div>
 
-  <main class="container mx-auto px-4 grid gap-8 md:grid-cols-2">
-    <!-- === GAUGES ====================================================== -->
-    <section id="gauges" class="space-y-8">
-      <h2 class="section-title">Vitals</h2>
-      <!-- HP Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 90" class="gauge-svg" id="hpGauge">
-          <!-- outline -->
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill (current HP) -->
-          <clipPath id="hpClip"><rect id="hpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="white" clip-path="url(#hpClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempHpClip"><rect id="tempHpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="#38bdf8" clip-path="url(#tempHpClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="hp--">−</button>
-          <button data-act="hp++">＋</button>
-          <button data-act="tempHp--">−Tmp</button>
-          <button data-act="tempHp++">＋Tmp</button>
-          <span id="hpLabel" class="gauge-label"></span>
+      <div id="pageTwoHeader" class="page-panel page-panel-mana">
+        <div class="mana-dashboard">
+          <div id="manaReadout" class="mana-readout">7 / 7</div>
+
+          <div
+            id="manaBarButton"
+            class="mana-bar-shell"
+            role="button"
+            tabindex="0"
+            aria-label="Edit max mana"
+          >
+            <div id="manaBarFill" class="mana-bar-fill"></div>
+            <div id="manaBarLabel" class="mana-bar-label">Max. Mana: 7</div>
+            <label id="manaBarEditor" class="mana-bar-editor" for="manaMaxInput">
+              <span>Max. Mana</span>
+              <input id="manaMaxInput" type="number" min="1" step="1" inputmode="numeric" />
+            </label>
+          </div>
+
+          <div class="mana-control-stack">
+            <div class="mana-adjuster">
+              <button id="manaDecreaseBtn" class="mana-step-btn" type="button" aria-label="Spend mana">-</button>
+              <input
+                id="manaStepInput"
+                class="mana-step-input"
+                type="number"
+                min="1"
+                step="1"
+                inputmode="numeric"
+                value="1"
+                aria-label="Mana change amount"
+              />
+              <button id="manaIncreaseBtn" class="mana-step-btn" type="button" aria-label="Recover mana">+</button>
+            </div>
+
+            <button id="longRestButton" class="long-rest-button" type="button">
+              <span>Long Rest</span>
+            </button>
+          </div>
         </div>
       </div>
+    </header>
 
-      <!-- Mana Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 100" class="gauge-svg" id="manaGauge">
-          <!-- simple potion outline -->
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill -->
-          <clipPath id="manaClip"><rect id="manaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="white" clip-path="url(#manaClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempManaClip"><rect id="tempManaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="#ef4444" clip-path="url(#tempManaClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="mana--">−</button>
-          <button data-act="mana++">＋</button>
-          <button data-act="tempMana--">−Tmp</button>
-          <button data-act="tempMana++">＋Tmp</button>
-          <span id="manaLabel" class="gauge-label"></span>
-        </div>
+    <button
+      id="mobileHeaderToggle"
+      class="header-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-label="Toggle menu"
+    >&#9662;</button>
+
+    <main id="cardsContainer" aria-live="polite"></main>
+
+    <footer class="page-nav" aria-label="Page navigation">
+      <button id="pagePrev" class="page-arrow" type="button" aria-label="Previous page">&#8592;</button>
+      <div class="page-nav-center">
+        <div id="pageStatus" class="page-status">Page 1 of 2</div>
+        <div id="pageDots" class="page-dots" aria-label="Page indicator"></div>
       </div>
-
-      <!-- Max setters -->
-      <div class="max-setters">
-        Max HP <input id="maxHpInput" type="number" min="1" max="360" class="num" />
-        Max Mana <input id="maxManaInput" type="number" min="1" max="360" class="num" />
-        <button id="applyMax">Apply</button>
-      </div>
-    </section>
-
-    <!-- === PREPARED GLYPHS ============================================ -->
-    <section class="space-y-4">
-      <h2 class="section-title flex items-center justify-between">
-        Prepared Glyphs
-        <button id="openPicker" class="btn">＋ Add</button>
-      </h2>
-      <div id="preparedList" class="space-y-3"></div>
-
-      <!-- Preset controls -->
-      <div class="presets flex flex-wrap gap-2 mt-6">
-        <input id="presetName" placeholder="Preset name" class="preset-input" />
-        <button id="savePreset" class="btn">Save</button>
-        <select id="presetSelect" class="preset-select"></select>
-        <button id="loadPreset" class="btn">Load</button>
-        <button id="deletePreset" class="btn">Delete</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- === GLYPH PICKER MODAL ========================================== -->
-  <div id="pickerOverlay" class="overlay hidden">
-    <div class="picker">
-      <div class="picker-header">Select Glyphs <button id="closePicker">✕</button></div>
-      <div id="pickerBody" class="picker-body"></div>
-      <div class="picker-footer"><button id="applyPicker" class="btn">Add Selected</button></div>
-    </div>
+      <button id="pageNext" class="page-arrow" type="button" aria-label="Next page">&#8594;</button>
+    </footer>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>PE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magiforge — Player HUD</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-topo text-gray-100">
-  <header class="py-4 text-center text-3xl font-extrabold tracking-widest">
-    Magiforge
-  </header>
-
-  <main class="container mx-auto px-4 grid gap-8 md:grid-cols-2">
-    <!-- === GAUGES ====================================================== -->
-    <section id="gauges" class="space-y-8">
-      <h2 class="section-title">Vitals</h2>
-      <!-- HP Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 90" class="gauge-svg" id="hpGauge">
-          <!-- outline -->
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill (current HP) -->
-          <clipPath id="hpClip"><rect id="hpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="white" clip-path="url(#hpClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempHpClip"><rect id="tempHpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="#38bdf8" clip-path="url(#tempHpClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="hp--">−</button>
-          <button data-act="hp++">＋</button>
-          <button data-act="tempHp--">−Tmp</button>
-          <button data-act="tempHp++">＋Tmp</button>
-          <span id="hpLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Mana Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 100" class="gauge-svg" id="manaGauge">
-          <!-- simple potion outline -->
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill -->
-          <clipPath id="manaClip"><rect id="manaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="white" clip-path="url(#manaClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempManaClip"><rect id="tempManaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="#ef4444" clip-path="url(#tempManaClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="mana--">−</button>
-          <button data-act="mana++">＋</button>
-          <button data-act="tempMana--">−Tmp</button>
-          <button data-act="tempMana++">＋Tmp</button>
-          <span id="manaLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Max setters -->
-      <div class="max-setters">
-        Max HP <input id="maxHpInput" type="number" min="1" max="360" class="num" />
-        Max Mana <input id="maxManaInput" type="number" min="1" max="360" class="num" />
-        <button id="applyMax">Apply</button>
-      </div>
-    </section>
-
-    <!-- === PREPARED GLYPHS ============================================ -->
-    <section class="space-y-4">
-      <h2 class="section-title flex items-center justify-between">
-        Prepared Glyphs
-        <button id="openPicker" class="btn">＋ Add</button>
-      </h2>
-      <div id="preparedList" class="space-y-3"></div>
-
-      <!-- Preset controls -->
-      <div class="presets flex flex-wrap gap-2 mt-6">
-        <input id="presetName" placeholder="Preset name" class="preset-input" />
-        <button id="savePreset" class="btn">Save</button>
-        <select id="presetSelect" class="preset-select"></select>
-        <button id="loadPreset" class="btn">Load</button>
-        <button id="deletePreset" class="btn">Delete</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- === GLYPH PICKER MODAL ========================================== -->
-  <div id="pickerOverlay" class="overlay hidden">
-    <div class="picker">
-      <div class="picker-header">Select Glyphs <button id="closePicker">✕</button></div>
-      <div id="pickerBody" class="picker-body"></div>
-      <div class="picker-footer"><button id="applyPicker" class="btn">Add Selected</button></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magiforge — Player HUD</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-topo text-gray-100">
-  <header class="py-4 text-center text-3xl font-extrabold tracking-widest">
-    Magiforge
-  </header>
-
-  <main class="container mx-auto px-4 grid gap-8 md:grid-cols-2">
-    <!-- === GAUGES ====================================================== -->
-    <section id="gauges" class="space-y-8">
-      <h2 class="section-title">Vitals</h2>
-      <!-- HP Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 90" class="gauge-svg" id="hpGauge">
-          <!-- outline -->
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill (current HP) -->
-          <clipPath id="hpClip"><rect id="hpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="white" clip-path="url(#hpClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempHpClip"><rect id="tempHpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="#38bdf8" clip-path="url(#tempHpClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="hp--">−</button>
-          <button data-act="hp++">＋</button>
-          <button data-act="tempHp--">−Tmp</button>
-          <button data-act="tempHp++">＋Tmp</button>
-          <span id="hpLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Mana Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 100" class="gauge-svg" id="manaGauge">
-          <!-- simple potion outline -->
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill -->
-          <clipPath id="manaClip"><rect id="manaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="white" clip-path="url(#manaClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempManaClip"><rect id="tempManaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="#ef4444" clip-path="url(#tempManaClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="mana--">−</button>
-          <button data-act="mana++">＋</button>
-          <button data-act="tempMana--">−Tmp</button>
-          <button data-act="tempMana++">＋Tmp</button>
-          <span id="manaLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Max setters -->
-      <div class="max-setters">
-        Max HP <input id="maxHpInput" type="number" min="1" max="360" class="num" />
-        Max Mana <input id="maxManaInput" type="number" min="1" max="360" class="num" />
-        <button id="applyMax">Apply</button>
-      </div>
-    </section>
-
-    <!-- === PREPARED GLYPHS ============================================ -->
-    <section class="space-y-4">
-      <h2 class="section-title flex items-center justify-between">
-        Prepared Glyphs
-        <button id="openPicker" class="btn">＋ Add</button>
-      </h2>
-      <div id="preparedList" class="space-y-3"></div>
-
-      <!-- Preset controls -->
-      <div class="presets flex flex-wrap gap-2 mt-6">
-        <input id="presetName" placeholder="Preset name" class="preset-input" />
-        <button id="savePreset" class="btn">Save</button>
-        <select id="presetSelect" class="preset-select"></select>
-        <button id="loadPreset" class="btn">Load</button>
-        <button id="deletePreset" class="btn">Delete</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- === GLYPH PICKER MODAL ========================================== -->
-  <div id="pickerOverlay" class="overlay hidden">
-    <div class="picker">
-      <div class="picker-header">Select Glyphs <button id="closePicker">✕</button></div>
-      <div id="pickerBody" class="picker-body"></div>
-      <div class="picker-footer"><button id="applyPicker" class="btn">Add Selected</button></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magiforge — Player HUD</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-topo text-gray-100">
-  <header class="py-4 text-center text-3xl font-extrabold tracking-widest">
-    Magiforge
-  </header>
-
-  <main class="container mx-auto px-4 grid gap-8 md:grid-cols-2">
-    <!-- === GAUGES ====================================================== -->
-    <section id="gauges" class="space-y-8">
-      <h2 class="section-title">Vitals</h2>
-      <!-- HP Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 90" class="gauge-svg" id="hpGauge">
-          <!-- outline -->
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill (current HP) -->
-          <clipPath id="hpClip"><rect id="hpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="white" clip-path="url(#hpClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempHpClip"><rect id="tempHpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="#38bdf8" clip-path="url(#tempHpClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="hp--">−</button>
-          <button data-act="hp++">＋</button>
-          <button data-act="tempHp--">−Tmp</button>
-          <button data-act="tempHp++">＋Tmp</button>
-          <span id="hpLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Mana Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 100" class="gauge-svg" id="manaGauge">
-          <!-- simple potion outline -->
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill -->
-          <clipPath id="manaClip"><rect id="manaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="white" clip-path="url(#manaClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempManaClip"><rect id="tempManaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="#ef4444" clip-path="url(#tempManaClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="mana--">−</button>
-          <button data-act="mana++">＋</button>
-          <button data-act="tempMana--">−Tmp</button>
-          <button data-act="tempMana++">＋Tmp</button>
-          <span id="manaLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Max setters -->
-      <div class="max-setters">
-        Max HP <input id="maxHpInput" type="number" min="1" max="360" class="num" />
-        Max Mana <input id="maxManaInput" type="number" min="1" max="360" class="num" />
-        <button id="applyMax">Apply</button>
-      </div>
-    </section>
-
-    <!-- === PREPARED GLYPHS ============================================ -->
-    <section class="space-y-4">
-      <h2 class="section-title flex items-center justify-between">
-        Prepared Glyphs
-        <button id="openPicker" class="btn">＋ Add</button>
-      </h2>
-      <div id="preparedList" class="space-y-3"></div>
-
-      <!-- Preset controls -->
-      <div class="presets flex flex-wrap gap-2 mt-6">
-        <input id="presetName" placeholder="Preset name" class="preset-input" />
-        <button id="savePreset" class="btn">Save</button>
-        <select id="presetSelect" class="preset-select"></select>
-        <button id="loadPreset" class="btn">Load</button>
-        <button id="deletePreset" class="btn">Delete</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- === GLYPH PICKER MODAL ========================================== -->
-  <div id="pickerOverlay" class="overlay hidden">
-    <div class="picker">
-      <div class="picker-header">Select Glyphs <button id="closePicker">✕</button></div>
-      <div id="pickerBody" class="picker-body"></div>
-      <div class="picker-footer"><button id="applyPicker" class="btn">Add Selected</button></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magiforge — Player HUD</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-topo text-gray-100">
-  <header class="py-4 text-center text-3xl font-extrabold tracking-widest">
-    Magiforge
-  </header>
-
-  <main class="container mx-auto px-4 grid gap-8 md:grid-cols-2">
-    <!-- === GAUGES ====================================================== -->
-    <section id="gauges" class="space-y-8">
-      <h2 class="section-title">Vitals</h2>
-      <!-- HP Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 90" class="gauge-svg" id="hpGauge">
-          <!-- outline -->
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill (current HP) -->
-          <clipPath id="hpClip"><rect id="hpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="white" clip-path="url(#hpClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempHpClip"><rect id="tempHpRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M50 82 L8 40 A20 20 0 0 1 50 8 A20 20 0 0 1 92 40 Z" fill="#38bdf8" clip-path="url(#tempHpClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="hp--">−</button>
-          <button data-act="hp++">＋</button>
-          <button data-act="tempHp--">−Tmp</button>
-          <button data-act="tempHp++">＋Tmp</button>
-          <span id="hpLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Mana Gauge -->
-      <div class="gauge-card">
-        <svg viewBox="0 0 100 100" class="gauge-svg" id="manaGauge">
-          <!-- simple potion outline -->
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="none" stroke="white" stroke-width="4" />
-          <!-- base fill -->
-          <clipPath id="manaClip"><rect id="manaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="white" clip-path="url(#manaClip)" />
-          <!-- temp overlay fill -->
-          <clipPath id="tempManaClip"><rect id="tempManaRect" x="0" y="0" width="100" height="0" /></clipPath>
-          <path d="M30 10 h40 v15 l10 15 v40 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 v-40 l10 -15 z" fill="#ef4444" clip-path="url(#tempManaClip)" />
-        </svg>
-        <div class="gauge-controls">
-          <button data-act="mana--">−</button>
-          <button data-act="mana++">＋</button>
-          <button data-act="tempMana--">−Tmp</button>
-          <button data-act="tempMana++">＋Tmp</button>
-          <span id="manaLabel" class="gauge-label"></span>
-        </div>
-      </div>
-
-      <!-- Max setters -->
-      <div class="max-setters">
-        Max HP <input id="maxHpInput" type="number" min="1" max="360" class="num" />
-        Max Mana <input id="maxManaInput" type="number" min="1" max="360" class="num" />
-        <button id="applyMax">Apply</button>
-      </div>
-    </section>
-
-    <!-- === PREPARED GLYPHS ============================================ -->
-    <section class="space-y-4">
-      <h2 class="section-title flex items-center justify-between">
-        Prepared Glyphs
-        <button id="openPicker" class="btn">＋ Add</button>
-      </h2>
-      <div id="preparedList" class="space-y-3"></div>
-
-      <!-- Preset controls -->
-      <div class="presets flex flex-wrap gap-2 mt-6">
-        <input id="presetName" placeholder="Preset name" class="preset-input" />
-        <button id="savePreset" class="btn">Save</button>
-        <select id="presetSelect" class="preset-select"></select>
-        <button id="loadPreset" class="btn">Load</button>
-        <button id="deletePreset" class="btn">Delete</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- === GLYPH PICKER MODAL ========================================== -->
-  <div id="pickerOverlay" class="overlay hidden">
-    <div class="picker">
-      <div class="picker-header">Select Glyphs <button id="closePicker">✕</button></div>
-      <div id="pickerBody" class="picker-body"></div>
-      <div class="picker-footer"><button id="applyPicker" class="btn">Add Selected</button></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="script.js?v=202603101810"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs =>
+        regs.forEach(reg => reg.unregister())
+      );
+    }
+  </script>
 </body>
 </html>
