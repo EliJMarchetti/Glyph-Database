@@ -2,10 +2,10 @@
   --panel-bg: rgba(0, 0, 0, 0.4);
   --panel-bg-open: rgba(0, 0, 0, 0.92);
   --panel-border: rgba(255, 255, 255, 0.82);
-  --panel-soft: rgba(255, 255, 255, 0.1);
-  --panel-soft-strong: rgba(255, 255, 255, 0.16);
   --text-dim: rgba(255, 255, 255, 0.78);
-  --mana-spectrum: linear-gradient(120deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0.45) 100%);
+  --mana-spectrum: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(220, 220, 220, 0.95));
+  --mana-marble: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.8) 0%, transparent 40%);
+  --mana-sparkles: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, transparent 8%);
 }
 
 html {
@@ -83,8 +83,7 @@ header {
 
 #search,
 select,
-.mana-step-input,
-.mana-bar-editor input {
+.mana-math-field input {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.28);
   color: white;
@@ -142,8 +141,9 @@ label,
 
 .school-button,
 .page-arrow,
-.mana-step-btn,
-.long-rest-button {
+.hold-button,
+.cast-adjust-button,
+.mana-mini-button {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: 0.45rem;
@@ -160,8 +160,8 @@ label,
 
 .school-button:hover,
 .page-arrow:hover,
-.mana-step-btn:hover,
-.long-rest-button:hover {
+.cast-adjust-button:hover,
+.mana-mini-button:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -338,6 +338,59 @@ label,
   color: var(--text-dim);
 }
 
+.cast-panel {
+  margin-top: 1rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.cast-summary,
+.cast-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cast-summary-title,
+.cast-preview span:first-child,
+.cast-adjust-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.cast-summary-meta,
+.cast-preview span:last-child,
+.cast-adjust-value {
+  font-size: 0.96rem;
+}
+
+.cast-adjuster {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.cast-adjust-button {
+  width: 2.15rem;
+  height: 2.15rem;
+  font-size: 1.15rem;
+}
+
+.cast-adjust-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.cast-button {
+  width: 100%;
+}
+
 .page-nav {
   flex: 0 0 auto;
   min-height: 5.2rem;
@@ -414,18 +467,68 @@ label,
   gap: 0.85rem;
 }
 
-.mana-readout {
+.mana-readout-button {
   grid-area: readout;
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.mana-readout {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.mana-math-editor {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  left: 0;
+  z-index: 5;
+  min-width: 16rem;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  gap: 0.65rem;
+  box-shadow: 0 0.65rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+
+.mana-readout-button.is-editing .mana-math-editor {
+  display: grid;
+}
+
+.mana-math-field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mana-math-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.mana-mini-button {
+  padding: 0.45rem 0.8rem;
 }
 
 .mana-bar-shell {
   grid-area: bar;
   position: relative;
   overflow: hidden;
-  min-height: 3.4rem;
+  min-height: 3.6rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.75);
@@ -440,100 +543,75 @@ label,
   position: absolute;
   inset: 0 auto 0 0;
   width: calc(var(--mana-fill-ratio, 1) * 100%);
-  background-image: var(--mana-spectrum);
-  background-size: 200% 200%;
-  animation: mana-shimmer 8s linear infinite;
-  opacity: 0.92;
+  background-image: var(--mana-sparkles), var(--mana-marble), var(--mana-spectrum);
+  background-size: 145% 145%, 220% 220%, 180% 180%;
+  background-position: 0% 35%, 0% 50%, 0% 50%;
+  background-blend-mode: screen, screen, normal;
+  animation: mana-flow 10s linear infinite, mana-flicker 1.5s steps(4, end) infinite;
+  opacity: 0.95;
   transition: width 0.45s ease, height 0.45s ease, opacity 0.3s ease;
 }
 
-.mana-bar-label,
-.mana-bar-editor {
+.mana-bar-label {
   position: relative;
   z-index: 1;
-}
-
-.mana-bar-label {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.92rem;
 }
 
-.mana-bar-editor {
-  display: none;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.mana-bar-editor input {
-  width: 5rem;
-  text-align: center;
-}
-
-.mana-bar-shell.is-editing .mana-bar-label {
-  display: none;
-}
-
-.mana-bar-shell.is-editing .mana-bar-editor {
-  display: inline-flex;
-}
-
 .mana-control-stack {
   grid-area: controls;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
-  flex-wrap: wrap;
 }
 
-.mana-adjuster {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.mana-step-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.25rem;
-}
-
-.mana-step-input {
-  width: 4.3rem;
+.hold-button {
+  position: relative;
+  overflow: hidden;
+  min-height: 3.45rem;
+  padding: 0.7rem 1rem;
+  display: grid;
+  place-items: center;
+  gap: 0.15rem;
   text-align: center;
 }
 
-.long-rest-button {
-  position: relative;
-  overflow: hidden;
-  padding: 0.65rem 1.1rem;
-  min-width: 8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.long-rest-button span {
-  position: relative;
-  z-index: 1;
-}
-
-.long-rest-button::before {
+.hold-button::before {
   content: "";
   position: absolute;
   inset: 0;
   transform-origin: left center;
   transform: scaleX(var(--hold-progress, 0));
-  background-image: var(--mana-spectrum);
-  background-size: 200% 200%;
-  animation: mana-shimmer 8s linear infinite;
+  background-image: var(--mana-sparkles), var(--mana-marble), var(--mana-spectrum);
+  background-size: 145% 145%, 220% 220%, 180% 180%;
+  background-position: 0% 35%, 0% 50%, 0% 50%;
+  background-blend-mode: screen, screen, normal;
+  animation: mana-flow 10s linear infinite, mana-flicker 1.5s steps(4, end) infinite;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
 
-.long-rest-button.is-holding::before {
-  opacity: 0.95;
+.hold-button.is-holding::before {
+  opacity: 0.98;
+}
+
+.button-title,
+.button-subtitle {
+  position: relative;
+  z-index: 1;
+}
+
+.button-title {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.button-subtitle {
+  font-size: 0.72rem;
+  opacity: 0.8;
+  letter-spacing: 0.08em;
 }
 
 .header-toggle {
@@ -574,20 +652,35 @@ label,
   color: #888888;
 }
 
-@keyframes mana-shimmer {
+@keyframes mana-flow {
   0% {
-    background-position: 0% 50%;
-    filter: brightness(0.92);
+    background-position: 0% 35%, 0% 50%, 0% 50%;
   }
 
   50% {
-    background-position: 100% 50%;
-    filter: brightness(1.08);
+    background-position: 80% 70%, 100% 40%, 100% 50%;
   }
 
   100% {
-    background-position: 0% 50%;
-    filter: brightness(0.92);
+    background-position: 0% 35%, 0% 50%, 0% 50%;
+  }
+}
+
+@keyframes mana-flicker {
+  0% {
+    filter: brightness(0.95) saturate(1);
+  }
+
+  30% {
+    filter: brightness(1.08) saturate(1.12);
+  }
+
+  65% {
+    filter: brightness(0.98) saturate(1.2);
+  }
+
+  100% {
+    filter: brightness(1.14) saturate(1.08);
   }
 }
 
@@ -768,6 +861,13 @@ label,
     box-shadow: 0 0 0.65rem rgba(136, 136, 136, 0.65);
   }
 
+  .cast-summary,
+  .cast-preview,
+  .cast-adjuster {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .page-nav {
     min-height: 4.7rem;
     padding-top: 0.45rem;
@@ -785,7 +885,16 @@ label,
       "bar controls";
     align-items: stretch;
     column-gap: 1rem;
-    min-height: min(65dvh, 28rem);
+    min-height: min(65dvh, 30rem);
+  }
+
+  .mana-readout-button {
+    width: 100%;
+  }
+
+  .mana-math-editor {
+    position: static;
+    min-width: 0;
   }
 
   .mana-bar-shell {
@@ -807,30 +916,12 @@ label,
     font-size: 0.85rem;
   }
 
-  .mana-bar-editor {
-    flex-direction: column;
-  }
-
   .mana-control-stack {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: stretch;
   }
 
-  .mana-adjuster {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .mana-step-btn {
-    flex: 0 0 2.7rem;
-  }
-
-  .mana-step-input {
-    flex: 1 1 auto;
-    width: auto;
-  }
-
-  .long-rest-button {
+  .hold-button {
     width: 100%;
   }
 }

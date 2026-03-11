@@ -9,8 +9,9 @@
 
   const glyphs = await res.json();
 
-  const STATE_KEY = 'glyphDatabaseState.v2';
+  const STATE_KEY = 'glyphDatabaseState.v3';
   const TOTAL_PAGES = 2;
+  const HOLD_DURATION_MS = 3000;
   const SCHOOLS = ['Harmony', 'Elemental', 'Nature', 'Celestial', 'Mind', 'Arcane', 'Chaos', 'Bane'];
   const SCHOOL_COLORS = {
     Harmony: '#ffffff',
@@ -26,6 +27,8 @@
   const body = document.body;
   const mobileQuery = window.matchMedia('(max-width: 767px)');
   const glyphMap = new Map();
+  const tierCosts = buildTierCosts(glyphs);
+  const maxTier = Math.max(...Object.keys(tierCosts).map(Number));
 
   glyphs.forEach(glyph => {
     glyphMap.set(get(glyph, 'Name') ?? '', glyph);
@@ -47,29 +50,29 @@
     pageNext: document.getElementById('pageNext'),
     pageStatus: document.getElementById('pageStatus'),
     pageDots: document.getElementById('pageDots'),
+    manaReadoutButton: document.getElementById('manaReadoutButton'),
     manaReadout: document.getElementById('manaReadout'),
-    manaBarButton: document.getElementById('manaBarButton'),
-    manaBarFill: document.getElementById('manaBarFill'),
-    manaBarLabel: document.getElementById('manaBarLabel'),
-    manaBarEditor: document.getElementById('manaBarEditor'),
+    manaMathEditor: document.getElementById('manaMathEditor'),
+    manaCurrentInput: document.getElementById('manaCurrentInput'),
     manaMaxInput: document.getElementById('manaMaxInput'),
-    manaStepInput: document.getElementById('manaStepInput'),
-    manaDecreaseBtn: document.getElementById('manaDecreaseBtn'),
-    manaIncreaseBtn: document.getElementById('manaIncreaseBtn'),
+    manaMathCancel: document.getElementById('manaMathCancel'),
+    manaMathSave: document.getElementById('manaMathSave'),
+    manaBarShell: document.getElementById('manaBarShell'),
+    manaBarFill: document.getElementById('manaBarFill'),
+    manaPotionButton: document.getElementById('manaPotionButton'),
     longRestButton: document.getElementById('longRestButton')
   };
 
   const schoolButtons = {};
-  let longRestTimer = null;
-  let longRestFrame = null;
-  let longRestActive = false;
-  let longRestStartedAt = 0;
+  let mathEditorOpen = false;
+  let activeHold = null;
 
   const defaultState = {
     currentPage: 0,
     headerOpen: false,
     prepared: [],
     openCards: [],
+    upcasts: {},
     filters: {
       query: '',
       searchDetails: false,
@@ -80,8 +83,7 @@
     },
     mana: {
       current: 7,
-      max: 7,
-      step: 1
+      max: 7
     }
   };
 
@@ -90,6 +92,8 @@
   populateTierFilter();
   buildSchoolButtons();
   bindEvents();
+  bindHoldButton(elements.longRestButton, longRest);
+  bindHoldButton(elements.manaPotionButton, drinkManaPotion);
   setMobileMenu(state.headerOpen);
   render();
 
@@ -97,6 +101,28 @@
     const wantedKey = wanted.toLowerCase().trim();
     const foundKey = Object.keys(obj).find(key => key.toLowerCase().trim() === wantedKey);
     return foundKey ? obj[foundKey] : undefined;
+  }
+
+  function buildTierCosts(data) {
+    const countsByTier = {};
+
+    data.forEach(glyph => {
+      const tier = Number(get(glyph, 'Tier'));
+      const cost = Number(get(glyph, 'Points'));
+      if (!Number.isFinite(tier) || !Number.isFinite(cost)) {
+        return;
+      }
+      countsByTier[tier] ||= {};
+      countsByTier[tier][cost] = (countsByTier[tier][cost] || 0) + 1;
+    });
+
+    return Object.fromEntries(
+      Object.entries(countsByTier).map(([tier, counts]) => {
+        const dominantCost = Object.entries(counts)
+          .sort((a, b) => b[1] - a[1] || Number(a[0]) - Number(b[0]))[0][0];
+        return [tier, Number(dominantCost)];
+      })
+    );
   }
 
   function sanitizeState(rawState) {
@@ -116,11 +142,12 @@
     const prepared = Array.isArray(merged.prepared) ? merged.prepared : [];
     const openCards = Array.isArray(merged.openCards) ? merged.openCards : [];
     const schools = Array.isArray(merged.filters.schools) ? merged.filters.schools : [];
+    const rawUpcasts = merged.upcasts && typeof merged.upcasts === 'object' ? merged.upcasts : {};
 
     merged.currentPage = clampNumber(merged.currentPage, 0, TOTAL_PAGES - 1, 0);
     merged.headerOpen = Boolean(merged.headerOpen);
     merged.prepared = uniqueStrings(prepared).filter(name => glyphMap.has(name));
-    merged.openCards = uniqueStrings(openCards);
+    merged.openCards = uniqueStrings(openCards).filter(name => glyphMap.has(name));
     merged.filters.query = String(merged.filters.query || '');
     merged.filters.searchDetails = Boolean(merged.filters.searchDetails);
     merged.filters.tier = merged.filters.tier === 'all'
@@ -131,7 +158,17 @@
     merged.filters.schools = uniqueStrings(schools).filter(school => SCHOOLS.includes(school));
     merged.mana.max = clampNumber(parseInt(merged.mana.max, 10), 1, 999, defaultState.mana.max);
     merged.mana.current = clampNumber(parseInt(merged.mana.current, 10), 0, merged.mana.max, merged.mana.max);
-    merged.mana.step = clampNumber(parseInt(merged.mana.step, 10), 1, 999, defaultState.mana.step);
+    merged.upcasts = Object.fromEntries(
+      Object.entries(rawUpcasts)
+        .filter(([name]) => glyphMap.has(name))
+        .map(([name, value]) => {
+          const glyph = glyphMap.get(name);
+          const tier = Number(get(glyph, 'Tier')) || 0;
+          const maxUpcast = Math.max(0, maxTier - tier);
+          return [name, clampNumber(parseInt(value, 10), 0, maxUpcast, 0)];
+        })
+        .filter(([, value]) => value > 0)
+    );
 
     if (!(merged.filters.upTo && merged.filters.tier !== 'all')) {
       merged.filters.includeCantrips = false;
@@ -142,7 +179,12 @@
 
   function loadState() {
     try {
-      return JSON.parse(localStorage.getItem(STATE_KEY) || '{}');
+      const current = localStorage.getItem(STATE_KEY);
+      if (current) {
+        return JSON.parse(current);
+      }
+      const legacy = localStorage.getItem('glyphDatabaseState.v2');
+      return JSON.parse(legacy || '{}');
     } catch (error) {
       console.warn('Unable to parse saved glyph state.', error);
       return {};
@@ -162,6 +204,18 @@
       return fallback;
     }
     return Math.min(max, Math.max(min, value));
+  }
+
+  function hexToRgba(hex, alpha) {
+    const clean = hex.replace('#', '');
+    const value = clean.length === 3
+      ? clean.split('').map(char => char + char).join('')
+      : clean;
+    const int = Number.parseInt(value, 16);
+    const r = (int >> 16) & 255;
+    const g = (int >> 8) & 255;
+    const b = int & 255;
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
   function populateTierFilter() {
@@ -233,61 +287,49 @@
     elements.pagePrev.addEventListener('click', () => setPage(state.currentPage - 1));
     elements.pageNext.addEventListener('click', () => setPage(state.currentPage + 1));
 
-    elements.manaBarButton.addEventListener('click', event => {
-      if (event.target === elements.manaMaxInput) {
+    elements.manaReadoutButton.addEventListener('click', event => {
+      if (event.target.closest('.mana-math-editor')) {
         return;
       }
-      openManaEditor();
+      toggleMathEditor(!mathEditorOpen);
     });
 
-    elements.manaBarButton.addEventListener('keydown', event => {
+    elements.manaReadoutButton.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        openManaEditor();
+        toggleMathEditor(!mathEditorOpen);
       }
     });
 
-    elements.manaMaxInput.addEventListener('click', event => {
+    elements.manaMathEditor.addEventListener('click', event => {
       event.stopPropagation();
     });
 
-    elements.manaMaxInput.addEventListener('keydown', event => {
-      if (event.key === 'Enter') {
-        event.preventDefault();
-        closeManaEditor(true);
-      } else if (event.key === 'Escape') {
-        event.preventDefault();
-        closeManaEditor(false);
+    elements.manaMathSave.addEventListener('click', saveManaMath);
+    elements.manaMathCancel.addEventListener('click', () => toggleMathEditor(false));
+
+    [elements.manaCurrentInput, elements.manaMaxInput].forEach(input => {
+      input.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          saveManaMath();
+        } else if (event.key === 'Escape') {
+          event.preventDefault();
+          toggleMathEditor(false);
+        }
+      });
+    });
+
+    document.addEventListener('click', event => {
+      if (mathEditorOpen && !elements.manaReadoutButton.contains(event.target)) {
+        toggleMathEditor(false);
       }
     });
 
-    elements.manaMaxInput.addEventListener('blur', () => {
-      closeManaEditor(true);
-    });
-
-    elements.manaStepInput.addEventListener('input', event => {
-      state.mana.step = clampNumber(parseInt(event.target.value, 10), 1, 999, 1);
-      saveState();
-    });
-
-    elements.manaDecreaseBtn.addEventListener('click', () => adjustMana(-1));
-    elements.manaIncreaseBtn.addEventListener('click', () => adjustMana(1));
-
-    elements.longRestButton.addEventListener('pointerdown', startLongRestHold);
-    elements.longRestButton.addEventListener('pointerup', cancelLongRestHold);
-    elements.longRestButton.addEventListener('pointerleave', cancelLongRestHold);
-    elements.longRestButton.addEventListener('pointercancel', cancelLongRestHold);
-    elements.longRestButton.addEventListener('blur', cancelLongRestHold);
-    elements.longRestButton.addEventListener('keydown', event => {
-      if ((event.key === 'Enter' || event.key === ' ') && !event.repeat) {
-        event.preventDefault();
-        startLongRestHold();
-      }
-    });
-    elements.longRestButton.addEventListener('keyup', event => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        cancelLongRestHold();
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        toggleMathEditor(false);
+        cancelActiveHold();
       }
     });
 
@@ -295,6 +337,86 @@
       setMobileMenu(state.headerOpen);
       render();
     });
+  }
+
+  function bindHoldButton(button, onComplete) {
+    button.addEventListener('pointerdown', event => {
+      event.preventDefault();
+      startHold(button, onComplete);
+    });
+    button.addEventListener('pointerup', () => cancelActiveHold(button));
+    button.addEventListener('pointerleave', () => cancelActiveHold(button));
+    button.addEventListener('pointercancel', () => cancelActiveHold(button));
+    button.addEventListener('blur', () => cancelActiveHold(button));
+    button.addEventListener('keydown', event => {
+      if ((event.key === 'Enter' || event.key === ' ') && !event.repeat) {
+        event.preventDefault();
+        startHold(button, onComplete);
+      }
+    });
+    button.addEventListener('keyup', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        cancelActiveHold(button);
+      }
+    });
+  }
+
+  function startHold(button, onComplete) {
+    if (activeHold?.button === button) {
+      return;
+    }
+
+    cancelActiveHold();
+    button.classList.add('is-holding');
+    button.style.setProperty('--hold-progress', '0');
+
+    const startedAt = performance.now();
+    const frame = requestAnimationFrame(function tick(now) {
+      if (!activeHold || activeHold.button !== button) {
+        return;
+      }
+      const progress = Math.min((now - startedAt) / HOLD_DURATION_MS, 1);
+      button.style.setProperty('--hold-progress', String(progress));
+      activeHold.frame = requestAnimationFrame(tick);
+    });
+
+    const timer = window.setTimeout(() => {
+      const hold = activeHold;
+      clearActiveHold();
+      if (hold) {
+        hold.onComplete();
+      }
+    }, HOLD_DURATION_MS);
+
+    activeHold = {
+      button,
+      frame,
+      timer,
+      onComplete
+    };
+  }
+
+  function clearActiveHold() {
+    if (!activeHold) {
+      return;
+    }
+    const { button, frame, timer } = activeHold;
+    clearTimeout(timer);
+    cancelAnimationFrame(frame);
+    button.classList.remove('is-holding');
+    button.style.setProperty('--hold-progress', '0');
+    activeHold = null;
+  }
+
+  function cancelActiveHold(expectedButton) {
+    if (!activeHold) {
+      return;
+    }
+    if (expectedButton && activeHold.button !== expectedButton) {
+      return;
+    }
+    clearActiveHold();
   }
 
   function setMobileMenu(open) {
@@ -308,7 +430,31 @@
 
   function setPage(pageIndex) {
     state.currentPage = clampNumber(pageIndex, 0, TOTAL_PAGES - 1, state.currentPage);
-    cancelLongRestHold();
+    toggleMathEditor(false);
+    cancelActiveHold();
+    render();
+  }
+
+  function toggleMathEditor(shouldOpen) {
+    mathEditorOpen = Boolean(shouldOpen) && state.currentPage === 1;
+    elements.manaReadoutButton.classList.toggle('is-editing', mathEditorOpen);
+    elements.manaReadoutButton.setAttribute('aria-expanded', String(mathEditorOpen));
+    if (mathEditorOpen) {
+      elements.manaCurrentInput.value = String(state.mana.current);
+      elements.manaMaxInput.value = String(state.mana.max);
+      window.requestAnimationFrame(() => {
+        elements.manaCurrentInput.focus();
+        elements.manaCurrentInput.select();
+      });
+    }
+  }
+
+  function saveManaMath() {
+    const nextMax = clampNumber(parseInt(elements.manaMaxInput.value, 10), 1, 999, state.mana.max);
+    const nextCurrent = clampNumber(parseInt(elements.manaCurrentInput.value, 10), 0, nextMax, state.mana.current);
+    state.mana.max = nextMax;
+    state.mana.current = nextCurrent;
+    toggleMathEditor(false);
     render();
   }
 
@@ -328,7 +474,7 @@
     elements.levelFilter.value = state.filters.tier;
     elements.upToToggle.checked = state.filters.upTo;
     elements.includeCantripsToggle.checked = state.filters.includeCantrips;
-    elements.manaStepInput.value = String(state.mana.step);
+    elements.manaCurrentInput.value = String(state.mana.current);
     elements.manaMaxInput.value = String(state.mana.max);
 
     Object.entries(schoolButtons).forEach(([school, button]) => {
@@ -350,6 +496,9 @@
     elements.pageOneHeader.classList.toggle('active', onCatalogPage);
     elements.pageTwoHeader.classList.toggle('active', !onCatalogPage);
     body.dataset.page = onCatalogPage ? 'catalog' : 'prepared';
+    if (onCatalogPage) {
+      toggleMathEditor(false);
+    }
   }
 
   function renderCards() {
@@ -438,7 +587,7 @@
     const name = get(glyph, 'Name') ?? '';
     const school = get(glyph, 'School') ?? '';
     const tier = Number(get(glyph, 'Tier')) || 0;
-    const manaCost = get(glyph, 'Points') || 0;
+    const manaCost = Number(get(glyph, 'Points')) || 0;
     const components = [get(glyph, 'V') ? 'V' : '', get(glyph, 'S') ? 'S' : ''].filter(Boolean).join('/');
     const isPrepared = state.prepared.includes(name);
     const isOpen = state.openCards.includes(name);
@@ -501,6 +650,10 @@
     bodyNode.appendChild(divider);
     bodyNode.appendChild(makeDetailLine('Higher Tiers', get(glyph, 'Higher Tiers')));
 
+    if (state.currentPage === 1) {
+      bodyNode.appendChild(buildCastPanel(glyph));
+    }
+
     header.addEventListener('click', () => {
       const nextOpen = !card.classList.contains('open');
       card.classList.toggle('open', nextOpen);
@@ -510,6 +663,102 @@
 
     card.append(header, bodyNode);
     return card;
+  }
+
+  function buildCastPanel(glyph) {
+    const details = getCastDetails(glyph);
+    const panel = document.createElement('div');
+    panel.className = 'cast-panel';
+
+    const summary = document.createElement('div');
+    summary.className = 'cast-summary';
+
+    const summaryTitle = document.createElement('div');
+    summaryTitle.className = 'cast-summary-title';
+    summaryTitle.textContent = details.upcast > 0 ? `Upcast +${details.upcast}` : 'Base Cast';
+
+    const summaryMeta = document.createElement('div');
+    summaryMeta.className = 'cast-summary-meta';
+    summaryMeta.textContent = `Tier ${details.castTier} - ${details.castCost} Mana`;
+
+    summary.append(summaryTitle, summaryMeta);
+
+    const adjuster = document.createElement('div');
+    adjuster.className = 'cast-adjuster';
+
+    const adjustLabel = document.createElement('span');
+    adjustLabel.className = 'cast-adjust-label';
+    adjustLabel.textContent = 'Upcast';
+
+    const decrease = document.createElement('button');
+    decrease.type = 'button';
+    decrease.className = 'cast-adjust-button';
+    decrease.textContent = '-';
+    decrease.disabled = details.upcast === 0;
+    decrease.addEventListener('click', () => adjustUpcast(details.name, details.baseTier, -1));
+
+    const value = document.createElement('span');
+    value.className = 'cast-adjust-value';
+    value.textContent = details.upcast > 0 ? `+${details.upcast}` : 'Base';
+
+    const increase = document.createElement('button');
+    increase.type = 'button';
+    increase.className = 'cast-adjust-button';
+    increase.textContent = '+';
+    increase.disabled = details.upcast >= details.maxUpcast;
+    increase.addEventListener('click', () => adjustUpcast(details.name, details.baseTier, 1));
+
+    adjuster.append(adjustLabel, decrease, value, increase);
+
+    const preview = document.createElement('div');
+    preview.className = 'cast-preview';
+
+    const previewTier = document.createElement('span');
+    previewTier.textContent = `Tier ${details.castTier}`;
+
+    const previewCost = document.createElement('span');
+    previewCost.textContent = `${details.castCost} Mana`;
+
+    preview.append(previewTier, previewCost);
+
+    const castButton = document.createElement('button');
+    castButton.type = 'button';
+    castButton.className = 'hold-button cast-button';
+
+    const castTitle = document.createElement('span');
+    castTitle.className = 'button-title';
+    castTitle.textContent = 'Cast';
+
+    const castSubtitle = document.createElement('span');
+    castSubtitle.className = 'button-subtitle';
+    castSubtitle.textContent = `Tier ${details.castTier} - ${details.castCost} Mana`;
+
+    castButton.append(castTitle, castSubtitle);
+    applyManaTexture(castButton, buildManaVisuals());
+    bindHoldButton(castButton, () => castGlyph(glyph));
+
+    panel.append(summary, adjuster, preview, castButton);
+    return panel;
+  }
+
+  function getCastDetails(glyph) {
+    const name = get(glyph, 'Name') ?? '';
+    const baseTier = Number(get(glyph, 'Tier')) || 0;
+    const baseCost = Number(get(glyph, 'Points')) || 0;
+    const maxUpcast = Math.max(0, maxTier - baseTier);
+    const upcast = clampNumber(Number(state.upcasts[name]) || 0, 0, maxUpcast, 0);
+    const castTier = baseTier + upcast;
+    const castCost = upcast === 0 ? baseCost : (tierCosts[castTier] ?? baseCost);
+
+    return {
+      name,
+      baseTier,
+      baseCost,
+      maxUpcast,
+      upcast,
+      castTier,
+      castCost
+    };
   }
 
   function makeDetailLine(label, value) {
@@ -541,12 +790,43 @@
     }
     state.prepared = [...prepared];
 
-    if (!shouldPrepare && state.currentPage === 1) {
-      const openCards = new Set(state.openCards);
-      openCards.delete(name);
-      state.openCards = [...openCards];
+    if (!shouldPrepare) {
+      delete state.upcasts[name];
+      if (state.currentPage === 1) {
+        const openCards = new Set(state.openCards);
+        openCards.delete(name);
+        state.openCards = [...openCards];
+      }
     }
 
+    render();
+  }
+
+  function adjustUpcast(name, baseTier, delta) {
+    const maxUpcast = Math.max(0, maxTier - baseTier);
+    const nextValue = clampNumber((Number(state.upcasts[name]) || 0) + delta, 0, maxUpcast, 0);
+    if (nextValue === 0) {
+      delete state.upcasts[name];
+    } else {
+      state.upcasts[name] = nextValue;
+    }
+    render();
+  }
+
+  function castGlyph(glyph) {
+    const details = getCastDetails(glyph);
+    state.mana.current = clampNumber(state.mana.current - details.castCost, 0, state.mana.max, 0);
+    render();
+  }
+
+  function drinkManaPotion() {
+    const restored = Math.floor(Math.random() * 7) + 3;
+    state.mana.current = clampNumber(state.mana.current + restored, 0, state.mana.max, state.mana.max);
+    render();
+  }
+
+  function longRest() {
+    state.mana.current = state.mana.max;
     render();
   }
 
@@ -567,122 +847,67 @@
     }
   }
 
-  function renderManaHud() {
-    const ratio = state.mana.max ? state.mana.current / state.mana.max : 0;
-    const gradient = buildManaGradient();
-    elements.manaReadout.textContent = `${state.mana.current} / ${state.mana.max}`;
-    elements.manaBarLabel.textContent = `Max. Mana: ${state.mana.max}`;
-    elements.manaBarFill.style.setProperty('--mana-fill-ratio', String(ratio));
-    elements.manaBarFill.style.setProperty('--mana-spectrum', gradient);
-    elements.longRestButton.style.setProperty('--mana-spectrum', gradient);
-    body.style.setProperty('--mana-spectrum', gradient);
-  }
-
-  function buildManaGradient() {
+  function buildManaVisuals() {
     const counts = SCHOOLS.map(school => {
       const total = state.prepared.reduce((sum, name) => {
         const glyph = glyphMap.get(name);
         return sum + (glyph && get(glyph, 'School') === school ? 1 : 0);
       }, 0);
-
       return total ? { school, total } : null;
     }).filter(Boolean);
 
-    if (!counts.length) {
-      return 'linear-gradient(120deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0.45) 100%)';
-    }
-
+    const palette = [];
     const totalPrepared = counts.reduce((sum, item) => sum + item.total, 0);
-    const stops = [];
-    let start = 0;
 
-    counts.forEach(item => {
-      const end = start + (item.total / totalPrepared) * 100;
-      const color = SCHOOL_COLORS[item.school];
-      stops.push(`${color} ${start.toFixed(2)}%`, `${color} ${end.toFixed(2)}%`);
-      start = end;
-    });
+    if (!counts.length) {
+      palette.push('#ffffff', '#dcdcdc', '#ffffff');
+    } else {
+      counts.forEach(item => {
+        const repeats = Math.max(1, Math.round((item.total / totalPrepared) * 6));
+        for (let index = 0; index < repeats; index += 1) {
+          palette.push(SCHOOL_COLORS[item.school]);
+        }
+      });
+    }
 
-    return `linear-gradient(120deg, ${stops.join(', ')})`;
+    while (palette.length < 4) {
+      palette.push(palette[palette.length - 1] || '#ffffff');
+    }
+
+    const spectrum = `linear-gradient(135deg, ${palette.map((color, index) => {
+      const stop = palette.length === 1 ? 100 : (index / (palette.length - 1)) * 100;
+      return `${hexToRgba(color, 0.95)} ${stop.toFixed(2)}%`;
+    }).join(', ')})`;
+
+    const marble = palette.map((color, index) => {
+      const x = 12 + (index * 19) % 76;
+      const y = 18 + (index * 27) % 64;
+      return `radial-gradient(circle at ${x}% ${y}%, ${hexToRgba(color, 0.88)} 0%, ${hexToRgba(color, 0.54)} 14%, transparent 42%)`;
+    }).join(', ');
+
+    const sparkles = palette.slice(0, 8).map((color, index) => {
+      const x = 8 + (index * 13) % 84;
+      const y = 16 + (index * 21) % 68;
+      return `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.78) 2.5%, ${hexToRgba(color, 0.42)} 4.5%, transparent 8%)`;
+    }).join(', ');
+
+    return { spectrum, marble, sparkles };
   }
 
-  function openManaEditor() {
-    elements.manaBarButton.classList.add('is-editing');
-    elements.manaMaxInput.value = String(state.mana.max);
-    window.requestAnimationFrame(() => {
-      elements.manaMaxInput.focus();
-      elements.manaMaxInput.select();
-    });
+  function applyManaTexture(node, visuals) {
+    node.style.setProperty('--mana-spectrum', visuals.spectrum);
+    node.style.setProperty('--mana-marble', visuals.marble);
+    node.style.setProperty('--mana-sparkles', visuals.sparkles);
   }
 
-  function closeManaEditor(saveChanges) {
-    if (!elements.manaBarButton.classList.contains('is-editing')) {
-      return;
-    }
+  function renderManaHud() {
+    const ratio = state.mana.max ? state.mana.current / state.mana.max : 0;
+    const visuals = buildManaVisuals();
 
-    if (saveChanges) {
-      const nextMax = clampNumber(parseInt(elements.manaMaxInput.value, 10), 1, 999, state.mana.max);
-      state.mana.max = nextMax;
-      state.mana.current = clampNumber(state.mana.current, 0, nextMax, nextMax);
-    }
-
-    elements.manaBarButton.classList.remove('is-editing');
-    render();
-  }
-
-  function adjustMana(direction) {
-    const amount = clampNumber(parseInt(elements.manaStepInput.value, 10), 1, 999, state.mana.step);
-    state.mana.step = amount;
-    state.mana.current = clampNumber(state.mana.current + amount * direction, 0, state.mana.max, state.mana.current);
-    render();
-  }
-
-  function startLongRestHold() {
-    if (longRestActive) {
-      return;
-    }
-
-    longRestActive = true;
-    longRestStartedAt = performance.now();
-    elements.longRestButton.classList.add('is-holding');
-    elements.longRestButton.style.setProperty('--hold-progress', '0');
-
-    const animateProgress = now => {
-      if (!longRestActive) {
-        return;
-      }
-      const progress = Math.min((now - longRestStartedAt) / 3000, 1);
-      elements.longRestButton.style.setProperty('--hold-progress', String(progress));
-      longRestFrame = requestAnimationFrame(animateProgress);
-    };
-
-    longRestFrame = requestAnimationFrame(animateProgress);
-    longRestTimer = window.setTimeout(() => {
-      longRestActive = false;
-      if (longRestFrame) {
-        cancelAnimationFrame(longRestFrame);
-        longRestFrame = null;
-      }
-      state.mana.current = state.mana.max;
-      elements.longRestButton.classList.remove('is-holding');
-      elements.longRestButton.style.setProperty('--hold-progress', '0');
-      render();
-    }, 3000);
-  }
-
-  function cancelLongRestHold() {
-    if (longRestTimer) {
-      clearTimeout(longRestTimer);
-      longRestTimer = null;
-    }
-    if (longRestFrame) {
-      cancelAnimationFrame(longRestFrame);
-      longRestFrame = null;
-    }
-    if (longRestActive) {
-      longRestActive = false;
-      elements.longRestButton.classList.remove('is-holding');
-      elements.longRestButton.style.setProperty('--hold-progress', '0');
-    }
+    elements.manaReadout.textContent = `${state.mana.current} / ${state.mana.max}`;
+    elements.manaBarFill.style.setProperty('--mana-fill-ratio', String(ratio));
+    applyManaTexture(elements.manaBarFill, visuals);
+    applyManaTexture(elements.longRestButton, visuals);
+    applyManaTexture(elements.manaPotionButton, visuals);
   }
 })();
