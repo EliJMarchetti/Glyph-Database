@@ -4827,7 +4827,7 @@
     "Duration": "Instantaneous",
     "Range": "120 feet",
     "Rite": false,
-    "New Text": "",
+    "New Text": "You point to a creature or object and invoke crushing terminal force. A target you can see within range must make a Constitution saving throw.\n\nOn a failed save, it takes 10d6 void damage and 10d6 force damage, and its speed becomes 0 until the end of your next turn. On a successful save, it takes half as much damage and suffers no other effect.\n\nIf the target is concentrating on a glyph, it makes its concentration check with disadvantage.\n\nIf this glyph reduces a nonmagical object or structure section to 0 hit points, that section violently collapses into jagged rubble.",
     "Higher Tiers": "",
     "Ignore": ""
   },
