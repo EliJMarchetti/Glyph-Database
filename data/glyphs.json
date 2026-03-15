@@ -7152,6 +7152,22 @@
     "Ignore": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
   },
   {
+    "Name": "Null Mana",
+    "Tier": 5,
+    "Points": 21,
+    "School": "Ban",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": true,
+    "Duration": "1 minute",
+    "Range": "90 feet",
+    "Rite": "",
+    "New Text": "",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Nysh's Horrid Wilting",
     "Tier": 10,
     "Points": 66,
