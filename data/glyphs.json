@@ -4816,6 +4816,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Grave of the Archon",
+    "Tier": 5,
+    "Points": 21,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "120 feet",
+    "Rite": false,
+    "New Text": "",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Gravity Fissure",
     "Tier": 8,
     "Points": 45,
@@ -7155,16 +7171,16 @@
     "Name": "Null Mana",
     "Tier": 5,
     "Points": 21,
-    "School": "Ban",
+    "School": "Bane",
     "V": false,
     "S": true,
     "Casting Time": "2 AP",
     "Concentration": true,
     "Duration": "1 minute",
     "Range": "90 feet",
-    "Rite": "",
-    "New Text": "",
-    "Higher Tiers": "",
+    "Rite": false,
+    "New Text": "You brand one creature you can see with a seal of magical negation. The target must make a Wellspring saving throw. On a failed save, it is afflicted for the duration.\n\nWhile afflicted:\n\nThe target cannot cast glyph of tier 4 or lower.\n\nWhen the target attempts to cast a glyph of tier 4 or higher, it must first succeed on a Constitution saving throw against your glyph save DC or the glyph fails and the mana is wasted.\n\nThe target sheds dim, distorted shadowlight in a 5-foot radius, and magical effects on it are visible as flickering fractures.\n\nAt the end of each of its turns, the target may repeat the Wellspring saving throw, ending the glyph on a success.\n\nIf the target is under the effect of a glyph when this glyph first takes hold, choose one glyph of tier 4 or lower affecting it. That glyph ends.",
+    "Higher Tiers": "When you cast this Glyph using a tier 6 or higher, the glyph suppresses glyphs of one additional tier lower than the maximum affected threshold, and the initial glyph-ending effect can end one glyph affecting the target of a tier equal to the glyph used.",
     "Ignore": ""
   },
   {
