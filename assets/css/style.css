@@ -955,8 +955,11 @@ label,
 
 .skill-name,
 .ability-card-title {
-  font-size: 0.76rem;
-  overflow-wrap: anywhere;
+  font-size: 0.66rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  line-height: 1.05;
 }
 
 .skill-name {
@@ -965,7 +968,10 @@ label,
 
 .skill-meta {
   grid-column: 1 / -1;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .sheet-action-button,
@@ -1007,15 +1013,10 @@ label,
 }
 
 .attack-row-header .attack-cell {
+  display: flex;
+  align-items: center;
   text-align: left;
-  padding-left: 0.35rem;
-}
-
-.attack-row-header .attack-col-2,
-.attack-row-header .attack-col-3,
-.attack-row-header .attack-col-4,
-.attack-row-header .attack-col-5 {
-  padding-left: 0.5rem;
+  padding-left: 0.7rem;
 }
 
 .attack-input {

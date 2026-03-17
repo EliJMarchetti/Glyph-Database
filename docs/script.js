@@ -2278,6 +2278,7 @@
     state.hp.current = state.hp.max;
     state.hp.temp = 0;
     state.sheet.conditions.exhaustion = clampNumber(state.sheet.conditions.exhaustion - 1, 0, 6, 0);
+    state.sheet.conditions.mortality = clampNumber(state.sheet.conditions.mortality - 1, 0, 3, 0);
     render();
   }
 
