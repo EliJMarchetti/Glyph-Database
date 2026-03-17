@@ -907,6 +907,12 @@ label,
   gap: 0.65rem;
 }
 
+.ability-card-header {
+  flex-wrap: nowrap;
+  gap: 0.34rem;
+  min-width: 0;
+}
+
 .ability-row-label,
 .condition-level-title,
 .mini-number-field span,
@@ -970,6 +976,12 @@ label,
 .ability-card-title {
   flex: 1 1 auto;
   min-width: 0;
+}
+
+.ability-card-header .proficiency-toggle-button {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: 0 0 0.95rem;
 }
 
 .skill-meta {

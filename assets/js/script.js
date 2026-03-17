@@ -1692,7 +1692,7 @@
       return;
     }
 
-    fitTextCollection('.ability-card-title', 7.4);
+    fitTextCollection('.ability-card-title', 6.2);
     fitTextCollection('.skill-name', 7.2);
   }
 
