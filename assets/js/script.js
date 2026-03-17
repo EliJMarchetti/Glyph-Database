@@ -803,6 +803,10 @@
       setMobileMenu(state.headerOpen);
       render();
     });
+
+    window.addEventListener('resize', () => {
+      window.requestAnimationFrame(fitSheetText);
+    });
   }
 
   function bindResourceEditor({ button, editor, currentInput, maxInput, saveButton, cancelButton, pageIndex, resource, onSave }) {
@@ -1118,6 +1122,7 @@
 
     sheet.append(columns, buildAttacksSection(), buildSecondarySection());
     elements.container.appendChild(sheet);
+    window.requestAnimationFrame(fitSheetText);
   }
 
   function buildAbilityColumn(ability) {
@@ -1680,6 +1685,32 @@
       node.textContent = options.text;
     }
     return node;
+  }
+
+  function fitSheetText() {
+    if (state.currentPage !== 2) {
+      return;
+    }
+
+    fitTextCollection('.ability-card-title', 7.4);
+    fitTextCollection('.skill-name', 7.2);
+  }
+
+  function fitTextCollection(selector, minFontSizePx) {
+    elements.container.querySelectorAll(selector).forEach(node => {
+      node.style.fontSize = '';
+      node.style.letterSpacing = '';
+
+      let fontSize = parseFloat(window.getComputedStyle(node).fontSize);
+      while (node.scrollWidth > node.clientWidth && fontSize > minFontSizePx) {
+        fontSize -= 0.2;
+        node.style.fontSize = `${fontSize}px`;
+      }
+
+      if (node.scrollWidth > node.clientWidth) {
+        node.style.letterSpacing = '0.01em';
+      }
+    });
   }
 
   function updateAttackField(attackId, field, value) {

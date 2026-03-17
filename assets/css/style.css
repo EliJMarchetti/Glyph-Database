@@ -956,6 +956,7 @@ label,
 .skill-name,
 .ability-card-title {
   font-size: 0.66rem;
+  display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
@@ -963,6 +964,11 @@ label,
 }
 
 .skill-name {
+  min-width: 0;
+}
+
+.ability-card-title {
+  flex: 1 1 auto;
   min-width: 0;
 }
 
