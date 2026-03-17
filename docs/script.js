@@ -14,7 +14,7 @@
   const STATE_KEY = 'glyphDatabaseState.v4';
   const LEGACY_STATE_KEYS = ['glyphDatabaseState.v3', 'glyphDatabaseState.v2'];
   const TOTAL_PAGES = 3;
-  const HOLD_DURATION_MS = 3000;
+  const HOLD_DURATION_MS = 1500;
   const SCHOOLS = ['Harmony', 'Elemental', 'Nature', 'Celestial', 'Mind', 'Arcane', 'Chaos', 'Bane'];
   const SCHOOL_COLORS = {
     Harmony: '#ffffff',
@@ -37,31 +37,31 @@
     {
       id: 'constitution',
       label: 'Constitution',
-      feature: { kind: 'heart', label: 'Heart' },
+      feature: { kind: 'heart', label: 'HP' },
       skills: ['endurance']
     },
     {
       id: 'mind',
       label: 'Mind',
-      feature: { kind: 'brain', label: 'Brain', field: 'brain', inputType: 'number', placeholder: '0' },
+      feature: { kind: 'brain', label: 'Madness', field: 'brain', inputType: 'number', placeholder: '0' },
       skills: ['inestigation', 'lore', 'medicine', 'nature', 'profession']
     },
     {
       id: 'strength',
       label: 'Strength',
-      feature: { kind: 'weight', label: 'Weight', field: 'strengthCalc', inputType: 'text', placeholder: 'Pending' },
+      feature: { kind: 'weight', label: 'Carrying', field: 'strengthCalc', inputType: 'text', placeholder: 'Pending' },
       skills: ['athletics', 'intimidation']
     },
     {
       id: 'wellspring',
       label: 'Wellspring',
-      feature: { kind: 'flame', label: 'Flame' },
+      feature: { kind: 'flame', label: 'MP' },
       skills: ['arcana', 'artistry', 'faith', 'intuition', 'ripple']
     },
     {
       id: 'wits',
       label: 'Wits',
-      feature: { kind: 'eye', label: 'Eye', field: 'witsCalc', inputType: 'text', placeholder: 'Pending' },
+      feature: { kind: 'eye', label: 'Passive Wits', field: 'witsCalc', inputType: 'text', placeholder: 'Pending' },
       skills: ['culture', 'empathy', 'perception', 'streetwise', 'manipulation']
     }
   ];
@@ -1454,15 +1454,50 @@
       blockNode.appendChild(createNode('h3', { className: 'resistance-block-title', text: block.title }));
       const chips = createNode('div', { className: 'resistance-chip-grid' });
 
-      block.items.forEach(itemId => {
-        chips.appendChild(buildResistanceChip(itemId));
-      });
+      if (block.id === 'physical') {
+        ['bludgeoning', 'piercing', 'slashing'].forEach(itemId => {
+          chips.appendChild(buildResistanceChip(itemId));
+        });
+        chips.appendChild(buildBleedAugmentGroup());
+      } else {
+        block.items.forEach(itemId => {
+          chips.appendChild(buildResistanceChip(itemId));
+        });
+      }
 
       blockNode.appendChild(chips);
       section.appendChild(blockNode);
     });
 
     return section;
+  }
+
+  function buildBleedAugmentGroup() {
+    const group = createNode('div', { className: 'bleed-augment-group' });
+    group.appendChild(buildResistanceChip('bleed'));
+
+    const augment = createNode('div', {
+      className: `resistance-chip resistance-chip-custom resistance-${state.sheet.resistances.statuses.physicalOther}`
+    });
+    augment.addEventListener('dblclick', () => openResistanceEditor('physicalOther'));
+    augment.style.color = RESISTANCE_META[state.sheet.resistances.statuses.physicalOther].color;
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'resistance-custom-input';
+    input.value = state.sheet.resistances.physicalOtherLabel;
+    input.placeholder = 'Augment';
+    input.addEventListener('dblclick', event => {
+      event.stopPropagation();
+      openResistanceEditor('physicalOther');
+    });
+    input.addEventListener('change', event => {
+      state.sheet.resistances.physicalOtherLabel = sanitizeShortText(event.target.value, 30);
+      saveState();
+    });
+    augment.appendChild(input);
+    group.appendChild(augment);
+    return group;
   }
 
   function buildResistanceChip(itemId) {
@@ -2286,7 +2321,7 @@
     const ratio = state.mana.max ? state.mana.current / state.mana.max : 0;
     const visuals = buildManaVisuals();
 
-    elements.manaReadout.textContent = `${state.mana.current} / ${state.mana.max}`;
+    elements.manaReadout.textContent = `Mana ${state.mana.current}/${state.mana.max}`;
     elements.manaBarFill.style.setProperty('--mana-fill-ratio', String(ratio));
     applyManaTexture(elements.manaBarFill, visuals);
     applyManaTexture(elements.longRestButton, visuals);
@@ -2298,14 +2333,16 @@
     const hpRatio = state.hp.max ? state.hp.current / state.hp.max : 0;
     const tempRatio = state.hp.max ? Math.min(state.hp.temp / state.hp.max, 1) : 0;
     const sparkles = buildHpSparkles();
+    const chaosCount = CONDITIONS.filter(condition => state.sheet.conditions.toggles[condition.id]).length;
 
-    elements.hpReadout.textContent = `${state.hp.current} / ${state.hp.max}`;
+    elements.hpReadout.textContent = `Hitpoints ${state.hp.current}/${state.hp.max}`;
     elements.tempHpValue.textContent = String(state.hp.temp);
     elements.shortRestSummary.textContent = `${state.hp.shortRestDie.toUpperCase()} + CON`;
     elements.hpBarFill.style.setProperty('--hp-fill-ratio', String(hpRatio));
     elements.hpTempOverlay.style.setProperty('--hp-temp-ratio', String(tempRatio));
     elements.hpTempOverlay.hidden = state.hp.temp <= 0;
     elements.hpConditionSparkles.style.setProperty('--hp-condition-sparkles', sparkles);
+    elements.hpConditionSparkles.style.setProperty('--condition-chaos', String(Math.max(1, chaosCount)));
     elements.hpConditionSparkles.hidden = sparkles === 'none';
     elements.hpMortalityMarks.textContent = Array.from(
       { length: state.sheet.conditions.mortality },

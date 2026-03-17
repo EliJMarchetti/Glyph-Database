@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- BUILD STAMP: 2026-03-16 12:30:00 -->
+  <!-- BUILD STAMP: 2026-03-16 13:10:00 -->
   <meta charset="UTF-8" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glyph Database</title>
-  <link rel="stylesheet" href="style.css?v=202603161230">
+  <link rel="stylesheet" href="style.css?v=202603161310">
 </head>
 <body>
   <div id="bg-fallback" style="background-image: url('./topo-bg.jpg');"></div>
@@ -44,13 +44,14 @@
         <div class="mana-dashboard">
           <div
             id="manaReadoutButton"
-            class="mana-readout-button"
+            class="mana-bar-shell resource-bar-button"
             role="button"
             tabindex="0"
             aria-expanded="false"
             aria-label="Edit current and maximum mana"
           >
-            <div id="manaReadout" class="mana-readout">7 / 7</div>
+            <div id="manaBarFill" class="mana-bar-fill"></div>
+            <div id="manaReadout" class="resource-bar-readout">Mana 7/7</div>
             <div id="manaMathEditor" class="mana-math-editor resource-math-editor">
               <label class="mana-math-field" for="manaCurrentInput">
                 <span>Current Mana</span>
@@ -65,14 +66,6 @@
                 <button id="manaMathSave" class="mana-mini-button" type="button">Apply</button>
               </div>
             </div>
-          </div>
-
-          <div
-            id="manaBarShell"
-            class="mana-bar-shell"
-          >
-            <div id="manaBarFill" class="mana-bar-fill"></div>
-            <div class="mana-bar-label">Mana</div>
           </div>
 
           <div class="mana-control-stack">
@@ -93,13 +86,17 @@
         <div class="hp-dashboard">
           <div
             id="hpReadoutButton"
-            class="mana-readout-button hp-readout-button"
+            class="hp-bar-shell resource-bar-button"
             role="button"
             tabindex="0"
             aria-expanded="false"
             aria-label="Edit current and maximum hitpoints"
           >
-            <div id="hpReadout" class="mana-readout">12 / 12</div>
+            <div id="hpBarFill" class="hp-bar-fill"></div>
+            <div id="hpTempOverlay" class="hp-temp-overlay" hidden></div>
+            <div id="hpConditionSparkles" class="hp-condition-sparkles" hidden></div>
+            <div id="hpMortalityMarks" class="hp-mortality-marks"></div>
+            <div id="hpReadout" class="resource-bar-readout">Hitpoints 12/12</div>
             <div id="hpMathEditor" class="mana-math-editor resource-math-editor">
               <label class="mana-math-field" for="hpCurrentInput">
                 <span>Current HP</span>
@@ -114,14 +111,6 @@
                 <button id="hpMathSave" class="mana-mini-button" type="button">Apply</button>
               </div>
             </div>
-          </div>
-
-          <div id="hpBarShell" class="hp-bar-shell">
-            <div id="hpBarFill" class="hp-bar-fill"></div>
-            <div id="hpTempOverlay" class="hp-temp-overlay" hidden></div>
-            <div id="hpConditionSparkles" class="hp-condition-sparkles" hidden></div>
-            <div id="hpMortalityMarks" class="hp-mortality-marks"></div>
-            <div class="mana-bar-label">Hitpoints</div>
           </div>
 
           <div class="hp-control-grid">
@@ -149,17 +138,16 @@
               <span id="hpLongRestTallies" class="long-rest-tallies"></span>
             </button>
 
-            <div class="hp-adjuster">
-              <button id="hpAdjustMinusButton" class="hold-button hp-adjust-button" type="button">-</button>
-              <input id="hpAdjustValue" class="hp-adjust-value" type="number" min="0" step="1" inputmode="numeric" value="1" />
-              <button id="hpAdjustPlusButton" class="hold-button hp-adjust-button" type="button">+</button>
+            <div class="hp-adjust-stack">
+              <div class="hp-adjuster">
+                <button id="hpAdjustMinusButton" class="hold-button hp-adjust-button" type="button">-</button>
+                <input id="hpAdjustValue" class="hp-adjust-value" type="number" min="0" step="1" inputmode="numeric" value="1" />
+                <button id="hpAdjustPlusButton" class="hold-button hp-adjust-button" type="button">+</button>
+              </div>
+              <button id="tempHpButton" class="mana-mini-button temp-hp-button" type="button">
+                Temp HP: <span id="tempHpValue">0</span>
+              </button>
             </div>
-          </div>
-
-          <div class="hp-meta-row">
-            <button id="tempHpButton" class="mana-mini-button temp-hp-button" type="button">
-              Temp HP: <span id="tempHpValue">0</span>
-            </button>
           </div>
         </div>
       </div>
@@ -196,7 +184,7 @@
     </div>
   </div>
 
-  <script src="script.js?v=202603161230"></script>
+  <script src="script.js?v=202603161310"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(regs =>

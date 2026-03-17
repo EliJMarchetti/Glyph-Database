@@ -469,30 +469,9 @@ label,
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "readout"
     "bar"
     "controls";
   gap: 0.85rem;
-}
-
-.mana-readout-button {
-  grid-area: readout;
-  position: relative;
-  display: inline-flex;
-  align-self: flex-start;
-  flex-direction: column;
-  gap: 0.6rem;
-  padding: 0.6rem 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 0.7rem;
-  background: rgba(255, 255, 255, 0.08);
-  cursor: pointer;
-}
-
-.mana-readout {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .mana-math-editor {
@@ -510,7 +489,7 @@ label,
   box-shadow: 0 0.65rem 1.5rem rgba(0, 0, 0, 0.35);
 }
 
-.mana-readout-button.is-editing .mana-math-editor {
+.resource-bar-button.is-editing .mana-math-editor {
   display: grid;
 }
 
@@ -545,6 +524,19 @@ label,
   justify-content: center;
   padding: 0.5rem 1rem;
   text-align: center;
+}
+
+.resource-bar-button {
+  cursor: pointer;
+}
+
+.resource-bar-readout {
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  pointer-events: none;
 }
 
 .mana-bar-fill {
@@ -676,8 +668,9 @@ label,
 .hp-bar-shell {
   position: relative;
   overflow: hidden;
-  min-height: 3.8rem;
-  border-radius: 999px;
+  width: 100%;
+  min-height: 4.15rem;
+  border-radius: 0.8rem;
   background: rgba(70, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.75);
   display: flex;
@@ -716,28 +709,38 @@ label,
 
 .hp-mortality-marks {
   position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+  left: 50%;
+  top: 0.2rem;
+  transform: translateX(-50%);
+  z-index: 3;
   color: rgba(0, 0, 0, 0.95);
-  text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.35);
+  text-shadow: 0 0 0.35rem rgba(255, 255, 255, 0.5);
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  pointer-events: none;
 }
 
 .hp-control-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.75rem;
+  align-items: start;
 }
 
 .hp-action-button,
 .hp-adjust-button {
-  min-height: 4.4rem;
+  min-height: 3.5rem;
 }
 
 .short-rest-control {
   display: grid;
   gap: 0.4rem;
+}
+
+.hp-adjust-stack {
+  display: grid;
+  gap: 0.35rem;
 }
 
 .short-rest-select,
@@ -769,8 +772,8 @@ label,
 
 .hp-adjust-value {
   text-align: center;
-  min-height: 4.4rem;
-  font-size: 1.05rem;
+  min-height: 3.5rem;
+  font-size: 0.98rem;
 }
 
 .hp-meta-row {
@@ -778,7 +781,10 @@ label,
 }
 
 .temp-hp-button {
-  padding: 0.65rem 0.95rem;
+  min-height: 2rem;
+  padding: 0.28rem 0.6rem;
+  font-size: 0.74rem;
+  width: 100%;
 }
 
 .long-rest-tallies {
@@ -799,6 +805,7 @@ label,
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0.85rem;
+  align-items: start;
 }
 
 .ability-column,
@@ -811,8 +818,9 @@ label,
 
 .ability-column {
   display: grid;
-  grid-template-rows: minmax(8rem, auto) minmax(10rem, auto) 1fr;
-  gap: 0.8rem;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+  gap: 0.55rem;
 }
 
 .feature-card,
@@ -820,18 +828,20 @@ label,
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 0.8rem;
-  padding: 0.8rem;
+  padding: 0.65rem;
+  overflow: hidden;
 }
 
 .feature-shape {
-  min-height: 7rem;
+  min-height: 5.1rem;
   border: 1px solid rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.06);
   display: grid;
   place-items: center;
-  gap: 0.35rem;
-  padding: 0.9rem;
+  gap: 0.2rem;
+  padding: 0.55rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .feature-shape-shield {
@@ -870,7 +880,7 @@ label,
 .feature-input {
   width: 100%;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.96rem;
 }
 
 .ability-card,
@@ -934,12 +944,17 @@ label,
 
 .skill-line {
   display: grid;
-  grid-template-columns: auto auto 1fr;
-  gap: 0.55rem;
+  grid-template-columns: auto 2.1rem minmax(0, 1fr);
+  gap: 0.38rem;
   align-items: center;
-  padding: 0.45rem 0.5rem;
+  padding: 0.3rem 0.38rem;
   border-radius: 0.55rem;
   background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-name,
+.ability-card-title {
+  font-size: 0.84rem;
 }
 
 .skill-meta {
@@ -972,13 +987,26 @@ label,
 
 .attack-row {
   display: grid;
-  grid-template-columns: 2fr 1fr 0.6fr 0.6fr 4fr auto;
+  grid-template-columns: 2.5fr 1.25fr 0.9fr 0.9fr 5fr auto;
   gap: 0.4rem;
   align-items: center;
 }
 
 .attack-row-header {
   font-size: 0.74rem;
+}
+
+.attack-cell {
+  min-width: 0;
+}
+
+.attack-row-header .attack-cell {
+  text-align: left;
+  padding-left: 0.15rem;
+}
+
+.attack-input {
+  width: 100%;
 }
 
 .multi-select-grid {
@@ -1034,9 +1062,60 @@ label,
 .resistance-chip {
   min-height: 2.7rem;
   padding: 0.45rem 0.55rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.24);
   border-radius: 0.55rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resistance-resistance {
+  border-color: #3ddc84;
+  background: rgba(61, 220, 132, 0.16);
+  box-shadow: 0 0 0.5rem rgba(61, 220, 132, 0.55);
+}
+
+.resistance-vulnerability {
+  border-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.16);
+  box-shadow: 0 0 0.5rem rgba(255, 107, 107, 0.55);
+}
+
+.resistance-immunity {
+  border-color: #595959;
+  background: rgba(89, 89, 89, 0.2);
+  box-shadow: 0 0 0.5rem rgba(89, 89, 89, 0.55);
+}
+
+.bleed-augment-group {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.bleed-augment-group .resistance-chip {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.bleed-augment-group .resistance-chip-custom {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.resistance-chip-custom {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.resistance-custom-input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
 }
 
 .resistance-block + .resistance-block {
@@ -1092,6 +1171,14 @@ label,
   gap: 0.35rem;
 }
 
+.hp-condition-sparkles {
+  background-size: calc(115% + (var(--condition-chaos, 1) * 10%));
+  animation:
+    mana-flow calc(10s - (var(--condition-chaos, 1) * 0.45s)) linear infinite,
+    mana-flicker calc(1.6s - (var(--condition-chaos, 1) * 0.05s)) steps(4, end) infinite,
+    condition-chaos calc(4.8s - (var(--condition-chaos, 1) * 0.15s)) ease-in-out infinite alternate;
+}
+
 @keyframes mana-flow {
   0% {
     background-position: 0% 35%, 0% 50%, 0% 50%;
@@ -1121,6 +1208,23 @@ label,
 
   100% {
     filter: brightness(1.14) saturate(1.08);
+  }
+}
+
+@keyframes condition-chaos {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: translate3d(-1.5%, 2%, 0) scale(1.03);
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: translate3d(2%, -2%, 0) scale(0.98);
+    opacity: 0.8;
   }
 }
 
@@ -1319,13 +1423,11 @@ label,
   }
 
   .mana-dashboard {
-    grid-template-columns: 4.75rem minmax(0, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "bar readout"
-      "bar controls";
-    align-items: stretch;
-    column-gap: 1rem;
-    min-height: min(65dvh, 30rem);
+      "bar"
+      "controls";
+    min-height: auto;
   }
 
   .hp-control-grid,
@@ -1344,10 +1446,6 @@ label,
 
   .feature-shape {
     min-height: 5.8rem;
-  }
-
-  .mana-readout-button {
-    width: 100%;
   }
 
   .mana-math-editor {
