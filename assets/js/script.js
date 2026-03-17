@@ -340,15 +340,18 @@
       ),
       attacks: [createAttack()],
       proficiencies: Object.fromEntries(PROFICIENCY_GROUPS.map(group => [group.id, []])),
+      customOptions: Object.fromEntries(PROFICIENCY_GROUPS.map(group => [group.id, []])),
       senses: {
         selectedRanges: [],
         ranges: Object.fromEntries(SENSE_RANGE_OPTIONS.map(option => [option.id, ''])),
-        traits: []
+        traits: [],
+        customRanges: [],
+        customTraits: []
       },
       speeds: Object.fromEntries(SPEED_TYPES.map(speed => [speed.id, ''])),
       resistances: {
         statuses: Object.fromEntries(Object.keys(RESISTANCE_LABELS).map(key => [key, 'none'])),
-        physicalOtherLabel: ''
+        bleedPoints: ''
       },
       conditions: {
         toggles: Object.fromEntries(CONDITIONS.map(condition => [condition.id, false])),
@@ -490,20 +493,50 @@
       ? rawSheet.attacks.map(attack => sanitizeAttack(attack)).filter(Boolean)
       : defaults.attacks;
 
+    const customOptions = Object.fromEntries(
+      PROFICIENCY_GROUPS.map(group => {
+        const rawCustom = Array.isArray(rawSheet?.customOptions?.[group.id]) ? rawSheet.customOptions[group.id] : [];
+        return [group.id, uniqueStrings(rawCustom).map(value => sanitizeShortText(value, 40)).filter(Boolean)];
+      })
+    );
+
     const proficiencies = Object.fromEntries(
       PROFICIENCY_GROUPS.map(group => {
         const selected = Array.isArray(rawSheet?.proficiencies?.[group.id])
           ? rawSheet.proficiencies[group.id]
           : [];
-        return [group.id, uniqueStrings(selected).filter(option => group.options.includes(option))];
+        const allowed = new Set([
+          ...group.options.filter(option => option !== 'Other'),
+          ...customOptions[group.id]
+        ]);
+        return [group.id, uniqueStrings(selected).filter(option => allowed.has(option))];
       })
     );
 
+    const customRanges = Array.isArray(rawSheet?.senses?.customRanges)
+      ? rawSheet.senses.customRanges
+        .map(range => ({
+          id: sanitizeShortText(range?.id || `custom-range-${Date.now()}`, 60),
+          label: sanitizeShortText(range?.label, 40)
+        }))
+        .filter(range => range.id && range.label)
+      : [];
+
+    const customTraits = uniqueStrings(rawSheet?.senses?.customTraits || [])
+      .map(value => sanitizeShortText(value, 40))
+      .filter(Boolean);
+
+    const allowedRangeIds = new Set([
+      ...SENSE_RANGE_OPTIONS.filter(option => option.id !== 'otherSense').map(option => option.id),
+      ...customRanges.map(option => option.id)
+    ]);
+
     const selectedRanges = uniqueStrings(rawSheet?.senses?.selectedRanges || [])
-      .filter(optionId => SENSE_RANGE_OPTIONS.some(option => option.id === optionId));
+      .filter(optionId => allowedRangeIds.has(optionId));
 
     const ranges = Object.fromEntries(
-      SENSE_RANGE_OPTIONS.map(option => [option.id, sanitizeOptionalNumber(rawSheet?.senses?.ranges?.[option.id])])
+      [...SENSE_RANGE_OPTIONS.filter(option => option.id !== 'otherSense'), ...customRanges]
+        .map(option => [option.id, sanitizeOptionalNumber(rawSheet?.senses?.ranges?.[option.id])])
     );
 
     const speeds = Object.fromEntries(
@@ -529,16 +562,19 @@
       skills,
       attacks: attacks.length ? attacks : defaults.attacks,
       proficiencies,
+      customOptions,
       senses: {
         selectedRanges,
         ranges,
         traits: uniqueStrings(rawSheet?.senses?.traits || [])
-          .filter(trait => SENSE_TRAITS.includes(trait))
+          .filter(trait => [...SENSE_TRAITS.filter(item => item !== 'Other'), ...customTraits].includes(trait)),
+        customRanges,
+        customTraits
       },
       speeds,
       resistances: {
         statuses,
-        physicalOtherLabel: sanitizeShortText(rawSheet?.resistances?.physicalOtherLabel)
+        bleedPoints: sanitizeOptionalNumber(rawSheet?.resistances?.bleedPoints)
       },
       conditions: {
         toggles: Object.fromEntries(
@@ -1323,12 +1359,21 @@
     summary.append(summaryLabel, summaryValue);
 
     const options = createNode('div', { className: 'multi-select-options' });
-    group.options.forEach(option => {
+    [...group.options, ...state.sheet.customOptions[group.id]].forEach(option => {
       const label = createNode('label', { className: 'multi-select-option' });
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.checked = state.sheet.proficiencies[group.id].includes(option);
       checkbox.addEventListener('change', event => {
+        if (option === 'Other') {
+          event.target.checked = false;
+          openCustomEntryModal({
+            kind: 'proficiency',
+            groupId: group.id,
+            title: group.label
+          });
+          return;
+        }
         toggleSelection(state.sheet.proficiencies[group.id], option, event.target.checked);
         summaryValue.textContent = formatSelectedList(state.sheet.proficiencies[group.id]);
         saveState();
@@ -1381,7 +1426,13 @@
     rangeSummary.append(createNode('span', { text: 'Range Senses' }), rangeSummaryValue);
 
     const rangeOptions = createNode('div', { className: 'sense-range-options' });
-    SENSE_RANGE_OPTIONS.forEach(option => {
+    const rangeOptionsList = [
+      ...SENSE_RANGE_OPTIONS.filter(option => option.id !== 'otherSense'),
+      ...state.sheet.senses.customRanges,
+      { id: 'otherSense', label: 'Other' }
+    ];
+
+    rangeOptionsList.forEach(option => {
       const row = createNode('label', { className: 'sense-range-row' });
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
@@ -1394,6 +1445,14 @@
       number.disabled = !checkbox.checked;
       number.value = state.sheet.senses.ranges[option.id];
       checkbox.addEventListener('change', event => {
+        if (option.id === 'otherSense') {
+          event.target.checked = false;
+          openCustomEntryModal({
+            kind: 'senseRange',
+            title: 'Range Sense'
+          });
+          return;
+        }
         toggleSelection(state.sheet.senses.selectedRanges, option.id, event.target.checked);
         if (!event.target.checked) {
           state.sheet.senses.ranges[option.id] = '';
@@ -1426,12 +1485,20 @@
     traitSummary.append(createNode('span', { text: 'Sense Traits' }), traitSummaryValue);
 
     const traitOptions = createNode('div', { className: 'multi-select-options' });
-    SENSE_TRAITS.forEach(trait => {
+    [...SENSE_TRAITS, ...state.sheet.senses.customTraits].forEach(trait => {
       const label = createNode('label', { className: 'multi-select-option' });
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.checked = state.sheet.senses.traits.includes(trait);
       checkbox.addEventListener('change', event => {
+        if (trait === 'Other') {
+          event.target.checked = false;
+          openCustomEntryModal({
+            kind: 'senseTrait',
+            title: 'Sense Trait'
+          });
+          return;
+        }
         toggleSelection(state.sheet.senses.traits, trait, event.target.checked);
         traitSummaryValue.textContent = formatSelectedList(state.sheet.senses.traits);
         saveState();
@@ -1474,29 +1541,27 @@
 
   function buildBleedAugmentGroup() {
     const group = createNode('div', { className: 'bleed-augment-group' });
-    group.appendChild(buildResistanceChip('bleed'));
+    const bleedChip = buildResistanceChip('bleed');
+    group.appendChild(bleedChip);
 
-    const augment = createNode('div', {
-      className: `resistance-chip resistance-chip-custom resistance-${state.sheet.resistances.statuses.physicalOther}`
+    const bleedStatus = state.sheet.resistances.statuses.bleed;
+    const points = createNode('div', {
+      className: `resistance-chip resistance-chip-custom resistance-${bleedStatus}`
     });
-    augment.addEventListener('dblclick', () => openResistanceEditor('physicalOther'));
-    augment.style.color = RESISTANCE_META[state.sheet.resistances.statuses.physicalOther].color;
+    points.style.color = RESISTANCE_META[bleedStatus].color;
 
     const input = document.createElement('input');
-    input.type = 'text';
+    input.type = 'number';
+    input.min = '0';
     input.className = 'resistance-custom-input';
-    input.value = state.sheet.resistances.physicalOtherLabel;
-    input.placeholder = 'Augment';
-    input.addEventListener('dblclick', event => {
-      event.stopPropagation();
-      openResistanceEditor('physicalOther');
-    });
+    input.value = state.sheet.resistances.bleedPoints;
+    input.placeholder = 'Bleed Points';
     input.addEventListener('change', event => {
-      state.sheet.resistances.physicalOtherLabel = sanitizeShortText(event.target.value, 30);
+      state.sheet.resistances.bleedPoints = sanitizeOptionalNumber(event.target.value);
       saveState();
     });
-    augment.appendChild(input);
-    group.appendChild(augment);
+    points.appendChild(input);
+    group.appendChild(points);
     return group;
   }
 
@@ -1508,22 +1573,7 @@
     chip.type = 'button';
     chip.addEventListener('dblclick', () => openResistanceEditor(itemId));
 
-    if (itemId === 'physicalOther') {
-      chip.classList.add('resistance-chip-custom');
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.className = 'resistance-custom-input';
-      input.value = state.sheet.resistances.physicalOtherLabel;
-      input.placeholder = 'Other';
-      input.addEventListener('click', event => event.stopPropagation());
-      input.addEventListener('change', event => {
-        state.sheet.resistances.physicalOtherLabel = sanitizeShortText(event.target.value, 30);
-        saveState();
-      });
-      chip.appendChild(input);
-    } else {
-      chip.textContent = RESISTANCE_LABELS[itemId];
-    }
+    chip.textContent = RESISTANCE_LABELS[itemId];
 
     chip.style.color = RESISTANCE_META[status].color;
     chip.title = 'Double-click to set resistance state';
@@ -1665,7 +1715,8 @@
 
   function formatSenseRanges() {
     const parts = state.sheet.senses.selectedRanges.map(optionId => {
-      const option = SENSE_RANGE_OPTIONS.find(item => item.id === optionId);
+      const option = SENSE_RANGE_OPTIONS.find(item => item.id === optionId)
+        || state.sheet.senses.customRanges.find(item => item.id === optionId);
       const distance = state.sheet.senses.ranges[optionId];
       return distance ? `${option.label} ${distance}'` : option.label;
     });
@@ -1696,8 +1747,15 @@
     modalState = {
       type: 'resistance',
       resistanceId,
-      status: state.sheet.resistances.statuses[resistanceId],
-      label: resistanceId === 'physicalOther' ? state.sheet.resistances.physicalOtherLabel : ''
+      status: state.sheet.resistances.statuses[resistanceId]
+    };
+    renderModal();
+  }
+
+  function openCustomEntryModal(config) {
+    modalState = {
+      type: 'customEntry',
+      ...config
     };
     renderModal();
   }
@@ -1725,9 +1783,53 @@
       renderTempHpModal();
     } else if (modalState.type === 'skill') {
       renderSkillModal();
+    } else if (modalState.type === 'customEntry') {
+      renderCustomEntryModal();
     } else if (modalState.type === 'resistance') {
       renderResistanceModal();
     }
+  }
+
+  function renderCustomEntryModal() {
+    elements.sheetModalTitle.textContent = `Define ${modalState.title}`;
+
+    const field = createNode('label', { className: 'modal-field' });
+    field.appendChild(createNode('span', { text: 'Custom label' }));
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'modal-input';
+    input.placeholder = 'Enter a custom name';
+    input.dataset.autofocus = 'true';
+    field.appendChild(input);
+    elements.sheetModalBody.appendChild(field);
+
+    elements.sheetModalActions.append(
+      buildModalButton('Cancel', closeModal),
+      buildModalButton('Add', () => {
+        const value = sanitizeShortText(input.value, 40).trim();
+        if (!value) {
+          return;
+        }
+
+        if (modalState.kind === 'proficiency') {
+          toggleSelection(state.sheet.customOptions[modalState.groupId], value, true);
+          toggleSelection(state.sheet.proficiencies[modalState.groupId], value, true);
+        } else if (modalState.kind === 'senseTrait') {
+          toggleSelection(state.sheet.senses.customTraits, value, true);
+          toggleSelection(state.sheet.senses.traits, value, true);
+        } else if (modalState.kind === 'senseRange') {
+          const id = `custom-range-${Date.now()}`;
+          state.sheet.senses.customRanges.push({ id, label: value });
+          state.sheet.senses.ranges[id] = '';
+          toggleSelection(state.sheet.senses.selectedRanges, id, true);
+        }
+
+        closeModal();
+        render();
+      }, true)
+    );
+
+    focusModalInput();
   }
 
   function renderTempHpModal() {
@@ -1807,24 +1909,8 @@
   }
 
   function renderResistanceModal() {
-    const label = modalState.resistanceId === 'physicalOther'
-      ? 'Other Physical Damage'
-      : RESISTANCE_LABELS[modalState.resistanceId];
+    const label = RESISTANCE_LABELS[modalState.resistanceId];
     elements.sheetModalTitle.textContent = label;
-
-    let labelInput = null;
-    if (modalState.resistanceId === 'physicalOther') {
-      const field = createNode('label', { className: 'modal-field' });
-      field.appendChild(createNode('span', { text: 'Custom label' }));
-      labelInput = document.createElement('input');
-      labelInput.type = 'text';
-      labelInput.className = 'modal-input';
-      labelInput.value = modalState.label;
-      labelInput.placeholder = 'Other';
-      labelInput.dataset.autofocus = 'true';
-      field.appendChild(labelInput);
-      elements.sheetModalBody.appendChild(field);
-    }
 
     const statuses = createNode('div', { className: 'resistance-modal-options' });
     Object.entries(RESISTANCE_META).forEach(([statusKey, meta]) => {
@@ -1845,9 +1931,6 @@
       buildModalButton('Save', () => {
         const selected = elements.sheetModalBody.querySelector('input[name="resistanceStatus"]:checked');
         state.sheet.resistances.statuses[modalState.resistanceId] = selected ? selected.value : 'none';
-        if (labelInput) {
-          state.sheet.resistances.physicalOtherLabel = sanitizeShortText(labelInput.value, 30);
-        }
         closeModal();
         render();
       }, true)
@@ -2194,6 +2277,7 @@
     state.mana.current = state.mana.max;
     state.hp.current = state.hp.max;
     state.hp.temp = 0;
+    state.sheet.conditions.exhaustion = clampNumber(state.sheet.conditions.exhaustion - 1, 0, 6, 0);
     render();
   }
 

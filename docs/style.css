@@ -872,7 +872,7 @@ label,
 }
 
 .feature-label {
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   color: var(--text-dim);
 }
 
@@ -917,7 +917,7 @@ label,
 }
 
 .ability-static {
-  font-size: 1.05rem;
+  font-size: 0.96rem;
 }
 
 .proficiency-toggle-button {
@@ -950,16 +950,22 @@ label,
   padding: 0.3rem 0.38rem;
   border-radius: 0.55rem;
   background: rgba(255, 255, 255, 0.05);
+  min-width: 0;
 }
 
 .skill-name,
 .ability-card-title {
-  font-size: 0.84rem;
+  font-size: 0.76rem;
+  overflow-wrap: anywhere;
+}
+
+.skill-name {
+  min-width: 0;
 }
 
 .skill-meta {
   grid-column: 1 / -1;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
 }
 
 .sheet-action-button,
@@ -1002,7 +1008,14 @@ label,
 
 .attack-row-header .attack-cell {
   text-align: left;
-  padding-left: 0.15rem;
+  padding-left: 0.35rem;
+}
+
+.attack-row-header .attack-col-2,
+.attack-row-header .attack-col-3,
+.attack-row-header .attack-col-4,
+.attack-row-header .attack-col-5 {
+  padding-left: 0.5rem;
 }
 
 .attack-input {
@@ -1114,8 +1127,9 @@ label,
   width: 100%;
   background: transparent;
   border: 0;
-  padding: 0;
+  padding: 0 0.1rem;
   border-radius: 0;
+  text-align: center;
 }
 
 .resistance-block + .resistance-block {
