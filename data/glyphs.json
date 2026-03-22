@@ -4400,6 +4400,22 @@
     "Ignore": "When you cast this Glyph using a Glyph slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
   },
   {
+    "Name": "Fracture",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "New Text": "You inscribe or invoke a glyph of entropy that weakens the structure, balance, and integrity of worn gear, wielded weapons, or constructed bodies. Choose one creature or object you can see within range. The target must make a Constitution saving throw. On a failed save, choose one of the following effects:\n\nFracture Armor: The target’s armor, shell, hide, or defensive structure is compromised. It takes a -2 penalty to AC for the duration.\n\nDull Edge: One weapon the target is wielding, or one of its natural weapons, becomes unbalanced or partially blunted. The target suffers a -2 penalty to attack rolls made with that weapon for the duration.\n\nStructural Collapse: If the target is an object or construct, it takes 4d6 force damage, and its speed is halved for the duration.\n\nA creature affected by this glyph may repeat the saving throw at the end of each of its turns, ending the effect on a success.",
+    "Higher Tiers": "When you cast this Glyph using a tier 4 or higher, the glyph gains additional benefits based on the level of the slot used:\n\ntier 4: You can target one additional creature or object.\n\ntier 6: The penalty imposed by Fracture Armor or Dull Edge increases to −3, and the damage dealt by Structural Collapse increases to 6d6.\n\ntier 7: You can target one additional creature or object.\n\ntier 9: The penalty imposed by Fracture Armor or Dull Edge increases to −4, and the damage dealt by Structural Collapse increases to 8d6.",
+    "Ignore": ""
+  },
+  {
     "Name": "Freedom of Movement",
     "Tier": 5,
     "Points": 21,
@@ -8096,6 +8112,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Rend",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "New Text": "You send a brief pulse of disruptive force into a creature’s gear, armor, or physical balance. Choose one creature you can see within range. The target must succeed on a Strength saving throw or suffer one of the following effects of your choice:\n\nGlitch Guard: The next attack roll made against the target before the start of your next turn gains a +1 bonus to hit.\n\nSystem Lag: The target suffers a -2 penalty to its next attack roll before the start of your next turn.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Resilient Sphere",
     "Tier": 5,
     "Points": 21,
@@ -9454,6 +9486,22 @@
     "New Text": "You invoke the searing power of the sun, targeting a creature you can see within 60 feet that is either outdoors in bright sunlight or within an area illuminated by an artificial sunlight effect (such as the daylight glyph).\n \n The target must make a Constitution saving throw. On a failed save, the creature takes 2d8 fire damage and 2d8 radiant damage. Or takes half damage on a successful one.",
     "Higher Tiers": "When you cast this glyph using a glyph of Tier 3 or higher, the fire and radiant damage each increase by 1d8 for every tier above Tier 2.",
     "Ignore": "When you cast this glyph using a glyph of Tier 3 or higher, the fire and radiant damage each increase by 1d8 for every tier above Tier 2."
+  },
+  {
+    "Name": "Supernova",
+    "Tier": 12,
+    "Points": 90,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "3 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "300 Feet",
+    "Rite": false,
+    "New Text": "Choose a point within range. A 60-foot-radius sphere centered on that point becomes the heart of the supernova. Each creature in the area must make an Agility saving throw. A creature takes 20d10 fire damage, 20d10 radiant damage, and 20d10 force damage on a failed save, or half as much damage on a successful one.\n\nObjects and structures in the area take the damage automatically. Nonmagical objects that are not being worn or carried are disintegrated if this glyph reduces them to 0 hit points. Structures take double damage.\n\nThe area of the explosion becomes flooded with searing stellar residue until the end of your next turn. The area is difficult terrain, and whenever a creature enters the area for the first time on a turn or starts its turn there, it takes 6d10 fire damage and 6d10 radiant damage.\n\nA creature reduced to 0 hit points by this glyph is burned into ash, leaving behind only whatever worn or carried equipment the GM deems capable of surviving such force. The creature's Wellspring is vanquished and they cannot be revived.",
+    "Higher Tiers": "",
+    "Ignore": ""
   },
   {
     "Name": "Swift Quiver",
