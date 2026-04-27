@@ -8208,6 +8208,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Ripple Vow",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 Minute",
+    "Concentration": false,
+    "Duration": "Until Broken",
+    "Range": "Touch",
+    "Rite": false,
+    "New Text": "You form a deep magical vow with another willing creature.  The terms of the vow must be known to both creatures.  If either creature voluntarily breaks the conditions of the vow, a burning sigil forms on the hands of both creatures, and both creatures immediately awaken if asleep and know the vow has been broken.  The sigil fades after 1 day.  ",
+    "Higher Tiers": "when you cast this Glyph at Tier 5, the creature who breaks the vow takes 4d6 aetherial damage.  At tier 7, the damage increases to 8d6 and the sigil becomes a permanent mark.  At tier 9, the damage increases to 12d6.  At tier 12, the creature who breaks the vow dies.  ",
+    "Ignore": "When you cast this Glyph at Tier 5, the creature who breaks the vow takes 4d6 aetherial damage.  At tier 7, the damage increases to 8d6 and the sigil becomes a permanent mark.  At tier 9, the damage increases to 12d6.  At tier 12, the creature who breaks the vow dies.  "
+  },
+  {
     "Name": "Rope Trick",
     "Tier": 2,
     "Points": 6,
