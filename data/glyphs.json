@@ -587,7 +587,7 @@
     "Duration": "Instantaneous",
     "Range": "Touch",
     "Rite": false,
-    "New Text": "",
+    "New Text": "You channel a thread of arcane precision through a set of lockpicking tools, allowing magic to guide each minute movement of the mechanism. While picking a lock, add your Wellspring modifier to the VIS of the lockpicking tools for the duration of that lockpicking attempt. Arcane Key does not open the lock automatically; the caster must still possess and use appropriate lockpicking tools and successfully pick the lock normally.",
     "Higher Tiers": "",
     "Ignore": ""
   },
