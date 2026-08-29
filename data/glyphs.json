@@ -1424,6 +1424,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Card Toss",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "New Text": "You conjure and then throw a magical card with a random effect. Make a ranged glyph attack against the target. On a hit, a target is hit by a card of one of the following colors, which each have a unique effect and purpose. For each target, roll a d6 to determine which color card effects it.\n\n    1. Red: The target takes 1d4 + your Wellspring modifier fire damage.\n    2. Orange: The target takes 1d4 + your Wellspring ability modifier acid damage.\n    3. Yellow: The target takes 1d4 + your Wellspring ability modifier lightning damage.\n    4. Green: The target takes 1d4 + your Wellspring ability modifier poison damage.\n    5. Blue: The target takes 1d4 + your Wellspring ability modifier cold damage\n    6. Violet: The target takes 1d4 psychic damage and must succeed on a Constitution saving throw or become blinded until the end of their next turn.\n\nThe glyph creates more than one card when you reach higher levels: two cards at 5th level, three cards at 11th level, and four cards at 17th level. You can direct the cards at the same target or at different ones. Make a separate attack roll for each card.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Catapult",
     "Tier": 1,
     "Points": 3,
@@ -3424,6 +3440,22 @@
     "Ignore": "At Higher Mana Cost. The glyph's damage increases by 1d8 and 1d4 when you reach 5th level (2d8/2d4), 11th level (3d8/3d4)), and 17th level (4d8/4d4)."
   },
   {
+    "Name": "Emotional Echo",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "New Text": "Choose a creature you can see. You immediately sense its strongest current emotion. If it fails a Mind saving throw, you can also determine the general source of that emotion.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Encode Thoughts",
     "Tier": 0,
     "Points": 0,
@@ -3614,6 +3646,22 @@
     "New Text": "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a agility saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd.",
     "Ignore": "When you cast this Glyph using a Glyph slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd."
+  },
+  {
+    "Name": "Eruption of Wellspring",
+    "Tier": 1,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self (30-Foot radius)",
+    "Rite": false,
+    "New Text": "You abandon every restraint placed upon your Wellspring and command the entirety of your life and mana to erupt outward at once.\n\nWhen you invoke this Glyph, your Wellspring becomes momentarily uncontainable. Aether tears through your body and bursts forth in a violent wave centered on you.\n\nEach other creature within a 30-foot radius must make a Wellspring saving throw.\n\nOn a failed save, a creature takes Aetherial damage equal to the sum of your current Hit Points and current Mana Points at the moment the Glyph is invoked. On a successful save, the creature takes half as much damage.\n\nThis damage ignores resistance to Aetherial damage. A creature immune to Aetherial damage instead has its immunity treated as resistance against this damage.\n\nImmediately after the eruption, your maximum Hit Points and maximum Mana Points are each reduced to 1. Your current Hit Points and Mana Points are likewise reduced to 1 if they are higher.\n\nThis reduction cannot be prevented, restored, transferred, or removed by healing, regeneration, restoration magic, or any other effect short of completing a Long Rest. Upon completing a Long Rest, your normal Hit Point and Mana Point maximums are restored.\n\nYou cannot cast this glyph while your maximum Hit Points or maximum Mana Points have been reduced by this Glyph.\n\nThe caster is not damaged by the eruption; the devastation is produced by the Wellspring tearing itself open rather than striking its vessel.",
+    "Higher Tiers": "",
+    "Ignore": ""
   },
   {
     "Name": "Estelle's Flourish",
@@ -5696,6 +5744,22 @@
     "Ignore": "When you cast this Glyph using a Glyph slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
   },
   {
+    "Name": "Inspire",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Harmony",
+    "V": true,
+    "S": false,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "New Text": "Choose one willing humanoid you can see within range. The target gains 1 additional Action Point at the start of its next turn.\n\nA creature can benefit from this glyph only once per round.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Instant Escape",
     "Tier": 3,
     "Points": 6,
@@ -5726,6 +5790,22 @@
     "New Text": "For the duration, you or one willing creature you can see within range has resistance to psychic damage, as well as advantage on mind, wits, and wellspring saving throws.",
     "Higher Tiers": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them.",
     "Ignore": "When you cast this Glyph using a Glyph slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them."
+  },
+  {
+    "Name": "Intrusive Thoughts",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "30 feet",
+    "Rite": false,
+    "New Text": "One creature within range makes a Wellspring saving throw. On a failure, it takes 1d4 Psychic damage and suffers a sudden, distracting thought of your choosing. Until the start of its next turn, the first action it takes costs 1 additional AP. A creature cannot suffer this AP increase more than once per round. This glyph’s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4)",
+    "Higher Tiers": "",
+    "Ignore": ""
   },
   {
     "Name": "Investiture of Flame",
@@ -6028,6 +6108,22 @@
     "Range": "Self",
     "Rite": true,
     "New Text": "You fuel your magic with your own life force, gaining increased glyphcasting but destroying your body in the process. \n \n For the duration or until you choose to end the glyph by spending 1 AP, you lose hit points instead of mana points whenever you cast a glyph of tier 1 or higher, and you may choose to use Constitution as your glyphcasting ability. The number of hit points lost is equal to 2 times the mana spent, and you may not cast a glyph in this way that uses a tier you are unable to cast. This damage ignores temporary hit points.\n \n When you lose hit points in this way, your hit point maximum is reduced by the same amount until you take a long rest. If your hit point maximum is reduced to 0 in this way, you die.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
+    "Name": "Life Siphon ",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "60 feet",
+    "Rite": false,
+    "New Text": "You extend your arm and siphon life energy from one creature’s blood. The target must make a Constitution saving throw against your glyph save DC to resist the effect. If the creature succeeds, the glyph fails and nothing happens. If they fail, they take 1d6 bleed damage and you restore half that many hit points (minimum of 1).\n\nThis glyph has no effect on creatures that are not living or do not use blood to live. At higher levels the glyphs damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
     "Higher Tiers": "",
     "Ignore": ""
   },
@@ -7760,6 +7856,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Psionic Drain",
+    "Tier": 3,
+    "Points": 9,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Touch",
+    "Rite": false,
+    "New Text": "Choose a willing creature with range to consume life force from. Creatures charmed by you count as willing creatures for the effects of this glyph. Deal 4d6 psychic damage to the target and regain hit points equal to the amount of psychic damage dealt. If the target is charmed by you they take an additional 2d6 psychic damage.",
+    "Higher Tiers": "When you cast this glyph using a tier 4 or higher, the damage, and therefore hit points regained, increases by 1d6 for each tier above 3rd.",
+    "Ignore": ""
+  },
+  {
     "Name": "Psychic Lance",
     "Tier": 5,
     "Points": 21,
@@ -8480,6 +8592,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Sensory Severance",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Mind",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "15 feet",
+    "Rite": false,
+    "New Text": "Choose one creature you can see within range and one of the following senses: sight, hearing, touch, taste, or smell.\n\nThe target must make a Mind saving throw. On a failed save, the chosen sense is magically suppressed until the start of your next turn.\n\nThe effect depends on the sense chosen:\n\nSight: The target is Blinded.\nHearing: The target is Deafened.\nTouch: The target becomes completely numb and cannot feel physical sensation, including pain, temperature, pressure, or contact.\nTaste: The target cannot perceive taste.\nSmell: The target cannot perceive smell.\n\nSuppressing touch does not prevent the target from moving or controlling its body, though it cannot perceive anything through physical sensation while the effect lasts.\n\nA creature can be affected by only one instance of Sensory Severance at a time. You can choose an additional sense when you reach 5th level (2 senses), 11th level (3 senses), and 17th level (4 senses).",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Sequester",
     "Tier": 10,
     "Points": 66,
@@ -8800,6 +8928,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Siphoning Scythe",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "touch",
+    "Rite": false,
+    "New Text": "Make a melee glyph attack against a creature within reach. On a hit, Siphoning Scythe tears away a sliver of the target’s wellspring, dealing 1d4 Aetherial damage.\n\nYou regain Hit Points equal to the aetherial damage actually dealt by this effect. This glyph’s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4). At 20th level you add your WELL modifier to the damage.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Skill Empowerment",
     "Tier": 6,
     "Points": 27,
@@ -8860,6 +9004,22 @@
     "Range": "150 feet",
     "Rite": false,
     "New Text": "Until the glyph ends, freezing rain and sleet fali in a 20-foot-tall cylinder with a 40 foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused. The ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the glyph's area for the first time on a turn or starts its turn there, it must make a agility saving throw. On a failed save, it falls prone. If a creature is concentrating in the glyph's area, the creature must make a successful Constitution saving throw against your glyph save DC or lose concentration.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
+    "Name": "Sleight",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Arcane",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "touch",
+    "Rite": false,
+    "New Text": "Up to three Tiny objects weighing a total of 1 pound or less that you touch turn invisible for the duration or until you stop touching the object.",
     "Higher Tiers": "",
     "Ignore": ""
   },
@@ -9086,6 +9246,22 @@
     "New Text": "You spray a 15-foot cone of spectral cards. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d10 force damage and has the blinded condition until the end of its next turn. On a successful save, a creature takes half as much damage only.",
     "Higher Tiers": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended.",
     "Ignore": "At Higher Mana Cost: You can expend extra mana to increase the effects of the glyph, the damage increases by 1d10 for every 3 additional mana expended."
+  },
+  {
+    "Name": "Stagehand",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "1 minute",
+    "Range": "30 feet (10-foot sphere)",
+    "Rite": false,
+    "New Text": "You silently weave a simple magic to aid in theatrical productions or tricks of misdirection and subtlety. You create one of the following magical effects within range:\n\n- You conjure illusory words or images in a 5-foot cube that you can see within range that last for 1 minute. This illusion is invisible, but you can see it as if it were not.\nYou immediately don or doff a piece of armor or clothing that you touch. If you target a costume, you may don or doff the entire costume so long as you have worn it before.\n- You cause a rope in a coil, on a pulley, or in a similar arrangement within range to either lower or raise back up, or cause a knot within range to become untied if that knot can be undone by simply pulling on one end.\n- Choose one creature or object within range. If you cannot see the target, you must instead touch it as part of invoking the glyph. If the target is or is held by an unwilling creature, the creature can make an Agility saving throw to avoid being touched, causing the glyph to fail on a successful save. The target becomes illuminated by your choice of bright or dim light for 1 minute, as if by a spotlight. This light fills the target's space but goes no further and moves with the target, remaining in its space at all times.\n- You create an invisible area of sound projection magic that fills a 10-foot-radius sphere centered on a point you can see within range, lasting 1 minute. Creatures within a number of feet equal to 100 times your wellspring modifier (minimum 100 feet) from the center can hear any sounds generated within the area as loudly and clearly as if they were no further than 5 feet away from the sound.\n- You fasten an object that you are holding in one hand to another object or creature that you touch it to. The object stays affixed to the target as though it were solidly glued there for 1 minute, or until more than 100 lbs. is placed upon the fastening. If the target is or is held by an unwilling creature, the creature can make an Agility saving throw to avoid being touched, causing the glyph to fail on a successful save. This ability never deals damage directly, even if a weapon is fastened to the target blade-first. However, if a dangerous material such as something burning or corrosive is attached to a target by this glyph, that material may damage the target at the end of its turns.\n\nIf you invoke this glyph multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect for 2 AP.",
+    "Higher Tiers": "",
+    "Ignore": ""
   },
   {
     "Name": "Staggering Smite",
@@ -9485,6 +9661,22 @@
     "Rite": false,
     "New Text": "Choose one creature you can see. The target makes a CON save. On a failure, arcane stress points bloom across its defense: its AC is reduced by 2 (to a minimum of 10) until the start of your next turn. On a success, the glyph has no effect.\n If the target is wearing manufactured armor or wielding a shield, the reduction is 3 instead.",
     "Higher Tiers": "When you cast this Glyph using a tier 5 or higher, the AC drops by an additional point for every 2 tiers you upcast this glyph.",
+    "Ignore": ""
+  },
+  {
+    "Name": "Sunlight Burst",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Celestial",
+    "V": true,
+    "S": false,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "120 feet",
+    "Rite": false,
+    "New Text": "You shoot a comet of cosmic light at a creature or object within range. Make a ranged glyph attack against the target. On a hit, the target takes 1d8 radiant damage and emits bright light in a 30 foot radius for 1 minute. If a creature goes invisible the light also turns invisible. \n\nThis glyph’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "Higher Tiers": "",
     "Ignore": ""
   },
   {
@@ -10496,6 +10688,22 @@
     "Ignore": ""
   },
   {
+    "Name": "Wandering Hand",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Bane",
+    "V": false,
+    "S": true,
+    "Casting Time": "1 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "Self",
+    "Rite": false,
+    "New Text": "You detach one of your hands from your body and animate it with magic, allowing you to control it independently while it remains separated from you.\n\nThe detached hand is treated as a creature under your control. Each of its attributes is equal to your Wellspring modifier, and it acts according to your commands. Despite being separated, you retain full control over its movements as though it were still a part of your body.\n\nIf the hand is reduced to 0 Hit Points or otherwise destroyed while detached, it vanishes in a small puff of smoke and immediately reappears attached to your arm, completely intact.\n\nWhile your hand is detached, you cannot use that hand for any action or ability that would normally require it.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
     "Name": "Warding Bond",
     "Tier": 3,
     "Points": 9,
@@ -10524,6 +10732,22 @@
     "Range": "Self",
     "Rite": false,
     "New Text": "A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the glyph's duration. The wind has the following effects: It deafens you and other creatures in its area; It extinguishes unprotected flames in its area that are torch-sized or smaller; It hedges out vapor, gas, and fog that can be dispersed by strong wind; The area is difficult terrain for creatures other than you; The attack rolls of ranged weapon attacks have disadvantage if the attacks pass in or out of the wind.",
+    "Higher Tiers": "",
+    "Ignore": ""
+  },
+  {
+    "Name": "Wardrobe Malfunction",
+    "Tier": 0,
+    "Points": 0,
+    "School": "Chaos",
+    "V": false,
+    "S": true,
+    "Casting Time": "2 AP",
+    "Concentration": false,
+    "Duration": "Instantaneous",
+    "Range": "120 feet",
+    "Rite": false,
+    "New Text": "You point at a target within your sight and make reference to the part of their outfit you wish to affect. The mentioned article of clothing suffers a wardrobe malfunction, including, but by no means limited to:\n\nShoes coming untied or unstrapped\nButtons coming undone\nPants ripping\nDickeys flipping up\nAnd so much more!\n\nImmediately after the wardrobe malfunction occurs, the target must make an Agility saving throw. On a failed save, the target falls Prone as they trip, stumble, or otherwise lose their footing as a result of the malfunction. On a successful save, they remain standing.\n\nIf the target is not wearing clothes, the glyph will, in fact, conjure a piece of clothing onto their person specifically to be affected by the wardrobe malfunction.\n\nThe target suffers no damage, except perhaps the emotional scars gained from public embarrassment.",
     "Higher Tiers": "",
     "Ignore": ""
   },
